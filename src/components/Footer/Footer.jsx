@@ -77,17 +77,23 @@ const Footer = () => {
             </h2>
             <ul className="font-small text-gray-500 dark:text-gray-400">
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a
+                  target="_blank"
+                  href="https://github.com/riturajmahapatra"
+                  className="hover:underline">
                   Rituraj S Mahapatra
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a target="_blank" href="https://github.com/SinniS1" className="hover:underline">
                   Sachin Yadav
                 </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">
+                <a
+                  target="_blank"
+                  href="https://github.com/profabhishekjha"
+                  className="hover:underline">
                   Abhishek Jha
                 </a>
               </li>
