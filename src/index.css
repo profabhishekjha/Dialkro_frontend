@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .redborder {
+    border: 1px solid tomato;
+  }
+}
