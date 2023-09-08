@@ -34,7 +34,10 @@ const Hero = () => {
           <div className="flex items-center justify-center">
             <AlignmentCards images={'/Hero_pg1/Repairs/ac repairs.jpg'} prompt={'AC repair'} />
             <AlignmentCards images={'/Hero_pg1/Repairs/car care.jpg'} prompt={'Car care'} />
-            <AlignmentCards images={'/Hero_pg1/Repairs/tv repairs.jpg'} prompt={'TV services'} />
+            <AlignmentCards
+              images={'/Hero_pg1/Repairs/tv repairs.jpg'}
+              prompt={'electronics services'}
+            />
             <AlignmentCards
               images={'/Hero_pg1/Repairs/washing machine repairs.jpg'}
               prompt={'washing machine'}
