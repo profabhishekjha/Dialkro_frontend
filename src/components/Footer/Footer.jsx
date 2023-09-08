@@ -4,10 +4,6 @@ import Image from '../Body/Carousel/Image'
 const Footer = () => {
   return (
     <>
-      <Image
-        image="https://images.unsplash.com/photo-1506617420156-8e4536971650?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2023&q=80"
-        customclass={'h-[50vh] w-full object-cover'}
-      />
       <footer className="mt-20 bg-gray-100 dark:bg-gray-700">
         <div className="mx-auto w-full">
           <div className="grid grid-cols-2 gap-8 px-4 py-6 md:grid-cols-4 lg:py-8">
