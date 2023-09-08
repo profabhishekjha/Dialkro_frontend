@@ -82,25 +82,19 @@ const Footer = () => {
                 Meet the Developers
               </h2>
               <ul className="font-small text-gray-500 dark:text-gray-400">
-                <li className="mb-4">
-                  <a
-                    target="_blank"
-                    href="https://github.com/riturajmahapatra"
-                    className="hover:underline">
+                <li className="mb-2">
+                  <a href="https://github.com/profabhishekjha" target="_blank" rel="noreferrer">
+                    Abhishek Jha
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a href="https://github.com/riturajmahapatra" target="_blank" rel="noreferrer">
                     Rituraj S Mahapatra
                   </a>
                 </li>
-                <li className="mb-4">
-                  <a target="_blank" href="https://github.com/SinniS1" className="hover:underline">
+                <li className="mb-2">
+                  <a href="https://github.com/SinniS1" target="_blank" rel="noreferrer">
                     Sachin Yadav
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    target="_blank"
-                    href="https://github.com/profabhishekjha"
-                    className="hover:underline">
-                    Abhishek Jha
                   </a>
                 </li>
               </ul>
@@ -111,16 +105,32 @@ const Footer = () => {
               © 2023 <a href="https://jansevaa.com/">Dialkro</a>. All Rights Reserved.
             </span>
             <div className="mt-4 flex space-x-5 sm:justify-center md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                 <img src="/socials/facebook.svg" alt="socials" className="h-5  w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                 <img src="/socials/instagram.svg" alt="socials" className="h-5  w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                 <img src="/socials/twitter.svg" alt="socials" className="h-5  w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                 <img src="/socials/youtube.svg" alt="socials" className="h-5 w-5" />
               </a>
             </div>
