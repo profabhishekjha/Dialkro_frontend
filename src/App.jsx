@@ -4,6 +4,7 @@ import Hero from './components/Body/Hero'
 import Footer from './components/Footer/Footer'
 import Image from './components/Body/Carousel/Image'
 
+import React from 'react'
 function App() {
   return (
     <>

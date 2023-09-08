@@ -1,4 +1,6 @@
 import React from 'react'
+import UserMenu from './UserMenu'
+import MobileUserMenu from '../responsive/mobileUserMenu'
 
 const Nav = () => {
   return (
@@ -19,7 +21,11 @@ const Nav = () => {
               <button className="bg-white text-[14px]  text-[#036c93] hover:bg-white hover:text-blue-300">
                 ADVERTISE
               </button>
+              <UserMenu />
             </ul>
+          </div>
+          <div className="hidden text-3xl max-lg:block max-md:absolute max-md:bottom-5 max-md:right-4">
+            <MobileUserMenu />
           </div>
         </nav>
       </main>
