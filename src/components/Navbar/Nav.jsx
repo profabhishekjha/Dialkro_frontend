@@ -1,7 +1,7 @@
 import React from 'react'
 import UserMenu from './UserMenu'
 import MobileUserMenu from '../responsive/mobileUserMenu'
-import Page from '../../productList/components/page'
+import Page from '../../productList/components/SearchBar'
 
 const Nav = () => {
   return (
