@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import Rating from '@mui/material/Rating'
 import { faker } from '@faker-js/faker'
-
+import { Heart } from 'lucide-react'
+import { toast } from 'react-hot-toast'
 const CardSection = () => {
   const [value, setValue] = React.useState(3)
+  const [isFavorite, setIsFavorite] = useState(false)
 
   return (
     <div>
-      <div className="container flex rounded-lg border-2">
-        <div className=" relative flex gap-5 p-10">
+      <div className="container relative flex rounded-lg border-2">
+        <div className="relative flex gap-5 p-10">
           <div className="relative mx-auto h-60  overflow-hidden rounded-lg bg-white shadow-lg">
             <img className="h-60 w-full object-cover" src={faker.image.url()} alt="Card Image" />
           </div>
@@ -41,6 +43,19 @@ const CardSection = () => {
             </div>
           </div>
         </div>
+        <Heart
+          className="absolute right-10 top-10"
+          color={`${isFavorite ? 'red' : 'black'}`}
+          fill={`${isFavorite ? 'red' : 'white'}`}
+          onClick={() => {
+            setIsFavorite(!isFavorite)
+            if (!isFavorite) {
+              toast.success('Added to Favorites')
+            } else {
+              toast.error('Removed from Favourites')
+            }
+          }}
+        />
       </div>
     </div>
   )
