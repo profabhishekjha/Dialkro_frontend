@@ -6,7 +6,7 @@ import Page from '../../productList/components/SearchBar'
 const Nav = () => {
   return (
     <div>
-      <main className="fixed z-10 w-full border-b-2 border-slate-200 bg-white shadow-sm">
+      <main className="fixed z-50 w-full border-b-2 border-slate-200 bg-white shadow-sm">
         <nav className="mx-4 my-2 flex flex-col md:mx-8 md:flex-row lg:mx-16">
           <a href="/">
             <img src="/logo.svg" alt="logo" className="h-12 w-24 " />
