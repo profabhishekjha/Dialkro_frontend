@@ -1,15 +1,23 @@
 import React from 'react'
 import Cards from '../ui/Cards'
 import AlignmentCards from '../ui/AlignmentCards'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
+  const navigate = useNavigate()
   return (
     <div>
       <section className="flex items-center text-black">
         <div className="container mx-auto mt-[10vh] text-center">
           <h1 className="  text-left text-4xl font-bold">Popular Categories</h1>
           <div className="my-20 flex items-center justify-center">
-            <AlignmentCards images={'/Hero_pg1/Popular/transport.jpg'} prompt={'Transport'} />
+            <AlignmentCards
+              images={'/Hero_pg1/Popular/transport.jpg'}
+              prompt={'Transport'}
+              onClick={() => {
+                navigate('/product')
+              }}
+            />
             <AlignmentCards images={'/Hero_pg1/Popular/couriers.jpg'} prompt={'Couriers'} />
             <AlignmentCards images={'/Hero_pg1/Popular/hospital.jpg'} prompt={'Hospitals'} />
             <AlignmentCards images={'/Hero_pg1/Popular/hotel.jpg'} prompt={'Hotels'} />

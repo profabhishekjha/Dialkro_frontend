@@ -1,14 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from './layout'
+import ListPage from './productList/listpage'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />
+    element: <Layout />
+  },
+  {
+    path: '/product',
+    element: <ListPage />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
