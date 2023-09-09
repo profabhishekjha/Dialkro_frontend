@@ -15,15 +15,51 @@ const Hero = () => {
               images={'/Hero_pg1/Popular/transport.jpg'}
               prompt={'Transport'}
               onClick={() => {
-                navigate('/product')
+                navigate('/transport')
               }}
             />
-            <AlignmentCards images={'/Hero_pg1/Popular/couriers.jpg'} prompt={'Couriers'} />
-            <AlignmentCards images={'/Hero_pg1/Popular/hospital.jpg'} prompt={'Hospitals'} />
-            <AlignmentCards images={'/Hero_pg1/Popular/hotel.jpg'} prompt={'Hotels'} />
-            <AlignmentCards images={'/Hero_pg1/Popular/movers.jpg'} prompt={'Movers'} />
-            <AlignmentCards images={'/Hero_pg1/Popular/rentals.jpg'} prompt={'rentals'} />
-            <AlignmentCards images={'/Hero_pg1/Popular/travels.jpg'} prompt={'travels'} />
+            <AlignmentCards
+              images={'/Hero_pg1/Popular/couriers.jpg'}
+              prompt={'Couriers'}
+              onClick={() => {
+                navigate('/couriers')
+              }}
+            />
+            <AlignmentCards
+              images={'/Hero_pg1/Popular/hospital.jpg'}
+              prompt={'Hospitals'}
+              onClick={() => {
+                navigate('/hospitals')
+              }}
+            />
+            <AlignmentCards
+              images={'/Hero_pg1/Popular/hotel.jpg'}
+              prompt={'Hotels'}
+              onClick={() => {
+                navigate('/hotel')
+              }}
+            />
+            <AlignmentCards
+              images={'/Hero_pg1/Popular/movers.jpg'}
+              prompt={'Movers'}
+              onClick={() => {
+                navigate('/movers')
+              }}
+            />
+            <AlignmentCards
+              images={'/Hero_pg1/Popular/rentals.jpg'}
+              prompt={'rentals'}
+              onClick={() => {
+                navigate('/rentals')
+              }}
+            />
+            <AlignmentCards
+              images={'/Hero_pg1/Popular/travels.jpg'}
+              prompt={'travels'}
+              onClick={() => {
+                navigate('/travels')
+              }}
+            />
           </div>
 
           <h1 className="my-20 text-left text-4xl font-bold">Trending Categories</h1>
