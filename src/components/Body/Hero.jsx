@@ -1,6 +1,7 @@
 import React from 'react'
 import Cards from '../ui/Cards'
 import AlignmentCards from '../ui/AlignmentCards'
+import Pages from '../Pages/Pages'
 
 const Hero = () => {
   return (
@@ -77,6 +78,7 @@ const Hero = () => {
           </div>
         </div>
       </section>{' '}
+      <Pages />
     </div>
   )
 }
