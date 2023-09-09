@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from '../Body/Carousel/Image'
 
 const Footer = () => {
   return (

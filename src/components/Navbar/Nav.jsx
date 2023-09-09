@@ -1,6 +1,7 @@
 import React from 'react'
 import UserMenu from './UserMenu'
 import MobileUserMenu from '../responsive/mobileUserMenu'
+import Page from '../../productList/components/page'
 
 const Nav = () => {
   return (
@@ -11,17 +12,23 @@ const Nav = () => {
             <img src="/logo.svg" alt="logo" className="h-12 w-24 " />
           </a>
           <div className=" flex flex-1 items-center justify-end gap-2 md:mt-0 md:gap-10">
-            <ul className="flex flex-col gap-2 max-lg:hidden md:flex-row md:items-center md:gap-4">
-              <button className="bg-white text-[14px] text-[#036c93] hover:bg-white hover:text-blue-300">
-                SERVICES
-              </button>
-              <button className="bg-white text-[14px]  capitalize  text-[#036c93] hover:bg-white hover:text-blue-300">
-                ADD BUSINESS
-              </button>
-              <button className="bg-white text-[14px]  text-[#036c93] hover:bg-white hover:text-blue-300">
-                ADVERTISE
-              </button>
-              <UserMenu />
+            <ul className="flex flex-col gap-10 max-lg:hidden md:flex-row md:items-center">
+              <li>
+                <Page />
+              </li>
+              <li>
+                <button className="bg-white text-[14px]  capitalize  text-[#036c93] hover:bg-white hover:text-blue-300">
+                  ADD BUSINESS
+                </button>
+              </li>
+              <li>
+                <button className="bg-white text-[14px]  text-[#036c93] hover:bg-white hover:text-blue-300">
+                  ADVERTISE
+                </button>
+              </li>
+              <li>
+                <UserMenu />
+              </li>
             </ul>
           </div>
           <div className="hidden text-3xl max-lg:block max-md:absolute max-md:bottom-5 max-md:right-4">
