@@ -5,6 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './layout'
 import ListPage from './productList/listpage'
+import { element } from 'prop-types'
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,31 @@ const router = createBrowserRouter([
     element: <Layout />
   },
   {
-    path: '/product',
+    path: '/transport',
+    element: <ListPage />
+  },
+  {
+    path: '/couriers',
+    element: <ListPage />
+  },
+  {
+    path: '/hospitals',
+    element: <ListPage />
+  },
+  {
+    path: '/hotel',
+    element: <ListPage />
+  },
+  {
+    path: '/movers',
+    element: <ListPage />
+  },
+  {
+    path: '/rentals',
+    element: <ListPage />
+  },
+  {
+    path: '/travels',
     element: <ListPage />
   }
 ])
