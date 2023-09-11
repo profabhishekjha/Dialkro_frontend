@@ -25,7 +25,7 @@ import BridalMakeupPage from './weddingAndBeauty/bridalMakeup/BridalMakeupPage'
 import PhotographyPage from './weddingAndBeauty/photography/PhotographyPage'
 import WeddingPlanningPage from './weddingAndBeauty/weddingPlanning/WeddingPlanningPage'
 import WeddingVenuesPage from './weddingAndBeauty/weddingVenues/weddingVenuesPage'
-import Page from './ProductDetails/Page'
+import ProductDetailPage from './ProductDetails/ProductDetailPage'
 
 const router = createBrowserRouter([
   {
@@ -117,8 +117,8 @@ const router = createBrowserRouter([
     element: <WeddingVenuesPage />
   },
   {
-    path: '/page',
-    element: <Page />
+    path: '/Product_Detail',
+    element: <ProductDetailPage />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

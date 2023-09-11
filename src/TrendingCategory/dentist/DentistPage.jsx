@@ -16,7 +16,7 @@ const DentistPage = () => {
         image="/Hero_pg1/Popular/banner.webp"
         customclass={'h-[40vh] w-full object-cover'}></Image>
       <div className=" my-5 grid  items-center justify-center gap-5">
-        <CardSection onClick={() => navigate('/page')} />
+        <CardSection onClick={() => navigate('/Product_Detail')} />
         <CardSection />
         <CardSection />
         <CardSection />
