@@ -10,18 +10,26 @@ const CardSection = ({ onClick }) => {
 
   return (
     <div>
-      <div
-        onClick={onClick}
-        className="container relative flex w-[80vw] cursor-pointer rounded-lg border-2">
+      <div className="container relative flex w-[80vw] rounded-lg border-2">
         <div className="relative flex gap-5 p-10">
           <div className="relative mx-auto h-60  overflow-hidden rounded-lg bg-white shadow-lg">
-            <img className="h-60 w-full object-cover" src={faker.image.url()} alt="Card Image" />
+            <img
+              className="h-60 w-full cursor-pointer object-cover"
+              onClick={onClick}
+              src={faker.image.url()}
+              alt="Card Image"
+            />
           </div>
           <div className="grid gap-3">
             <div className="">
-              <p className="text-xl font-bold capitalize"> {faker.commerce.productName()} </p>
+              <p onClick={onClick} className="cursor-pointer text-xl font-bold capitalize">
+                {' '}
+                {faker.commerce.productName()}{' '}
+              </p>
               <Rating name="read-only" value={value} readOnly />
-              <p className="text-lg font-bold uppercase">{faker.company.buzzVerb()}</p>
+              <p className="cursor-pointer text-lg font-bold uppercase">
+                {faker.company.buzzVerb()}
+              </p>
               <p className="q my-2 w-3/4 ">{faker.commerce.productDescription()}</p>
               <h1 className="my-5 text-xl font-bold">₹ {faker.commerce.price()}</h1>
             </div>
@@ -42,7 +50,7 @@ const CardSection = ({ onClick }) => {
           </div>
         </div>
         <Heart
-          className="absolute right-10 top-10"
+          className="absolute right-10 top-10 cursor-pointer"
           color={`${isFavorite ? 'red' : 'black'}`}
           fill={`${isFavorite ? 'red' : 'white'}`}
           onClick={() => {
