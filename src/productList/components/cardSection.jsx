@@ -1,15 +1,18 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 import Rating from '@mui/material/Rating'
 import { faker } from '@faker-js/faker'
 import { Heart } from 'lucide-react'
 import { toast } from 'react-hot-toast'
-const CardSection = () => {
+const CardSection = ({ onClick }) => {
   const [value, setValue] = React.useState(3)
   const [isFavorite, setIsFavorite] = useState(false)
 
   return (
     <div>
-      <div className="container relative flex w-[80vw] rounded-lg border-2">
+      <div
+        onClick={onClick}
+        className="container relative flex w-[80vw] cursor-pointer rounded-lg border-2">
         <div className="relative flex gap-5 p-10">
           <div className="relative mx-auto h-60  overflow-hidden rounded-lg bg-white shadow-lg">
             <img className="h-60 w-full object-cover" src={faker.image.url()} alt="Card Image" />
@@ -29,12 +32,12 @@ const CardSection = () => {
               <a href="">
                 <img src="/socials/whatsapp.svg" alt="DialKro" className="w-10" />
               </a>
-              <button className="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500 dark:text-white dark:focus:ring-cyan-800">
+              {/*               <button className="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500 dark:text-white dark:focus:ring-cyan-800">
                 <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
                   {' '}
                   Menu
                 </span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

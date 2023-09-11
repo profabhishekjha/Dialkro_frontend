@@ -72,7 +72,7 @@ const Page = () => {
               type="search"
               id="search-dropdown"
               className="z-20 block w-[25vw] rounded-r-lg border border-l-2 border-gray-300 border-l-gray-50 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:border-l-gray-700 dark:text-black dark:placeholder-gray-400 dark:hover:bg-gray-200 dark:focus:border-blue-500"
-              placeholder="Search Mockups, Logos, Design Templates..."
+              placeholder="Search Transport, Couriers and more..."
               required
             />
             <button

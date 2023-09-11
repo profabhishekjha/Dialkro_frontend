@@ -4,8 +4,28 @@ import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './layout'
-import ListPage from './productList/listpage'
-import { element } from 'prop-types'
+import CouriersPage from './popularCategory/couriers/CouriersPage'
+import TransportPage from './popularCategory/transport/TransportPage'
+import HospitalsPage from './popularCategory/hospitals/HospitalsPage'
+import HotelsPage from './popularCategory/hotels/HotelsPage'
+import MoversPage from './popularCategory/movers/MoversPage'
+import RentalsPage from './popularCategory/rentals/RentalsPage'
+import TravelsPage from './popularCategory/travels/TravelsPage'
+import DentistPage from './TrendingCategory/dentist/DentistPage'
+import GymPage from './TrendingCategory/gym/GymPage'
+import HostelsPage from './TrendingCategory/hostels/HostelsPage'
+import HousingsPage from './TrendingCategory/housings/HousingsPage'
+import PestControlPage from './TrendingCategory/pestControl/PestControlPage'
+import PetShopPage from './TrendingCategory/petShop/PetShopPage'
+import AcRepairPage from './repairServices/acRepair/AcRepairPage'
+import CarCarePage from './repairServices/carCare/CarCarePage'
+import WashingMachinePage from './repairServices/washingMachine/WashingMachinePage'
+import ElectronicServicesPage from './repairServices/electronicServices/ElectronicServicesPage'
+import BridalMakeupPage from './weddingAndBeauty/bridalMakeup/BridalMakeupPage'
+import PhotographyPage from './weddingAndBeauty/photography/PhotographyPage'
+import WeddingPlanningPage from './weddingAndBeauty/weddingPlanning/WeddingPlanningPage'
+import WeddingVenuesPage from './weddingAndBeauty/weddingVenues/weddingVenuesPage'
+import Page from './ProductDetails/Page'
 
 const router = createBrowserRouter([
   {
@@ -14,31 +34,91 @@ const router = createBrowserRouter([
   },
   {
     path: '/transport',
-    element: <ListPage />
+    element: <TransportPage />
   },
   {
     path: '/couriers',
-    element: <ListPage />
+    element: <CouriersPage />
   },
   {
     path: '/hospitals',
-    element: <ListPage />
+    element: <HospitalsPage />
   },
   {
     path: '/hotel',
-    element: <ListPage />
+    element: <HotelsPage />
   },
   {
     path: '/movers',
-    element: <ListPage />
+    element: <MoversPage />
   },
   {
     path: '/rentals',
-    element: <ListPage />
+    element: <RentalsPage />
   },
   {
     path: '/travels',
-    element: <ListPage />
+    element: <TravelsPage />
+  },
+  {
+    path: '/dentist',
+    element: <DentistPage />
+  },
+  {
+    path: '/gym',
+    element: <GymPage />
+  },
+  {
+    path: '/hostels',
+    element: <HostelsPage />
+  },
+  {
+    path: '/housings',
+    element: <HousingsPage />
+  },
+  {
+    path: '/pestControl',
+    element: <PestControlPage />
+  },
+  {
+    path: '/petshop',
+    element: <PetShopPage />
+  },
+  {
+    path: '/acRepairPage',
+    element: <AcRepairPage />
+  },
+  {
+    path: '/carCare',
+    element: <CarCarePage />
+  },
+  {
+    path: '/electronicServices',
+    element: <ElectronicServicesPage />
+  },
+  {
+    path: '/washingMachine',
+    element: <WashingMachinePage />
+  },
+  {
+    path: '/bridalMakeup',
+    element: <BridalMakeupPage />
+  },
+  {
+    path: '/photography',
+    element: <PhotographyPage />
+  },
+  {
+    path: '/weddingPlanning',
+    element: <WeddingPlanningPage />
+  },
+  {
+    path: '/weddingvenues',
+    element: <WeddingVenuesPage />
+  },
+  {
+    path: '/page',
+    element: <Page />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
