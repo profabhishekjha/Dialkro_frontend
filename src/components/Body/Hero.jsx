@@ -10,7 +10,8 @@ const Hero = () => {
       <section className="flex items-center text-black">
         <div className="container mx-auto mt-[10vh] text-center">
           <h1 className="  text-left text-4xl font-bold">Popular Categories</h1>
-          <div className="my-20 flex items-center justify-center">
+          <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
+          <div className=" my-20 flex items-center justify-center">
             <AlignmentCards
               images={'/Hero_pg1/Popular/transport.webp'}
               prompt={'Transport'}
@@ -62,8 +63,9 @@ const Hero = () => {
             />
           </div>
 
-          <h1 className="my-20 text-left text-4xl font-bold">Trending Categories</h1>
-          <div className="flex items-center justify-center">
+          <h1 className=" text-left text-4xl font-bold">Trending Categories</h1>
+          <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
+          <div className="my-20 flex items-center justify-center">
             <AlignmentCards images={'/Hero_pg1/Trending/dentist.webp'} prompt={'Dentist'} />
             <AlignmentCards images={'/Hero_pg1/Trending/gyms.webp'} prompt={'gyms'} />
             <AlignmentCards images={'/Hero_pg1/Trending/hostels.webp'} prompt={'hostels'} />
@@ -74,8 +76,9 @@ const Hero = () => {
             />
             <AlignmentCards images={'/Hero_pg1/Trending/petshop.webp'} prompt={'pet shop'} />
           </div>
-          <h1 className=" my-20 text-left text-4xl font-bold">Repair Services</h1>
-          <div className="flex items-center justify-center">
+          <h1 className="  text-left text-4xl font-bold">Repair Services</h1>
+          <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
+          <div className="my-20  flex items-center justify-center">
             <AlignmentCards images={'/Hero_pg1/Repairs/ac repairs.webp'} prompt={'AC repair'} />
             <AlignmentCards images={'/Hero_pg1/Repairs/car care.webp'} prompt={'Car care'} />
             <AlignmentCards
@@ -88,7 +91,9 @@ const Hero = () => {
             />
           </div>
           <h1 className=" my-10 text-left text-4xl font-bold">Wedding & Beauty</h1>
-          <div className="flex gap-5">
+          <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
+
+          <div className="my-20 flex   gap-5 overflow-hidden">
             {/* give props to the cards and make them dynamic by giving them anchor , desc , name*/}
             <Cards
               images={'/Hero_pg1/Wedding&Beauty/bridal-makeup.webp'}
