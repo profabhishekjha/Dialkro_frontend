@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import Layout from './layout'
 import CouriersPage from './popularCategory/couriers/CouriersPage'
 import TransportPage from './popularCategory/transport/TransportPage'
@@ -117,7 +118,87 @@ const router = createBrowserRouter([
     element: <WeddingVenuesPage />
   },
   {
-    path: '/Product_Detail',
+    path: '/transport/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/couriers/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/hospitals/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/hotel/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/movers/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/rentals/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/travels/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/dentist/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/gym/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/hostels/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/housings/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/pestControl/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/petshop/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/acRepairPage/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/carCare/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/electronicServices/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/washingMachine/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/bridalMakeup/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/photography/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/weddingPlanning/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/weddingvenues/Product_Detail',
     element: <ProductDetailPage />
   }
 ])

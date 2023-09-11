@@ -44,13 +44,12 @@ const Hero_pg2 = () => {
               <p className="cursor-pointer text-lg font-bold uppercase">
                 {faker.company.buzzVerb()}
               </p>
-              <p>{faker.lorem.paragraphs()}</p>
+              <p>{faker.lorem.paragraphs(1)}</p>
               <p></p>
             </div>
             <div className="my-5">
               <button className="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 group-hover:from-purple-600 group-hover:to-blue-500 dark:text-white dark:focus:ring-blue-800">
                 <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
-                  {' '}
                   7746885707{' '}
                 </span>
               </button>
@@ -95,6 +94,10 @@ const Hero_pg2 = () => {
               <Ratings />
               <Ratings />
               <Ratings />
+            </div>
+            <div className="">
+              <div className="my-5 text-center text-2xl font-bold underline">ABOUT US</div>
+              <p>{faker.lorem.paragraphs(10)}</p>
             </div>
           </div>
         </div>
