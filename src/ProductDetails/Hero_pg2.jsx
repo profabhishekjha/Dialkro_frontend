@@ -44,7 +44,7 @@ const Hero_pg2 = () => {
               <p className="cursor-pointer text-lg font-bold uppercase">
                 {faker.company.buzzVerb()}
               </p>
-              <p>{faker.lorem.paragraphs()}</p>
+              <p>{faker.lorem.paragraphs(1)}</p>
               <p></p>
             </div>
             <div className="my-5">
@@ -95,6 +95,10 @@ const Hero_pg2 = () => {
               <Ratings />
               <Ratings />
               <Ratings />
+            </div>
+            <div className="">
+              <div className="my-5 text-center text-2xl font-bold underline">ABOUT US</div>
+              <p>{faker.lorem.paragraphs(10)}</p>
             </div>
           </div>
         </div>
