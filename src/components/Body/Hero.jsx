@@ -37,7 +37,7 @@ const Hero = () => {
               images={'/Hero_pg1/Popular/hotel.webp'}
               prompt={'Hotels'}
               onClick={() => {
-                navigate('/hotel')
+                navigate('/hotels')
               }}
             />
             <AlignmentCards
