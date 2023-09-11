@@ -1,11 +1,11 @@
 import React from 'react'
-import Nav from '../components/Navbar/Nav'
+import Nav from '../../components/Navbar/Nav'
 import { Outlet } from 'react-router-dom'
-import Image from '../components/Body/Carousel/Image'
-import Footer from '../components/Footer/Footer'
-import CardSection from './components/cardSection'
+import Image from '../../components/Body/Carousel/Image'
+import Footer from '../../components/Footer/Footer'
+import CardSection from '../../productList/components/cardSection'
 import { Toaster } from 'react-hot-toast'
-const ListPage = () => {
+const BridalMakeupPage = () => {
   return (
     <div>
       <Outlet />
@@ -26,4 +26,4 @@ const ListPage = () => {
   )
 }
 
-export default ListPage
+export default BridalMakeupPage
