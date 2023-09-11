@@ -1,6 +1,7 @@
 import React from 'react'
 import Ratings from './Ratings'
 import { faker } from '@faker-js/faker'
+import RandomStar from './RandomStar'
 
 const Hero_pg2 = () => {
   return (
@@ -28,7 +29,6 @@ const Hero_pg2 = () => {
                   alt="Card Image"
                 />
               </div>
-
               <div className="relative mx-auto h-20 overflow-hidden rounded-lg bg-white shadow-lg">
                 <img
                   className="h-20 w-full object-cover"
@@ -41,15 +41,11 @@ const Hero_pg2 = () => {
           </div>
           <div className="rounded-lg border p-10">
             <div className="">
-              <p>Transport</p>
-              <p>ratings</p>
-              <p>opens in somethime</p>
-              <p>
-                For all those people who love Japanese food. This place is a must visit in worli
-                village, although the location is not that great but once you enter the restaurant
-                their elaborate menu and options for cocktails is amazing, do try their sushi and
-                katsu curry.
+              <p className="cursor-pointer text-lg font-bold uppercase">
+                {faker.company.buzzVerb()}
               </p>
+              <p>{faker.lorem.paragraphs()}</p>
+              <p></p>
             </div>
             <div className="my-5">
               <button className="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 group-hover:from-purple-600 group-hover:to-blue-500 dark:text-white dark:focus:ring-blue-800">
@@ -75,19 +71,29 @@ const Hero_pg2 = () => {
               <button
                 type="button"
                 className="rounded-2xl bg-sky-700 px-5 py-2.5 text-[2rem] font-medium text-white hover:bg-sky-800 focus:outline-none focus:ring-4 focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
-                4.3
+                {faker.number.float({ min: 1, max: 5, precision: 0.1 })}
               </button>
-              <p className="p-5">⭐⭐⭐⭐⭐</p>
+              <p className="p-5">
+                <RandomStar />
+              </p>
               <div className="flex">
                 <div className="h-[100px] min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-10 dark:opacity-50"></div>
                 <div className="p-7">
-                  <h1>16 Ratings</h1>
-                  <p>Dial kro rating index based on 16 ratings across the web</p>
+                  <h1>{faker.number.int({ max: 10000 })} Ratings</h1>
+                  <p>
+                    Dial kro rating index based on {faker.number.int({ max: 10000 })} ratings across
+                    the web
+                  </p>
                 </div>
               </div>
             </div>
             <div className="">
               <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
+              <Ratings />
+              <Ratings />
+              <Ratings />
+              <Ratings />
+              <Ratings />
               <Ratings />
             </div>
           </div>
