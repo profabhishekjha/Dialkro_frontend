@@ -30,7 +30,7 @@ const CardSection = ({ onClick }) => {
               <p className="cursor-pointer text-lg font-bold uppercase">
                 {faker.company.buzzVerb()}
               </p>
-              <p className="q my-2 w-3/4 ">{faker.commerce.productDescription()}</p>
+              <p className=" my-2 w-3/4 ">{faker.commerce.productDescription()}</p>
               <h1 className="my-5 text-xl font-bold">₹ {faker.commerce.price()}</h1>
             </div>
             <div className="flex  gap-5">
@@ -40,7 +40,8 @@ const CardSection = ({ onClick }) => {
               <a href="">
                 <img src="/socials/whatsapp.svg" alt="DialKro" className="w-10" />
               </a>
-              {/*               <button className="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500 dark:text-white dark:focus:ring-cyan-800">
+
+              {/* <button className="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500 dark:text-white dark:focus:ring-cyan-800">
                 <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
                   {' '}
                   Menu
