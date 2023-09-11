@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { faker } from '@faker-js/faker'
+import RandomStar from './RandomStar'
 const Ratings = () => {
   return (
     <div>
@@ -20,16 +21,14 @@ const Ratings = () => {
             </svg>
           </div>
           <div className="px-">
-            <p className="text-[1.3rem] font-bold">Hitesh</p>
-            <h1>16 Ratings</h1>
+            <p className="text-[1.3rem] font-bold capitalize">{faker.lorem.word()}</p>
+            <h1>{faker.number.int({ max: 100 })} Ratings</h1>
           </div>
         </div>
-        <p className="py-3">⭐⭐⭐⭐⭐</p>
-        <p>
-          Food Is superb and very delicious for vegetarians it is the very best place to visit and
-          and food is very fresh and very friendly staff and service also very fast even the non
-          vegetarian will love it every flavour was easily sensing the taste i loved it
+        <p className="py-3">
+          <RandomStar />{' '}
         </p>
+        <p>{faker.lorem.paragraphs()}</p>
         <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
       </div>
       {/* ratings */}
