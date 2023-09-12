@@ -21,12 +21,9 @@ const Layout = () => {
   }, [location.pathname])
 
   return (
-    <div className="redborder">
+    <div>
       <Toaster />
       <Nav />
-      {/* <Image
-        image="/Hero_pg1/Popular/banner.webp"
-        customclass={'h-[40vh] redborder  w-full object-cover'}></Image> */}
       <BannerCarousel images={images} />
       <Hero />
       <Footer />

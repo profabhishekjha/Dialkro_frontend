@@ -23,13 +23,13 @@ const BannerCarousel = ({ images, customClasses }) => {
     usePrevNextButtons(emblaApi, onButtonClick)
 
   return (
-    <div className={`embla relative ${customClasses}`}>
+    <div className={`embla relative pt-10 ${customClasses}`}>
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="embla__container banner-embla__container flex cursor-grab touch-pan-y active:cursor-grabbing">
           {slides.map((index) => (
             <div className="banner-embla__slide min-w-0" key={index}>
               <img
-                className="banner-embla__slide__img mt-8 block  w-full object-cover"
+                className="banner-embla__slide__img block w-full  object-cover pt-8"
                 src={imageByIndex(index)}
                 alt="Carousel Images"
               />
