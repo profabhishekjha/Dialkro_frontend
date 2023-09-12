@@ -48,6 +48,10 @@ const router = createBrowserRouter([
     element: <SubCategoryPage />
   },
   {
+    path: '/restaurantcategory/restaurant',
+    element: <RestaurantPage />
+  },
+  {
     path: '/couriers',
     element: <CouriersPage />
   },
