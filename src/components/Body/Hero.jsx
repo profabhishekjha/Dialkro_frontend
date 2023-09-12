@@ -19,6 +19,15 @@ const Hero = () => {
                 navigate('/transport')
               }}
             />
+
+            <AlignmentCards
+              images={'/Hero_pg1/Popular/restaurant.webp'}
+              prompt={'Restaurant'}
+              onClick={() => {
+                navigate('/restaurantcategory')
+              }}
+            />
+
             <AlignmentCards
               images={'/Hero_pg1/Popular/couriers.webp'}
               prompt={'Couriers'}
@@ -26,6 +35,7 @@ const Hero = () => {
                 navigate('/couriers')
               }}
             />
+
             <AlignmentCards
               images={'/Hero_pg1/Popular/hospital.webp'}
               prompt={'Hospitals'}
@@ -33,6 +43,7 @@ const Hero = () => {
                 navigate('/hospitals')
               }}
             />
+
             <AlignmentCards
               images={'/Hero_pg1/Popular/hotel.webp'}
               prompt={'Hotels'}
@@ -40,25 +51,20 @@ const Hero = () => {
                 navigate('/hotels')
               }}
             />
+
             <AlignmentCards
               images={'/Hero_pg1/Popular/movers.webp'}
-              prompt={'Movers'}
+              prompt={'Packers&Movers'}
               onClick={() => {
                 navigate('/movers')
               }}
             />
+
             <AlignmentCards
-              images={'/Hero_pg1/Popular/rentals.webp'}
-              prompt={'rentals'}
+              images={'/Hero_pg1/Trending/house.webp'}
+              prompt={'housings'}
               onClick={() => {
-                navigate('/rentals')
-              }}
-            />
-            <AlignmentCards
-              images={'/Hero_pg1/Popular/travels.webp'}
-              prompt={'travels'}
-              onClick={() => {
-                navigate('/travels')
+                navigate('/housings')
               }}
             />
           </div>
@@ -86,11 +92,12 @@ const Hero = () => {
                 navigate('/hostels')
               }}
             />
+
             <AlignmentCards
-              images={'/Hero_pg1/Trending/house.webp'}
-              prompt={'housings'}
+              images={'/Hero_pg1/Popular/travels.webp'}
+              prompt={'travels'}
               onClick={() => {
-                navigate('/housings')
+                navigate('/travels')
               }}
             />
             <AlignmentCards
@@ -98,6 +105,13 @@ const Hero = () => {
               prompt={'pest control'}
               onClick={() => {
                 navigate('/pestControl')
+              }}
+            />
+            <AlignmentCards
+              images={'/Hero_pg1/Popular/rentals.webp'}
+              prompt={'rentals'}
+              onClick={() => {
+                navigate('/rentals')
               }}
             />
             <AlignmentCards

@@ -11,7 +11,7 @@ import HospitalsPage from './popularCategory/hospitals/HospitalsPage'
 import HotelsPage from './popularCategory/hotels/HotelsPage'
 import MoversPage from './popularCategory/movers/MoversPage'
 import RentalsPage from './popularCategory/rentals/RentalsPage'
-import TravelsPage from './popularCategory/travels/TravelsPage'
+import TravelsPage from './TrendingCategory/travels/TravelsPage'
 import DentistPage from './TrendingCategory/dentist/DentistPage'
 import GymPage from './TrendingCategory/gym/GymPage'
 import HostelsPage from './TrendingCategory/hostels/HostelsPage'
@@ -27,6 +27,8 @@ import PhotographyPage from './weddingAndBeauty/photography/PhotographyPage'
 import WeddingPlanningPage from './weddingAndBeauty/weddingPlanning/WeddingPlanningPage'
 import WeddingVenuesPage from './weddingAndBeauty/weddingVenues/weddingVenuesPage'
 import ProductDetailPage from './ProductDetails/ProductDetailPage'
+import RestaurantPage from './popularCategory/restaurant/RestaurantPage'
+import SubCategoryPage from './popularCategory/restaurant/components/SubCategory/SubCategoryPage'
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
   {
     path: '/transport',
     element: <TransportPage />
+  },
+  {
+    path: '/restaurant',
+    element: <RestaurantPage />
+  },
+  {
+    path: '/restaurantcategory',
+    element: <SubCategoryPage />
   },
   {
     path: '/couriers',
