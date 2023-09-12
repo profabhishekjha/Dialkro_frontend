@@ -9,7 +9,7 @@ const ProductDetailPage = () => {
     <div>
       <Nav />
       <Image
-        image="/Hero_pg1/Popular/banner.webp"
+        image="/Hero_pg1/CarouselImages/market.webp"
         customclass={'h-[40vh] w-full object-cover'}></Image>
       <Hero_pg2 />
       <Footer />

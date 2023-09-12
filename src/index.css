@@ -7,3 +7,68 @@
     border: 2px solid tomato;
   }
 }
+/* Carousel CSS */
+
+.embla {
+  --banner-slide-spacing: 1rem;
+  --banner-slide-size: 100%;
+  --banner-slide-height: 23vw;
+
+  --card-slide-spacing: 2vw;
+  --card-slide-size: fit-content;
+  --card-slide-height: 17.5vw;
+}
+
+/* IMPORTANT -----------------------------------------------------
+if background of container have images then uncomment this */
+.embla__container {
+  backface-visibility: hidden;
+}
+
+/* ----------------------------------------- */
+.banner-embla__container {
+  margin-left: calc(var(--banner-slide-spacing) * -1);
+}
+
+.card-embla__container {
+  margin-left: calc(var(--card-slide-spacing) * -1);
+}
+
+/* ------------------------------------------ */
+.banner-embla__slide {
+  flex: 0 0 var(--banner-slide-size);
+  padding-left: var(--banner-slide-spacing);
+}
+
+.card-embla__slide {
+  flex: 0 0 var(--card-slide-size);
+  padding-left: var(--card-slide-spacing);
+}
+
+/* ------------------------------------------ */
+.banner-embla__slide__img {
+  /* height: var(--banner-slide-height); */
+  height: 40vw;
+}
+
+.card-embla__slide__card {
+  height: var(--card-slide-height);
+}
+
+@media screen and (min-width: 640px) {
+  .banner-embla__slide__img {
+    height: 30vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner-embla__slide__img {
+    height: 30vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .banner-embla__slide__img {
+    height: 17.5vw;
+  }
+}
