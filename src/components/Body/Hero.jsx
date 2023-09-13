@@ -165,7 +165,7 @@ const Hero = () => {
                 ' Elevate your beauty on your special day with our talented makeup artists, who will tailor a look that reflects your unique style and radiates confidence.'
               }
               onClick={() => {
-                navigate('/bridalMakeup')
+                navigate('/bridalMakeupcategory')
               }}
             />
             <Cards
