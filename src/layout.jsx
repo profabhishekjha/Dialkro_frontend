@@ -8,6 +8,7 @@ import BannerCarousel from './components/Body/Carousel/BannerCarousel'
 
 const Layout = () => {
   const location = useLocation()
+
   const images = [
     'Hero_pg1/CarouselImages/doctor.webp',
     'Hero_pg1/CarouselImages/market.webp',

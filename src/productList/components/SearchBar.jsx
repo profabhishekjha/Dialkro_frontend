@@ -5,7 +5,12 @@ const Page = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [suggestions, setSuggestions] = useState([])
   const [isAllCategoriesOpen, setIsAllCategoriesOpen] = useState(false)
+  const [isSuggestionsOpen, setIsSuggestionsOpen] = useState(false)
+
   const dropdownRef = useRef(null)
+  const suggestionsDropdownRef = useRef(null)
+  const allCategoriesButtonRef = useRef(null)
+
   const navigate = useNavigate()
 
   const categories = [
@@ -22,14 +27,20 @@ const Page = () => {
     'Housings',
     'PestControl',
     'PetShop'
-
     // Add more categories as needed
   ]
 
   // Function to close the dropdown when clicking outside of it
   const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target) &&
+      allCategoriesButtonRef.current !== event.target
+    ) {
       setIsAllCategoriesOpen(false)
+    }
+    if (suggestionsDropdownRef.current && !suggestionsDropdownRef.current.contains(event.target)) {
+      setIsSuggestionsOpen(false)
     }
   }
 
@@ -43,6 +54,9 @@ const Page = () => {
     )
 
     setSuggestions(filteredSuggestions)
+
+    // Open the suggestions dropdown if there are suggestions
+    setIsSuggestionsOpen(filteredSuggestions.length > 0)
   }
 
   const handleCategoryClick = (category) => {
@@ -76,8 +90,7 @@ const Page = () => {
     setSuggestions([])
   }
 
-  const handleAllCategoriesClick = () => {
-    // Toggle the dropdown state
+  const handleDropdownButtonClick = () => {
     setIsAllCategoriesOpen(!isAllCategoriesOpen)
   }
 
@@ -89,6 +102,7 @@ const Page = () => {
       document.removeEventListener('click', handleClickOutside)
     }
   }, [])
+
   return (
     <div className="z-20">
       <form className="flex items-center justify-center">
@@ -103,7 +117,8 @@ const Page = () => {
             data-dropdown-toggle="dropdown"
             className="z-10 inline-flex flex-shrink-0 items-center rounded-l-lg border border-gray-300 px-4 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:ring-blue-500 dark:border-black dark:bg-white dark:text-black "
             type="button"
-            onClick={handleAllCategoriesClick}>
+            onClick={handleDropdownButtonClick}
+            ref={allCategoriesButtonRef}>
             All categories
             <svg
               className={`ml-2.5 h-2.5 w-2.5 ${
@@ -153,10 +168,15 @@ const Page = () => {
               value={searchQuery}
               onChange={handleSearchInputChange}
               onKeyDown={handleKeyPress}
+              onClick={() => setIsSuggestionsOpen(!isSuggestionsOpen)}
               autoComplete="off"
               required
             />
-            <ul className="absolute z-10 mt-2 divide-y divide-gray-100 rounded-lg bg-white py-2 text-sm text-gray-700 shadow dark:bg-white dark:text-black">
+            <ul
+              ref={suggestionsDropdownRef} // Reference to suggestions dropdown
+              className={`${
+                isSuggestionsOpen ? 'block' : 'hidden'
+              } absolute top-7 z-10 mt-6 max-h-60 w-96 divide-y divide-gray-100 overflow-y-auto rounded-lg text-gray-700 shadow dark:bg-white dark:text-black`}>
               {suggestions.map((category, index) => (
                 <li key={index}>
                   <button
@@ -168,6 +188,7 @@ const Page = () => {
                 </li>
               ))}
             </ul>
+
             <button
               type="submit"
               className="absolute right-0 top-0 h-full rounded-r-lg border border-blue-700 bg-blue-700 p-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
