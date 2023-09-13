@@ -1,15 +1,22 @@
 import React from 'react'
 import Nav from '../../../../components/Navbar/Nav'
 import Footer from '../../../../components/Footer/Footer'
-import Image from '../../../../components/Body/Carousel/Image'
 import SearchBar from '../SearchBar'
 import Choices from '../Choices'
+import BannerCarousel from '../../../../components/Body/Carousel/BannerCarousel'
 
 const SubCategoryPage = () => {
+  const images = [
+    'Hero_pg1/CarouselImages/doctor.webp',
+    'Hero_pg1/CarouselImages/market.webp',
+    'Hero_pg1/CarouselImages/parcel.webp',
+    'Hero_pg1/CarouselImages/resturant.webp',
+    'Hero_pg1/CarouselImages/transport.webp'
+  ]
   return (
     <div>
       <Nav />
-      <Image image="/Hero_pg1/Popular/banner.webp" customclass={'h-[40vh] w-full object-cover'} />
+      <BannerCarousel images={images} />
       <div className="mt-5 flex flex-col gap-8">
         <div className="flex items-center justify-center">
           <Choices />
