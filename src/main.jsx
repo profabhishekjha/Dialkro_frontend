@@ -10,12 +10,11 @@ import TransportPage from './popularCategory/transport/TransportPage'
 import HospitalsPage from './popularCategory/hospitals/HospitalsPage'
 import HotelsPage from './popularCategory/hotels/HotelsPage'
 import MoversPage from './popularCategory/movers/MoversPage'
-import RentalsPage from './popularCategory/rentals/RentalsPage'
 import TravelsPage from './TrendingCategory/travels/TravelsPage'
 import DentistPage from './TrendingCategory/dentist/DentistPage'
 import GymPage from './TrendingCategory/gym/GymPage'
 import HostelsPage from './TrendingCategory/hostels/HostelsPage'
-import HousingsPage from './TrendingCategory/housings/HousingsPage'
+import HousingsPage from './popularCategory/housings/HousingsPage'
 import PestControlPage from './TrendingCategory/pestControl/PestControlPage'
 import PetShopPage from './TrendingCategory/petShop/PetShopPage'
 import AcRepairPage from './repairServices/acRepair/AcRepairPage'
@@ -30,6 +29,7 @@ import ProductDetailPage from './ProductDetails/ProductDetailPage'
 import RestaurantPage from './popularCategory/restaurant/RestaurantPage'
 import SubCategoryPage from './popularCategory/restaurant/components/SubCategory/SubCategoryPage'
 import SubCategoryBridalPage from './weddingAndBeauty/bridalMakeup/components/SubCategory/SubCategoryBridalPage'
+import SubCategoryRentalPage from './TrendingCategory/rentals/components/SubCategory/SubCategoryrentalPage'
 
 const router = createBrowserRouter([
   {
@@ -65,8 +65,8 @@ const router = createBrowserRouter([
     element: <MoversPage />
   },
   {
-    path: '/rentals',
-    element: <RentalsPage />
+    path: '/rentalcategory',
+    element: <SubCategoryRentalPage />
   },
   {
     path: '/travels',

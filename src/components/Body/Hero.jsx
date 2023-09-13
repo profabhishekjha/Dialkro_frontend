@@ -78,6 +78,7 @@ const Hero = () => {
                 navigate('/dentist')
               }}
             />
+
             <AlignmentCards
               images={'/Hero_pg1/Trending/gyms.webp'}
               prompt={'gyms'}
@@ -85,6 +86,7 @@ const Hero = () => {
                 navigate('/gym')
               }}
             />
+
             <AlignmentCards
               images={'/Hero_pg1/Trending/hostels.webp'}
               prompt={'hostels'}
@@ -100,6 +102,7 @@ const Hero = () => {
                 navigate('/travels')
               }}
             />
+
             <AlignmentCards
               images={'/Hero_pg1/Trending/pest-control.webp'}
               prompt={'pest control'}
@@ -107,13 +110,15 @@ const Hero = () => {
                 navigate('/pestControl')
               }}
             />
+
             <AlignmentCards
               images={'/Hero_pg1/Popular/rentals.webp'}
-              prompt={'Rent on Hire'}
+              prompt={'Rent and Hire'}
               onClick={() => {
-                navigate('/rentals')
+                navigate('/rentalcategory')
               }}
             />
+
             <AlignmentCards
               images={'/Hero_pg1/Trending/petshop.webp'}
               prompt={'pet shop'}
