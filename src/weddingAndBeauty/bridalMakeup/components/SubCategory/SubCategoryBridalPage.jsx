@@ -5,12 +5,13 @@ import SearchBar from '../SearchBar'
 import BannerCarousel from '../../../../components/Body/Carousel/BannerCarousel'
 
 const SubCategoryBridalPage = () => {
+  const bridal = 'bridal'
   const images = [
-    'Hero_pg1/CarouselImages/doctor.webp',
-    'Hero_pg1/CarouselImages/market.webp',
-    'Hero_pg1/CarouselImages/parcel.webp',
-    'Hero_pg1/CarouselImages/resturant.webp',
-    'Hero_pg1/CarouselImages/transport.webp'
+    `Hero_pg1/SubCategoryImages/${bridal}Carousel/${bridal} (1).webp`,
+    `Hero_pg1/SubCategoryImages/${bridal}Carousel/${bridal} (2).webp`,
+    `Hero_pg1/SubCategoryImages/${bridal}Carousel/${bridal} (4).webp`,
+    `Hero_pg1/SubCategoryImages/${bridal}Carousel/${bridal} (5).webp`,
+    `Hero_pg1/SubCategoryImages/${bridal}Carousel/${bridal} (6).webp`
   ]
   return (
     <div>
