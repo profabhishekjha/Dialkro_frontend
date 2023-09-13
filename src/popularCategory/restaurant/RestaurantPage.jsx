@@ -6,12 +6,12 @@ import CardSection from '../../productList/components/cardSection'
 import { Toaster } from 'react-hot-toast'
 import BannerCarousel from '../../components/Body/Carousel/BannerCarousel'
 const RestaurantPage = () => {
+  const category = 'restaurant' // Category name
   const images = [
-    'Hero_pg1/CarouselImages/doctor.webp',
-    'Hero_pg1/CarouselImages/market.webp',
-    'Hero_pg1/CarouselImages/parcel.webp',
-    'Hero_pg1/CarouselImages/resturant.webp',
-    'Hero_pg1/CarouselImages/transport.webp'
+    `Hero_pg1/Popular/${category}Carousel/${category}1.webp`,
+    `Hero_pg1/Popular/${category}Carousel/${category}2.webp`,
+    `Hero_pg1/Popular/${category}Carousel/${category}3.webp`,
+    `Hero_pg1/Popular/${category}Carousel/${category}4.webp`
   ]
   return (
     <div>

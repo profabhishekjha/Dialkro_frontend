@@ -25,7 +25,7 @@ import ElectronicServicesPage from './repairServices/electronicServices/Electron
 import BridalMakeupPage from './weddingAndBeauty/bridalMakeup/BridalMakeupPage'
 import PhotographyPage from './weddingAndBeauty/photography/PhotographyPage'
 import WeddingPlanningPage from './weddingAndBeauty/weddingPlanning/WeddingPlanningPage'
-import WeddingVenuesPage from './weddingAndBeauty/weddingVenues/weddingVenuesPage'
+import WeddingVenuesPage from './weddingAndBeauty/weddingVenues/WeddingVenuesPage'
 import ProductDetailPage from './ProductDetails/ProductDetailPage'
 import RestaurantPage from './popularCategory/restaurant/RestaurantPage'
 import SubCategoryPage from './popularCategory/restaurant/components/SubCategory/SubCategoryPage'
