@@ -29,6 +29,7 @@ import WeddingVenuesPage from './weddingAndBeauty/weddingVenues/WeddingVenuesPag
 import ProductDetailPage from './ProductDetails/ProductDetailPage'
 import RestaurantPage from './popularCategory/restaurant/RestaurantPage'
 import SubCategoryPage from './popularCategory/restaurant/components/SubCategory/SubCategoryPage'
+import SubCategoryBridalPage from './weddingAndBeauty/bridalMakeup/components/SubCategory/SubCategoryBridalPage'
 
 const router = createBrowserRouter([
   {
@@ -46,10 +47,6 @@ const router = createBrowserRouter([
   {
     path: '/restaurantcategory',
     element: <SubCategoryPage />
-  },
-  {
-    path: '/restaurantcategory/restaurant',
-    element: <RestaurantPage />
   },
   {
     path: '/couriers',
@@ -100,7 +97,7 @@ const router = createBrowserRouter([
     element: <PetShopPage />
   },
   {
-    path: '/acRepairPage',
+    path: '/acRepair',
     element: <AcRepairPage />
   },
   {
@@ -118,6 +115,10 @@ const router = createBrowserRouter([
   {
     path: '/bridalMakeup',
     element: <BridalMakeupPage />
+  },
+  {
+    path: '/bridalMakeupcategory',
+    element: <SubCategoryBridalPage />
   },
   {
     path: '/photography',
