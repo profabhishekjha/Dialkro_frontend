@@ -29,7 +29,7 @@ const BannerCarousel = ({ images, customClasses }) => {
           {slides.map((index) => (
             <div className="banner-embla__slide min-w-0" key={index}>
               <img
-                className="banner-embla__slide__img block w-full  object-cover pt-8"
+                className={`banner-embla__slide__img block w-full object-cover pt-8 ${customClasses}`}
                 src={imageByIndex(index)}
                 alt="Carousel Images"
               />
