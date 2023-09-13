@@ -73,7 +73,7 @@ const SearchBar = () => {
             <AlignmentCards
               images={content.images}
               prompt={content.prompt}
-              onClick={() => handleSuggestionClick}
+              onClick={() => handleSuggestionClick(content)}
             />
           </div>
         ))}

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Page = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [suggestions, setSuggestions] = useState([])
   const [isAllCategoriesOpen, setIsAllCategoriesOpen] = useState(false)
+  const dropdownRef = useRef(null)
   const navigate = useNavigate()
 
   const categories = [
@@ -24,6 +25,13 @@ const Page = () => {
 
     // Add more categories as needed
   ]
+
+  // Function to close the dropdown when clicking outside of it
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsAllCategoriesOpen(false)
+    }
+  }
 
   const handleSearchInputChange = (e) => {
     const query = e.target.value
@@ -75,8 +83,10 @@ const Page = () => {
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyPress)
+    document.addEventListener('click', handleClickOutside)
     return () => {
       window.removeEventListener('keydown', handleKeyPress)
+      document.removeEventListener('click', handleClickOutside)
     }
   }, [])
   return (
@@ -114,6 +124,7 @@ const Page = () => {
           </button>
           <div
             id="dropdown"
+            ref={dropdownRef}
             className={`z-10 ${
               isAllCategoriesOpen ? 'block' : 'hidden'
             } right-100 absolute top-7 mt-8 max-h-60 w-36 divide-y divide-gray-100 overflow-y-auto rounded-lg bg-white shadow dark:bg-white`}>
