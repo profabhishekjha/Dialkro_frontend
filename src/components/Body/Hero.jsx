@@ -54,7 +54,7 @@ const Hero = () => {
 
             <AlignmentCards
               images={'/Hero_pg1/Popular/movers.webp'}
-              prompt={'Packers&Movers'}
+              prompt={'Packers And Movers'}
               onClick={() => {
                 navigate('/movers')
               }}
@@ -62,7 +62,7 @@ const Hero = () => {
 
             <AlignmentCards
               images={'/Hero_pg1/Trending/house.webp'}
-              prompt={'housings'}
+              prompt={'Real-Estate'}
               onClick={() => {
                 navigate('/housings')
               }}
@@ -109,7 +109,7 @@ const Hero = () => {
             />
             <AlignmentCards
               images={'/Hero_pg1/Popular/rentals.webp'}
-              prompt={'rentals'}
+              prompt={'Rent on Hire'}
               onClick={() => {
                 navigate('/rentals')
               }}
