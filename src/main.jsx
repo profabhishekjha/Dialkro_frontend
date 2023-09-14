@@ -27,6 +27,7 @@ import WeddingPlanningPage from './weddingAndBeauty/weddingPlanning/WeddingPlann
 import WeddingVenuesPage from './weddingAndBeauty/weddingVenues/WeddingVenuesPage'
 import ProductDetailPage from './ProductDetails/ProductDetailPage'
 import RestaurantPage from './popularCategory/restaurant/RestaurantPage'
+import RentalsPage from './TrendingCategory/rentals/RentalsPage'
 import SubCategoryRestaurantPage from './popularCategory/restaurant/components/SubCategory/SubCategoryRestaurantPage'
 import SubCategoryBridalPage from './weddingAndBeauty/bridalMakeup/components/SubCategory/SubCategoryBridalPage'
 import SubCategoryRentalPage from './TrendingCategory/rentals/components/SubCategory/SubCategoryrentalPage'
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
   {
     path: '/movers',
     element: <MoversPage />
+  },
+  {
+    path: '/rentals',
+    element: <RentalsPage />
   },
   {
     path: '/rentalcategory',

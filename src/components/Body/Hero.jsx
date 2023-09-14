@@ -113,7 +113,7 @@ const Hero = () => {
 
             <AlignmentCards
               images={'/Hero_pg1/Popular/rentals.webp'}
-              prompt={'Rent and Hire'}
+              prompt={'Rent on Hire'}
               onClick={() => {
                 navigate('/rentalcategory')
               }}
