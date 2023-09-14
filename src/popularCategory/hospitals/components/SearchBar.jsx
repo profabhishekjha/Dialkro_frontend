@@ -10,28 +10,44 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
+      images: '/Hero_pg1/Trending/RentalsSub/carrent.webp',
+      prompt: 'Hospitals'
+    },
+    {
+      images: '/Hero_pg1/Trending/RentalsSub/costumesrent.webp',
+      prompt: 'Children Hospitals'
+    },
+    {
+      images: '/Hero_pg1/Trending/RentalsSub/busrent.webp',
+      prompt: 'ENT Hospitals'
+    },
+    {
+      images: '/Hero_pg1/Trending/RentalsSub/temposrent.webp',
+      prompt: 'Eye Hospitals'
+    },
+    {
+      images: '/Hero_pg1/Trending/RentalsSub/acrent.webp',
+      prompt: 'Maternity Hospitals'
+    },
+    {
+      images: '/Hero_pg1/Trending/RentalsSub/minibusrent.webp',
+      prompt: 'Mental Hospitals'
+    },
+    {
+      images: '/Hero_pg1/Trending/RentalsSub/furniturerent.webp',
+      prompt: 'Multispeciality Hospitals'
+    },
+    {
       images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/beautyparlours.webp',
-      prompt: 'Beauty Parlours'
+      prompt: 'Private Hospitals'
     },
     {
       images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/beautyservices.webp',
-      prompt: 'Beauty Services'
+      prompt: 'Public Hospital'
     },
     {
       images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/bridalmakeup.webp',
-      prompt: 'Bridal Makeup'
-    },
-    {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/bridegroommakeup.webp',
-      prompt: 'Bridegroom Makeup'
-    },
-    {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/salons.webp',
-      prompt: 'Salons'
-    },
-    {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/spas.webp',
-      prompt: 'Spas'
+      prompt: 'Veterinary Hospitals'
     }
   ]
 
@@ -41,7 +57,7 @@ const SearchBar = () => {
 
   const handleSuggestionClick = () => {
     // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/rentals')
+    navigate('/hospitalscategory')
   }
 
   const handleEnterKeyPress = (e) => {
@@ -74,7 +90,7 @@ const SearchBar = () => {
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className="grid items-center justify-center gap-7 max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <AlignmentSubCards
@@ -98,7 +114,7 @@ const SearchBar = () => {
     )
   }
   return (
-    <div className=" container flex flex-col gap-10">
+    <div className="container flex flex-col gap-10">
       <div className="flex items-center justify-center">
         <form className="mt-3 w-96 px-6">
           <div className="relative">
