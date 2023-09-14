@@ -2,8 +2,10 @@ import React from 'react'
 import UserMenu from './UserMenu'
 import MobileUserMenu from '../responsive/mobileUserMenu'
 import Page from '../../productList/components/SearchBar'
+import { useNavigate } from 'react-router-dom'
 
 const Nav = () => {
+  const navigate = useNavigate()
   return (
     <div>
       <main className="fixed z-50 w-full border-b-2 border-slate-200 bg-white shadow-sm">
@@ -17,7 +19,11 @@ const Nav = () => {
                 <Page />
               </li>
               <li>
-                <button className="bg-white text-[14px]  capitalize  text-[#036c93] hover:bg-white hover:text-blue-300">
+                <button
+                  onClick={() => {
+                    navigate('/addbusiness')
+                  }}
+                  className="bg-white text-[14px]  capitalize  text-[#036c93] hover:bg-white hover:text-blue-300">
                   ADD BUSINESS
                 </button>
               </li>
