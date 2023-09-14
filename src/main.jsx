@@ -32,11 +32,16 @@ import SubCategoryRestaurantPage from './popularCategory/restaurant/components/S
 import SubCategoryBridalPage from './weddingAndBeauty/bridalMakeup/components/SubCategory/SubCategoryBridalPage'
 import SubCategoryRentalPage from './TrendingCategory/rentals/components/SubCategory/SubCategoryRentalPage'
 import SubCategoryHospitalPage from './popularCategory/hospitals/components/SubCategory/SubCategoryHospitalPage'
+import BusinessListingForm from './components/Navbar/BusinessListingForm'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />
+  },
+  {
+    path: '/addbusiness',
+    element: <BusinessListingForm />
   },
   {
     path: '/transport',
