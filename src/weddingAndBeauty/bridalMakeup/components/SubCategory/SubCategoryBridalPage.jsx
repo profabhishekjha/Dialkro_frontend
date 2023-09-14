@@ -23,11 +23,11 @@ const SubCategoryBridalPage = () => {
         <div className="ml-24">
           <SearchBar />
         </div>
-        <div className="flex items-center justify-center">
+        {/* <div className="flex items-center justify-center">
           <button className="h-[40px] w-[25vw] rounded-md bg-blue-500 text-white hover:bg-blue-400">
             View All Categories
           </button>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>
