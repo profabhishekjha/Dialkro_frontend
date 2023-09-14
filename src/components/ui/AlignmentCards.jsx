@@ -3,8 +3,8 @@ import React from 'react'
 
 const AlignmentCards = ({ images, prompt, onClick }) => {
   return (
-    <div className="z-10 flex">
-      <div className="relative p-3">
+    <div className="z-10 flex items-center justify-center">
+      <div className="relative p-2">
         <div className=" relative mx-auto h-32 w-48 overflow-hidden rounded-lg bg-white shadow-lg">
           <a href="" onClick={onClick}>
             <img className="h-32 w-full object-cover" src={images} alt="Card Image" />
