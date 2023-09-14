@@ -9,11 +9,11 @@ const CarCarePage = () => {
   const car = 'car'
 
   const images = [
-    `Hero_pg1/Repairs/carCarousel/car (1).webp`,
-    `Hero_pg1/Repairs/${car}Carousel/${car} (2).webp`,
-    `Hero_pg1/Repairs/${car}Carousel/${car} (3).webp`,
-    `Hero_pg1/Repairs/${car}Carousel/${car} (4).webp`,
-    `Hero_pg1/Repairs/${car}Carousel/${car} (5).webp`
+    `Hero_pg1/Repairs/CarCarousel/${car} (1).webp`,
+    `Hero_pg1/Repairs/CarCarousel/${car} (2).webp`,
+    `Hero_pg1/Repairs/CarCarousel/${car} (3).webp`,
+    `Hero_pg1/Repairs/CarCarousel/${car} (4).webp`,
+    `Hero_pg1/Repairs/CarCarousel/${car} (5).webp`
   ]
 
   const navigate = useNavigate()
