@@ -40,7 +40,7 @@ const Hero = () => {
               images={'/Hero_pg1/Popular/hospital.webp'}
               prompt={'Hospitals'}
               onClick={() => {
-                navigate('/hospitals')
+                navigate('/hospitalscategory')
               }}
             />
 

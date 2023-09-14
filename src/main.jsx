@@ -31,6 +31,7 @@ import RentalsPage from './TrendingCategory/rentals/RentalsPage'
 import SubCategoryRestaurantPage from './popularCategory/restaurant/components/SubCategory/SubCategoryRestaurantPage'
 import SubCategoryBridalPage from './weddingAndBeauty/bridalMakeup/components/SubCategory/SubCategoryBridalPage'
 import SubCategoryRentalPage from './TrendingCategory/rentals/components/SubCategory/SubCategoryRentalPage'
+import SubCategoryHospitalPage from './popularCategory/hospitals/components/SubCategory/SubCategoryHospitalPage'
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: '/hospitals',
     element: <HospitalsPage />
+  },
+  {
+    path: '/hospitalscategory',
+    element: <SubCategoryHospitalPage />
   },
   {
     path: '/hotels',
