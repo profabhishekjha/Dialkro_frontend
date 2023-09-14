@@ -28,10 +28,8 @@ const BusinessListingForm = () => {
   }
 
   return (
-    <div className="mt-[20vh] flex items-center justify-center">
-      <form
-        className="redborder container mt-10 h-52 w-1/3 rounded-lg border p-10"
-        onSubmit={handleSubmit}>
+    <div className="flex items-center justify-center">
+      <form className=" container mt-48 w-5/12 rounded-lg border p-10" onSubmit={handleSubmit}>
         <div className="mb-5 text-center">
           <h1 className="text-xl font-light">
             Get your business listed for{' '}
