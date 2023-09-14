@@ -10,44 +10,40 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/Hero_pg1/Trending/RentalsSub/carrent.webp',
+      images: '/hospitals/hospitals.webp',
       prompt: 'Hospitals'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/costumesrent.webp',
+      images: '/hospitals/childrenhospitals.webp',
       prompt: 'Children Hospitals'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/busrent.webp',
+      images: '/hospitals/enthospitals.webp',
       prompt: 'ENT Hospitals'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/temposrent.webp',
+      images: '/hospitals/eyeshospitals.webp',
       prompt: 'Eye Hospitals'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/acrent.webp',
+      images: '/hospitals/maternityhospitals.webp',
       prompt: 'Maternity Hospitals'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/minibusrent.webp',
+      images: '/hospitals/mentalhospitals.webp',
       prompt: 'Mental Hospitals'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/furniturerent.webp',
+      images: '/hospitals/multispecialityhospitals.webp',
       prompt: 'Multispeciality Hospitals'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/beautyparlours.webp',
+      images: '/hospitals/privatehospitals.webp',
       prompt: 'Private Hospitals'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/beautyservices.webp',
+      images: '/hospitals/publichospitals.webp',
       prompt: 'Public Hospital'
-    },
-    {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/bridalmakeup.webp',
-      prompt: 'Veterinary Hospitals'
     }
   ]
 
