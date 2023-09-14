@@ -3,6 +3,7 @@ import Nav from '../../../../components/Navbar/Nav'
 import Footer from '../../../../components/Footer/Footer'
 import SearchBar from '../SearchBar'
 import BannerCarousel from '../../../../components/Body/Carousel/BannerCarousel'
+import Choices from '../Choices'
 
 const SubCategoryRentalPage = () => {
   const images = [
@@ -15,7 +16,10 @@ const SubCategoryRentalPage = () => {
     <div>
       <Nav />
       <BannerCarousel images={images} />
-      <div className="flex items-center justify-center">
+      <div className="mt-5 flex items-center justify-center">
+        <Choices />
+      </div>
+      <div className="mt-10 flex items-center justify-center">
         <SearchBar />
       </div>
       <Footer />

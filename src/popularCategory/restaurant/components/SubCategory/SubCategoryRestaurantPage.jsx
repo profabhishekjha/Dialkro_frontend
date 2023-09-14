@@ -6,13 +6,13 @@ import Choices from '../Choices'
 import BannerCarousel from '../../../../components/Body/Carousel/BannerCarousel'
 
 const SubCategoryRestaurantPage = () => {
-  const resturant = 'resturant'
+  const cateogry = 'resturant'
   const images = [
-    `Hero_pg1/SubCategoryImages/${resturant}Carousel/${resturant} (1).webp`,
-    `Hero_pg1/SubCategoryImages/${resturant}Carousel/${resturant} (2).webp`,
-    `Hero_pg1/SubCategoryImages/${resturant}Carousel/${resturant} (4).webp`,
-    `Hero_pg1/SubCategoryImages/${resturant}Carousel/${resturant} (5).webp`,
-    `Hero_pg1/SubCategoryImages/${resturant}Carousel/${resturant} (6).webp`
+    `Hero_pg1/SubCategoryImages/${cateogry}Carousel/${cateogry} (1).webp`,
+    `Hero_pg1/SubCategoryImages/${cateogry}Carousel/${cateogry} (2).webp`,
+    `Hero_pg1/SubCategoryImages/${cateogry}Carousel/${cateogry} (4).webp`,
+    `Hero_pg1/SubCategoryImages/${cateogry}Carousel/${cateogry} (5).webp`,
+    `Hero_pg1/SubCategoryImages/${cateogry}Carousel/${cateogry} (6).webp`
   ]
   return (
     <div>
@@ -22,13 +22,8 @@ const SubCategoryRestaurantPage = () => {
         <div className="flex items-center justify-center">
           <Choices />
         </div>
-        <div className="ml-24">
-          <SearchBar />
-        </div>
         <div className="flex items-center justify-center">
-          <button className="h-[40px] w-[25vw] rounded-md bg-blue-500 text-white hover:bg-blue-400">
-            View All Categories
-          </button>
+          <SearchBar />
         </div>
       </div>
       <Footer />

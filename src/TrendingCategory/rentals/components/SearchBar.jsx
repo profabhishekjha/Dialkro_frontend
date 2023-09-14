@@ -102,7 +102,7 @@ const SearchBar = () => {
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid grid-cols-5 items-center justify-center gap-7">
+        <div className=" grid grid-cols-5 items-center justify-center gap-7 max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-4 ">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <AlignmentCards
@@ -127,7 +127,7 @@ const SearchBar = () => {
   }
   return (
     <div className=" container flex flex-col gap-10">
-      <div className="flex items-center justify-center">
+      <div className="flex items-start justify-start">
         <form className="mt-3 w-96 px-6">
           <div className="relative">
             <svg
