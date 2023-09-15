@@ -1,7 +1,6 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import './style.css'
 import useEmblaCarousel from 'embla-carousel-react'
-import { PrevButton, NextButton, usePrevNextButtons } from './EmblaCarouselArrowButtons.jsx'
 import Autoplay from 'embla-carousel-autoplay'
 
 const BannerCarousel = ({ images, customClasses }) => {
@@ -11,16 +10,16 @@ const BannerCarousel = ({ images, customClasses }) => {
 
   const imageByIndex = (index) => images[index % images.length]
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
+  const [emblaRef] = useEmblaCarousel(options, [Autoplay()])
 
-  const onButtonClick = useCallback((emblaApi) => {
+  /*   const onButtonClick = useCallback((emblaApi) => {
     const { autoplay } = emblaApi.plugins()
     if (!autoplay) return
     if (autoplay.options.stopOnInteraction === false) autoplay.stop()
   }, [])
 
   const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
-    usePrevNextButtons(emblaApi, onButtonClick)
+    usePrevNextButtons(emblaApi, onButtonClick) */
 
   return (
     <div className={`embla relative pt-10 ${customClasses}`}>
@@ -38,8 +37,8 @@ const BannerCarousel = ({ images, customClasses }) => {
         </div>
       </div>
 
-      <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-      <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+      {/*   <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+      <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} /> */}
     </div>
   )
 }
