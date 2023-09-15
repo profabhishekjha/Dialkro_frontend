@@ -30,7 +30,7 @@ import RestaurantPage from './popularCategory/restaurant/RestaurantPage'
 import RentalsPage from './TrendingCategory/rentals/RentalsPage'
 import SubCategoryRestaurantPage from './popularCategory/restaurant/components/SubCategory/SubCategoryRestaurantPage'
 import SubCategoryBridalPage from './weddingAndBeauty/bridalMakeup/components/SubCategory/SubCategoryBridalPage'
-import SubCategoryRentalPage from './TrendingCategory/rentals/components/SubCategory/SubCategoryRentalPage'
+import SubCategoryRentalPage from './TrendingCategory/rentals/components/SubCategory/SubCategoryRentalPage.jsx'
 import SubCategoryHospitalPage from './popularCategory/hospitals/components/SubCategory/SubCategoryHospitalPage'
 import BusinessListingForm from './components/Navbar/BusinessListingForm'
 
