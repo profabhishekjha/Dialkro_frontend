@@ -7,12 +7,12 @@ import { Toaster } from 'react-hot-toast'
 import BannerCarousel from '../../components/Body/Carousel/BannerCarousel'
 const GymPage = () => {
   const images = [
-    'Hero_pg1/Trending/GymCarousel/gym1.webp',
-    'Hero_pg1/Trending/GymCarousel/gym2.webp',
-    'Hero_pg1/Trending/GymCarousel/gym3.webp',
-    'Hero_pg1/Trending/GymCarousel/gym4.webp',
-    'Hero_pg1/Trending/GymCarousel/gym5.webp',
-    'Hero_pg1/Trending/GymCarousel/gym6.webp'
+    'GymCarousel/gym1.webp',
+    'GymCarousel/gym2.webp',
+    'GymCarousel/gym3.webp',
+    'GymCarousel/gym4.webp',
+    'GymCarousel/gym5.webp',
+    'GymCarousel/gym6.webp'
   ]
 
   const navigate = useNavigate()

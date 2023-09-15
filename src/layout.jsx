@@ -10,11 +10,11 @@ const Layout = () => {
   const location = useLocation()
 
   const images = [
-    'Hero_pg1/CarouselImages/doctor.webp',
-    'Hero_pg1/CarouselImages/market.webp',
-    'Hero_pg1/CarouselImages/parcel.webp',
-    'Hero_pg1/CarouselImages/resturant.webp',
-    'Hero_pg1/CarouselImages/transport.webp'
+    'CarouselImages/doctor.webp',
+    'CarouselImages/market.webp',
+    'CarouselImages/parcel.webp',
+    'CarouselImages/resturant.webp',
+    'CarouselImages/transport.webp'
   ]
   useEffect(() => {
     // Scroll to the top of the page whenever the route changes

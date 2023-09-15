@@ -8,11 +8,11 @@ import BannerCarousel from '../../../../components/Body/Carousel/BannerCarousel'
 const SubCategoryRestaurantPage = () => {
   const cateogry = 'resturant'
   const images = [
-    `Hero_pg1/SubCategoryImages/${cateogry}Carousel/${cateogry} (1).webp`,
-    `Hero_pg1/SubCategoryImages/${cateogry}Carousel/${cateogry} (2).webp`,
-    `Hero_pg1/SubCategoryImages/${cateogry}Carousel/${cateogry} (4).webp`,
-    `Hero_pg1/SubCategoryImages/${cateogry}Carousel/${cateogry} (5).webp`,
-    `Hero_pg1/SubCategoryImages/${cateogry}Carousel/${cateogry} (6).webp`
+    `${cateogry}Carousel/${cateogry} (1).webp`,
+    `${cateogry}Carousel/${cateogry} (2).webp`,
+    `${cateogry}Carousel/${cateogry} (4).webp`,
+    `${cateogry}Carousel/${cateogry} (5).webp`,
+    `${cateogry}Carousel/${cateogry} (6).webp`
   ]
   return (
     <div>

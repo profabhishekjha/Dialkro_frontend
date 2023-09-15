@@ -5,7 +5,7 @@ import { faker } from '@faker-js/faker'
 import { Heart } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 const CardSection = ({ onClick }) => {
-  const [value, setValue] = React.useState(3)
+  const [value] = React.useState(3)
   const [isFavorite, setIsFavorite] = useState(false)
 
   return (

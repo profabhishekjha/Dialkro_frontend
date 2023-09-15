@@ -8,10 +8,10 @@ import BannerCarousel from '../../components/Body/Carousel/BannerCarousel'
 const HotelsPage = () => {
   const category = 'hotel' // Category name
   const images = [
-    `Hero_pg1/Popular/${category}Carousel/${category}1.webp`,
-    `Hero_pg1/Popular/${category}Carousel/${category}2.webp`,
-    `Hero_pg1/Popular/${category}Carousel/${category}3.webp`,
-    `Hero_pg1/Popular/${category}Carousel/${category}4.webp`
+    `${category}Carousel/${category}1.webp`,
+    `${category}Carousel/${category}2.webp`,
+    `${category}Carousel/${category}3.webp`,
+    `${category}Carousel/${category}4.webp`
   ]
   return (
     <div>

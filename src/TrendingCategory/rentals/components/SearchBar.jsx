@@ -10,55 +10,55 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/Hero_pg1/Trending/RentalsSub/carrent.webp',
+      images: 'RentalsSub/carrent.webp',
       prompt: 'Car on Rent'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/costumesrent.webp',
+      images: 'RentalsSub/costumesrent.webp',
       prompt: 'Costumes on Rent'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/busrent.webp',
+      images: 'RentalsSub/busrent.webp',
       prompt: 'Bus on Rent'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/temposrent.webp',
+      images: 'RentalsSub/temposrent.webp',
       prompt: 'Tempos on Rent'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/acrent.webp',
+      images: 'RentalsSub/acrent.webp',
       prompt: 'AC on Rent'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/minibusrent.webp',
+      images: 'RentalsSub/minibusrent.webp',
       prompt: 'Mini Bus on Rent'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/furniturerent.webp',
+      images: 'RentalsSub/furniturerent.webp',
       prompt: 'Furnitures on Rent'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/beautyparlours.webp',
+      images: 'bridalmakeup-sub/beautyparlours.webp',
       prompt: 'Beauty Parlours'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/beautyservices.webp',
+      images: 'bridalmakeup-sub/beautyservices.webp',
       prompt: 'Beauty Services'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/bridalmakeup.webp',
+      images: 'bridalmakeup-sub/bridalmakeup.webp',
       prompt: 'Bridal Makeup'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/bridegroommakeup.webp',
+      images: 'bridalmakeup-sub/bridegroommakeup.webp',
       prompt: 'Bridegroom Makeup'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/salons.webp',
+      images: 'bridalmakeup-sub/salons.webp',
       prompt: 'Salons'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/spas.webp',
+      images: 'bridalmakeup-sub/spas.webp',
       prompt: 'Spas'
     }
   ]

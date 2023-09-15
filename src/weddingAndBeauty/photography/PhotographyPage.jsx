@@ -9,11 +9,11 @@ const PhotographyPage = () => {
   const bridal = 'bridal'
 
   const images = [
-    `Hero_pg1/Wedding&Beauty/${bridal}Carousel/${bridal}5.webp`,
-    `Hero_pg1/Wedding&Beauty/${bridal}Carousel/${bridal}2.webp`,
-    `Hero_pg1/Wedding&Beauty/${bridal}Carousel/${bridal}7.webp`,
-    `Hero_pg1/Wedding&Beauty/${bridal}Carousel/${bridal}6.webp`,
-    `Hero_pg1/Wedding&Beauty/${bridal}Carousel/${bridal}8.webp`
+    `${bridal}Carousel/${bridal}5.webp`,
+    `${bridal}Carousel/${bridal}2.webp`,
+    `${bridal}Carousel/${bridal}7.webp`,
+    `${bridal}Carousel/${bridal}6.webp`,
+    `${bridal}Carousel/${bridal}8.webp`
   ]
 
   const navigate = useNavigate()

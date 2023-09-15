@@ -7,11 +7,11 @@ import BannerCarousel from '../../../../components/Body/Carousel/BannerCarousel'
 const SubCategoryBridalPage = () => {
   const bridal = 'bridal'
   const images = [
-    `Hero_pg1/SubCategoryImages/${bridal}Carousel/${bridal} (1).webp`,
-    `Hero_pg1/SubCategoryImages/${bridal}Carousel/${bridal} (2).webp`,
-    `Hero_pg1/SubCategoryImages/${bridal}Carousel/${bridal} (4).webp`,
-    `Hero_pg1/SubCategoryImages/${bridal}Carousel/${bridal} (5).webp`,
-    `Hero_pg1/SubCategoryImages/${bridal}Carousel/${bridal} (6).webp`
+    `${bridal}Carousel/${bridal} (1).webp`,
+    `${bridal}Carousel/${bridal} (2).webp`,
+    `${bridal}Carousel/${bridal} (4).webp`,
+    `${bridal}Carousel/${bridal} (5).webp`,
+    `${bridal}Carousel/${bridal} (6).webp`
   ]
   return (
     <div>
