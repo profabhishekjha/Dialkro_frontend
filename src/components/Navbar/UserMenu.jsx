@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState, useRef } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import MenuItem from './MenuItem'
 import Avatar from '../Avatar'
-import LoginModal from '../modals/LoginModal' // Import your modal component
+import LoginModal from '../modals/LoginModal'
 import RegisterModal from '../modals/RegisterModal'
 
 const UserMenu = () => {
