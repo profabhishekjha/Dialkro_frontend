@@ -148,6 +148,10 @@ const router = createBrowserRouter([
     element: <WeddingVenuesPage />
   },
   {
+    path: '/restaurant/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
     path: '/transport/Product_Detail',
     element: <ProductDetailPage />
   },
