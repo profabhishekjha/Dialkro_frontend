@@ -7,11 +7,11 @@ import { Toaster } from 'react-hot-toast'
 import BannerCarousel from '../../components/Body/Carousel/BannerCarousel'
 const pestControlPage = () => {
   const images = [
-    'Hero_pg1/Trending/PestCarousel/pest1.webp',
-    'Hero_pg1/Trending/PestCarousel/pest2.webp',
-    'Hero_pg1/Trending/PestCarousel/pest3.webp',
-    'Hero_pg1/Trending/PestCarousel/pest4.webp',
-    'Hero_pg1/Trending/PestCarousel/pest5.webp'
+    'PestCarousel/pest1.webp',
+    'PestCarousel/pest2.webp',
+    'PestCarousel/pest3.webp',
+    'PestCarousel/pest4.webp',
+    'PestCarousel/pest5.webp'
   ]
   const navigate = useNavigate()
   return (

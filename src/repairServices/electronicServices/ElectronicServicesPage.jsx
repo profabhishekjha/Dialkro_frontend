@@ -9,13 +9,13 @@ const ElectronicServicesPage = () => {
   const electronics = 'electronics'
 
   const images = [
-    `Hero_pg1/Repairs/${electronics}Carousel/${electronics} (1).webp`,
-    `Hero_pg1/Repairs/${electronics}Carousel/${electronics} (2).webp`,
-    `Hero_pg1/Repairs/${electronics}Carousel/${electronics} (3).webp`,
-    `Hero_pg1/Repairs/${electronics}Carousel/${electronics} (4).webp`,
-    `Hero_pg1/Repairs/${electronics}Carousel/${electronics} (5).webp`,
-    `Hero_pg1/Repairs/${electronics}Carousel/${electronics} (6).webp`,
-    `Hero_pg1/Repairs/${electronics}Carousel/${electronics} (7).webp`
+    `${electronics}Carousel/${electronics} (1).webp`,
+    `${electronics}Carousel/${electronics} (2).webp`,
+    `${electronics}Carousel/${electronics} (3).webp`,
+    `${electronics}Carousel/${electronics} (4).webp`,
+    `${electronics}Carousel/${electronics} (5).webp`,
+    `${electronics}Carousel/${electronics} (6).webp`,
+    `${electronics}Carousel/${electronics} (7).webp`
   ]
 
   const navigate = useNavigate()

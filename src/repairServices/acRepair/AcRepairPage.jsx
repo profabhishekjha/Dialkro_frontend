@@ -9,11 +9,11 @@ const AcRepairPage = () => {
   const ac = 'ac'
 
   const images = [
-    `Hero_pg1/Repairs/ACCarousel/${ac} (1).webp`,
-    `Hero_pg1/Repairs/ACCarousel/${ac} (2).webp`,
-    `Hero_pg1/Repairs/ACCarousel/${ac} (3).webp`,
-    `Hero_pg1/Repairs/ACCarousel/${ac} (4).webp`,
-    `Hero_pg1/Repairs/ACCarousel/${ac} (5).webp`
+    `ACCarousel/${ac} (1).webp`,
+    `ACCarousel/${ac} (2).webp`,
+    `ACCarousel/${ac} (3).webp`,
+    `ACCarousel/${ac} (4).webp`,
+    `ACCarousel/${ac} (5).webp`
   ]
 
   const navigate = useNavigate()

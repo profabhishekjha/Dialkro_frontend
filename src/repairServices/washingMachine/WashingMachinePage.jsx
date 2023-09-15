@@ -9,11 +9,11 @@ const WashingMachinePage = () => {
   const washing = 'washing'
 
   const images = [
-    `Hero_pg1/Repairs/washingCarousel/${washing} (1).webp`,
-    `Hero_pg1/Repairs/washingCarousel/${washing} (2).webp`,
-    `Hero_pg1/Repairs/washingCarousel/${washing} (3).webp`,
-    `Hero_pg1/Repairs/washingCarousel/${washing} (4).webp`,
-    `Hero_pg1/Repairs/washingCarousel/${washing} (5).webp`
+    `washingCarousel/${washing} (1).webp`,
+    `washingCarousel/${washing} (2).webp`,
+    `washingCarousel/${washing} (3).webp`,
+    `washingCarousel/${washing} (4).webp`,
+    `washingCarousel/${washing} (5).webp`
   ]
 
   const navigate = useNavigate()

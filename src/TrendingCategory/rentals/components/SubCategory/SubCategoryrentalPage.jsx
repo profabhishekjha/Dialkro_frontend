@@ -7,10 +7,10 @@ import Choices from '../Choices'
 
 const SubCategoryRentalPage = () => {
   const images = [
-    '/Hero_pg1/Trending/RentalsSub/carrent.webp',
-    '/Hero_pg1/Trending/RentalsSub/costumesrent.webp',
-    '/Hero_pg1/Trending/RentalsSub/busrent.webp',
-    '/Hero_pg1/Trending/RentalsSub/temposrent.webp'
+    'RentalsSub/carrent.webp',
+    'RentalsSub/costumesrent.webp',
+    'RentalsSub/busrent.webp',
+    'RentalsSub/temposrent.webp'
   ]
   return (
     <div>

@@ -14,7 +14,7 @@ const Hero = () => {
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
             <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7">
               <AlignmentCards
-                images={'/Hero_pg1/Popular/transport.webp'}
+                images={'Popular/transport.webp'}
                 prompt={'Transport'}
                 onClick={() => {
                   navigate('/transport')
@@ -22,7 +22,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Popular/restaurant.webp'}
+                images={'Popular/restaurant.webp'}
                 prompt={'Restaurant'}
                 onClick={() => {
                   navigate('/restaurantcategory')
@@ -30,7 +30,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Popular/couriers.webp'}
+                images={'Popular/couriers.webp'}
                 prompt={'Couriers'}
                 onClick={() => {
                   navigate('/couriers')
@@ -38,7 +38,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Popular/hospital.webp'}
+                images={'Popular/hospital.webp'}
                 prompt={'Hospitals'}
                 onClick={() => {
                   navigate('/hospitalscategory')
@@ -46,7 +46,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Popular/hotel.webp'}
+                images={'Popular/hotel.webp'}
                 prompt={'Hotels'}
                 onClick={() => {
                   navigate('/hotels')
@@ -54,7 +54,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Popular/movers.webp'}
+                images={'Popular/movers.webp'}
                 prompt={'Packers And Movers'}
                 onClick={() => {
                   navigate('/movers')
@@ -62,7 +62,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Trending/house.webp'}
+                images={'Trending/house.webp'}
                 prompt={'Real-Estate'}
                 onClick={() => {
                   navigate('/housings')
@@ -74,7 +74,7 @@ const Hero = () => {
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
             <div className="grid grid-cols-1 items-center justify-center gap-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
               <AlignmentCards
-                images={'/Hero_pg1/Trending/dentist.webp'}
+                images={'Trending/dentist.webp'}
                 prompt={'Dentist'}
                 onClick={() => {
                   navigate('/dentist')
@@ -82,7 +82,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Trending/gyms.webp'}
+                images={'Trending/gyms.webp'}
                 prompt={'gyms'}
                 onClick={() => {
                   navigate('/gym')
@@ -90,7 +90,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Trending/hostels.webp'}
+                images={'Trending/hostels.webp'}
                 prompt={'hostels'}
                 onClick={() => {
                   navigate('/hostels')
@@ -98,7 +98,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Popular/travels.webp'}
+                images={'Popular/travels.webp'}
                 prompt={'travels'}
                 onClick={() => {
                   navigate('/travels')
@@ -106,7 +106,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Trending/pest-control.webp'}
+                images={'Trending/pest-control.webp'}
                 prompt={'pest control'}
                 onClick={() => {
                   navigate('/pestControl')
@@ -114,7 +114,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Popular/rentals.webp'}
+                images={'Popular/rentals.webp'}
                 prompt={'Rent on Hire'}
                 onClick={() => {
                   navigate('/rentalcategory')
@@ -122,7 +122,7 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'/Hero_pg1/Trending/petshop.webp'}
+                images={'Trending/petshop.webp'}
                 prompt={'pet shop'}
                 onClick={() => {
                   navigate('/petshop')
@@ -133,28 +133,28 @@ const Hero = () => {
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
             <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
               <AlignmentCards
-                images={'/Hero_pg1/Repairs/ac repairs.webp'}
+                images={'Repairs/ac repairs.webp'}
                 prompt={'AC repair'}
                 onClick={() => {
                   navigate('/acRepair')
                 }}
               />
               <AlignmentCards
-                images={'/Hero_pg1/Repairs/car care.webp'}
+                images={'Repairs/car care.webp'}
                 prompt={'Car care'}
                 onClick={() => {
                   navigate('/carCare')
                 }}
               />
               <AlignmentCards
-                images={'/Hero_pg1/Repairs/tv repairs.webp'}
+                images={'Repairs/tv repairs.webp'}
                 prompt={'electronics services'}
                 onClick={() => {
                   navigate('/electronicServices')
                 }}
               />
               <AlignmentCards
-                images={'/Hero_pg1/Repairs/washing machine repairs.webp'}
+                images={'Repairs/washing machine repairs.webp'}
                 prompt={'washing machine'}
                 onClick={() => {
                   navigate('/washingMachine')
@@ -167,7 +167,7 @@ const Hero = () => {
             <div className="grid grid-cols-1 items-center justify-center gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {/* give props to the cards and make them dynamic by giving them anchor , desc , name*/}
               <Cards
-                images={'/Hero_pg1/Wedding&Beauty/bridal-makeup.webp'}
+                images={'Wedding&Beauty/bridal-makeup.webp'}
                 heading={'Bridal Makeup'}
                 description={
                   ' Elevate your beauty on your special day with our talented makeup artists, who will tailor a look that reflects your unique style and radiates confidence.'
@@ -177,7 +177,7 @@ const Hero = () => {
                 }}
               />
               <Cards
-                images={'/Hero_pg1/Wedding&Beauty/wedding-photography.webp'}
+                images={'Wedding&Beauty/wedding-photography.webp'}
                 heading={'Wedding Photography'}
                 description={
                   ' Capture timeless moments with our expert photographers, who artfully craft visual narratives that resonate with the emotions and joy of your wedding day.'
@@ -187,7 +187,7 @@ const Hero = () => {
                 }}
               />
               <Cards
-                images={'/Hero_pg1/Wedding&Beauty/wedding-venue.webp'}
+                images={'Wedding&Beauty/wedding-venue.webp'}
                 heading={'Wedding Venues'}
                 description={
                   'Find the perfect backdrop for your love story among our diverse selection of venues, each designed to reflect your style and create lasting memories.'
@@ -197,7 +197,7 @@ const Hero = () => {
                 }}
               />
               <Cards
-                images={'/Hero_pg1/Wedding&Beauty/wedding.webp'}
+                images={'Wedding&Beauty/wedding.webp'}
                 heading={'Wedding Planning'}
                 description={
                   'Let us handle the details for a flawless celebration, from concept to execution, ensuring that every element aligns seamlessly with your dreams and desires.'

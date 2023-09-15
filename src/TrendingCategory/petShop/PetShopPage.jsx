@@ -7,13 +7,13 @@ import { Toaster } from 'react-hot-toast'
 import BannerCarousel from '../../components/Body/Carousel/BannerCarousel'
 const PetShopPage = () => {
   const images = [
-    'Hero_pg1/Trending/PetshopCarousel/pet1.webp',
-    'Hero_pg1/Trending/PetshopCarousel/pet2.webp',
-    'Hero_pg1/Trending/PetshopCarousel/pet3.webp',
-    'Hero_pg1/Trending/PetshopCarousel/pet4.webp',
-    'Hero_pg1/Trending/PetshopCarousel/pet5.webp',
-    'Hero_pg1/Trending/PetshopCarousel/pet6.webp',
-    'Hero_pg1/Trending/PetshopCarousel/pet7.webp'
+    'PetshopCarousel/pet1.webp',
+    'PetshopCarousel/pet2.webp',
+    'PetshopCarousel/pet3.webp',
+    'PetshopCarousel/pet4.webp',
+    'PetshopCarousel/pet5.webp',
+    'PetshopCarousel/pet6.webp',
+    'PetshopCarousel/pet7.webp'
   ]
 
   const navigate = useNavigate()

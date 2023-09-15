@@ -34,31 +34,31 @@ const SearchBar = () => {
       prompt: 'Foodie'
     },
     {
-      images: '/Hero_pg1/Trending/RentalsSub/furniturerent.webp',
+      images: 'RentalsSub/furniturerent.webp',
       prompt: 'Furnitures on Rent'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/beautyparlours.webp',
+      images: 'bridalmakeup-sub/beautyparlours.webp',
       prompt: 'Beauty Parlours'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/beautyservices.webp',
+      images: 'bridalmakeup-sub/beautyservices.webp',
       prompt: 'Beauty Services'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/bridalmakeup.webp',
+      images: 'bridalmakeup-sub/bridalmakeup.webp',
       prompt: 'Bridal Makeup'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/bridegroommakeup.webp',
+      images: 'bridalmakeup-sub/bridegroommakeup.webp',
       prompt: 'Bridegroom Makeup'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/salons.webp',
+      images: 'bridalmakeup-sub/salons.webp',
       prompt: 'Salons'
     },
     {
-      images: '/Hero_pg1/Wedding&Beauty/bridalmakeup-sub/spas.webp',
+      images: 'bridalmakeup-sub/spas.webp',
       prompt: 'Spas'
     }
   ]
