@@ -5,7 +5,12 @@ import Nav from '../components/Navbar/Nav'
 import BannerCarousel from '../components/Body/Carousel/BannerCarousel'
 
 const ProductDetailPage = () => {
-  const images = ['couriers.webp', 'hospital.webp', 'hotel.webp', 'movers.webp']
+  const images = [
+    '/Popular/couriers.webp',
+    '/Popular/hospital.webp',
+    '/Popular/hotel.webp',
+    '/Popular/movers.webp'
+  ]
   return (
     <div>
       <Nav />
