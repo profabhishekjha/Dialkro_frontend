@@ -33,6 +33,10 @@ import SubCategoryBridalPage from './weddingAndBeauty/bridalMakeup/components/Su
 import SubCategoryRentalPage from './TrendingCategory/rentals/components/SubCategory/SubCategoryRentalPage.jsx'
 import SubCategoryHospitalPage from './popularCategory/hospitals/components/SubCategory/SubCategoryHospitalPage'
 import BusinessListingForm from './components/Navbar/BusinessListingForm'
+import SubCategoryCarPage from './repairServices/carCare/components/SubCategory/SubCategoryCarPage'
+import SubCategoryAcPage from './repairServices/acRepair/components/SubCategory/SubCategoryAcPage'
+import SubCategoryWashingMachinePage from './repairServices/washingMachine/components/SubCategory/SubCategoryWashingMachinePage'
+import SubCategoryElectronicPage from './repairServices/electronicServices/components/SubCategory/SubCategoryElectronicPage'
 
 const router = createBrowserRouter([
   {
@@ -116,16 +120,32 @@ const router = createBrowserRouter([
     element: <AcRepairPage />
   },
   {
+    path: '/acRepaircategory',
+    element: <SubCategoryAcPage />
+  },
+  {
     path: '/carCare',
     element: <CarCarePage />
+  },
+  {
+    path: '/carCarecategory',
+    element: <SubCategoryCarPage />
   },
   {
     path: '/electronicServices',
     element: <ElectronicServicesPage />
   },
   {
+    path: '/electronicServicesCategory',
+    element: <SubCategoryElectronicPage />
+  },
+  {
     path: '/washingMachine',
     element: <WashingMachinePage />
+  },
+  {
+    path: '/washingMachineCategory',
+    element: <SubCategoryWashingMachinePage />
   },
   {
     path: '/bridalMakeup',
