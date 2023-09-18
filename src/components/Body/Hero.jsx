@@ -2,6 +2,7 @@ import React from 'react'
 import Cards from '../ui/Cards'
 import AlignmentCards from '../ui/AlignmentCards'
 import { useNavigate } from 'react-router-dom'
+import TopBanner from './TopBanner'
 
 const Hero = () => {
   const navigate = useNavigate()
@@ -10,6 +11,7 @@ const Hero = () => {
       <section className="flex items-center text-black">
         <div className="">
           <div className="mt-[10vh] text-center">
+            <TopBanner />
             <h1 className="text-left text-4xl font-bold">Popular Categories</h1>
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
             <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7">
