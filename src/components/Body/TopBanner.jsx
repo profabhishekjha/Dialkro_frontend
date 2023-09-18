@@ -75,7 +75,7 @@ function TopBanner() {
         <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
           <div
             style={{
-              backgroundImage: `url(b2b.webp)`
+              backgroundImage: `url(TopBannerCarousel/b2b.webp)`
             }}
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
@@ -89,7 +89,7 @@ function TopBanner() {
         <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
           <div
             style={{
-              backgroundImage: `url(home.webp)`
+              backgroundImage: `url(TopBannerCarousel/home.webp)`
             }}
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
@@ -102,7 +102,7 @@ function TopBanner() {
         <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
           <div
             style={{
-              backgroundImage: `url(doctor.webp)`
+              backgroundImage: `url(TopBannerCarousel/doctor.webp)`
             }}
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
