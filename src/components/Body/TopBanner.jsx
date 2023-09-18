@@ -1,19 +1,25 @@
-import { React, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
 
 function TopBanner() {
   const images = [
     {
-      url: 'https://images.unsplash.com/photo-1692698921100-e31dc7453d4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+      url: 'TopBannerCarousel/vege1.webp'
     },
     {
-      url: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1784&q=80'
+      url: 'TopBannerCarousel/vege2.webp'
     },
     {
-      url: 'https://images.unsplash.com/photo-1546213290-e1b492ab3eee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80'
+      url: 'TopBannerCarousel/vege3.webp'
     },
     {
-      url: 'https://images.unsplash.com/photo-1630673163701-a31ca55cb4b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+      url: 'TopBannerCarousel/grocery1.webp'
+    },
+    {
+      url: 'TopBannerCarousel/grocery2.webp'
+    },
+    {
+      url: 'TopBannerCarousel/grocery3.webp'
     }
   ]
 
@@ -32,6 +38,16 @@ function TopBanner() {
     setCurrentIndex(newIndex)
     console.log('rightclicked')
   }
+  useEffect(() => {
+    const autoplayInterval = setInterval(() => {
+      nextImg()
+    }, 4000)
+
+    // Clear the interval when the component unmounts or when currentIndex changes.
+    return () => {
+      clearInterval(autoplayInterval)
+    }
+  }, [currentIndex])
 
   return (
     <>
@@ -49,17 +65,22 @@ function TopBanner() {
           <div className="absolute right-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
             <BsChevronCompactRight size={30} onClick={nextImg} />
           </div>
+          <a
+            href=""
+            className="absolute hidden -translate-y-[12.3rem] translate-x-[20rem]  cursor-pointer rounded-full bg-black/20 p-2 text-4xl font-extrabold uppercase text-white group-hover:block">
+            ORder Now
+          </a>
         </div>
         {/* Non-Sliding Card 1 */}
         <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
           <div
             style={{
-              backgroundImage: `url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)`
+              backgroundImage: `url(b2b.webp)`
             }}
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
               href=""
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-xl font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
               Explore More
             </a>
           </div>
@@ -68,12 +89,25 @@ function TopBanner() {
         <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
           <div
             style={{
-              backgroundImage: `url("https://images.unsplash.com/photo-1694843622261-6acd040beff9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80")`
+              backgroundImage: `url(home.webp)`
             }}
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
               href=""
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-xl font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
+              Explore More
+            </a>
+          </div>
+        </div>
+        <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
+          <div
+            style={{
+              backgroundImage: `url(doctor.webp)`
+            }}
+            className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
+            <a
+              href=""
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
               Explore More
             </a>
           </div>
