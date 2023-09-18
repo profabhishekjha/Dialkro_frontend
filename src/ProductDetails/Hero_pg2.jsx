@@ -2,11 +2,13 @@ import React from 'react'
 import Ratings from './Ratings'
 import { faker } from '@faker-js/faker'
 import RandomStar from './RandomStar'
+import ProductShopDetails from './ProductShopDetails'
+import ProductAds from './ProductAds'
 
 const Hero_pg2 = () => {
   return (
-    <div>
-      <div className="mt-5 grid p-5">
+    <div className="flex">
+      <div className="mt-5 grid w-[1500px] p-5">
         <div className="rounded-xl border p-10">
           <div className="relative mb-10 flex items-center justify-center gap-10 rounded-lg border py-10">
             <div className="relative  h-52 overflow-hidden rounded-lg bg-white shadow-lg">
@@ -101,6 +103,10 @@ const Hero_pg2 = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <ProductShopDetails />
+        <ProductAds />
       </div>
     </div>
   )
