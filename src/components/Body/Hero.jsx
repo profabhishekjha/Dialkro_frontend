@@ -138,28 +138,28 @@ const Hero = () => {
                 images={'Repairs/ac repairs.webp'}
                 prompt={'AC repair'}
                 onClick={() => {
-                  navigate('/acRepair')
+                  navigate('/acRepaircategory')
                 }}
               />
               <AlignmentCards
                 images={'Repairs/car care.webp'}
                 prompt={'Car care'}
                 onClick={() => {
-                  navigate('/carCare')
+                  navigate('/carCarecategory')
                 }}
               />
               <AlignmentCards
                 images={'Repairs/tv repairs.webp'}
                 prompt={'electronics services'}
                 onClick={() => {
-                  navigate('/electronicServices')
+                  navigate('/electronicServicesCategory')
                 }}
               />
               <AlignmentCards
                 images={'Repairs/washing machine repairs.webp'}
                 prompt={'washing machine'}
                 onClick={() => {
-                  navigate('/washingMachine')
+                  navigate('/washingMachineCategory')
                 }}
               />
             </div>
