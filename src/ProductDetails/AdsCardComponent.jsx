@@ -18,17 +18,15 @@ const AdsCardComponent = ({ onClick }) => {
             </div>
           </div>
           <div className="grid w-[300px] gap-1">
-            <div className="">
-              <p onClick={onClick} className="cursor-pointer text-xl font-bold capitalize">
-                {' '}
-                {faker.commerce.productName()}{' '}
-              </p>
-              <p className="cursor-pointer text-lg font-bold uppercase">
-                {faker.company.buzzVerb()}
-              </p>
-              <h1 className="my-2 text-xl font-bold">₹ {faker.commerce.price()}</h1>
-            </div>
-            <div className="flex gap-0">
+            <p onClick={onClick} className="cursor-pointer text-xl font-bold capitalize">
+              {' '}
+              {faker.commerce.productName()}{' '}
+            </p>
+            <p className="text-md cursor-pointer font-medium uppercase">
+              {faker.company.buzzVerb()}
+            </p>
+            <h1 className="my-2 text-xl font-bold">₹ {faker.commerce.price()}</h1>
+            <div className="flex gap-8">
               <a href="">
                 <img src="/socials/telephone.svg" alt="DialKro" className="w-10" />
               </a>
