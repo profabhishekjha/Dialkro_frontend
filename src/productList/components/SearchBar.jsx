@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Page = () => {
+const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [suggestions, setSuggestions] = useState([])
   const [isAllCategoriesOpen, setIsAllCategoriesOpen] = useState(false)
@@ -49,9 +49,9 @@ const Page = () => {
     setSearchQuery(query)
 
     // Filter categories based on the search query
-    const filteredSuggestions = categories.filter((category) =>
-      category.toLowerCase().includes(query.toLowerCase())
-    )
+    const filteredSuggestions = categories
+      .filter((category) => category.toLowerCase().includes(query.toLowerCase()))
+      .map((category) => category.replace(/categories$/i, '').trim())
 
     setSuggestions(filteredSuggestions)
 
@@ -60,15 +60,42 @@ const Page = () => {
   }
 
   const handleCategoryClick = (category) => {
-    navigate(`/${category.toLowerCase()}`)
+    if (category.toLowerCase() === 'hospitals') {
+      // Handle the special case for "Hospitals" with the "categories" suffix
+      navigate(`/${category.toLowerCase()}category`)
+    } else {
+      // Check if the category has the "categories" suffix
+      if (categories.includes(category)) {
+        // Redirect with suffix
+        navigate(`/${category.toLowerCase()}`)
+      } else {
+        // Redirect without suffix
+        const categoryNameWithoutSuffix = category.toLowerCase()
+        navigate(`/${categoryNameWithoutSuffix}`)
+      }
+    }
+
     setSearchQuery('')
     setSuggestions([])
   }
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && suggestions.length > 0) {
-      // Redirect to the first suggestion
-      navigate(`/${suggestions[0].toLowerCase()}`)
+      const selectedCategory = suggestions[0].toLowerCase()
+      if (selectedCategory === 'hospitals') {
+        // Handle the special case for "Hospitals" with the "categories" suffix
+        navigate(`/${selectedCategory}category`)
+      } else {
+        // Check if the category has the "categories" suffix
+        if (categories.includes(selectedCategory)) {
+          // Redirect with suffix
+          navigate(`/${selectedCategory}`)
+        } else {
+          // Redirect without suffix
+          navigate(`/${selectedCategory}`)
+        }
+      }
+
       setSearchQuery('')
       setSuggestions([])
     }
@@ -84,8 +111,21 @@ const Page = () => {
   }
 
   const handleAllCategoryItemClick = (category) => {
-    // Handle click on an item within the "All categories" submenu
-    navigate(`/${category.toLowerCase()}`)
+    const selectedCategory = category.toLowerCase()
+    if (selectedCategory === 'hospitals') {
+      // Handle the special case for "Hospitals" with the "categories" suffix
+      navigate(`/${selectedCategory}category`)
+    } else {
+      // Check if the category has the "categories" suffix
+      if (categories.includes(selectedCategory)) {
+        // Redirect with suffix
+        navigate(`/${selectedCategory}`)
+      } else {
+        // Redirect without suffix
+        navigate(`/${selectedCategory}`)
+      }
+    }
+
     setSearchQuery('')
     setSuggestions([])
   }
@@ -170,7 +210,6 @@ const Page = () => {
               onKeyDown={handleKeyPress}
               onClick={() => setIsSuggestionsOpen(!isSuggestionsOpen)}
               autoComplete="off"
-              required
             />
             <ul
               ref={suggestionsDropdownRef} // Reference to suggestions dropdown
@@ -216,4 +255,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default SearchBar
