@@ -21,15 +21,10 @@ import AcRepairPage from './repairServices/acRepair/AcRepairPage'
 import CarCarePage from './repairServices/carCare/CarCarePage'
 import WashingMachinePage from './repairServices/washingMachine/WashingMachinePage'
 import ElectronicServicesPage from './repairServices/electronicServices/ElectronicServicesPage'
-import BridalMakeupPage from './weddingAndBeauty/bridalMakeup/BridalMakeupPage'
-import PhotographyPage from './weddingAndBeauty/photography/PhotographyPage'
-import WeddingPlanningPage from './weddingAndBeauty/weddingPlanning/WeddingPlanningPage'
-import WeddingVenuesPage from './weddingAndBeauty/weddingVenues/WeddingVenuesPage'
 import ProductDetailPage from './ProductDetails/ProductDetailPage'
 import RestaurantPage from './popularCategory/restaurant/RestaurantPage'
 import RentalsPage from './TrendingCategory/rentals/RentalsPage'
 import SubCategoryRestaurantPage from './popularCategory/restaurant/components/SubCategory/SubCategoryRestaurantPage'
-import SubCategoryBridalPage from './weddingAndBeauty/bridalMakeup/components/SubCategory/SubCategoryBridalPage'
 import SubCategoryRentalPage from './TrendingCategory/rentals/components/SubCategory/SubCategoryRentalPage.jsx'
 import SubCategoryHospitalPage from './popularCategory/hospitals/components/SubCategory/SubCategoryHospitalPage'
 import BusinessListingForm from './components/Navbar/addBusiness/BusinessListingForm'
@@ -39,6 +34,7 @@ import SubCategoryWashingMachinePage from './repairServices/washingMachine/compo
 import SubCategoryElectronicPage from './repairServices/electronicServices/components/SubCategory/SubCategoryElectronicPage'
 import BusinessForm from './components/Navbar/addBusiness/BuisnessForm'
 import PaymentForm from './components/Navbar/addBusiness/PaymentForm'
+import WeddingServices from './otherServices/education/Education'
 
 const router = createBrowserRouter([
   {
@@ -159,24 +155,12 @@ const router = createBrowserRouter([
     element: <SubCategoryWashingMachinePage />
   },
   {
-    path: '/bridalMakeup',
-    element: <BridalMakeupPage />
+    path: '/weddingservices',
+    element: <WeddingServices />
   },
   {
-    path: '/bridalMakeupcategory',
-    element: <SubCategoryBridalPage />
-  },
-  {
-    path: '/photography',
-    element: <PhotographyPage />
-  },
-  {
-    path: '/weddingPlanning',
-    element: <WeddingPlanningPage />
-  },
-  {
-    path: '/weddingvenues',
-    element: <WeddingVenuesPage />
+    path: '/weddingservicesCategory',
+    element: <WeddingServices />
   },
   {
     path: '/restaurant/Product_Detail',
@@ -250,6 +234,7 @@ const router = createBrowserRouter([
     path: '/washingMachine/Product_Detail',
     element: <ProductDetailPage />
   },
+
   {
     path: '/bridalMakeup/Product_Detail',
     element: <ProductDetailPage />

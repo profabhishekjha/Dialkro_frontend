@@ -163,49 +163,16 @@ const Hero = () => {
                 }}
               />
             </div>
-            <h1 className="font-bol my-10 text-left text-4xl">Wedding & Beauty</h1>
+            <h1 className="font-bol my-10 text-left text-4xl">Other Services</h1>
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
 
-            <div className="grid grid-cols-1 items-center justify-center gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
               {/* give props to the cards and make them dynamic by giving them anchor , desc , name*/}
-              <Cards
-                images={'Wedding&Beauty/bridal-makeup.webp'}
-                heading={'Bridal Makeup'}
-                description={
-                  ' Elevate your beauty on your special day with our talented makeup artists, who will tailor a look that reflects your unique style and radiates confidence.'
-                }
+              <AlignmentCards
+                images={'Popular/transport.webp'}
+                prompt={'Wedding Services'}
                 onClick={() => {
-                  navigate('/bridalMakeupcategory')
-                }}
-              />
-              <Cards
-                images={'Wedding&Beauty/wedding-photography.webp'}
-                heading={'Wedding Photography'}
-                description={
-                  ' Capture timeless moments with our expert photographers, who artfully craft visual narratives that resonate with the emotions and joy of your wedding day.'
-                }
-                onClick={() => {
-                  navigate('/photography')
-                }}
-              />
-              <Cards
-                images={'Wedding&Beauty/wedding-venue.webp'}
-                heading={'Wedding Venues'}
-                description={
-                  'Find the perfect backdrop for your love story among our diverse selection of venues, each designed to reflect your style and create lasting memories.'
-                }
-                onClick={() => {
-                  navigate('/weddingVenues')
-                }}
-              />
-              <Cards
-                images={'Wedding&Beauty/wedding.webp'}
-                heading={'Wedding Planning'}
-                description={
-                  'Let us handle the details for a flawless celebration, from concept to execution, ensuring that every element aligns seamlessly with your dreams and desires.'
-                }
-                onClick={() => {
-                  navigate('/weddingPlanning')
+                  navigate('/weddingservices')
                 }}
               />
             </div>
