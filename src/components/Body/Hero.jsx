@@ -169,10 +169,10 @@ const Hero = () => {
             <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
               {/* give props to the cards and make them dynamic by giving them anchor , desc , name*/}
               <AlignmentCards
-                images={'Popular/transport.webp'}
+                images={'Wedding&Beauty/bridal-makeup.webp'}
                 prompt={'Wedding Services'}
                 onClick={() => {
-                  navigate('/weddingservices')
+                  navigate('/weddingservicescategory')
                 }}
               />
             </div>
