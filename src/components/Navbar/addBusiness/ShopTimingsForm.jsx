@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, React } from 'react'
 
 const ShopTimingsForm = () => {
   const initialTiming = '00:00'

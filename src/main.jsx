@@ -39,6 +39,8 @@ import SubCategoryWashingMachinePage from './repairServices/washingMachine/compo
 import SubCategoryElectronicPage from './repairServices/electronicServices/components/SubCategory/SubCategoryElectronicPage'
 import BusinessForm from './components/Navbar/addBusiness/BuisnessForm'
 import PaymentForm from './components/Navbar/addBusiness/PaymentForm'
+import ContactForm from './components/Navbar/addBusiness/ContactForm'
+import ThankYou from './components/Navbar/addBusiness/ThankYou'
 
 const router = createBrowserRouter([
   {
@@ -54,8 +56,16 @@ const router = createBrowserRouter([
     element: <BusinessForm />
   },
   {
+    path: '/contactinfo',
+    element: <ContactForm />
+  },
+  {
     path: '/otherinfo',
     element: <PaymentForm />
+  },
+  {
+    path: '/thankyou',
+    element: <ThankYou />
   },
 
   {

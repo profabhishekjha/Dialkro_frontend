@@ -10,6 +10,8 @@ const BusinessForm = () => {
           Enlist Your
           <span className="bg-yellow-300 px-1">Business</span>
         </h2>
+        <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
+
         <div className="mb-6">
           <label htmlFor="companyName" className="mb-2 block text-sm font-medium text-gray-900">
             Business Name <span className="text-red-700">*</span>
@@ -105,7 +107,7 @@ const BusinessForm = () => {
 
         <button
           type="submit"
-          onClick={() => navigate('/otherinfo')}
+          onClick={() => navigate('/contactinfo')}
           className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto">
           Save & Continue
         </button>
