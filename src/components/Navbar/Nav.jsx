@@ -1,8 +1,8 @@
 import React from 'react'
 import UserMenu from './UserMenu'
 import MobileUserMenu from '../responsive/mobileUserMenu'
-import Page from '../../productList/components/SearchBar'
 import { useNavigate } from 'react-router-dom'
+import SearchBar from '../../productList/components/SearchBar'
 
 const Nav = () => {
   const navigate = useNavigate()
@@ -16,7 +16,7 @@ const Nav = () => {
           <div className=" flex flex-1 items-center justify-end gap-2 md:mt-0 md:gap-10">
             <ul className="flex flex-col gap-10 max-lg:hidden md:flex-row md:items-center">
               <li>
-                <Page />
+                <SearchBar />
               </li>
               <li>
                 <button

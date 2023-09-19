@@ -1,6 +1,34 @@
 import { useState } from 'react'
 
 const ShopTimingsForm = () => {
+  const handleSubmit = async () => {
+    const formData = {
+      timings,
+      closedDays
+    }
+
+    try {
+      const response = await fetch('aapkaURL', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      if (response.ok) {
+        console.log('Data successfully sent to the backend.')
+        // Reset form or perform any other actions upon success
+      } else {
+        console.error('Error sending data to the backend.')
+        // Handle errors accordingly
+      }
+    } catch (error) {
+      console.error('Error sending data to the backend:', error)
+      // Handle errors accordingly
+    }
+  }
+
   const initialTiming = '00:00'
 
   const [timings, setTimings] = useState({
@@ -33,7 +61,7 @@ const ShopTimingsForm = () => {
   }
 
   return (
-    <div className="mb-24 flex flex-col items-center justify-center">
+    <div className="mb-24 flex flex-col items-center justify-center rounded-xl border px-3 py-2">
       <h1 className="px-4 py-5 text-2xl font-semibold">Your Business Days & Hours</h1>
       {Object.keys(closedDays).map((day) => (
         <div className="flex gap-5" key={day}>
