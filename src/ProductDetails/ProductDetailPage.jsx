@@ -6,10 +6,11 @@ import BannerCarousel from '../components/Body/Carousel/BannerCarousel'
 
 const ProductDetailPage = () => {
   const images = [
-    '/Popular/couriers.webp',
-    '/Popular/hospital.webp',
-    '/Popular/hotel.webp',
-    '/Popular/movers.webp'
+    '/CarouselImages/doctor.webp',
+    '/CarouselImages/market.webp',
+    '/CarouselImages/parcel.webp',
+    '/CarouselImages/resturant.webp',
+    '/CarouselImages/transport.webp'
   ]
   return (
     <div>
