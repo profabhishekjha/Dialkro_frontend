@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { faker } from '@faker-js/faker'
-import { toast } from 'react-hot-toast'
+import React from 'react'
+
 import AdsCardComponent from './AdsCardComponent'
 
 const ProductAds = () => {

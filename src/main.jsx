@@ -35,6 +35,10 @@ import SubCategoryElectronicPage from './repairServices/electronicServices/compo
 import BusinessForm from './components/Navbar/addBusiness/BuisnessForm'
 import PaymentForm from './components/Navbar/addBusiness/PaymentForm'
 import WeddingServices from './otherServices/education/Education'
+import ContactForm from './components/Navbar/addBusiness/ContactForm'
+import ThankYou from './components/Navbar/addBusiness/ThankYou'
+import KeywordSelectionForm from './components/Navbar/addBusiness/KeywordSelectionForm'
+
 
 const router = createBrowserRouter([
   {
@@ -50,8 +54,20 @@ const router = createBrowserRouter([
     element: <BusinessForm />
   },
   {
+    path: '/contactinfo',
+    element: <ContactForm />
+  },
+  {
+    path: '/keywordsform',
+    element: <KeywordSelectionForm />
+  },
+  {
     path: '/otherinfo',
     element: <PaymentForm />
+  },
+  {
+    path: '/thankyou',
+    element: <ThankYou />
   },
 
   {

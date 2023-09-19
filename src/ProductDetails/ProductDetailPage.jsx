@@ -10,6 +10,7 @@ const ProductDetailPage = () => {
     '/CarouselImages/market.webp',
     '/CarouselImages/parcel.webp',
     '/CarouselImages/resturant.webp',
+    '/CarouselImages/banner.webp',
     '/CarouselImages/transport.webp'
   ]
   return (

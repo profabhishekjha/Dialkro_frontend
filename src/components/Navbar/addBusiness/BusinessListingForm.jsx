@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import ShopTimingsForm from './ShopTimingsForm'
 import { useNavigate } from 'react-router-dom'
 
 const BusinessListingForm = () => {
@@ -130,7 +129,7 @@ const BusinessListingForm = () => {
               Company URL <span className="text-red-700">*</span>
             </label>
             <input
-              type="url"
+              type="www"
               id="companyURL"
               name="companyURL"
               value={formData.companyURL}
@@ -149,7 +148,6 @@ const BusinessListingForm = () => {
               checked={formData.rememberMe}
               onChange={handleChange}
               className="h-4 w-4 rounded border border-gray-300 bg-gray-50"
-              required
             />
           </div>
           <label htmlFor="remember" className="ml-3 text-sm font-medium text-gray-400">
