@@ -1,6 +1,7 @@
 import React from 'react'
 import AlignmentCards from '../ui/AlignmentCards'
 import { useNavigate } from 'react-router-dom'
+import AlignmentCardsOther from '../ui/AlignmentCardsOther'
 
 const Hero = () => {
   const navigate = useNavigate()
@@ -163,13 +164,41 @@ const Hero = () => {
             <h1 className="font-bol my-10 text-left text-4xl">Other Services</h1>
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
 
-            <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+            <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {/* give props to the cards and make them dynamic by giving them anchor , desc , name*/}
-              <AlignmentCards
-                images={'Popular/transport.webp'}
+              <AlignmentCardsOther
+                images={'Wedding&Beauty/bridal-makeup.webp'}
                 prompt={'Wedding Services'}
                 onClick={() => {
-                  navigate('/weddingservices')
+                  navigate('/weddingservicescategory')
+                }}
+              />
+              <AlignmentCardsOther
+                images={'education/education.webp'}
+                prompt={'Education'}
+                onClick={() => {
+                  navigate('/educationcategory')
+                }}
+              />
+              <AlignmentCardsOther
+                images={'consultant/consultant.webp'}
+                prompt={'Consultant'}
+                onClick={() => {
+                  navigate('/consultantcategory')
+                }}
+              />
+              <AlignmentCardsOther
+                images={'Wedding&Beauty/bridsaal-makeup.webp'}
+                prompt={'other Services'}
+                onClick={() => {
+                  navigate('/weddingservicescategory')
+                }}
+              />
+              <AlignmentCardsOther
+                images={'Wedding&Beauty/bridasaal-makeup.webp'}
+                prompt={'other Services'}
+                onClick={() => {
+                  navigate('/weddingservicescategory')
                 }}
               />
             </div>
