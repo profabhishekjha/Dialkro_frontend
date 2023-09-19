@@ -41,6 +41,7 @@ import BusinessForm from './components/Navbar/addBusiness/BuisnessForm'
 import PaymentForm from './components/Navbar/addBusiness/PaymentForm'
 import ContactForm from './components/Navbar/addBusiness/ContactForm'
 import ThankYou from './components/Navbar/addBusiness/ThankYou'
+import KeywordSelectionForm from './components/Navbar/addBusiness/KeywordSelectionForm'
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: '/contactinfo',
     element: <ContactForm />
+  },
+  {
+    path: '/keywordsform',
+    element: <KeywordSelectionForm />
   },
   {
     path: '/otherinfo',

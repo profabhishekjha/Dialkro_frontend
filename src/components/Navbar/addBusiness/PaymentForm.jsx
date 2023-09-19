@@ -160,7 +160,7 @@ const PaymentForm = () => {
         <div className="mt-6 flex items-center justify-center">
           <button
             type="submit"
-            onClick={() => navigate('/thankyou')}
+            onClick={() => navigate('/keywordsform')}
             className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">
             Submit
           </button>
