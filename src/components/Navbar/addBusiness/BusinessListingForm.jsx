@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ShopTimingsForm from './ShopTimingsForm'
 
 const BusinessListingForm = () => {
   const [formData, setFormData] = useState({
@@ -159,6 +160,8 @@ const BusinessListingForm = () => {
           Submit
         </button>
       </form>
+
+      <ShopTimingsForm />
     </div>
   )
 }
