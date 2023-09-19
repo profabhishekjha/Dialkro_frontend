@@ -10,27 +10,27 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/hospitals/hospitals.webp',
+      images: '/Wedding&Beauty/bridal-makeup.webp',
       prompt: 'Beauty Parlour'
     },
     {
-      images: '/hospitals/childrenhospitals.webp',
+      images: '/Wedding&Beauty/event-organizer.webp',
       prompt: 'Event Organizer'
     },
     {
-      images: '/hospitals/enthospitals.webp',
+      images: '/Wedding&Beauty/catering.webp',
       prompt: 'Catering'
     },
     {
-      images: '/hospitals/eyeshospitals.webp',
-      prompt: 'Tent House'
-    },
-    {
-      images: '/hospitals/maternityhospitals.webp',
+      images: '/Wedding&Beauty/wedding-photography.webp',
       prompt: 'Photographer'
     },
     {
-      images: '/hospitals/mentalhospitals.webp',
+      images: '/Wedding&Beauty/tent.webp',
+      prompt: 'Tent House'
+    },
+    {
+      images: '/Wedding&Beauty/venue.webp',
       prompt: 'Wedding Venues'
     }
   ]
@@ -41,7 +41,7 @@ const SearchBar = () => {
 
   const handleSuggestionClick = () => {
     // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/hospitals')
+    navigate('/weddingservices')
   }
 
   const handleEnterKeyPress = (e) => {
