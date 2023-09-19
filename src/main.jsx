@@ -32,7 +32,7 @@ import SubCategoryRestaurantPage from './popularCategory/restaurant/components/S
 import SubCategoryBridalPage from './weddingAndBeauty/bridalMakeup/components/SubCategory/SubCategoryBridalPage'
 import SubCategoryRentalPage from './TrendingCategory/rentals/components/SubCategory/SubCategoryRentalPage.jsx'
 import SubCategoryHospitalPage from './popularCategory/hospitals/components/SubCategory/SubCategoryHospitalPage'
-import BusinessListingForm from './components/Navbar/BusinessListingForm'
+import BusinessListingForm from './components/Navbar/addBusiness/BusinessListingForm'
 import SubCategoryCarPage from './repairServices/carCare/components/SubCategory/SubCategoryCarPage'
 import SubCategoryAcPage from './repairServices/acRepair/components/SubCategory/SubCategoryAcPage'
 import SubCategoryWashingMachinePage from './repairServices/washingMachine/components/SubCategory/SubCategoryWashingMachinePage'
@@ -47,6 +47,7 @@ const router = createBrowserRouter([
     path: '/addbusiness',
     element: <BusinessListingForm />
   },
+
   {
     path: '/transport',
     element: <TransportPage />
