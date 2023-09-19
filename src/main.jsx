@@ -38,7 +38,7 @@ import WeddingServices from './otherServices/education/Education'
 import ContactForm from './components/Navbar/addBusiness/ContactForm'
 import ThankYou from './components/Navbar/addBusiness/ThankYou'
 import KeywordSelectionForm from './components/Navbar/addBusiness/KeywordSelectionForm'
-
+import SubCategoryWeddingServicesPage from './otherServices/weddingService/components/SubCategory/SubCategoryWeddingServicesPage'
 
 const router = createBrowserRouter([
   {
@@ -175,8 +175,8 @@ const router = createBrowserRouter([
     element: <WeddingServices />
   },
   {
-    path: '/weddingservicesCategory',
-    element: <WeddingServices />
+    path: '/weddingservicescategory',
+    element: <SubCategoryWeddingServicesPage />
   },
   {
     path: '/restaurant/Product_Detail',
