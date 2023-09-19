@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const BuisnessForm = () => {
+const BusinessForm = () => {
+  const navigate = useNavigate()
   return (
     <div className="flex items-center justify-center">
       <form className="container mt-10 rounded-lg border p-10">
@@ -103,6 +105,7 @@ const BuisnessForm = () => {
 
         <button
           type="submit"
+          onClick={() => navigate('/otherinfo')}
           className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto">
           Save & Continue
         </button>
@@ -111,4 +114,4 @@ const BuisnessForm = () => {
   )
 }
 
-export default BuisnessForm
+export default BusinessForm

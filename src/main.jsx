@@ -37,6 +37,8 @@ import SubCategoryCarPage from './repairServices/carCare/components/SubCategory/
 import SubCategoryAcPage from './repairServices/acRepair/components/SubCategory/SubCategoryAcPage'
 import SubCategoryWashingMachinePage from './repairServices/washingMachine/components/SubCategory/SubCategoryWashingMachinePage'
 import SubCategoryElectronicPage from './repairServices/electronicServices/components/SubCategory/SubCategoryElectronicPage'
+import BusinessForm from './components/Navbar/addBusiness/BuisnessForm'
+import PaymentForm from './components/Navbar/addBusiness/PaymentForm'
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
   {
     path: '/addbusiness',
     element: <BusinessListingForm />
+  },
+  {
+    path: '/businessform',
+    element: <BusinessForm />
+  },
+  {
+    path: '/otherinfo',
+    element: <PaymentForm />
   },
 
   {

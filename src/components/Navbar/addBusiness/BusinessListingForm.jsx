@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import ShopTimingsForm from './ShopTimingsForm'
+import { useNavigate } from 'react-router-dom'
 
 const BusinessListingForm = () => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     companyName: '',
     title: '',
@@ -29,7 +31,7 @@ const BusinessListingForm = () => {
   }
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center" onSubmit={() => navigate('/businessform')}>
       <form className=" container mt-48 w-5/12 rounded-lg border p-10" onSubmit={handleSubmit}>
         <div className="mb-5 text-center">
           <h1 className="text-xl font-light">
@@ -160,8 +162,6 @@ const BusinessListingForm = () => {
           Submit
         </button>
       </form>
-
-      <ShopTimingsForm />
     </div>
   )
 }

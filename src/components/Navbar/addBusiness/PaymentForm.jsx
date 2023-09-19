@@ -1,7 +1,9 @@
 import React from 'react'
+import ShopTimingsForm from './ShopTimingsForm'
 const PaymentForm = () => {
   return (
     <div className="red m-10 mx-auto w-4/5 rounded-lg bg-white p-4 shadow-md">
+      <ShopTimingsForm />
       <h2 className="mb-4 p-3 text-center text-3xl font-semibold">
         <span className="bg-yellow-300 px-1">Select Payment Gateways</span> Accepted by you
       </h2>

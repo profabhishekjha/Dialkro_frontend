@@ -33,7 +33,7 @@ const ShopTimingsForm = () => {
   }
 
   return (
-    <div>
+    <div className="mb-24 flex flex-col items-center justify-center">
       <h1 className="px-4 py-5 text-2xl font-semibold">Your Business Days & Hours</h1>
       {Object.keys(closedDays).map((day) => (
         <div className="flex gap-5" key={day}>
@@ -44,6 +44,7 @@ const ShopTimingsForm = () => {
             onChange={(e) => handleTimingChange('openingTime', e.target.value)}
             disabled={closedDays[day]}>
             {/* Options for opening time */}
+
             <option value="00:00">12:00 AM</option>
             <option value="01:00">1:00 AM</option>
             <option value="02:00">2:00 AM</option>
