@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer'
 import Hero from './components/Body/Hero'
 import { Toaster } from 'react-hot-toast'
 import BannerCarousel from './components/Body/Carousel/BannerCarousel'
+import TopBanner from './components/Body/TopBanner'
 
 const Layout = () => {
   const location = useLocation()
@@ -25,7 +26,9 @@ const Layout = () => {
     <div>
       <Toaster />
       <Nav />
+
       <BannerCarousel images={images} />
+      <TopBanner />
       <Hero />
       <Footer />
     </div>

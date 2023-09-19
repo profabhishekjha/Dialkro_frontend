@@ -51,7 +51,7 @@ function TopBanner() {
 
   return (
     <>
-      <div className="flex items-center gap-5">
+      <div className=" mt-10 flex items-center gap-5 px-10">
         <div className=" group relative m-auto h-[50vh] w-full object-cover px-4 py-16 ">
           <div
             style={{
@@ -86,6 +86,19 @@ function TopBanner() {
           </div>
         </div>
         {/* Non-Sliding Card 2 */}
+        <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
+          <div
+            style={{
+              backgroundImage: `url(TopBannerCarousel/home.webp)`
+            }}
+            className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
+            <a
+              href=""
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
+              Explore More
+            </a>
+          </div>
+        </div>
         <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
           <div
             style={{

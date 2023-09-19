@@ -1,34 +1,6 @@
 import { useState, React } from 'react'
 
 const ShopTimingsForm = () => {
-  const handleSubmit = async () => {
-    const formData = {
-      timings,
-      closedDays
-    }
-
-    try {
-      const response = await fetch('aapkaURL', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-
-      if (response.ok) {
-        console.log('Data successfully sent to the backend.')
-        // Reset form or perform any other actions upon success
-      } else {
-        console.error('Error sending data to the backend.')
-        // Handle errors accordingly
-      }
-    } catch (error) {
-      console.error('Error sending data to the backend:', error)
-      // Handle errors accordingly
-    }
-  }
-
   const initialTiming = '00:00'
 
   const [timings, setTimings] = useState({
