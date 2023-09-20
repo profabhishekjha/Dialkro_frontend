@@ -10,20 +10,28 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/Wedding&Beauty/bridal-makeup.webp',
+      images: '/consultant/lawyer.webp',
       prompt: 'Lawyer'
     },
     {
-      images: '/Wedding&Beauty/event-organizer.webp',
-      prompt: 'College'
+      images: '/consultant/ca.webp',
+      prompt: 'Chartered Accountant'
     },
     {
-      images: '/Wedding&Beauty/catering.webp',
-      prompt: 'Tuition'
+      images: '/consultant/catering.webp',
+      prompt: 'Auditors'
     },
     {
-      images: '/Wedding&Beauty/wedding-photography.webp',
-      prompt: 'Computer Class'
+      images: '/consultant/wedding-photography.webp',
+      prompt: 'Income Tax Consultant'
+    },
+    {
+      images: '/consultant/wedding-photography.webp',
+      prompt: 'Valuers'
+    },
+    {
+      images: '/consultant/wedding-photography.webp',
+      prompt: 'GST Compliance Consultant'
     }
   ]
 
