@@ -13,7 +13,7 @@ const AlignmentSubCards = ({ images, prompt, onClick }) => {
             </figcaption>
           </a>
         </div>
-        <h1 className="w-32 overflow-hidden text-xs font-bold capitalize text-slate-500">
+        <h1 className="w-32 overflow-hidden text-center text-xs font-bold capitalize text-slate-500">
           {' '}
           {prompt}
         </h1>
