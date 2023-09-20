@@ -14,7 +14,6 @@ import TravelsPage from './TrendingCategory/travels/TravelsPage'
 import DentistPage from './TrendingCategory/dentist/DentistPage'
 import GymPage from './TrendingCategory/gym/GymPage'
 import HostelsPage from './TrendingCategory/hostels/HostelsPage'
-import HousingsPage from './popularCategory/housings/HousingsPage'
 import PestControlPage from './TrendingCategory/pestControl/PestControlPage'
 import PetShopPage from './TrendingCategory/petShop/PetShopPage'
 import AcRepairPage from './repairServices/acRepair/AcRepairPage'
@@ -34,11 +33,17 @@ import SubCategoryWashingMachinePage from './repairServices/washingMachine/compo
 import SubCategoryElectronicPage from './repairServices/electronicServices/components/SubCategory/SubCategoryElectronicPage'
 import BusinessForm from './components/Navbar/addBusiness/BuisnessForm'
 import PaymentForm from './components/Navbar/addBusiness/PaymentForm'
-import WeddingServices from './otherServices/education/Education'
+import Education from './otherServices/education/Education'
+import WeddingServices from './otherServices/weddingService/WeddingServices'
 import ContactForm from './components/Navbar/addBusiness/ContactForm'
 import ThankYou from './components/Navbar/addBusiness/ThankYou'
 import KeywordSelectionForm from './components/Navbar/addBusiness/KeywordSelectionForm'
 import SubCategoryWeddingServicesPage from './otherServices/weddingService/components/SubCategory/SubCategoryWeddingServicesPage'
+import SubCategoryEducationPage from './otherServices/education/components/SubCategory/SubCategoryEducationPage'
+import SubCategoryConsultantPage from './otherServices/consultant/components/SubCategory/SubCategoryConsultantPage'
+import Consultant from './otherServices/consultant/Consultant'
+import SubCategoryRealEstatePage from './popularCategory/housings/components/SubCategory/SubCategoryRealEstatePage'
+import RealEstatePage from './popularCategory/housings/RealEstatePage'
 
 const router = createBrowserRouter([
   {
@@ -127,8 +132,12 @@ const router = createBrowserRouter([
     element: <HostelsPage />
   },
   {
-    path: '/housings',
-    element: <HousingsPage />
+    path: '/realestate',
+    element: <RealEstatePage />
+  },
+  {
+    path: '/realestatecategory',
+    element: <SubCategoryRealEstatePage />
   },
   {
     path: '/pestControl',
@@ -177,6 +186,22 @@ const router = createBrowserRouter([
   {
     path: '/weddingservicescategory',
     element: <SubCategoryWeddingServicesPage />
+  },
+  {
+    path: '/education',
+    element: <Education />
+  },
+  {
+    path: '/educationcategory',
+    element: <SubCategoryEducationPage />
+  },
+  {
+    path: '/consultant',
+    element: <Consultant />
+  },
+  {
+    path: '/consultantcategory',
+    element: <SubCategoryConsultantPage />
   },
   {
     path: '/restaurant/Product_Detail',

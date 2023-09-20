@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer'
 import CardSection from '../../productList/components/cardSection'
 import { Toaster } from 'react-hot-toast'
 import BannerCarousel from '../../components/Body/Carousel/BannerCarousel'
-const HousingsPage = () => {
+const RealEstatePage = () => {
   const images = [
     'HouseCarousel/house1.webp',
     'HouseCarousel/house2.webp',
@@ -33,4 +33,4 @@ const HousingsPage = () => {
   )
 }
 
-export default HousingsPage
+export default RealEstatePage

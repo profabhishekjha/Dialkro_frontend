@@ -65,7 +65,7 @@ const Hero = () => {
                 images={'Trending/house.webp'}
                 prompt={'Real-Estate'}
                 onClick={() => {
-                  navigate('/housings')
+                  navigate('/realestatecategory')
                 }}
               />
             </div>
