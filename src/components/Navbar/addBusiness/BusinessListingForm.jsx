@@ -34,7 +34,6 @@ const BusinessListingForm = () => {
   return (
     <>
       <Nav />
-
       <div className="flex items-center justify-center" onSubmit={() => navigate('/businessform')}>
         <form className=" container mt-48 w-5/12 rounded-lg border p-10" onSubmit={handleSubmit}>
           <div className="mb-5 text-center">
