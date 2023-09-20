@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+model BuisnessListingForm{
+    id String @id @default(cuid()) @map("_id")
+    createdAt DateTime @default(now())
+    companyName String
+    title String
+    fullName String
+    mobileNumber Int @unique
+    companyEmail  String @unique
+    companyURL String
+    rememberMe Boolean
+}
+
+model BuisnessForm{
+    id String @id @default(cuid()) @map("_id")
+    createdAt    DateTime  @default(now())
+    companyName  String
+    officeAddress  String @unique
+    landmark  String
+    street    String
+    area      String
+    city      String
+    pincode   Int 
+    country   String
+}
+
+model Contact {
+    id String @id @default(cuid()) @map("_id")
+    createdAt    DateTime  @default(now())
+    contactPersons String
+    mobileNumbers Int  @unique
+    tollFreeNumber Int
+    landlineNumber Int  @unique
+    website String
+    email String  @unique
+    facebook String
+    twitter String
+    instagram String
+}
