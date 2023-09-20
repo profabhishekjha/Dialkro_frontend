@@ -45,6 +45,7 @@ import Consultant from './otherServices/consultant/Consultant'
 import SubCategoryRealEstatePage from './popularCategory/housings/components/SubCategory/SubCategoryRealEstatePage'
 import RealEstatePage from './popularCategory/housings/RealEstatePage'
 import Autocare from './automobileparts/Autocare'
+import ProductDetailPageShop from './automobileparts/components/ProductDetails/ProductDetailPageShop'
 
 const router = createBrowserRouter([
   {
@@ -296,6 +297,10 @@ const router = createBrowserRouter([
   {
     path: '/weddingvenues/Product_Detail',
     element: <ProductDetailPage />
+  },
+  {
+    path: '/autocare/Product_Detail',
+    element: <ProductDetailPageShop />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

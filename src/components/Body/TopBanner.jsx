@@ -55,10 +55,10 @@ function TopBanner() {
             style={{
               backgroundImage: `url(${images[currentIndex].url})`
             }}
-            className="flex h-full w-full items-center justify-center rounded-2xl bg-cover bg-center">
+            className=" flex h-full w-full items-center justify-center rounded-2xl bg-cover bg-center duration-500">
             <a
               href=""
-              className="hidden text-4xl font-extrabold text-white duration-500 hover:scale-[1.5] group-hover:block">
+              className=" hidden text-center text-4xl font-extrabold text-white duration-500 hover:scale-[1.5] group-hover:block">
               Order Now!
             </a>
           </div>
