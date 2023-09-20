@@ -10,19 +10,19 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/Wedding&Beauty/bridal-makeup.webp',
+      images: '/education/school.webp',
       prompt: 'School'
     },
     {
-      images: '/Wedding&Beauty/event-organizer.webp',
+      images: '/education/college.webp',
       prompt: 'College'
     },
     {
-      images: '/Wedding&Beauty/catering.webp',
+      images: '/education/tuition.webp',
       prompt: 'Tuition'
     },
     {
-      images: '/Wedding&Beauty/wedding-photography.webp',
+      images: '/education/computer.webp',
       prompt: 'Computer Class'
     }
   ]
@@ -65,7 +65,7 @@ const SearchBar = () => {
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <AlignmentSubCards

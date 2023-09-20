@@ -8,7 +8,7 @@ import BannerCarousel from '../../components/Body/Carousel/BannerCarousel'
 const Consultant = () => {
   const navigate = useNavigate()
 
-  const category = 'hospital' // Category name
+  const category = 'consultant' // Category name
   const images = [
     `${category}Carousel/${category}1.webp`,
     `${category}Carousel/${category}2.webp`,

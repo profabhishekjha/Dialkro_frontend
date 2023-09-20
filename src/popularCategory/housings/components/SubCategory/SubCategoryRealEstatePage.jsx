@@ -5,7 +5,7 @@ import SearchBar from '../SearchBar'
 import BannerCarousel from '../../../../components/Body/Carousel/BannerCarousel'
 
 const SubCategoryRealEstatePage = () => {
-  const category = 'education'
+  const category = 'realestate'
   const images = [
     `${category}Carousel/${category}1.webp`,
     `${category}Carousel/${category}2.webp`,
