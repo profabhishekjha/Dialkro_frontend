@@ -29,14 +29,12 @@ function TopBanner() {
     const IsFirst = currentIndex === 0
     const newIndex = IsFirst ? images.length - 1 : currentIndex - 1
     setCurrentIndex(newIndex)
-    console.log('clicked')
   }
 
   const nextImg = () => {
     const IsFirst = currentIndex === images.length - 1
     const newIndex = IsFirst ? 0 : currentIndex + 1
     setCurrentIndex(newIndex)
-    console.log('rightclicked')
   }
   useEffect(() => {
     const autoplayInterval = setInterval(() => {
@@ -57,7 +55,13 @@ function TopBanner() {
             style={{
               backgroundImage: `url(${images[currentIndex].url})`
             }}
-            className="h-full w-full rounded-2xl bg-cover bg-center  duration-500 "></div>
+            className="flex h-full w-full items-center justify-center rounded-2xl bg-cover bg-center">
+            <a
+              href=""
+              className="hidden text-4xl font-extrabold text-white duration-500 hover:scale-[1.5] group-hover:block">
+              Order Now!
+            </a>
+          </div>
 
           <div className="absolute left-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
             <BsChevronCompactLeft size={30} onClick={prevImg} />
@@ -65,11 +69,6 @@ function TopBanner() {
           <div className="absolute right-5 top-[50%] hidden -translate-x-0 translate-y-[-50%] cursor-pointer rounded-full bg-black/20 p-2 text-2xl text-white group-hover:block">
             <BsChevronCompactRight size={30} onClick={nextImg} />
           </div>
-          <a
-            href=""
-            className="absolute hidden -translate-y-[12.3rem] translate-x-[20rem]  cursor-pointer rounded-full bg-black/20 p-2 text-4xl font-extrabold uppercase text-white group-hover:block">
-            ORder Now
-          </a>
         </div>
         {/* Non-Sliding Card 1 */}
         <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
@@ -80,8 +79,10 @@ function TopBanner() {
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
               href=""
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
-              Explore More
+              className="absolute inset-0 flex items-center  justify-center bg-black bg-opacity-40 text-center text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
+              <p className="grid">
+                Explore <span>More</span>
+              </p>
             </a>
           </div>
         </div>
@@ -89,13 +90,15 @@ function TopBanner() {
         <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
           <div
             style={{
-              backgroundImage: `url(TopBannerCarousel/home.webp)`
+              backgroundImage: `url(TopBannerCarousel/automobile.webp)`
             }}
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
-              href=""
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
-              Explore More
+              href="/autocare"
+              className="absolute inset-0 flex w-full items-center justify-center bg-black bg-opacity-40 text-center text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
+              <p className="grid">
+                AutoMobile <span>Parts</span>
+              </p>
             </a>
           </div>
         </div>
@@ -107,8 +110,10 @@ function TopBanner() {
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
               href=""
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
-              Explore More
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-center text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
+              <p className="grid">
+                Explore <span>More</span>
+              </p>
             </a>
           </div>
         </div>
@@ -120,8 +125,10 @@ function TopBanner() {
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
               href=""
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
-              Explore More
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-center text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
+              <p className="grid">
+                Explore <span>More</span>
+              </p>
             </a>
           </div>
         </div>

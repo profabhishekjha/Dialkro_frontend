@@ -44,6 +44,7 @@ import SubCategoryConsultantPage from './otherServices/consultant/components/Sub
 import Consultant from './otherServices/consultant/Consultant'
 import SubCategoryRealEstatePage from './popularCategory/housings/components/SubCategory/SubCategoryRealEstatePage'
 import RealEstatePage from './popularCategory/housings/RealEstatePage'
+import Autocare from './automobileparts/Autocare'
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
   {
     path: '/businessform',
     element: <BusinessForm />
+  },
+  {
+    path: '/autocare',
+    element: <Autocare />
   },
   {
     path: '/contactinfo',
