@@ -18,19 +18,19 @@ const SearchBar = () => {
       prompt: 'Chartered Accountant'
     },
     {
-      images: '/consultant/catering.webp',
+      images: '/consultant/auditor.webp',
       prompt: 'Auditors'
     },
     {
-      images: '/consultant/wedding-photography.webp',
+      images: '/consultant/incometax.webp',
       prompt: 'Income Tax Consultant'
     },
     {
-      images: '/consultant/wedding-photography.webp',
+      images: '/consultant/valuers.webp',
       prompt: 'Valuers'
     },
     {
-      images: '/consultant/wedding-photography.webp',
+      images: '/consultant/gst.webp',
       prompt: 'GST Compliance Consultant'
     }
   ]

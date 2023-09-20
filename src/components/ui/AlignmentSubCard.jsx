@@ -4,7 +4,7 @@ import React from 'react'
 const AlignmentSubCards = ({ images, prompt, onClick }) => {
   return (
     <div className="z-10 flex">
-      <div className="relative flex h-44 flex-col items-start justify-start p-3">
+      <div className="relative flex h-36 flex-col items-start justify-start p-3">
         <div className="relati  ve h-24 w-32 overflow-hidden rounded-lg bg-white shadow-lg">
           <a onClick={onClick} className="cursor-pointer">
             <img className="h-24 w-full object-cover" src={images} alt="Card Image" />
