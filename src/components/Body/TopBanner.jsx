@@ -94,7 +94,7 @@ function TopBanner() {
             }}
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
-              href="/autocare"
+              href="/autocarecategory"
               className="absolute inset-0 flex w-full items-center justify-center bg-black bg-opacity-40 text-center text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
               <p className="grid">
                 AutoMobile <span>Parts</span>
