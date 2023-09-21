@@ -26,7 +26,7 @@ const BusinessForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
+    console.log(formData)
     // Basic validation for required fields
     if (!formData.companyName || !formData.city || !formData.pincode) {
       alert('Please fill in all required fields.')
@@ -163,7 +163,6 @@ const BusinessForm = () => {
 
           <button
             type="submit"
-            onClick={() => navigate('/contactinfo')}
             className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto">
             Save & Continue
           </button>

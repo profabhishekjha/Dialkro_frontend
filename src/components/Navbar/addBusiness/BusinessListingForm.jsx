@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Nav from '../Nav'
 import Footer from '../../Footer/Footer'
+import toast, { Toaster } from 'react-hot-toast'
+
+const notify = () => {
+  toast.success('Submitted')
+}
 
 const BusinessListingForm = () => {
   const navigate = useNavigate()
@@ -18,7 +23,6 @@ const BusinessListingForm = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target
     const newValue = type === 'checkbox' ? checked : value
-
     setFormData({
       ...formData,
       [name]: newValue
@@ -27,7 +31,7 @@ const BusinessListingForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Add your form submission logic here
+    notify() /* toaster on submit */
     console.log(formData)
   }
 
@@ -166,6 +170,7 @@ const BusinessListingForm = () => {
             Submit
           </button>
         </form>
+        <Toaster />
       </div>
       <Footer />
     </>

@@ -53,11 +53,15 @@ function ContactForm() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault()
-
+    console.log(formData)
     // Perform form validation if needed
-
+    if (!formData.contactPersons || !formData.mobileNumbers) {
+      alert('Please fill in all required fields.')
+    } else {
+      // Navigate to the next page
+      navigate('/otherinfo')
+    }
     // Navigate to the next page
-    navigate('/otherinfo')
   }
 
   return (
@@ -85,7 +89,6 @@ function ContactForm() {
                     placeholder="Amit Grewal"
                     value={value}
                     onChange={(e) => handleInputChange(e, index, 'contactPersons')}
-                    required
                   />
                 </div>
               ))}
@@ -131,7 +134,7 @@ function ContactForm() {
             <label
               htmlFor="tollFreeNumber"
               className="mb-2 block text-sm font-medium text-gray-900">
-              Toll Free Number<span className="text-red-700">*</span>
+              Toll Free Number
             </label>
             <div className="mb-2">
               <input
@@ -141,7 +144,6 @@ function ContactForm() {
                 placeholder="(800) 623-4541"
                 value={formData.tollFreeNumber}
                 onChange={handleInputChange}
-                required
               />
             </div>
           </div>
@@ -160,7 +162,6 @@ function ContactForm() {
               placeholder="00-000-00"
               value={formData.landlineNumber}
               onChange={handleInputChange}
-              required
             />
           </div>
 
