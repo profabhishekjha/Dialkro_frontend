@@ -5,7 +5,7 @@ const BigSubCards = ({ images, title }) => {
     <div className="container p-10">
       <div className="w-[25vw] rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
         <a href="#">
-          <img className="rounded-t-lg" src={images} alt="" />
+          <img className="h-32 w-full rounded-t-lg object-cover" src={images} alt="" />
         </a>
         <div className="p-3 text-center">
           <a href="#">
