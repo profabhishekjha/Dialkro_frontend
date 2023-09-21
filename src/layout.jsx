@@ -26,7 +26,6 @@ const Layout = () => {
     <div>
       <Toaster />
       <Nav />
-
       <BannerCarousel images={images} />
       <TopBanner />
       <Hero />
