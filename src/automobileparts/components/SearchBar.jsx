@@ -9,49 +9,111 @@ const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [visibleContentCount, setVisibleContentCount] = useState(5)
   // Your list of available content
+  const section = 'autocare'
   const availableContent = [
     {
-      images: '/hospitals/hospitals.webp',
-      prompt: 'Hospitals'
+      images: `/${section}/periodicservices.webp`,
+      prompt: 'Periodic Services'
     },
     {
-      images: '/hospitals/childrenhospitals.webp',
-      prompt: 'Children'
+      images: `/${section}/acrepair.webp`,
+      prompt: 'Ac Services'
     },
     {
-      images: '/hospitals/enthospitals.webp',
-      prompt: 'ENT Hospitals'
+      images: `/${section}/batteries.webp`,
+      prompt: 'Batteries'
     },
     {
-      images: '/hospitals/eyeshospitals.webp',
-      prompt: 'Eye Hospitals'
+      images: `/${section}/tyre.webp`,
+      prompt: 'Tyres & Wheel Care'
     },
     {
-      images: '/hospitals/maternityhospitals.webp',
-      prompt: 'Maternity'
+      images: `/${section}/denting.webp`,
+      prompt: 'Denting and Painting'
     },
     {
-      images: '/hospitals/mentalhospitals.webp',
-      prompt: 'Mental Hospitals'
+      images: `/${section}/detailing.webp`,
+      prompt: 'Detailing Services'
     },
     {
-      images: '/hospitals/multispecialityhospitals.webp',
-      prompt: 'Multispeciality'
+      images: `/${section}/carspa.webp`,
+      prompt: 'Car Spa & Cleaning'
     },
     {
-      images: '/hospitals/privatehospitals.webp',
-      prompt: 'Private Hospitals'
+      images: `/${section}/inspection.webp`,
+      prompt: 'Car Inspection'
     },
     {
-      images: '/hospitals/publichospitals.webp',
-      prompt: 'Public Hospital'
+      images: `/${section}/windshields.webp`,
+      prompt: 'Windshields'
+    },
+    {
+      images: `/${section}/suspension.webp`,
+      prompt: 'Suspension & Fitments'
+    }
+  ]
+  const CustomServices = [
+    {
+      images: `/${section}/batteries.webp`,
+      prompt: 'Batteries'
+    },
+    {
+      images: `/${section}/brakes.webp`,
+      prompt: 'Brakes'
+    },
+    {
+      images: `/${section}/acrepair.webp`,
+      prompt: 'Ac Parts'
+    },
+    {
+      images: `/${section}/clutch.webp`,
+      prompt: 'Clutch'
+    },
+    {
+      images: `/${section}/tyre.webp`,
+      prompt: 'Tyres'
+    },
+    {
+      images: `/${section}/steering.webp`,
+      prompt: 'Steering'
+    },
+    {
+      images: `/${section}/goconnect.webp`,
+      prompt: 'GoConnect 2.0'
+    },
+    {
+      images: `/${section}/lights.webp`,
+      prompt: 'Lights'
+    },
+    {
+      images: `/${section}/body.webp`,
+      prompt: 'Body Parts'
+    },
+    {
+      images: `/${section}/windshields.webp`,
+      prompt: 'Glasses'
+    },
+    {
+      images: `/${section}/carspa.webp`,
+      prompt: 'Car Spa'
+    },
+    {
+      images: `/${section}/detailing.webp`,
+      prompt: 'Car Detailing'
     }
   ]
 
   const filteredContent = availableContent.filter((content) =>
     content.prompt.toLowerCase().includes(searchTerm.toLowerCase())
   )
+  const filteredContentCurated = CustomServices.filter((content) =>
+    content.prompt.toLowerCase().includes(searchTerm.toLowerCase())
+  )
 
+  const mergedContent = [...filteredContent, ...filteredContentCurated]
+  const filterContent = mergedContent.filter((content) =>
+    content.prompt.toLowerCase().includes(searchTerm.toLowerCase())
+  )
   const handleSuggestionClick = () => {
     // Handle the card click here, e.g., navigate to the corresponding route
     navigate('/autocare')
@@ -65,14 +127,15 @@ const SearchBar = () => {
   }
   // Function to automatically redirect to the first suggestion
   const redirectToFirstSuggestion = () => {
-    if (filteredContent.length > 0) {
-      handleSuggestionClick(filteredContent[0])
+    const mergedContent = [...filteredContent, ...filteredContentCurated]
+    if (mergedContent.length > 0) {
+      handleSuggestionClick(mergedContent[0])
     }
   }
 
   // Render the filtered content
   const renderFilteredContent = () => {
-    if (filteredContent.length === 0) {
+    if (filterContent.length === 0) {
       return (
         <div className="ml-16 flex items-center justify-center gap-10">
           <p>No matching content found.</p>
@@ -86,27 +149,61 @@ const SearchBar = () => {
     }
 
     return (
-      <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
-          {filteredContent.slice(0, visibleContentCount).map((content, index) => (
-            <div key={index}>
-              <BigSubCards
-                images={content.images}
-                title={content.prompt}
-                onClick={() => handleSuggestionClick(content)}
-              />
+      <div className="flex w-full flex-col gap-16">
+        <div className="flex w-full items-center justify-center">
+          <div className=" flex w-[70%] flex-col items-center justify-center gap-2">
+            <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
+              <p>Car Services Available in Dialkro</p>
             </div>
-          ))}
-        </div>
-        {filteredContent.length > visibleContentCount && (
-          <div className="mt-7 flex items-end justify-end">
-            <button
-              onClick={handleViewMoreClick}
-              className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
-              View More Category
-            </button>
+            <div className="grid items-center justify-center max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              {filteredContent.slice(0, visibleContentCount).map((content, index) => (
+                <div key={index}>
+                  <BigSubCards
+                    images={content.images}
+                    title={content.prompt}
+                    onClick={() => handleSuggestionClick(content)}
+                  />
+                </div>
+              ))}
+            </div>
+            {filteredContent.length > visibleContentCount && (
+              <div className="mt-7 flex items-end justify-end">
+                <button
+                  onClick={handleViewMoreClick}
+                  className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
+                  View More Category
+                </button>
+              </div>
+            )}
           </div>
-        )}
+        </div>
+        <div className="flex w-full items-center justify-center">
+          <div className=" flex w-[70%] flex-col items-center justify-center gap-5">
+            <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
+              <p>Curated Custom Services</p>
+            </div>
+            <div className="grid items-center justify-center max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              {filteredContentCurated.slice(0, visibleContentCount).map((content, index) => (
+                <div key={index}>
+                  <BigSubCards
+                    images={content.images}
+                    title={content.prompt}
+                    onClick={() => handleSuggestionClick(content)}
+                  />
+                </div>
+              ))}
+            </div>
+            {filteredContent.length > visibleContentCount && (
+              <div className="mt-7 flex items-end justify-end">
+                <button
+                  onClick={handleViewMoreClick}
+                  className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
+                  View More Category
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     )
   }
