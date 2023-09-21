@@ -10,27 +10,27 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/b2bCarousel/axe.webp',
+      images: '/homeservice/refrigerator.webp',
       prompt: 'Refrigerator'
     },
     {
-      images: '/b2bCarousel/cabinet.webp',
+      images: '/homeservice/tv.webp',
       prompt: 'Television'
     },
     {
-      images: '/b2bCarousel/commercialfurniture.webp',
+      images: '/homeservice/chimney.webp',
       prompt: 'Chimney'
     },
     {
-      images: '/b2bCarousel/electricalcomponents.webp',
+      images: '/homeservice/RO.webp',
       prompt: 'RO/Water Purifier'
     },
     {
-      images: '/b2bCarousel/handtools.webp',
+      images: '/homeservice/pestcontrol.webp',
       prompt: 'Pest Control'
     },
     {
-      images: '/b2bCarousel/lightbulb.webp',
+      images: '/homeservice/kitchen.webp',
       prompt: ' Kitchen Deep Cleaning'
     }
   ]
@@ -74,7 +74,7 @@ const SearchBar = () => {
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
+        <div className=" grid items-center justify-center gap-0 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <BigSubCards
