@@ -49,6 +49,8 @@ import ProductDetailPageShop from './automobileparts/components/ProductDetails/P
 import SubCategoryAutoPage from './automobileparts/components/SubCategory/SubCategoryAutoPage'
 import B2B from './B2B/B2B'
 import SubCategoryb2bPage from './B2B/components/SubCategory/SubCategoryb2bPage'
+import HomeService from './HomeServices/HomeService'
+import SubCategoryHomeServicePage from './HomeServices/components/SubCategory/SubCategoryHomeServicePage'
 
 const router = createBrowserRouter([
   {
@@ -66,6 +68,22 @@ const router = createBrowserRouter([
   {
     path: '/autocare',
     element: <Autocare />
+  },
+  {
+    path: '/autocare/Product_Detail',
+    element: <ProductDetailPageShop />
+  },
+  {
+    path: '/autocarecategory',
+    element: <SubCategoryAutoPage />
+  },
+  {
+    path: '/homeservices',
+    element: <HomeService />
+  },
+  {
+    path: '/homeservicescategory',
+    element: <SubCategoryHomeServicePage />
   },
   {
     path: '/contactinfo',
@@ -300,14 +318,6 @@ const router = createBrowserRouter([
   {
     path: '/weddingvenues/Product_Detail',
     element: <ProductDetailPage />
-  },
-  {
-    path: '/autocare/Product_Detail',
-    element: <ProductDetailPageShop />
-  },
-  {
-    path: '/autocarecategory',
-    element: <SubCategoryAutoPage />
   },
   {
     path: '/b2bcategory',
