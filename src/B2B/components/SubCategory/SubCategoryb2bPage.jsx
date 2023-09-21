@@ -5,12 +5,11 @@ import SearchBar from '../SearchBar'
 import BannerCarousel from '../../../components/Body/Carousel/BannerCarousel'
 
 const SubCategoryb2bPage = () => {
-  const category = 'autocare' // Category name
+  const category = 'b2b' // Category name
   const images = [
     `${category}Carousel/${category}1.webp`,
     `${category}Carousel/${category}2.webp`,
-    `${category}Carousel/${category}3.webp`,
-    `${category}Carousel/${category}4.webp`
+    `${category}Carousel/${category}3.webp`
   ]
   return (
     <div>

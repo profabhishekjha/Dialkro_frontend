@@ -10,40 +10,104 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/hospitals/hospitals.webp',
-      prompt: 'B@B'
+      images: '/b2bCarousel/axe.webp',
+      prompt: 'Axe'
     },
     {
-      images: '/hospitals/childrenhospitals.webp',
-      prompt: 'Children'
+      images: '/b2bCarousel/cabinet.webp',
+      prompt: 'Cabinet'
     },
     {
-      images: '/hospitals/enthospitals.webp',
-      prompt: 'ENT Hospitals'
+      images: '/b2bCarousel/commercialfurniture.webp',
+      prompt: 'Commercial Furniture'
     },
     {
-      images: '/hospitals/eyeshospitals.webp',
-      prompt: 'Eye Hospitals'
+      images: '/b2bCarousel/electricalcomponents.webp',
+      prompt: 'Electrical Components'
     },
     {
-      images: '/hospitals/maternityhospitals.webp',
-      prompt: 'Maternity'
+      images: '/b2bCarousel/handtools.webp',
+      prompt: 'Hand Tools'
     },
     {
-      images: '/hospitals/mentalhospitals.webp',
-      prompt: 'Mental Hospitals'
+      images: '/b2bCarousel/lightbulb.webp',
+      prompt: ' Light Bulbs'
     },
     {
-      images: '/hospitals/multispecialityhospitals.webp',
-      prompt: 'Multispeciality'
+      images: '/b2bCarousel/protective-equipment.webp',
+      prompt: 'Protective Gear'
     },
     {
-      images: '/hospitals/privatehospitals.webp',
-      prompt: 'Private Hospitals'
+      images: '/b2bCarousel/resistor.webp',
+      prompt: 'Resistors'
     },
     {
-      images: '/hospitals/publichospitals.webp',
-      prompt: 'Public Hospital'
+      images: '/b2bCarousel/scaffolding.webp',
+      prompt: 'Scaffoldings'
+    },
+    {
+      images: '/b2bCarousel/treadmill.webp',
+      prompt: 'Treadmill'
+    },
+    {
+      images: '/b2bCarousel/truckpart.webp',
+      prompt: 'Truck Parts'
+    },
+    {
+      images: '/b2bCarousel/water-pump.webp',
+      prompt: 'Water Pumps'
+    },
+    {
+      images: '/b2bCarousel/clamps.webp',
+      prompt: 'Clamps'
+    },
+    {
+      images: '/b2bCarousel/weightmachine.webp',
+      prompt: 'Weight Machine'
+    },
+    {
+      images: '/b2bCarousel/wheelchair.webp',
+      prompt: 'Wheelchairs'
+    },
+    {
+      images: '/b2bCarousel/hoses.webp',
+      prompt: 'Hoses'
+    },
+    {
+      images: '/b2bCarousel/lubricants.webp',
+      prompt: 'Lubricants'
+    },
+    {
+      images: '/b2bCarousel/nut-bolt.webp',
+      prompt: 'Nut & Bolts'
+    },
+    {
+      images: '/b2bCarousel/package-material.webp',
+      prompt: 'Package Materials'
+    },
+    {
+      images: '/b2bCarousel/plastics.webp',
+      prompt: 'Plastics'
+    },
+    {
+      images: '/b2bCarousel/roofing.webp',
+      prompt: 'Roofing'
+    },
+    {
+      images: '/b2bCarousel/rubber.webp',
+      prompt: 'Rubber'
+    },
+    {
+      images: '/b2bCarousel/stationary.webp',
+      prompt: 'Stationary'
+    },
+    {
+      images: '/b2bCarousel/valves.webp',
+      prompt: 'Valves'
+    },
+    {
+      images: '/b2bCarousel/water-pump.webp',
+      prompt: 'Pumps'
     }
   ]
 
