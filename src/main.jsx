@@ -70,6 +70,18 @@ const router = createBrowserRouter([
     element: <Autocare />
   },
   {
+    path: '/tvservices',
+    element: <Autocare />
+  },
+  {
+    path: '/refrigeratorservices',
+    element: <Autocare />
+  },
+  {
+    path: '/kitchenservices',
+    element: <Autocare />
+  },
+  {
     path: '/autocare/Product_Detail',
     element: <ProductDetailPageShop />
   },
