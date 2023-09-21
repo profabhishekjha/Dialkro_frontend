@@ -3,10 +3,10 @@ import React from 'react'
 
 const Cards = ({ images, heading, description, onClick }) => {
   return (
-    <div>
-      <div className="max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
+    <div onClick={onClick} className=" cursor-pointer">
+      <div className="redborder max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-blue-800 hover:dark:bg-blue-600">
         <a href="#">
-          <img className="rounded-t-lg" src={images} alt="lorem" />
+          <img className="h-60 rounded-t-lg" src={images} alt="lorem" />
         </a>
         <div className="p-5">
           <a href="#">
@@ -14,10 +14,10 @@ const Cards = ({ images, heading, description, onClick }) => {
               {heading}
             </h5>
           </a>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+          <p className=" mb-3 w-48 font-normal text-white dark:text-white">{description}</p>
           <a
             href="#"
-            className="inline-flex items-center rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="inline-flex items-center rounded-lg bg-black px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-black dark:bg-black dark:hover:bg-neutral-800 dark:focus:ring-blue-800"
             onClick={onClick}>
             Explore More
             <svg
