@@ -112,19 +112,25 @@ const SearchBar = () => {
                 images={`/homeservice/tv.webp`}
                 heading={`Television`}
                 description={'We offer one of the best TV services in India'}
-                onClick
+                onClick={() => {
+                  navigate('/tvservices')
+                }}
               />
               <Cards
                 images={`/homeservice/refrigerator.webp`}
                 heading={`Refrigerator`}
-                description={'We offer one of the best TV services in India'}
-                onClick
+                description={'We offer one of the best Refrigerator services in India'}
+                onClick={() => {
+                  navigate('/refrigeratorservices')
+                }}
               />
               <Cards
                 images={`/homeservice/kitchen.webp`}
                 heading={`Kitchen Deep Cleaning`}
-                description={'We offer one of the best TV services in India'}
-                onClick
+                description={'We offer one of the best Home Services services in India'}
+                onClick={() => {
+                  navigate('/kitchenservices')
+                }}
               />
             </div>
           </div>
