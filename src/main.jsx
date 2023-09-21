@@ -47,6 +47,8 @@ import RealEstatePage from './popularCategory/housings/RealEstatePage'
 import Autocare from './automobileparts/Autocare'
 import ProductDetailPageShop from './automobileparts/components/ProductDetails/ProductDetailPageShop'
 import SubCategoryAutoPage from './automobileparts/components/SubCategory/SubCategoryAutoPage'
+import B2B from './B2B/B2B'
+import SubCategoryb2bPage from './B2B/components/SubCategory/SubCategoryb2bPage'
 
 const router = createBrowserRouter([
   {
@@ -306,6 +308,14 @@ const router = createBrowserRouter([
   {
     path: '/autocarecategory',
     element: <SubCategoryAutoPage />
+  },
+  {
+    path: '/b2bcategory',
+    element: <SubCategoryb2bPage />
+  },
+  {
+    path: '/b2b',
+    element: <B2B />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

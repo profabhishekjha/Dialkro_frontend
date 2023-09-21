@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import AlignmentSubCards from '../../components/ui/AlignmentSubCard'
 import BigSubCards from '../../components/ui/BigSubCards'
 
 const SearchBar = () => {
@@ -12,7 +11,7 @@ const SearchBar = () => {
   const availableContent = [
     {
       images: '/hospitals/hospitals.webp',
-      prompt: 'Hospitals'
+      prompt: 'B@B'
     },
     {
       images: '/hospitals/childrenhospitals.webp',
@@ -54,7 +53,7 @@ const SearchBar = () => {
 
   const handleSuggestionClick = () => {
     // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/autocare')
+    navigate('/b2b')
   }
 
   const handleEnterKeyPress = (e) => {
