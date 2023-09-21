@@ -11,6 +11,7 @@ const SubCategoryHomeServicePage = () => {
     `${category}Carousel/${category}2.webp`,
     `${category}Carousel/${category}3.webp`
   ]
+
   return (
     <div>
       <Nav />
