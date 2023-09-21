@@ -2,11 +2,12 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BigSubCards from '../../components/ui/BigSubCards'
+import Cards from '../../components/ui/Cards'
 
 const SearchBar = () => {
   const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState('')
-  const [visibleContentCount, setVisibleContentCount] = useState(5)
+  const [visibleContentCount, setVisibleContentCount] = useState(6)
   // Your list of available content
   const availableContent = [
     {
@@ -31,7 +32,7 @@ const SearchBar = () => {
     },
     {
       images: '/homeservice/kitchen.webp',
-      prompt: ' Kitchen Deep Cleaning'
+      prompt: 'Kitchen Deep Cleaning'
     }
   ]
 
@@ -68,32 +69,66 @@ const SearchBar = () => {
     }
 
     const handleViewMoreClick = () => {
-      // Show 5 more cards when the "View More" button is clicked
-      setVisibleContentCount((prevCount) => prevCount + 5)
+      // Show 6 more cards when the "View More" button is clicked
+      setVisibleContentCount((prevCount) => prevCount + 6)
     }
 
     return (
-      <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-0 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          {filteredContent.slice(0, visibleContentCount).map((content, index) => (
-            <div key={index}>
-              <BigSubCards
-                images={content.images}
-                title={content.prompt}
-                onClick={() => handleSuggestionClick(content)}
+      <div className="flex w-full flex-col gap-16">
+        <div className=" flex w-full items-center justify-center">
+          <div className=" flex w-[80%] flex-col items-center justify-center gap-5">
+            <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
+              <p>Dialkro's Home Services</p>
+            </div>
+            <div className="grid items-center justify-center gap-4 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+              {filteredContent.slice(0, visibleContentCount).map((content, index) => (
+                <div key={index}>
+                  <BigSubCards
+                    images={content.images}
+                    title={content.prompt}
+                    onClick={() => handleSuggestionClick(content)}
+                  />
+                </div>
+              ))}
+            </div>
+            {filteredContent.length > visibleContentCount && (
+              <div className="mt-7 flex items-end justify-end">
+                <button
+                  onClick={handleViewMoreClick}
+                  className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
+                  View More Category
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className=" flex w-full flex-col items-center justify-center">
+          <div className="flex w-[80%] flex-col items-center justify-center gap-5">
+            <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
+              <p>Dialkro's Most Popular Services</p>
+            </div>
+            <div className="grid items-center justify-center gap-20 max-sm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              <Cards
+                images={`/homeservice/tv.webp`}
+                heading={`Television`}
+                description={'We offer one of the best TV services in India'}
+                onClick
+              />
+              <Cards
+                images={`/homeservice/refrigerator.webp`}
+                heading={`Refrigerator`}
+                description={'We offer one of the best TV services in India'}
+                onClick
+              />
+              <Cards
+                images={`/homeservice/kitchen.webp`}
+                heading={`Kitchen Deep Cleaning`}
+                description={'We offer one of the best TV services in India'}
+                onClick
               />
             </div>
-          ))}
-        </div>
-        {filteredContent.length > visibleContentCount && (
-          <div className="mt-7 flex items-end justify-end">
-            <button
-              onClick={handleViewMoreClick}
-              className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
-              View More Category
-            </button>
           </div>
-        )}
+        </div>
       </div>
     )
   }
