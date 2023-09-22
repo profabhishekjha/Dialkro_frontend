@@ -4,14 +4,15 @@ import MobileUserMenu from '../responsive/mobileUserMenu'
 import { useNavigate } from 'react-router-dom'
 import SearchBar from '../../productList/components/SearchBar'
 
-const Nav = () => {
+const Nav = ({ services }) => {
   const navigate = useNavigate()
   return (
     <div>
       <main className="fixed z-50 w-full border-b-2 border-slate-200 bg-white shadow-sm">
         <nav className="mx-4 my-2 flex flex-col md:mx-8 md:flex-row lg:mx-16">
-          <a href="/">
+          <a href="/" className="flex items-center justify-center gap-2">
             <img src="/logo.svg" alt="logo" className="h-12 w-24 " />
+            <p className=" text-xl font-bold text-blue-800 ">{services}</p>
           </a>
           <div className=" flex flex-1 items-center justify-end gap-2 md:mt-0 md:gap-10">
             <ul className="flex flex-col gap-10 max-lg:hidden md:flex-row md:items-center">
