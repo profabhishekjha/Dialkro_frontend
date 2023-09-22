@@ -13,10 +13,22 @@ const ProductDetailPage = () => {
     '/CarouselImages/banner.webp',
     '/CarouselImages/transport.webp'
   ]
+
+  const subcategoryContent = {
+    southindian: <SushiComponent />,
+    market: <MarketComponent />,
+    parcel: <ParcelComponent />,
+    restaurant: <RestaurantComponent />,
+    banner: <BannerComponent />,
+    transport: <TransportComponent />
+    // Add more subcategories as needed
+  }
+
   return (
     <div>
       <Nav />
       <BannerCarousel images={images} />
+
       <Hero_pg2 />
       <Footer />
     </div>

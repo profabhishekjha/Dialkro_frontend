@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer'
 import { Toaster } from 'react-hot-toast'
 import BannerCarousel from '../components/Body/Carousel/BannerCarousel'
 import CardSectionshop from './components/cardSectionshop'
+import NavbarXpert from '../components/Navbar/NavbarXpert'
 const HomeService = () => {
   const navigate = useNavigate()
 
@@ -19,7 +20,7 @@ const HomeService = () => {
     <div>
       <Outlet />
       <Toaster />
-      <Nav />
+      <Nav services={`Services`} />
       <BannerCarousel images={images} />
       <div className=" my-5 grid  items-center justify-center gap-5">
         <CardSectionshop onClick={() => navigate('/autocare/Product_Detail')} />

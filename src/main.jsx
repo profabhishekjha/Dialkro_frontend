@@ -55,16 +55,19 @@ import SubCategoryHomeServicePage from './HomeServices/components/SubCategory/Su
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />
+    element: <Layout />,
+    children: [
+      {
+        path: '/addbusiness',
+        element: <BusinessListingForm />
+      },
+      {
+        path: '/businessform',
+        element: <BusinessForm />
+      }
+    ]
   },
-  {
-    path: '/addbusiness',
-    element: <BusinessListingForm />
-  },
-  {
-    path: '/businessform',
-    element: <BusinessForm />
-  },
+
   {
     path: '/autocare',
     element: <Autocare />

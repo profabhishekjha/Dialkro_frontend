@@ -3,6 +3,7 @@ import Nav from '../../../components/Navbar/Nav'
 import Footer from '../../../components/Footer/Footer'
 import SearchBar from '../SearchBar'
 import BannerCarousel from '../../../components/Body/Carousel/BannerCarousel'
+import NavbarXpert from '../../../components/Navbar/NavbarXpert'
 
 const SubCategoryHomeServicePage = () => {
   const category = 'b2b' // Category name
@@ -14,7 +15,7 @@ const SubCategoryHomeServicePage = () => {
 
   return (
     <div>
-      <Nav />
+      <Nav services={`Services`} />
       <BannerCarousel images={images} />
 
       <div className="mt-10 flex items-center justify-center">

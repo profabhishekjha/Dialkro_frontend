@@ -3,6 +3,7 @@ import Footer from '../../../components/Footer/Footer'
 import Hero_pg2 from './Hero_pg2'
 import Nav from '../../../components/Navbar/Nav'
 import BannerCarousel from '../../../components/Body/Carousel/BannerCarousel'
+import NavbarXpert from '../../../components/Navbar/NavbarXpert'
 
 const ProductDetailPageShop = () => {
   const images = [
@@ -15,7 +16,7 @@ const ProductDetailPageShop = () => {
   ]
   return (
     <div>
-      <Nav />
+      <Nav services={`Services`} />
       <BannerCarousel images={images} />
       <Hero_pg2 />
       <Footer />
