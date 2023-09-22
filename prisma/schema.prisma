@@ -13,7 +13,6 @@ datasource db {
 
 model BuisnessListingForm{
     id String @id @default(cuid()) @map("_id")
-    createdAt DateTime @default(now())
     companyName String
     title String
     fullName String
