@@ -4,7 +4,7 @@ import Hero_pg2 from './Hero_pg2'
 import Nav from '../../../components/Navbar/Nav'
 import BannerCarousel from '../../../components/Body/Carousel/BannerCarousel'
 
-const ProductDetailPageShop = () => {
+const ProductDetailb2bPageShop = () => {
   const images = [
     '/CarouselImages/doctor.webp',
     '/CarouselImages/market.webp',
@@ -15,7 +15,7 @@ const ProductDetailPageShop = () => {
   ]
   return (
     <div>
-      <Nav />
+      <Nav services={`B2B`} />
       <BannerCarousel images={images} />
       <Hero_pg2 />
       <Footer />
@@ -23,4 +23,4 @@ const ProductDetailPageShop = () => {
   )
 }
 
-export default ProductDetailPageShop
+export default ProductDetailb2bPageShop

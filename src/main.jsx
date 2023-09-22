@@ -46,6 +46,7 @@ import SubCategoryRealEstatePage from './popularCategory/housings/components/Sub
 import RealEstatePage from './popularCategory/housings/RealEstatePage'
 import Autocare from './automobileparts/Autocare'
 import ProductDetailPageShop from './automobileparts/components/ProductDetails/ProductDetailPageShop'
+import ProductDetailb2bPageShop from './B2B/components/ProductDetails/ProductDetailPageShop'
 import SubCategoryAutoPage from './automobileparts/components/SubCategory/SubCategoryAutoPage'
 import B2B from './B2B/B2B'
 import SubCategoryb2bPage from './B2B/components/SubCategory/SubCategoryb2bPage'
@@ -55,19 +56,16 @@ import SubCategoryHomeServicePage from './HomeServices/components/SubCategory/Su
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />,
-    children: [
-      {
-        path: '/addbusiness',
-        element: <BusinessListingForm />
-      },
-      {
-        path: '/businessform',
-        element: <BusinessForm />
-      }
-    ]
+    element: <Layout />
   },
-
+  {
+    path: '/addbusiness',
+    element: <BusinessListingForm />
+  },
+  {
+    path: '/businessform',
+    element: <BusinessForm />
+  },
   {
     path: '/autocare',
     element: <Autocare />
@@ -341,6 +339,10 @@ const router = createBrowserRouter([
   {
     path: '/b2b',
     element: <B2B />
+  },
+  {
+    path: '/b2b/Product_Detail',
+    element: <ProductDetailb2bPageShop />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

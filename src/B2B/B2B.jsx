@@ -19,14 +19,14 @@ const B2B = () => {
     <div>
       <Outlet />
       <Toaster />
-      <Nav />
+      <Nav services={`B2B`} />
       <BannerCarousel images={images} />
       <div className=" my-5 grid  items-center justify-center gap-5">
-        <CardSectionshop onClick={() => navigate('/autocare/Product_Detail')} />
-        <CardSectionshop onClick={() => navigate('/autocare/Product_Detail')} />
-        <CardSectionshop onClick={() => navigate('/autocare/Product_Detail')} />
-        <CardSectionshop onClick={() => navigate('/autocare/Product_Detail')} />
-        <CardSectionshop onClick={() => navigate('/autocare/Product_Detail')} />
+        <CardSectionshop onClick={() => navigate('/b2b/Product_Detail')} />
+        <CardSectionshop onClick={() => navigate('/b2b/Product_Detail')} />
+        <CardSectionshop onClick={() => navigate('/b2b/Product_Detail')} />
+        <CardSectionshop onClick={() => navigate('/b2b/Product_Detail')} />
+        <CardSectionshop onClick={() => navigate('/b2b/Product_Detail')} />
       </div>
       <Footer />
     </div>

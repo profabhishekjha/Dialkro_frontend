@@ -14,16 +14,6 @@ const ProductDetailPage = () => {
     '/CarouselImages/transport.webp'
   ]
 
-  const subcategoryContent = {
-    southindian: <SushiComponent />,
-    market: <MarketComponent />,
-    parcel: <ParcelComponent />,
-    restaurant: <RestaurantComponent />,
-    banner: <BannerComponent />,
-    transport: <TransportComponent />
-    // Add more subcategories as needed
-  }
-
   return (
     <div>
       <Nav />
