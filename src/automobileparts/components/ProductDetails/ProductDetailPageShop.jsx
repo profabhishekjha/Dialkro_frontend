@@ -15,7 +15,7 @@ const ProductDetailPageShop = () => {
   ]
   return (
     <div>
-      <Nav />
+      <Nav services={`Services`} />
       <BannerCarousel images={images} />
       <Hero_pg2 />
       <Footer />
