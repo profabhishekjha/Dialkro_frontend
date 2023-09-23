@@ -50,12 +50,12 @@ function TopBanner() {
   return (
     <>
       <div className=" mt-10 flex items-center gap-5 px-10">
-        <div className=" group relative m-auto h-[50vh] w-full object-cover px-4 py-16 ">
+        <div className="group relative m-auto h-[50vh] w-full overflow-hidden object-cover px-4 py-16 ">
           <div
             style={{
               backgroundImage: `url(${images[currentIndex].url})`
             }}
-            className=" flex h-full w-full items-center justify-center rounded-2xl bg-cover bg-center duration-500">
+            className="flex h-full w-full items-center justify-center overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-105">
             <a
               href=""
               className=" hidden text-center text-4xl font-extrabold text-white duration-500 hover:scale-[1.5] group-hover:block">
