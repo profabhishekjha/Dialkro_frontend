@@ -6,36 +6,24 @@ import AlignmentSubCards from '../../../components/ui/AlignmentSubCard'
 const SearchBar = () => {
   const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState('')
-  const [visibleContentCount, setVisibleContentCount] = useState(5)
+  const [visibleContentCount, setVisibleContentCount] = useState(4)
   // Your list of available content
   const availableContent = [
     {
       images: '/contractor/carpentry.webp',
-      prompt: 'Carpentry Contractors'
+      prompt: 'All Courier Services'
     },
     {
       images: '/contractor/civil.webp',
-      prompt: 'Civil Contractors'
+      prompt: 'International'
     },
     {
       images: '/contractor/electrical.webp',
-      prompt: 'Electrical Contractors'
+      prompt: 'National'
     },
     {
       images: '/contractor/flooring.webp',
-      prompt: 'Flooring Contractors'
-    },
-    {
-      images: '/contractor/furniture.webp',
-      prompt: 'Furniture Contractors'
-    },
-    {
-      images: '/contractor/painting.webp',
-      prompt: 'Painting Contractors'
-    },
-    {
-      images: '/contractor/plumbing.webp',
-      prompt: 'Plumbing Contractors'
+      prompt: 'Bulk Courier'
     }
   ]
 
@@ -72,12 +60,12 @@ const SearchBar = () => {
 
     const handleViewMoreClick = () => {
       // Show 5 more cards when the "View More" button is clicked
-      setVisibleContentCount((prevCount) => prevCount + 5)
+      setVisibleContentCount((prevCount) => prevCount + 4)
     }
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <AlignmentSubCards

@@ -20,7 +20,7 @@ const CouriersPage = () => {
       <Toaster />
       <Nav />
       <BannerCarousel images={images} />
-      <div className=" my-5 grid  items-center justify-center gap-5">
+      <div className=" my-5 grid items-center justify-center gap-5">
         <CardSection onClick={() => navigate('/couriers/Product_Detail')} />
         <CardSection onClick={() => navigate('/couriers/Product_Detail')} />
         <CardSection onClick={() => navigate('/couriers/Product_Detail')} />

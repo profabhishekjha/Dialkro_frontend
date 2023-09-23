@@ -373,7 +373,7 @@ const router = createBrowserRouter([
     element: <SubCategoryCouriersPage />
   },
   {
-    path: '/contractor/Product_Detail',
+    path: '/couriers/Product_Detail',
     element: <ProductDetailPage />
   }
 ])
