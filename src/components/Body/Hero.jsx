@@ -30,10 +30,10 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'Popular/couriers.webp'}
-                prompt={'Couriers'}
+                images={'Popular/astrology.webp'}
+                prompt={'Astrologers'}
                 onClick={() => {
-                  navigate('/couriers')
+                  navigate('/astrologer')
                 }}
               />
 
@@ -188,17 +188,17 @@ const Hero = () => {
                 }}
               />
               <AlignmentCardsOther
-                images={'Wedding&Beauty/bridsaal-makeup.webp'}
-                prompt={'other Services'}
+                images={'contractor/contractor.webp'}
+                prompt={'Contractor'}
                 onClick={() => {
-                  navigate('/weddingservicescategory')
+                  navigate('/contractorcategory')
                 }}
               />
               <AlignmentCardsOther
-                images={'Wedding&Beauty/bridasaal-makeup.webp'}
-                prompt={'other Services'}
+                images={'Popular/couriers.webp'}
+                prompt={'Courier'}
                 onClick={() => {
-                  navigate('/weddingservicescategory')
+                  navigate('/courierscategory')
                 }}
               />
             </div>

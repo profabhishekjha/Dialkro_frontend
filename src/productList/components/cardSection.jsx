@@ -71,7 +71,7 @@ const CardSection = ({ onClick }) => {
             </div>
           </div>
         </div>
-        <div className="mt-8 flex flex-col gap-36">
+        <div className="mt-8 flex flex-col gap-16">
           <Heart
             className="hover:scale-110"
             color={`${isFavorite ? 'red' : 'black'}`}
