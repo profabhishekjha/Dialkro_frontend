@@ -73,7 +73,7 @@ const CardSection = ({ onClick }) => {
         </div>
         <div className="mt-8 flex flex-col gap-36">
           <Heart
-            className=""
+            className="hover:scale-110"
             color={`${isFavorite ? 'red' : 'black'}`}
             fill={`${isFavorite ? 'red' : 'white'}`}
             onClick={() => {
@@ -89,7 +89,9 @@ const CardSection = ({ onClick }) => {
           <div className="flex flex-col gap-5">
             {isLoggedIn ? (
               <>
-                <a href="#" onClick={handlePhoneIconClick} className="relative">
+                <a
+                  onClick={handlePhoneIconClick}
+                  className="relative cursor-pointer hover:scale-110">
                   <img src="/socials/telephone.svg" alt="DialKro" className="w-10" />
                   {openToggle === 'phone' && (
                     <div
@@ -105,7 +107,9 @@ const CardSection = ({ onClick }) => {
                     </div>
                   )}
                 </a>
-                <a href="#" onClick={handleWhatsAppIconClick} className="relative">
+                <a
+                  onClick={handleWhatsAppIconClick}
+                  className="relative cursor-pointer hover:scale-110">
                   <img src="/socials/whatsapp.svg" alt="DialKro" className="w-10" />
                   {openToggle === 'whatsapp' && (
                     <div
