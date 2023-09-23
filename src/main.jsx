@@ -53,6 +53,9 @@ import SubCategoryb2bPage from './B2B/components/SubCategory/SubCategoryb2bPage'
 import HomeService from './HomeServices/HomeService'
 import SubCategoryHomeServicePage from './HomeServices/components/SubCategory/SubCategoryHomeServicePage'
 import LoginModal from './components/modals/LoginModal'
+import Contractor from './otherServices/contractor/Contractor'
+import SubCategoryContractorPage from './otherServices/contractor/components/SubCategory/SubCategoryContractorPage'
+import SubCategoryCouriersPage from './otherServices/couriers/components/SubCategory/SubCategoryCouriersPage'
 
 const router = createBrowserRouter([
   {
@@ -348,6 +351,30 @@ const router = createBrowserRouter([
   {
     path: '/b2b/Product_Detail',
     element: <ProductDetailb2bPageShop />
+  },
+  {
+    path: '/contractor',
+    element: <Contractor />
+  },
+  {
+    path: '/contractorcategory',
+    element: <SubCategoryContractorPage />
+  },
+  {
+    path: '/contractor/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/couriers',
+    element: <CouriersPage />
+  },
+  {
+    path: '/courierscategory',
+    element: <SubCategoryCouriersPage />
+  },
+  {
+    path: '/contractor/Product_Detail',
+    element: <ProductDetailPage />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
