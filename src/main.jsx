@@ -56,6 +56,7 @@ import LoginModal from './components/modals/LoginModal'
 import Contractor from './otherServices/contractor/Contractor'
 import SubCategoryContractorPage from './otherServices/contractor/components/SubCategory/SubCategoryContractorPage'
 import SubCategoryCouriersPage from './otherServices/couriers/components/SubCategory/SubCategoryCouriersPage'
+import AstrologerPage from './popularCategory/astrologer/AstrologerPage'
 
 const router = createBrowserRouter([
   {
@@ -374,6 +375,14 @@ const router = createBrowserRouter([
   },
   {
     path: '/couriers/Product_Detail',
+    element: <ProductDetailPage />
+  },
+  {
+    path: '/astrologer',
+    element: <AstrologerPage />
+  },
+  {
+    path: '/astrologer/Product_Detail',
     element: <ProductDetailPage />
   }
 ])

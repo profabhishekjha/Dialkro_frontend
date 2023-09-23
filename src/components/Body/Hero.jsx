@@ -30,10 +30,10 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'Popular/couriers.webp'}
-                prompt={'Couriers'}
+                images={'Popular/astrology.webp'}
+                prompt={'Astrologers'}
                 onClick={() => {
-                  navigate('/couriers')
+                  navigate('/astrologer')
                 }}
               />
 
