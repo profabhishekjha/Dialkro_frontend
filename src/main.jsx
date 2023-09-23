@@ -52,8 +52,13 @@ import B2B from './B2B/B2B'
 import SubCategoryb2bPage from './B2B/components/SubCategory/SubCategoryb2bPage'
 import HomeService from './HomeServices/HomeService'
 import SubCategoryHomeServicePage from './HomeServices/components/SubCategory/SubCategoryHomeServicePage'
+import LoginModal from './components/modals/LoginModal'
 
 const router = createBrowserRouter([
+  {
+    path: '/signin',
+    element: <LoginModal />
+  },
   {
     path: '/',
     element: <Layout />

@@ -3,8 +3,8 @@ import React from 'react'
 
 function LoginModal({ onClose, onRegisterClick }) {
   const handleRegisterClick = () => {
-    onClose() // Close the LoginModal
-    onRegisterClick() // Open the RegisterModal
+    onClose()
+    onRegisterClick()
   }
   return (
     <div>
@@ -16,7 +16,7 @@ function LoginModal({ onClose, onRegisterClick }) {
           <div className="relative z-50 rounded-lg bg-white shadow dark:bg-gray-700">
             <button
               type="button"
-              className="absolute right-2.5 top-3 ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+              className="absolute right-2.5 top-3 ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-black"
               data-modal-hide="authentication-modal"
               onClick={() => {
                 onClose() // Call the onClose function to close the modal

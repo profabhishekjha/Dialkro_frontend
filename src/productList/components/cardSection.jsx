@@ -4,23 +4,59 @@ import Rating from '@mui/material/Rating'
 import { faker } from '@faker-js/faker'
 import { Heart } from 'lucide-react'
 import { toast } from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
+import LoginModal from '../../components/modals/LoginModal' // Adjust the path as needed
+import RegisterModal from '../../components/modals/RegisterModal' // Adjust the path as needed
+
 const CardSection = ({ onClick }) => {
+  const [isToggleMenuOpen, setIsToggleMenuOpen] = useState(false) // State to control the toggle menu
+  const [phoneNumber, setPhoneNumber] = useState('+1234567890')
   const [value] = React.useState(3)
   const [isFavorite, setIsFavorite] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(true)
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false)
+  const [openToggle, setOpenToggle] = useState(null)
+  const navigate = useNavigate()
+
+  if (isLoggedIn === 'access') {
+    setIsLoggedIn(true)
+  }
+
+  const openRegisterModal = () => {
+    setIsRegisterModalOpen(true)
+  }
+
+  const toggleMenu = (menu) => {
+    if (openToggle === menu) {
+      setOpenToggle(null) // Close the toggle menu if it's already open
+    } else {
+      setOpenToggle(menu) // Open the toggle menu
+    }
+  }
+
+  const handlePhoneIconClick = () => {
+    toggleMenu('phone')
+  }
+
+  const handleWhatsAppIconClick = () => {
+    toggleMenu('whatsapp')
+  }
 
   return (
     <div>
       <div className="container relative flex w-[80vw] rounded-lg border-2">
-        <div className="relative flex gap-5 p-10">
-          <div className="relative mx-auto h-60  overflow-hidden rounded-lg bg-white shadow-lg">
+        <div className=" relative flex w-[95%] gap-5 p-10">
+          <div className=" h-60 w-[300px] overflow-hidden bg-white shadow-lg">
             <img
-              className="h-60 w-full cursor-pointer object-cover"
+              className="h-60 w-full cursor-pointer rounded-lg object-cover"
               onClick={onClick}
               src={faker.image.url()}
               alt="Card Image"
             />
           </div>
-          <div className="grid gap-3">
+
+          <div className="grid w-[40vw] gap-3">
             <div className="">
               <p onClick={onClick} className="cursor-pointer text-xl font-bold capitalize">
                 {' '}
@@ -33,36 +69,100 @@ const CardSection = ({ onClick }) => {
               <p className=" my-2 w-3/4 ">{faker.commerce.productDescription()}</p>
               <h1 className="my-5 text-xl font-bold">₹ {faker.commerce.price()}</h1>
             </div>
-            <div className="flex  gap-5">
-              <a href="">
-                <img src="/socials/telephone.svg" alt="DialKro" className="w-10" />
-              </a>
-              <a href="">
-                <img src="/socials/whatsapp.svg" alt="DialKro" className="w-10" />
-              </a>
-
-              {/* <button className="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500 dark:text-white dark:focus:ring-cyan-800">
-                <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
-                  {' '}
-                  Menu
-                </span>
-              </button> */}
-            </div>
           </div>
         </div>
-        <Heart
-          className="absolute right-10 top-10 cursor-pointer"
-          color={`${isFavorite ? 'red' : 'black'}`}
-          fill={`${isFavorite ? 'red' : 'white'}`}
-          onClick={() => {
-            setIsFavorite(!isFavorite)
-            if (!isFavorite) {
-              toast.success('Added to Favorites')
-            } else {
-              toast.error('Removed from Favourites')
-            }
-          }}
-        />
+        <div className="mt-8 flex flex-col gap-36">
+          <Heart
+            className=""
+            color={`${isFavorite ? 'red' : 'black'}`}
+            fill={`${isFavorite ? 'red' : 'white'}`}
+            onClick={() => {
+              setIsFavorite(!isFavorite)
+              if (!isFavorite) {
+                toast.success('Added to Favorites')
+              } else {
+                toast.error('Removed from Favourites')
+              }
+            }}
+          />
+
+          <div className="flex flex-col gap-5">
+            {isLoggedIn ? (
+              <>
+                <a href="#" onClick={handlePhoneIconClick} className="relative">
+                  <img src="/socials/telephone.svg" alt="DialKro" className="w-10" />
+                  {openToggle === 'phone' && (
+                    <div
+                      className="absolute right-10 top-0 mt-10 w-64 rounded border border-gray-300 bg-white p-2 text-sm text-gray-500 opacity-100 shadow-md transition-opacity duration-300"
+                      role="tooltip">
+                      <div className=" rounded-t-lg border-b border-gray-200 bg-gray-100 px-3 py-2">
+                        <h3 className="font-semibold text-gray-900">Phone Number</h3>
+                      </div>
+                      <div className="px-3 py-2">
+                        <p>123-456-7890</p>
+                      </div>
+                      <div data-popper-arrow></div>
+                    </div>
+                  )}
+                </a>
+                <a href="#" onClick={handleWhatsAppIconClick} className="relative">
+                  <img src="/socials/whatsapp.svg" alt="DialKro" className="w-10" />
+                  {openToggle === 'whatsapp' && (
+                    <div
+                      className="absolute right-10 top-0 mt-10 w-64 rounded border border-gray-300 bg-white p-2 text-sm text-gray-500 opacity-100 shadow-md transition-opacity duration-300"
+                      role="tooltip">
+                      <div className="rounded-t-lg border-b border-gray-200 bg-gray-100 px-3 py-2">
+                        <h3 className="font-semibold text-gray-900">WhatsApp Number</h3>
+                      </div>
+                      <div className="px-3 py-2">
+                        <p>987-654-3210</p>
+                      </div>
+                      <div data-popper-arrow></div>
+                    </div>
+                  )}
+                </a>
+              </>
+            ) : (
+              <p>
+                Please{' '}
+                <span
+                  className="cursor-pointer text-blue-500"
+                  onClick={() => {
+                    setIsLoginModalOpen(true) // Open the LoginModal
+                  }}>
+                  login
+                </span>{' '}
+                or{` `}
+                <span
+                  className="cursor-pointer text-blue-500"
+                  onClick={() => {
+                    setIsRegisterModalOpen(true) // Open the LoginModal
+                  }}>
+                  create
+                </span>{' '}
+                an account to access phone and WhatsApp number.
+              </p>
+            )}
+            {isLoginModalOpen && (
+              <LoginModal
+                onClose={() => {
+                  setIsLoginModalOpen(false) // Close the LoginModal
+                }}
+                onRegisterClick={openRegisterModal}
+              />
+            )}
+            {isRegisterModalOpen && (
+              <RegisterModal
+                onClose={() => {
+                  setIsRegisterModalOpen(false) // Close the RegisterModal
+                }}
+                onLoginClick={() => {
+                  setIsLoginModalOpen(true) // Open the LoginModal
+                }}
+              />
+            )}
+          </div>
+        </div>
       </div>
     </div>
   )

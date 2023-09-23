@@ -7,6 +7,9 @@ import RegisterModal from '../modals/RegisterModal'
 
 const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false)
+
   const dropdownRef = useRef(null)
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value)
@@ -33,8 +36,6 @@ const UserMenu = () => {
   }, [isOpen, handleClickOutside])
 
   // State to manage the modal's open/close state
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
-  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false)
 
   // Function to open the modal
   const openLoginModal = () => {
