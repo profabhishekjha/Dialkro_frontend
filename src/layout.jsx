@@ -17,10 +17,6 @@ const Layout = () => {
     '/CarouselImages/resturant.webp',
     '/CarouselImages/transport.webp'
   ]
-  useEffect(() => {
-    // Scroll to the top of the page whenever the route changes
-    window.scrollTo(0, 0)
-  }, [location.pathname])
 
   return (
     <div>
