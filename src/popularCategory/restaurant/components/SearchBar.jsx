@@ -32,34 +32,6 @@ const SearchBar = () => {
     {
       images: '/Restaurant/foodie.webp',
       prompt: 'Foodie'
-    },
-    {
-      images: 'RentalsSub/furniturerent.webp',
-      prompt: 'Furnitures on Rent'
-    },
-    {
-      images: 'bridalmakeup-sub/beautyparlours.webp',
-      prompt: 'Beauty Parlours'
-    },
-    {
-      images: 'bridalmakeup-sub/beautyservices.webp',
-      prompt: 'Beauty Services'
-    },
-    {
-      images: 'bridalmakeup-sub/bridalmakeup.webp',
-      prompt: 'Bridal Makeup'
-    },
-    {
-      images: 'bridalmakeup-sub/bridegroommakeup.webp',
-      prompt: 'Bridegroom Makeup'
-    },
-    {
-      images: 'bridalmakeup-sub/salons.webp',
-      prompt: 'Salons'
-    },
-    {
-      images: 'bridalmakeup-sub/spas.webp',
-      prompt: 'Spas'
     }
   ]
 
@@ -102,7 +74,7 @@ const SearchBar = () => {
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className="grid items-center justify-center gap-7 max-sm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className="grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <AlignmentSubCards

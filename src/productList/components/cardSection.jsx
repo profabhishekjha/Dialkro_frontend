@@ -45,9 +45,9 @@ const CardSection = ({ onClick }) => {
 
   return (
     <div>
-      <div className="container relative flex w-[80vw] rounded-lg border-2">
-        <div className=" relative flex w-[95%] gap-5 p-10">
-          <div className=" h-60 w-[300px] overflow-hidden bg-white shadow-lg">
+      <div className="container relative flex w-[90vw] rounded-lg border-2 max-md:flex-col">
+        <div className=" relative flex w-[90vw] gap-5 p-5 max-md:flex-col">
+          <div className=" h-60 overflow-hidden bg-white shadow-lg">
             <img
               className="h-60 w-full cursor-pointer rounded-lg object-cover"
               onClick={onClick}
@@ -55,8 +55,7 @@ const CardSection = ({ onClick }) => {
               alt="Card Image"
             />
           </div>
-
-          <div className="grid w-[40vw] gap-3">
+          <div className=" grid w-[70vw] gap-3 max-md:w-[80vw] max-md:items-center max-md:justify-center">
             <div className="">
               <p onClick={onClick} className="cursor-pointer text-xl font-bold capitalize">
                 {' '}
@@ -66,105 +65,107 @@ const CardSection = ({ onClick }) => {
               <p className="cursor-pointer text-lg font-bold uppercase">
                 {faker.company.buzzVerb()}
               </p>
-              <p className=" my-2 w-3/4 ">{faker.commerce.productDescription()}</p>
+              <p className=" my-2 w-3/4 max-md:h-[18vh] max-md:w-[60vw]">
+                {faker.commerce.productDescription()}
+              </p>
               <h1 className="my-5 text-xl font-bold">₹ {faker.commerce.price()}</h1>
             </div>
           </div>
-        </div>
-        <div className="mt-8 flex flex-col gap-16">
-          <Heart
-            className="hover:scale-110"
-            color={`${isFavorite ? 'red' : 'black'}`}
-            fill={`${isFavorite ? 'red' : 'white'}`}
-            onClick={() => {
-              setIsFavorite(!isFavorite)
-              if (!isFavorite) {
-                toast.success('Added to Favorites')
-              } else {
-                toast.error('Removed from Favourites')
-              }
-            }}
-          />
+          <div className=" flex flex-col gap-16 max-md:flex-row max-md:items-center max-md:justify-center">
+            <Heart
+              className="duration-500 hover:scale-125"
+              color={`${isFavorite ? 'red' : 'black'}`}
+              fill={`${isFavorite ? 'red' : 'white'}`}
+              onClick={() => {
+                setIsFavorite(!isFavorite)
+                if (!isFavorite) {
+                  toast.success('Added to Favorites')
+                } else {
+                  toast.error('Removed from Favourites')
+                }
+              }}
+            />
 
-          <div className="flex flex-col gap-5">
-            {isLoggedIn ? (
-              <>
-                <a
-                  onClick={handlePhoneIconClick}
-                  className="relative cursor-pointer hover:scale-110">
-                  <img src="/socials/telephone.svg" alt="DialKro" className="w-10" />
-                  {openToggle === 'phone' && (
-                    <div
-                      className="absolute right-10 top-0 mt-10 w-64 rounded border border-gray-300 bg-white p-2 text-sm text-gray-500 opacity-100 shadow-md transition-opacity duration-300"
-                      role="tooltip">
-                      <div className=" rounded-t-lg border-b border-gray-200 bg-gray-100 px-3 py-2">
-                        <h3 className="font-semibold text-gray-900">Phone Number</h3>
+            <div className="flex flex-col gap-5 max-md:flex-row">
+              {isLoggedIn ? (
+                <>
+                  <a
+                    onClick={handlePhoneIconClick}
+                    className="relative cursor-pointer duration-500 hover:scale-125">
+                    <img src="/socials/telephone.svg" alt="DialKro" className="w-10" />
+                    {openToggle === 'phone' && (
+                      <div
+                        className="absolute right-10 top-0 mt-10 w-64 rounded border border-gray-300 bg-white p-2 text-sm text-gray-500 opacity-100 shadow-md transition-opacity duration-300 max-lg:w-40 max-md:-top-28 max-md:right-6 max-md:h-20"
+                        role="tooltip">
+                        <div className=" rounded-t-lg border-b border-gray-200 bg-gray-100 px-3 py-2">
+                          <h3 className="font-semibold text-gray-900">Phone Number</h3>
+                        </div>
+                        <div className="px-3 py-2">
+                          <p>123-456-7890</p>
+                        </div>
+                        <div data-popper-arrow></div>
                       </div>
-                      <div className="px-3 py-2">
-                        <p>123-456-7890</p>
+                    )}
+                  </a>
+                  <a
+                    onClick={handleWhatsAppIconClick}
+                    className="relative cursor-pointer duration-500 hover:scale-125">
+                    <img src="/socials/whatsapp.svg" alt="DialKro" className="w-10" />
+                    {openToggle === 'whatsapp' && (
+                      <div
+                        className="absolute right-10 top-0 mt-10 w-64 rounded border border-gray-300 bg-white p-2 text-sm text-gray-500 opacity-100 shadow-md transition-opacity duration-300 max-md:-top-28 max-md:right-6 max-md:h-20 max-md:w-40"
+                        role="tooltip">
+                        <div className="flex items-center justify-center rounded-t-lg border-b border-gray-200 bg-gray-100 py-2">
+                          <h3 className="font-semibold text-gray-900">WhatsApp Number</h3>
+                        </div>
+                        <div className="px-3 py-2">
+                          <p>987-654-3210</p>
+                        </div>
+                        <div data-popper-arrow></div>
                       </div>
-                      <div data-popper-arrow></div>
-                    </div>
-                  )}
-                </a>
-                <a
-                  onClick={handleWhatsAppIconClick}
-                  className="relative cursor-pointer hover:scale-110">
-                  <img src="/socials/whatsapp.svg" alt="DialKro" className="w-10" />
-                  {openToggle === 'whatsapp' && (
-                    <div
-                      className="absolute right-10 top-0 mt-10 w-64 rounded border border-gray-300 bg-white p-2 text-sm text-gray-500 opacity-100 shadow-md transition-opacity duration-300"
-                      role="tooltip">
-                      <div className="rounded-t-lg border-b border-gray-200 bg-gray-100 px-3 py-2">
-                        <h3 className="font-semibold text-gray-900">WhatsApp Number</h3>
-                      </div>
-                      <div className="px-3 py-2">
-                        <p>987-654-3210</p>
-                      </div>
-                      <div data-popper-arrow></div>
-                    </div>
-                  )}
-                </a>
-              </>
-            ) : (
-              <p>
-                Please{' '}
-                <span
-                  className="cursor-pointer text-blue-500"
-                  onClick={() => {
+                    )}
+                  </a>
+                </>
+              ) : (
+                <p>
+                  Please{' '}
+                  <span
+                    className="cursor-pointer text-blue-500"
+                    onClick={() => {
+                      setIsLoginModalOpen(true) // Open the LoginModal
+                    }}>
+                    login
+                  </span>{' '}
+                  or{` `}
+                  <span
+                    className="cursor-pointer text-blue-500"
+                    onClick={() => {
+                      setIsRegisterModalOpen(true) // Open the RegisterModal
+                    }}>
+                    create
+                  </span>{' '}
+                  an account to access phone and WhatsApp number.
+                </p>
+              )}
+              {isLoginModalOpen && (
+                <LoginModal
+                  onClose={() => {
+                    setIsLoginModalOpen(false) // Close the LoginModal
+                  }}
+                  onRegisterClick={openRegisterModal}
+                />
+              )}
+              {isRegisterModalOpen && (
+                <RegisterModal
+                  onClose={() => {
+                    setIsRegisterModalOpen(false) // Close the RegisterModal
+                  }}
+                  onLoginClick={() => {
                     setIsLoginModalOpen(true) // Open the LoginModal
-                  }}>
-                  login
-                </span>{' '}
-                or{` `}
-                <span
-                  className="cursor-pointer text-blue-500"
-                  onClick={() => {
-                    setIsRegisterModalOpen(true) // Open the LoginModal
-                  }}>
-                  create
-                </span>{' '}
-                an account to access phone and WhatsApp number.
-              </p>
-            )}
-            {isLoginModalOpen && (
-              <LoginModal
-                onClose={() => {
-                  setIsLoginModalOpen(false) // Close the LoginModal
-                }}
-                onRegisterClick={openRegisterModal}
-              />
-            )}
-            {isRegisterModalOpen && (
-              <RegisterModal
-                onClose={() => {
-                  setIsRegisterModalOpen(false) // Close the RegisterModal
-                }}
-                onLoginClick={() => {
-                  setIsLoginModalOpen(true) // Open the LoginModal
-                }}
-              />
-            )}
+                  }}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>
