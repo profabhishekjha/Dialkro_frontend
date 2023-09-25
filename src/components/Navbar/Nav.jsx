@@ -10,7 +10,9 @@ const Nav = ({ services }) => {
     <div>
       <main className="fixed z-50 w-full border-b-2 border-slate-200 bg-white shadow-sm">
         <nav className="mx-4 my-2 flex flex-col md:mx-8 md:flex-row lg:mx-16">
-          <a href="/" className="flex items-center justify-center gap-2">
+          <a
+            href="/"
+            className="flex items-center justify-center gap-2 max-lg:items-start max-lg:justify-start">
             <img src="/logo.svg" alt="logo" className="h-12 w-24 " />
             <p className=" text-xl font-bold text-blue-800 ">{services}</p>
           </a>
@@ -38,7 +40,7 @@ const Nav = ({ services }) => {
               </li>
             </ul>
           </div>
-          <div className="hidden text-3xl max-lg:block max-md:absolute max-md:bottom-5 max-md:right-4">
+          <div className="hidden text-3xl max-lg:block max-md:absolute max-md:bottom-1 max-md:right-4">
             <MobileUserMenu />
           </div>
         </nav>

@@ -26,14 +26,6 @@ const AdsCardComponent = ({ onClick }) => {
               {faker.company.buzzVerb()}
             </p>
             <h1 className="my-2 text-xl font-bold">₹ {faker.commerce.price()}</h1>
-            <div className="flex gap-8">
-              <a href="">
-                <img src="/socials/telephone.svg" alt="DialKro" className="w-10" />
-              </a>
-              <a href="">
-                <img src="/socials/whatsapp.svg" alt="DialKro" className="w-10" />
-              </a>
-            </div>
           </div>
         </div>
       </div>
