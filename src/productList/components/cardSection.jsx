@@ -55,7 +55,7 @@ const CardSection = ({ onClick }) => {
               alt="Card Image"
             />
           </div>
-          <div className=" grid w-[70vw] gap-3 max-md:w-[80vw] max-md:items-center max-md:justify-center">
+          <div className=" grid w-[70vw] gap-3 max-md:w-[80vw] ">
             <div className="">
               <p onClick={onClick} className="cursor-pointer text-xl font-bold capitalize">
                 {' '}
@@ -65,13 +65,13 @@ const CardSection = ({ onClick }) => {
               <p className="cursor-pointer text-lg font-bold uppercase">
                 {faker.company.buzzVerb()}
               </p>
-              <p className=" my-2 w-3/4 max-md:h-[18vh] max-md:w-[60vw]">
-                {faker.commerce.productDescription()}
+              <p className=" w-3/4 max-md:h-[7vh] max-md:w-[78vw]">
+                {faker.commerce.productDescription().substring(0, 80)}
               </p>
-              <h1 className="my-5 text-xl font-bold">₹ {faker.commerce.price()}</h1>
+              <h1 className=" text-xl font-bold">₹ {faker.commerce.price()}</h1>
             </div>
           </div>
-          <div className=" flex flex-col gap-16 max-md:flex-row max-md:items-center max-md:justify-center">
+          <div className="flex flex-col gap-16 max-md:flex-row max-md:items-center max-md:justify-center max-md:gap-24">
             <Heart
               className="duration-500 hover:scale-125"
               color={`${isFavorite ? 'red' : 'black'}`}
@@ -86,7 +86,7 @@ const CardSection = ({ onClick }) => {
               }}
             />
 
-            <div className="flex flex-col gap-5 max-md:flex-row">
+            <div className="flex flex-col gap-5 max-md:flex-row max-md:gap-10">
               {isLoggedIn ? (
                 <>
                   <a
