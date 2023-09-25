@@ -2,8 +2,8 @@ import React from 'react'
 
 const BigSubCards = ({ images, title, onClick }) => {
   return (
-    <div onClick={onClick} className=" container p-8">
-      <div className="w-[10vw] rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
+    <div onClick={onClick} className=" container p-3">
+      <div className="rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
         <a href="#">
           <img className="h-24 w-full rounded-t-lg object-cover" src={images} alt="" />
         </a>
