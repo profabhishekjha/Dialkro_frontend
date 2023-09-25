@@ -55,7 +55,7 @@ const CardSection = ({ onClick }) => {
               alt="Card Image"
             />
           </div>
-          <div className=" grid w-[70vw] gap-3 max-md:w-[80vw] ">
+          <div className=" grid w-[70vw] gap-5 max-md:w-[80vw] ">
             <div className="">
               <p onClick={onClick} className="cursor-pointer text-xl font-bold capitalize">
                 {' '}
@@ -66,7 +66,7 @@ const CardSection = ({ onClick }) => {
                 {faker.company.buzzVerb()}
               </p>
               <p className=" w-3/4 max-md:h-[7vh] max-md:w-[78vw]">
-                {faker.commerce.productDescription().substring(0, 80)}
+                {faker.commerce.productDescription().substring(0, 75)}
               </p>
               <h1 className=" text-xl font-bold">₹ {faker.commerce.price()}</h1>
             </div>
@@ -124,7 +124,7 @@ const CardSection = ({ onClick }) => {
             )}
             {/* ... (other JSX code) */}
           </div>
-          <div className="flex h-12 flex-col max-md:flex-row max-md:items-center max-md:justify-center max-md:gap-24">
+          <div className="flex h-12 flex-col max-md:flex-row max-md:items-center max-md:justify-center ">
             <Heart
               className=" h-12 w-24 duration-500 hover:scale-125"
               color={`${isFavorite ? 'red' : 'black'}`}

@@ -14,7 +14,9 @@ const Nav = ({ services }) => {
             href="/"
             className="flex items-center justify-center gap-2 max-lg:items-start max-lg:justify-start">
             <img src="/logo.svg" alt="logo" className="h-12 w-24 " />
-            <p className=" text-xl font-bold text-blue-800 ">{services}</p>
+            <p className=" flex h-12 items-center justify-center text-xl font-bold text-blue-800 ">
+              {services}
+            </p>
           </a>
           <div className=" flex flex-1 items-center justify-end gap-2 md:mt-0 md:gap-10">
             <ul className="flex flex-col gap-10 max-lg:hidden md:flex-row md:items-center">
