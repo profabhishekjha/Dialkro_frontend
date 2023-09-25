@@ -104,11 +104,29 @@ const CardSection = ({ onClick }) => {
                 to order.
               </p>
             )}
+            {isLoginModalOpen && (
+              <LoginModal
+                onClose={() => {
+                  setIsLoginModalOpen(false) // Close the LoginModal
+                }}
+                onRegisterClick={openRegisterModal}
+              />
+            )}
+            {isRegisterModalOpen && (
+              <RegisterModal
+                onClose={() => {
+                  setIsRegisterModalOpen(false) // Close the RegisterModal
+                }}
+                onLoginClick={() => {
+                  setIsLoginModalOpen(true) // Open the LoginModal
+                }}
+              />
+            )}
             {/* ... (other JSX code) */}
           </div>
-          <div className="flex flex-col gap-16 max-md:flex-row max-md:items-center max-md:justify-center max-md:gap-24">
+          <div className="flex h-12 flex-col max-md:flex-row max-md:items-center max-md:justify-center max-md:gap-24">
             <Heart
-              className="duration-500 hover:scale-125"
+              className=" h-12 w-24 duration-500 hover:scale-125"
               color={`${isFavorite ? 'red' : 'black'}`}
               fill={`${isFavorite ? 'red' : 'white'}`}
               onClick={() => {
@@ -120,87 +138,6 @@ const CardSection = ({ onClick }) => {
                 }
               }}
             />
-
-            <div className="flex flex-col gap-5 max-md:flex-row max-md:gap-10">
-              {isLoggedIn ? (
-                <>
-                  <a
-                    onClick={handlePhoneIconClick}
-                    className="relative cursor-pointer duration-500 hover:scale-125">
-                    <img src="/socials/telephone.svg" alt="DialKro" className="w-10" />
-                    {openToggle === 'phone' && (
-                      <div
-                        className="absolute right-10 top-0 mt-10 w-64 rounded border border-gray-300 bg-white p-2 text-sm text-gray-500 opacity-100 shadow-md transition-opacity duration-300 max-lg:w-40 max-md:-top-28 max-md:right-6 max-md:h-20"
-                        role="tooltip">
-                        <div className=" rounded-t-lg border-b border-gray-200 bg-gray-100 px-3 py-2">
-                          <h3 className="font-semibold text-gray-900">Phone Number</h3>
-                        </div>
-                        <div className="px-3 py-2">
-                          <p>123-456-7890</p>
-                        </div>
-                        <div data-popper-arrow></div>
-                      </div>
-                    )}
-                  </a>
-                  <a
-                    onClick={handleWhatsAppIconClick}
-                    className="relative cursor-pointer duration-500 hover:scale-125">
-                    <img src="/socials/whatsapp.svg" alt="DialKro" className="w-10" />
-                    {openToggle === 'whatsapp' && (
-                      <div
-                        className="absolute right-10 top-0 mt-10 w-64 rounded border border-gray-300 bg-white p-2 text-sm text-gray-500 opacity-100 shadow-md transition-opacity duration-300 max-md:-top-28 max-md:right-6 max-md:h-20 max-md:w-40"
-                        role="tooltip">
-                        <div className="flex items-center justify-center rounded-t-lg border-b border-gray-200 bg-gray-100 py-2">
-                          <h3 className="font-semibold text-gray-900">WhatsApp Number</h3>
-                        </div>
-                        <div className="px-3 py-2">
-                          <p>987-654-3210</p>
-                        </div>
-                        <div data-popper-arrow></div>
-                      </div>
-                    )}
-                  </a>
-                </>
-              ) : (
-                <p className="w-[60vw]">
-                  Please{' '}
-                  <span
-                    className="cursor-pointer text-blue-500"
-                    onClick={() => {
-                      setIsLoginModalOpen(true) // Open the LoginModal
-                    }}>
-                    login
-                  </span>{' '}
-                  or{` `}
-                  <span
-                    className="cursor-pointer text-blue-500"
-                    onClick={() => {
-                      setIsRegisterModalOpen(true) // Open the RegisterModal
-                    }}>
-                    signup
-                  </span>{' '}
-                  to access phone and WhatsApp.
-                </p>
-              )}
-              {isLoginModalOpen && (
-                <LoginModal
-                  onClose={() => {
-                    setIsLoginModalOpen(false) // Close the LoginModal
-                  }}
-                  onRegisterClick={openRegisterModal}
-                />
-              )}
-              {isRegisterModalOpen && (
-                <RegisterModal
-                  onClose={() => {
-                    setIsRegisterModalOpen(false) // Close the RegisterModal
-                  }}
-                  onLoginClick={() => {
-                    setIsLoginModalOpen(true) // Open the LoginModal
-                  }}
-                />
-              )}
-            </div>
           </div>
         </div>
       </div>
