@@ -1,7 +1,10 @@
 import { React, useEffect, useState } from 'react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
+import AlignmentCards from '../../components/ui/AlignmentCards'
+import { useNavigate } from 'react-router-dom'
 
-function TopBanner() {
+const TopBanner = () => {
+  const navigate = useNavigate()
   const images = [
     {
       url: 'TopBannerCarousel/vege1.webp'
@@ -48,9 +51,9 @@ function TopBanner() {
   }, [currentIndex])
 
   return (
-    <>
-      <div className=" mt-10 flex items-center gap-5 px-10">
-        <div className="group relative m-auto h-[50vh] w-full overflow-hidden object-cover px-4 py-16 ">
+    <div>
+      <div className=" mt-10 flex items-center gap-5 px-10 max-md:px-3">
+        <div className="group relative m-auto h-[50vh] w-full overflow-hidden object-cover px-4 py-16 max-md:h-[35vh] max-md:w-[130vw] ">
           <div
             style={{
               backgroundImage: `url(${images[currentIndex].url})`
@@ -71,7 +74,7 @@ function TopBanner() {
           </div>
         </div>
         {/* Non-Sliding Card 1 */}
-        <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
+        <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover max-lg:hidden">
           <div
             style={{
               backgroundImage: `url(TopBannerCarousel/b2b.webp)`
@@ -87,7 +90,7 @@ function TopBanner() {
           </div>
         </div>
         {/* Non-Sliding Card 2 */}
-        <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
+        <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover max-lg:hidden">
           <div
             style={{
               backgroundImage: `url(TopBannerCarousel/automobile.webp)`
@@ -102,7 +105,7 @@ function TopBanner() {
             </a>
           </div>
         </div>
-        <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
+        <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover max-lg:hidden">
           <div
             style={{
               backgroundImage: `url(TopBannerCarousel/home.webp)`
@@ -117,7 +120,7 @@ function TopBanner() {
             </a>
           </div>
         </div>
-        <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover">
+        <div className="relative h-[36vh] w-1/5 overflow-hidden rounded-2xl object-cover max-lg:hidden">
           <div
             style={{
               backgroundImage: `url(TopBannerCarousel/doctor.webp)`
@@ -133,7 +136,29 @@ function TopBanner() {
           </div>
         </div>
       </div>
-    </>
+      <div className=" grid w-full grid-cols-2 items-center justify-center md:grid-cols-4 lg:hidden">
+        <AlignmentCards
+          images={`/TopBannerCarousel/b2b.webp`}
+          prompt={'B2B'}
+          onClick={() => navigate('/b2bcategory')}
+        />
+        <AlignmentCards
+          images={`/TopBannerCarousel/automobile.webp`}
+          prompt={'AutoMobile Parts'}
+          onClick={() => navigate('/autocarecategory')}
+        />
+        <AlignmentCards
+          images={`/TopBannerCarousel/home.webp`}
+          prompt={'Home Services'}
+          onClick={() => navigate('/homeservicescategory')}
+        />
+        <AlignmentCards
+          images={`/TopBannerCarousel/doctor.webp`}
+          prompt={'Doctor'}
+          onClick={() => navigate('/b2bcategory')}
+        />
+      </div>
+    </div>
   )
 }
 
