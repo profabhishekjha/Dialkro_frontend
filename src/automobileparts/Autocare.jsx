@@ -8,13 +8,14 @@ import CardSectionshop from './components/cardSectionshop'
 const Autocare = () => {
   const navigate = useNavigate()
 
-  const category = 'autocare' // Category name
+  const category = 'autocare'
   const images = [
     `${category}Carousel/${category}1.webp`,
     `${category}Carousel/${category}2.webp`,
     `${category}Carousel/${category}3.webp`,
     `${category}Carousel/${category}4.webp`
   ]
+
   return (
     <div>
       <Outlet />

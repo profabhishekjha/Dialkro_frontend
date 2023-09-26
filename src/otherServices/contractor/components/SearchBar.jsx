@@ -10,28 +10,32 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/Restaurant/southIndian.webp',
-      prompt: 'South Indian'
+      images: '/contractor/carpentry.webp',
+      prompt: 'Carpentry Contractors'
     },
     {
-      images: '/Restaurant/globalcuisines.webp',
-      prompt: 'Global Cuisines'
+      images: '/contractor/civil.webp',
+      prompt: 'Civil Contractors'
     },
     {
-      images: '/Restaurant/nightlife.webp',
-      prompt: 'Night Life'
+      images: '/contractor/electrical.webp',
+      prompt: 'Electrical Contractors'
     },
     {
-      images: '/Restaurant/sweettooth.webp',
-      prompt: 'Sweet Tooth'
+      images: '/contractor/flooring.webp',
+      prompt: 'Flooring Contractors'
     },
     {
-      images: '/Restaurant/quickbites.webp',
-      prompt: 'Quick Bites'
+      images: '/contractor/furniture.webp',
+      prompt: 'Furniture Contractors'
     },
     {
-      images: '/Restaurant/foodie.webp',
-      prompt: 'Foodie'
+      images: '/contractor/painting.webp',
+      prompt: 'Painting Contractors'
+    },
+    {
+      images: '/contractor/plumbing.webp',
+      prompt: 'Plumbing Contractors'
     }
   ]
 
@@ -40,8 +44,7 @@ const SearchBar = () => {
   )
 
   const handleSuggestionClick = () => {
-    // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/restaurant')
+    navigate('/contractor')
   }
 
   const handleEnterKeyPress = (e) => {
@@ -74,7 +77,7 @@ const SearchBar = () => {
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className="grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <AlignmentSubCards
@@ -98,7 +101,7 @@ const SearchBar = () => {
     )
   }
   return (
-    <div className=" container flex flex-col gap-10">
+    <div className="container flex flex-col gap-10">
       <div className="flex items-center justify-center">
         <form className="mt-3 w-96 px-6">
           <div className="relative">

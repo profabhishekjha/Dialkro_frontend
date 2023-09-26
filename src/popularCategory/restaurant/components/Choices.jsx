@@ -2,9 +2,9 @@ import React from 'react'
 
 const Choices = () => {
   return (
-    <div className="flex gap-10">
+    <div className="flex gap-10 max-lg:flex-col">
       <a href="/restaurant">
-        <div className="max-auto flex h-16 w-60 items-center justify-center rounded-md border border-black shadow-lg">
+        <div className="max-auto flex h-16 w-72 items-center justify-center rounded-md border border-black shadow-lg">
           <div className="flex gap-7">
             <div className="flex h-14 flex-col items-center justify-center">
               <img src="/Restaurant/booking.svg" alt="" className="w-16" />
@@ -19,7 +19,7 @@ const Choices = () => {
 
       <a href="/restaurant" className="hover:bg-gray-100">
         <div className="max-auto flex h-16 w-72 items-center justify-center rounded-md border border-black shadow-lg">
-          <div className="flex gap-7">
+          <div className="flex gap-10">
             <div className="flex h-14 flex-col items-center justify-center">
               <img src="/Restaurant/trending.svg" alt="" className="w-10" />
             </div>
@@ -32,9 +32,9 @@ const Choices = () => {
       </a>
 
       <a href="/restaurant">
-        <div className="max-auto flex h-16 w-60 items-center justify-center rounded-md border border-black shadow-lg">
-          <div className="flex gap-7">
-            <div className="flex h-14 flex-col items-center justify-center">
+        <div className="max-auto flex h-16 w-72 items-center justify-center rounded-md border border-black shadow-lg">
+          <div className="flex gap-10">
+            <div className=" flex h-14 flex-col items-center justify-center">
               <img src="/Restaurant/order.svg" alt="" className="w-12" />
             </div>
             <div>

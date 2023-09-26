@@ -10,28 +10,24 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/Restaurant/southIndian.webp',
-      prompt: 'South Indian'
+      images: '/couriers/all.webp',
+      prompt: 'All Courier Services'
     },
     {
-      images: '/Restaurant/globalcuisines.webp',
-      prompt: 'Global Cuisines'
+      images: '/couriers/international.webp',
+      prompt: 'International'
     },
     {
-      images: '/Restaurant/nightlife.webp',
-      prompt: 'Night Life'
+      images: '/couriers/national.webp',
+      prompt: 'National'
     },
     {
-      images: '/Restaurant/sweettooth.webp',
-      prompt: 'Sweet Tooth'
+      images: '/couriers/local.webp',
+      prompt: 'Local'
     },
     {
-      images: '/Restaurant/quickbites.webp',
-      prompt: 'Quick Bites'
-    },
-    {
-      images: '/Restaurant/foodie.webp',
-      prompt: 'Foodie'
+      images: '/couriers/bulk.webp',
+      prompt: 'Bulk Courier'
     }
   ]
 
@@ -40,8 +36,7 @@ const SearchBar = () => {
   )
 
   const handleSuggestionClick = () => {
-    // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/restaurant')
+    navigate('/couriers')
   }
 
   const handleEnterKeyPress = (e) => {
@@ -74,7 +69,7 @@ const SearchBar = () => {
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className="grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <AlignmentSubCards
@@ -98,7 +93,7 @@ const SearchBar = () => {
     )
   }
   return (
-    <div className=" container flex flex-col gap-10">
+    <div className="container flex flex-col gap-10">
       <div className="flex items-center justify-center">
         <form className="mt-3 w-96 px-6">
           <div className="relative">

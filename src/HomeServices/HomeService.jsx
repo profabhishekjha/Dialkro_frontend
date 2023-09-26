@@ -5,7 +5,6 @@ import Footer from '../components/Footer/Footer'
 import { Toaster } from 'react-hot-toast'
 import BannerCarousel from '../components/Body/Carousel/BannerCarousel'
 import CardSectionshop from './components/cardSectionshop'
-import NavbarXpert from '../components/Navbar/NavbarXpert'
 const HomeService = () => {
   const navigate = useNavigate()
 

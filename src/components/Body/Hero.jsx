@@ -12,7 +12,7 @@ const Hero = () => {
           <div className="mt-[10vh] text-center">
             <h1 className="text-left text-4xl font-bold">Popular Categories</h1>
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
-            <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7">
+            <div className="grid grid-cols-2 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-7">
               <AlignmentCards
                 images={'Popular/transport.webp'}
                 prompt={'Transport'}
@@ -30,10 +30,10 @@ const Hero = () => {
               />
 
               <AlignmentCards
-                images={'Popular/couriers.webp'}
-                prompt={'Couriers'}
+                images={'Popular/astrology.webp'}
+                prompt={'Astrologers'}
                 onClick={() => {
-                  navigate('/couriers')
+                  navigate('/astrologer')
                 }}
               />
 
@@ -72,7 +72,7 @@ const Hero = () => {
 
             <h1 className="my-20 text-left text-4xl font-bold">Trending Categories</h1>
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
-            <div className="grid grid-cols-1 items-center justify-center gap-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
+            <div className="grid grid-cols-2 items-center justify-center gap-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-7">
               <AlignmentCards
                 images={'Trending/dentist.webp'}
                 prompt={'Dentist'}
@@ -131,7 +131,7 @@ const Hero = () => {
             </div>
             <h1 className="my-20 text-left text-4xl font-bold">Repair Services</h1>
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
-            <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+            <div className="grid grid-cols-2 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
               <AlignmentCards
                 images={'Repairs/ac repairs.webp'}
                 prompt={'AC repair'}
@@ -161,7 +161,7 @@ const Hero = () => {
                 }}
               />
             </div>
-            <h1 className="font-bol my-10 text-left text-4xl">Other Services</h1>
+            <h1 className=" my-10 text-left text-4xl font-bold">Other Services</h1>
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
 
             <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
@@ -188,17 +188,17 @@ const Hero = () => {
                 }}
               />
               <AlignmentCardsOther
-                images={'Wedding&Beauty/bridsaal-makeup.webp'}
-                prompt={'other Services'}
+                images={'contractor/contractor.webp'}
+                prompt={'Contractor'}
                 onClick={() => {
-                  navigate('/weddingservicescategory')
+                  navigate('/contractorcategory')
                 }}
               />
               <AlignmentCardsOther
-                images={'Wedding&Beauty/bridasaal-makeup.webp'}
-                prompt={'other Services'}
+                images={'Popular/couriers.webp'}
+                prompt={'Courier'}
                 onClick={() => {
-                  navigate('/weddingservicescategory')
+                  navigate('/courierscategory')
                 }}
               />
             </div>

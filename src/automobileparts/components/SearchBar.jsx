@@ -8,6 +8,7 @@ const SearchBar = () => {
   const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState('')
   const [visibleContentCount, setVisibleContentCount] = useState(5)
+  const [visibleContentCount1, setVisibleContentCount1] = useState(5)
   // Your list of available content
   const section = 'autocare'
   const availableContent = [
@@ -147,6 +148,10 @@ const SearchBar = () => {
       // Show 5 more cards when the "View More" button is clicked
       setVisibleContentCount((prevCount) => prevCount + 5)
     }
+    const handleViewMoreClick1 = () => {
+      // Show 5 more cards when the "View More" button is clicked
+      setVisibleContentCount1((prevCount) => prevCount + 5)
+    }
 
     return (
       <div className="flex w-full flex-col gap-16">
@@ -183,7 +188,7 @@ const SearchBar = () => {
               <p>Curated Custom Services</p>
             </div>
             <div className="grid items-center justify-center max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              {filteredContentCurated.slice(0, visibleContentCount).map((content, index) => (
+              {filteredContentCurated.slice(0, visibleContentCount1).map((content, index) => (
                 <div key={index}>
                   <BigSubCards
                     images={content.images}
@@ -193,10 +198,10 @@ const SearchBar = () => {
                 </div>
               ))}
             </div>
-            {filteredContent.length > visibleContentCount && (
+            {filteredContent.length > visibleContentCount1 && (
               <div className="mt-7 flex items-end justify-end">
                 <button
-                  onClick={handleViewMoreClick}
+                  onClick={handleViewMoreClick1}
                   className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
                   View More Category
                 </button>
