@@ -1,5 +1,4 @@
 import React from 'react'
-import './style.css'
 import { useCallback, useEffect, useState } from 'react'
 
 export const usePrevNextButtons = (emblaApi, onButtonClick) => {
