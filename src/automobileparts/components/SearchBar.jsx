@@ -235,7 +235,7 @@ const SearchBar = () => {
         <div className=" flex w-full flex-col items-center justify-center gap-10">
           <Section FirstHeading="Engine Parts" cards={cards} isCardCarousel={true} />
           <Section FirstHeading="Engine Oils" cards={cards} isCardCarousel={true} />
-          <Section FirstHeading="Engine Oils" cards={cards} isCardCarousel={true} />
+          <Section FirstHeading="Basic Parts" cards={cards} isCardCarousel={true} />
         </div>
       </div>
     )

@@ -32,6 +32,26 @@ const SearchBar = () => {
     {
       images: '/Wedding&Beauty/venue.webp',
       prompt: 'Wedding Venues'
+    },
+    {
+      images: '/Wedding&Beauty/corporate.webp',
+      prompt: 'Corporate Parties'
+    },
+    {
+      images: '/Wedding&Beauty/private.webp',
+      prompt: 'Private Parties'
+    },
+    {
+      images: '/Wedding&Beauty/seminar.webp',
+      prompt: 'Seminar Organiser'
+    },
+    {
+      images: '/Wedding&Beauty/stage.webp',
+      prompt: 'Stage Show Organiser'
+    },
+    {
+      images: '/Wedding&Beauty/trade.webp',
+      prompt: 'Trade Fair Organiser'
     }
   ]
 
