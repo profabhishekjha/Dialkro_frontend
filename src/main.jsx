@@ -58,6 +58,7 @@ import SubCategoryContractorPage from './otherServices/contractor/components/Sub
 import SubCategoryCouriersPage from './otherServices/couriers/components/SubCategory/SubCategoryCouriersPage'
 import AstrologerPage from './popularCategory/astrologer/AstrologerPage'
 import { Toaster } from 'react-hot-toast'
+import Refrigerator from './HomeServices/components/refrigerator/Refrigerator'
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
   {
     path: '/refrigeratorservices',
     element: <Autocare />
+  },
+  {
+    path: '/refrigeratorCategories',
+    element: <Refrigerator />
   },
   {
     path: '/kitchenservices',
