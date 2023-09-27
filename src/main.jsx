@@ -57,6 +57,7 @@ import Contractor from './otherServices/contractor/Contractor'
 import SubCategoryContractorPage from './otherServices/contractor/components/SubCategory/SubCategoryContractorPage'
 import SubCategoryCouriersPage from './otherServices/couriers/components/SubCategory/SubCategoryCouriersPage'
 import AstrologerPage from './popularCategory/astrologer/AstrologerPage'
+import { Toaster } from 'react-hot-toast'
 
 const router = createBrowserRouter([
   {
@@ -388,6 +389,7 @@ const router = createBrowserRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Toaster position="top center" reverseOrder={false} />
     <RouterProvider router={router} />
   </React.StrictMode>
 )

@@ -1,5 +1,4 @@
 import React from 'react'
-import './style.css'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
