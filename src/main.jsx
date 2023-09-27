@@ -59,6 +59,10 @@ import SubCategoryCouriersPage from './otherServices/couriers/components/SubCate
 import AstrologerPage from './popularCategory/astrologer/AstrologerPage'
 import { Toaster } from 'react-hot-toast'
 import Refrigerator from './HomeServices/components/refrigerator/Refrigerator'
+import Kitchen from './HomeServices/components/kitchen/Kitchen'
+import TV from './HomeServices/components/tv/tv'
+import Chimney from './HomeServices/components/chimney/Chimney'
+import WaterPurifier from './HomeServices/components/waterPurifier/WaterPurifier'
 
 const router = createBrowserRouter([
   {
@@ -86,6 +90,26 @@ const router = createBrowserRouter([
     element: <Autocare />
   },
   {
+    path: '/tvCategories',
+    element: <TV />
+  },
+  {
+    path: '/chimneyCategories',
+    element: <Chimney />
+  },
+  {
+    path: '/waterpurifierCategories',
+    element: <WaterPurifier />
+  },
+  {
+    path: '/pestcontrolCategories',
+    element: <WaterPurifier />
+  },
+  {
+    path: '/kitchenCategories',
+    element: <Kitchen />
+  },
+  {
     path: '/refrigeratorservices',
     element: <Autocare />
   },
@@ -97,6 +121,7 @@ const router = createBrowserRouter([
     path: '/kitchenservices',
     element: <Autocare />
   },
+
   {
     path: '/autocare/Product_Detail',
     element: <ProductDetailPageShop />

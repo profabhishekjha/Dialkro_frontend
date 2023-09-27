@@ -5,7 +5,7 @@ import BannerCarousel from '../../../components/Body/Carousel/BannerCarousel'
 import AlignmentSubCards from '../../../components/ui/AlignmentSubCard'
 import { useNavigate } from 'react-router-dom'
 
-const Refrigerator = () => {
+const Kitchen = () => {
   const navigation = useNavigate()
   const category = 'b2b' // Category name
   const images = [
@@ -52,4 +52,4 @@ const Refrigerator = () => {
   )
 }
 
-export default Refrigerator
+export default Kitchen

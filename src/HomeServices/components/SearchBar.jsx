@@ -32,27 +32,27 @@ const SearchBar = () => {
             <BigSubCards
               images={'/homeservice/tv.webp'}
               title={`TV and LED's`}
-              onClick={() => navigate('/refrigeratorCategories')}
+              onClick={() => navigate('/tvCategories')}
             />
             <BigSubCards
               images={'/homeservice/chimney.webp'}
               title={'Chimney'}
-              onClick={() => navigate('/refrigeratorCategories')}
+              onClick={() => navigate('/chimneyCategories')}
             />
             <BigSubCards
               images={'/homeservice/RO.webp'}
               title={'RO/Water Purifier'}
-              onClick={() => navigate('/refrigeratorCategories')}
+              onClick={() => navigate('/waterpurifierCategories')}
             />
             <BigSubCards
               images={'/homeservice/pestcontrol.webp'}
               title={'Pest Control'}
-              onClick={() => navigate('/refrigeratorCategories')}
+              onClick={() => navigate('/pestcontrolCategories')}
             />
             <BigSubCards
               images={'/homeservice/kitchen.webp'}
               title={'Kitchen'}
-              onClick={() => navigate('/refrigeratorCategories')}
+              onClick={() => navigate('/kitchenCategories')}
             />
           </div>
         </div>
