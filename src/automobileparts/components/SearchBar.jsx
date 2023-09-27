@@ -3,6 +3,9 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AlignmentSubCards from '../../components/ui/AlignmentSubCard'
 import BigSubCards from '../../components/ui/BigSubCards'
+import Section from '../../components/Section'
+import Card from '../../components/Card'
+import { faker } from '@faker-js/faker'
 
 const SearchBar = () => {
   const navigate = useNavigate()
@@ -153,6 +156,26 @@ const SearchBar = () => {
       setVisibleContentCount1((prevCount) => prevCount + 5)
     }
 
+    function CardList() {
+      const cards = []
+      for (let i = 0; i < 10; i++) {
+        cards.push(
+          <Card
+            id={i}
+            heading={faker.commerce.productName()}
+            description={faker.commerce.productDescription()}
+            companyName={faker.company.buzzVerb()}
+            image={faker.image.url()}
+            price={faker.commerce.price()}
+            rating={faker.number.float({ min: 1, max: 5, precision: 0.1 })}
+            reviews={faker.number.int({ max: 10000 })}
+          />
+        )
+      }
+      return cards
+    }
+    const cards = CardList()
+
     return (
       <div className="flex w-full flex-col gap-16">
         <div className="flex w-full items-center justify-center">
@@ -208,6 +231,11 @@ const SearchBar = () => {
               </div>
             )}
           </div>
+        </div>
+        <div className=" flex w-full flex-col items-center justify-center gap-10">
+          <Section FirstHeading="Engine Parts" cards={cards} isCardCarousel={true} />
+          <Section FirstHeading="Engine Oils" cards={cards} isCardCarousel={true} />
+          <Section FirstHeading="Basic Parts" cards={cards} isCardCarousel={true} />
         </div>
       </div>
     )

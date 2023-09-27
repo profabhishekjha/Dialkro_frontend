@@ -19,11 +19,15 @@ const SearchBar = () => {
     },
     {
       images: '/education/tuition.webp',
-      prompt: 'Tuition'
+      prompt: 'Coaching Classes'
     },
     {
       images: '/education/computer.webp',
-      prompt: 'Computer Class'
+      prompt: 'Computer Classes'
+    },
+    {
+      images: '/education/computer.webp',
+      prompt: 'Vocational Training'
     }
   ]
 
@@ -65,7 +69,7 @@ const SearchBar = () => {
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
+        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <AlignmentSubCards

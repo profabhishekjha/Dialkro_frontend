@@ -168,7 +168,7 @@ const Hero = () => {
               {/* give props to the cards and make them dynamic by giving them anchor , desc , name*/}
               <AlignmentCardsOther
                 images={'Wedding&Beauty/bridal-makeup.webp'}
-                prompt={'Wedding Services'}
+                prompt={'Wedding & Event Organiser'}
                 onClick={() => {
                   navigate('/weddingservicescategory')
                 }}

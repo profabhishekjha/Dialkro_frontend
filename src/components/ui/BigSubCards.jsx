@@ -10,7 +10,7 @@ const BigSubCards = ({ images, title, onClick }) => {
         <div className="truncate p-2 text-center">
           <a
             href=""
-            className="mb-2 overflow-hidden text-center text-xs font-bold capitalize tracking-wide text-gray-900 dark:text-white">
+            className="text-md mb-2 overflow-hidden text-center font-bold capitalize tracking-wide text-gray-900 dark:text-white">
             {title}
           </a>
         </div>
