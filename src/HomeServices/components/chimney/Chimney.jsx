@@ -19,29 +19,19 @@ const Chimney = () => {
       <Nav services={`Services`} />
       <BannerCarousel images={images} />
       <div className="mt-10 flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className=" grid items-center justify-center gap-16 max-sm:grid-cols-1 sm:grid-cols-3">
           <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Single Door`}
+            images={`/homeservice/chimneyrepair.webp`}
+            prompt={`Repair Service`}
             onClick={() => navigation('/homeservices')}
           />
           <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Double Door`}
+            images={`/homeservice/chimneycleaning.webp`}
+            prompt={`Cleaning`}
             onClick={() => navigation('/homeservices')}
           />
           <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Triple Door`}
-            onClick={() => navigation('/homeservices')}
-          />
-          <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Side by Side Door`}
-            onClick={() => navigation('/homeservices')}
-          />
-          <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
+            images={`/homeservice/chimneyinstall.webp`}
             prompt={`Installation / Uninstallation`}
             onClick={() => navigation('/homeservices')}
           />

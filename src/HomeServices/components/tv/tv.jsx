@@ -18,30 +18,15 @@ const TV = () => {
     <div>
       <Nav services={`Services`} />
       <BannerCarousel images={images} />
-      <div className="mt-10 flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="mt-10 flex w-full flex-col items-center justify-center gap-10">
+        <div className=" grid grid-cols-2 items-center justify-center gap-20 ">
           <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Single Door`}
+            images={`/homeservice/tvrepair.webp`}
+            prompt={`Repair Services`}
             onClick={() => navigation('/homeservices')}
           />
           <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Double Door`}
-            onClick={() => navigation('/homeservices')}
-          />
-          <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Triple Door`}
-            onClick={() => navigation('/homeservices')}
-          />
-          <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Side by Side Door`}
-            onClick={() => navigation('/homeservices')}
-          />
-          <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
+            images={`/homeservice/tvinstall.webp`}
             prompt={`Installation / Uninstallation`}
             onClick={() => navigation('/homeservices')}
           />

@@ -21,28 +21,28 @@ const PestControl = () => {
       <div className="mt-10 flex w-full flex-col items-center justify-center gap-5">
         <div className=" grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Single Door`}
+            images={`/homeservice/cockroach.webp`}
+            prompt={`Cockroach & Ants`}
             onClick={() => navigation('/homeservices')}
           />
           <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Double Door`}
+            images={`/homeservice/termites.webp`}
+            prompt={`Termites`}
             onClick={() => navigation('/homeservices')}
           />
           <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Triple Door`}
+            images={`/homeservice/bedbugs.webp`}
+            prompt={`Bed Bugs`}
             onClick={() => navigation('/homeservices')}
           />
           <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Side by Side Door`}
+            images={`/homeservice/mosquitos.webp`}
+            prompt={`Mosquitos`}
             onClick={() => navigation('/homeservices')}
           />
           <AlignmentSubCards
-            images={`/homeservice/refrigerator.webp`}
-            prompt={`Installation / Uninstallation`}
+            images={`/homeservice/lizards.webp`}
+            prompt={`Rodents / Lizards`}
             onClick={() => navigation('/homeservices')}
           />
         </div>
