@@ -63,6 +63,7 @@ import Kitchen from './HomeServices/components/kitchen/Kitchen'
 import TV from './HomeServices/components/tv/tv'
 import Chimney from './HomeServices/components/chimney/Chimney'
 import WaterPurifier from './HomeServices/components/waterPurifier/WaterPurifier'
+import PestControl from './HomeServices/components/pestControl/PestControl'
 
 const router = createBrowserRouter([
   {
@@ -103,7 +104,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/pestcontrolCategories',
-    element: <WaterPurifier />
+    element: <PestControl />
   },
   {
     path: '/kitchenCategories',
