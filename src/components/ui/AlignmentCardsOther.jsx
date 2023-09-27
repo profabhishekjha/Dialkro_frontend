@@ -3,7 +3,7 @@ import React from 'react'
 
 const AlignmentCardsOther = ({ images, prompt, onClick }) => {
   return (
-    <div className="z-10 flex items-center justify-center">
+    <div className="z-10 flex items-center justify-center duration-500 hover:scale-110">
       <div className="relative p-2">
         <div className="relative mx-auto h-40 w-52 overflow-hidden rounded-lg bg-white shadow-lg">
           <a onClick={onClick} className="cursor-pointer">
