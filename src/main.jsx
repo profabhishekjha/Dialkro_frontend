@@ -57,6 +57,12 @@ import Contractor from './otherServices/contractor/Contractor'
 import SubCategoryContractorPage from './otherServices/contractor/components/SubCategory/SubCategoryContractorPage'
 import SubCategoryCouriersPage from './otherServices/couriers/components/SubCategory/SubCategoryCouriersPage'
 import AstrologerPage from './popularCategory/astrologer/AstrologerPage'
+import { Toaster } from 'react-hot-toast'
+import Refrigerator from './HomeServices/components/refrigerator/Refrigerator'
+import Kitchen from './HomeServices/components/kitchen/Kitchen'
+import TV from './HomeServices/components/tv/tv'
+import Chimney from './HomeServices/components/chimney/Chimney'
+import WaterPurifier from './HomeServices/components/waterPurifier/WaterPurifier'
 
 const router = createBrowserRouter([
   {
@@ -84,13 +90,38 @@ const router = createBrowserRouter([
     element: <Autocare />
   },
   {
+    path: '/tvCategories',
+    element: <TV />
+  },
+  {
+    path: '/chimneyCategories',
+    element: <Chimney />
+  },
+  {
+    path: '/waterpurifierCategories',
+    element: <WaterPurifier />
+  },
+  {
+    path: '/pestcontrolCategories',
+    element: <WaterPurifier />
+  },
+  {
+    path: '/kitchenCategories',
+    element: <Kitchen />
+  },
+  {
     path: '/refrigeratorservices',
     element: <Autocare />
+  },
+  {
+    path: '/refrigeratorCategories',
+    element: <Refrigerator />
   },
   {
     path: '/kitchenservices',
     element: <Autocare />
   },
+
   {
     path: '/autocare/Product_Detail',
     element: <ProductDetailPageShop />
@@ -388,6 +419,7 @@ const router = createBrowserRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Toaster position="top center" reverseOrder={false} />
     <RouterProvider router={router} />
   </React.StrictMode>
 )
