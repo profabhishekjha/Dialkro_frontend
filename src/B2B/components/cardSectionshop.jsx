@@ -13,7 +13,7 @@ const CardSection = ({ onClick }) => {
   const [phoneNumber, setPhoneNumber] = useState('+1234567890')
   const [value] = React.useState(3)
   const [isFavorite, setIsFavorite] = useState(false)
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(true)
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false)
   const [openToggle, setOpenToggle] = useState(null)
@@ -41,6 +41,10 @@ const CardSection = ({ onClick }) => {
 
   const handleWhatsAppIconClick = () => {
     toggleMenu('whatsapp')
+  }
+
+  const handleOrderNowClick = () => {
+    navigate('/checkoutpage')
   }
 
   return (

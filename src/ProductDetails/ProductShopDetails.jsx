@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker'
 
 const ProductShopDetails = () => {
   return (
-    <div className="mt-10 h-[430px] w-[380px] rounded-lg border ">
+    <div className=" mt-10 h-[430px] w-[380px] rounded-lg border max-lg:hidden">
       <div className="flex items-center justify-center p-6">
         <div>
           <h2 className="mb-6 text-2xl font-semibold">Address Information</h2>

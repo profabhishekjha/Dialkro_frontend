@@ -88,8 +88,8 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a href="https://github.com/SinniS1" target="_blank" rel="noreferrer">
-                    Sachin Yadav
+                  <a href="https://github.com/kumarsushilroy" target="_blank" rel="noreferrer">
+                    Sushil Kumar
                   </a>
                 </li>
               </ul>

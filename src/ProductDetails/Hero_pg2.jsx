@@ -10,7 +10,7 @@ const Hero_pg2 = () => {
     <div className="flex">
       <div className="mt-5 grid w-[1500px] p-5">
         <div className="rounded-xl border p-10">
-          <div className="relative mb-10 flex items-center justify-center gap-10 rounded-lg border py-10">
+          <div className="relative mb-10 flex items-center justify-center gap-10 rounded-lg py-10 max-lg:flex-wrap">
             <div className="relative  h-52 overflow-hidden rounded-lg bg-white shadow-lg">
               <img className="h-52 w-full object-cover" src={faker.image.url()} alt="Card Image" />
             </div>
@@ -23,25 +23,8 @@ const Hero_pg2 = () => {
             <div className="relative  h-52 overflow-hidden rounded-lg bg-white shadow-lg">
               <img className="h-52 w-full object-cover" src={faker.image.url()} alt="Card Image" />
             </div>
-            <div className="mr-10 grid gap-10">
-              <div className="relative  h-20 overflow-hidden rounded-lg bg-white shadow-lg">
-                <img
-                  className="h-20 w-full object-cover"
-                  src={faker.image.url()}
-                  alt="Card Image"
-                />
-              </div>
-              <div className="relative mx-auto h-20 overflow-hidden rounded-lg bg-white shadow-lg">
-                <img
-                  className="h-20 w-full object-cover"
-                  src={faker.image.url()}
-                  alt="Card Image"
-                />
-              </div>
-            </div>
-            <div></div>
           </div>
-          <div className="rounded-lg border p-10">
+          <div className="rounded-lg border p-10 max-lg:border-none max-lg:p-2">
             <div className="">
               <p className="cursor-pointer text-lg font-bold uppercase">
                 {faker.company.buzzVerb()}
@@ -68,7 +51,7 @@ const Hero_pg2 = () => {
               </button>
             </div>
             <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
-            <div className="flex items-center">
+            <div className=" flex items-center max-lg:flex-wrap">
               <button
                 type="button"
                 className="rounded-2xl bg-sky-700 px-5 py-2.5 text-[2rem] font-medium text-white hover:bg-sky-800 focus:outline-none focus:ring-4 focus:ring-sky-300 dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
@@ -77,8 +60,8 @@ const Hero_pg2 = () => {
               <p className="p-5">
                 <RandomStar />
               </p>
-              <div className="flex">
-                <div className="h-[100px] min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-10 dark:opacity-50"></div>
+              <div className=" flex">
+                <div className="h-[100px] min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-10 dark:opacity-50 max-lg:hidden"></div>
                 <div className="p-7">
                   <h1>{faker.number.int({ max: 10000 })} Ratings</h1>
                   <p>

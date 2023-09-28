@@ -64,6 +64,7 @@ import TV from './HomeServices/components/tv/tv'
 import Chimney from './HomeServices/components/chimney/Chimney'
 import WaterPurifier from './HomeServices/components/waterPurifier/WaterPurifier'
 import PestControl from './HomeServices/components/pestControl/PestControl'
+import CheckoutPage from './CheckoutPage/CheckoutPage'
 
 const router = createBrowserRouter([
   {
@@ -416,6 +417,10 @@ const router = createBrowserRouter([
   {
     path: '/astrologer/Product_Detail',
     element: <ProductDetailPage />
+  },
+  {
+    path: '/checkoutpage',
+    element: <CheckoutPage />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
