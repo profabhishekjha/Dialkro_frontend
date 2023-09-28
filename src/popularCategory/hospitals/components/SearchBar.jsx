@@ -98,7 +98,7 @@ const SearchBar = () => {
           ))}
         </div>
         {filteredContent.length > visibleContentCount && (
-          <div className="mt-7 flex items-end justify-end">
+          <div className=" mt-7 flex items-end justify-end">
             <button
               onClick={handleViewMoreClick}
               className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
