@@ -6,7 +6,7 @@ const Cards = ({ images, heading, description, onClick }) => {
     <div onClick={onClick} className=" cursor-pointer">
       <div className="redborder max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-blue-800 hover:dark:bg-blue-600">
         <a onClick={onClick}>
-          <img className="h-60 rounded-t-lg" src={images} alt="lorem" />
+          <img className="h-60 w-[65vw] rounded-t-lg" src={images} alt="lorem" />
         </a>
         <div className="p-5">
           <a onClick={onClick}>
