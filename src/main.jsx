@@ -65,6 +65,7 @@ import Chimney from './HomeServices/components/chimney/Chimney'
 import WaterPurifier from './HomeServices/components/waterPurifier/WaterPurifier'
 import PestControl from './HomeServices/components/pestControl/PestControl'
 import CheckoutPage from './CheckoutPage/CheckoutPage'
+import Onlineshopping from './OnlineShopping/OnlineShopping'
 
 const router = createBrowserRouter([
   {
@@ -421,6 +422,10 @@ const router = createBrowserRouter([
   {
     path: '/checkoutpage',
     element: <CheckoutPage />
+  },
+  {
+    path: '/onlineshopping',
+    element: <Onlineshopping />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
