@@ -2,208 +2,143 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BigSubCards from '../../components/ui/BigSubCards'
+import Cards from '../../components/ui/Cards'
 
 const SearchBar = () => {
   const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState('')
-  const [visibleContentCount, setVisibleContentCount] = useState(5)
+  const [visibleBigCardsCount, setVisibleBigCardsCount] = useState(6)
   // Your list of available content
-  const availableContent = [
+
+  const bigSubCardsData = [
     {
       images: '/b2bCarousel/axe.webp',
-      prompt: 'Axe'
+      title: 'Axe',
+      onClick: () => navigate('/refrigeratorCategories')
+    },
+    {
+      images: '/b2bCarousel/airfilter.webp',
+      title: 'Air Filter',
+      onClick: () => navigate('/tvCategories')
     },
     {
       images: '/b2bCarousel/cabinet.webp',
-      prompt: 'Cabinet'
-    },
-    {
-      images: '/b2bCarousel/commercialfurniture.webp',
-      prompt: 'Commercial Furniture'
+      title: 'Cabinet',
+      onClick: () => navigate('/chimneyCategories')
     },
     {
       images: '/b2bCarousel/electricalcomponents.webp',
-      prompt: 'Electrical Components'
+      title: 'Electrical Component',
+      onClick: () => navigate('/waterpurifierCategories')
     },
     {
       images: '/b2bCarousel/handtools.webp',
-      prompt: 'Hand Tools'
+      title: 'Hand Tools',
+      onClick: () => navigate('/pestcontrolCategories')
     },
     {
       images: '/b2bCarousel/lightbulb.webp',
-      prompt: ' Light Bulbs'
+      title: 'Light Bulbs',
+      onClick: () => navigate('/kitchenCategories')
     },
     {
       images: '/b2bCarousel/protective-equipment.webp',
-      prompt: 'Protective Gear'
+      title: 'Protective Equipment',
+      onClick: () => navigate('/kitchenCategories')
     },
     {
       images: '/b2bCarousel/resistor.webp',
-      prompt: 'Resistors'
+      title: 'Resistors',
+      onClick: () => navigate('/kitchenCategories')
     },
     {
       images: '/b2bCarousel/scaffolding.webp',
-      prompt: 'Scaffoldings'
+      title: 'Scaf Foldings',
+      onClick: () => navigate('/kitchenCategories')
     },
     {
       images: '/b2bCarousel/treadmill.webp',
-      prompt: 'Treadmill'
+      title: 'Tread Mill',
+      onClick: () => navigate('/kitchenCategories')
     },
     {
       images: '/b2bCarousel/truckpart.webp',
-      prompt: 'Truck Parts'
+      title: 'Truck Parts',
+      onClick: () => navigate('/kitchenCategories')
     },
     {
       images: '/b2bCarousel/water-pump.webp',
-      prompt: 'Water Pumps'
-    },
-    {
-      images: '/b2bCarousel/clamps.webp',
-      prompt: 'Clamps'
-    },
-    {
-      images: '/b2bCarousel/weightmachine.webp',
-      prompt: 'Weight Machine'
-    },
-    {
-      images: '/b2bCarousel/wheelchair.webp',
-      prompt: 'Wheelchairs'
-    },
-    {
-      images: '/b2bCarousel/hoses.webp',
-      prompt: 'Hoses'
-    },
-    {
-      images: '/b2bCarousel/lubricants.webp',
-      prompt: 'Lubricants'
-    },
-    {
-      images: '/b2bCarousel/nut-bolt.webp',
-      prompt: 'Nut & Bolts'
-    },
-    {
-      images: '/b2bCarousel/package-material.webp',
-      prompt: 'Package Materials'
-    },
-    {
-      images: '/b2bCarousel/plastics.webp',
-      prompt: 'Plastics'
-    },
-    {
-      images: '/b2bCarousel/roofing.webp',
-      prompt: 'Roofing'
-    },
-    {
-      images: '/b2bCarousel/rubber.webp',
-      prompt: 'Rubber'
-    },
-    {
-      images: '/b2bCarousel/stationary.webp',
-      prompt: 'Stationary'
-    },
-    {
-      images: '/b2bCarousel/valves.webp',
-      prompt: 'Valves'
-    },
-    {
-      images: '/b2bCarousel/water-pump.webp',
-      prompt: 'Pumps'
+      title: 'Water Pumps',
+      onClick: () => navigate('/kitchenCategories')
     }
   ]
 
-  const filteredContent = availableContent.filter((content) =>
-    content.prompt.toLowerCase().includes(searchTerm.toLowerCase())
-  )
-
-  const handleSuggestionClick = () => {
-    // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/b2b')
+  const handleViewMoreBigCardsClick = () => {
+    setVisibleBigCardsCount((prevCount) => prevCount + 6) // Increase by 6 on each click
   }
-
-  const handleEnterKeyPress = (e) => {
-    if (e.keyCode === 13) {
-      // Enter key pressed
-      redirectToFirstSuggestion()
-    }
-  }
-  // Function to automatically redirect to the first suggestion
-  const redirectToFirstSuggestion = () => {
-    if (filteredContent.length > 0) {
-      handleSuggestionClick(filteredContent[0])
-    }
-  }
-
   // Render the filtered content
-  const renderFilteredContent = () => {
-    if (filteredContent.length === 0) {
-      return (
-        <div className="ml-16 flex items-center justify-center gap-10">
-          <p>No matching content found.</p>
-        </div>
-      )
-    }
 
-    const handleViewMoreClick = () => {
-      // Show 5 more cards when the "View More" button is clicked
-      setVisibleContentCount((prevCount) => prevCount + 5)
-    }
-
-    return (
-      <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-md:gap-5 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
-          {filteredContent.slice(0, visibleContentCount).map((content, index) => (
-            <div key={index}>
-              <BigSubCards
-                images={content.images}
-                title={content.prompt}
-                onClick={() => handleSuggestionClick(content)}
-              />
-            </div>
-          ))}
-        </div>
-        {filteredContent.length > visibleContentCount && (
-          <div className="mt-7 flex items-end justify-end">
-            <button
-              onClick={handleViewMoreClick}
-              className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
-              View More Category
-            </button>
-          </div>
-        )}
-      </div>
-    )
-  }
   return (
-    <div className="container flex flex-col gap-10">
-      <div className="flex items-center justify-center">
-        <form className="mt-3 w-96 px-6">
-          <div className="relative">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="absolute bottom-0 left-3 top-0 my-auto h-6 w-6 text-gray-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+    <div className="flex w-full flex-col gap-16">
+      <div className=" flex w-full items-center justify-center">
+        <div className=" flex w-[80%] flex-col items-center justify-center gap-5">
+          <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
+            <p>Dialkro's B2B Services</p>
+          </div>
+          <div className=" grid items-center justify-center gap-4 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+            {bigSubCardsData.slice(0, visibleBigCardsCount).map((card, index) => (
+              <BigSubCards
+                key={index}
+                images={card.images}
+                title={card.title}
+                onClick={card.onClick}
               />
-            </svg>
-            <input
-              type="text"
-              placeholder="Search"
-              className="w-full rounded-md border bg-gray-50 py-2 pl-12 pr-4 text-gray-500 outline-none focus:border-indigo-600 focus:bg-white"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              onBlur={redirectToFirstSuggestion}
-              onKeyDown={handleEnterKeyPress}
+            ))}
+          </div>
+          {visibleBigCardsCount < bigSubCardsData.length && (
+            <div className=" mt-7 flex w-full items-center justify-center">
+              <button
+                onClick={handleViewMoreBigCardsClick}
+                className="h-10 w-44 rounded-md bg-blue-500 text-white hover:bg-blue-400">
+                View More Category
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+      <div className=" flex w-full flex-col items-center justify-center">
+        <div className="flex w-[80%] flex-col items-center justify-center gap-5">
+          <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
+            <p>Dialkro's Most Popular Services</p>
+          </div>
+          <div className="grid items-center justify-center gap-20 max-sm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <Cards
+              images={`/homeservice/tv.webp`}
+              heading={`Television`}
+              description={'We offer one of the best TV services in India'}
+              onClick={() => {
+                navigate('/tvservices')
+              }}
+            />
+            <Cards
+              images={`/homeservice/refrigerator.webp`}
+              heading={`Refrigerator`}
+              description={'We offer one of the best Refrigerator services in India'}
+              onClick={() => {
+                navigate('/refrigeratorservices')
+              }}
+            />
+            <Cards
+              images={`/homeservice/kitchen.webp`}
+              heading={`Kitchen Deep Cleaning`}
+              description={'We offer one of the best Home Services services in India'}
+              onClick={() => {
+                navigate('/kitchenservices')
+              }}
             />
           </div>
-        </form>
+        </div>
       </div>
-      <div className="flex items-start justify-start">{renderFilteredContent()}</div>
     </div>
   )
 }
