@@ -19,14 +19,14 @@ const Onlineshopping = () => {
     <div>
       <Outlet />
       <Toaster />
-      <Nav services={`Online Shop`} />
+      <Nav services={`Shopping`} />
       <BannerCarousel images={images} />
       <div className=" my-5 grid  items-center justify-center gap-5">
-        <CardSectionshop onClick={() => navigate('/onlineshopping/Product_Detail')} />
-        <CardSectionshop onClick={() => navigate('/onlineshopping/Product_Detail')} />
-        <CardSectionshop onClick={() => navigate('/onlineshopping/Product_Detail')} />
-        <CardSectionshop onClick={() => navigate('/onlineshopping/Product_Detail')} />
-        <CardSectionshop onClick={() => navigate('/onlineshopping/Product_Detail')} />
+        <CardSectionshop onClick={() => navigate('/b2b/Product_Detail')} />
+        <CardSectionshop onClick={() => navigate('/b2b/Product_Detail')} />
+        <CardSectionshop onClick={() => navigate('/b2b/Product_Detail')} />
+        <CardSectionshop onClick={() => navigate('/b2b/Product_Detail')} />
+        <CardSectionshop onClick={() => navigate('/b2b/Product_Detail')} />
       </div>
       <Footer />
     </div>
