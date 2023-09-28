@@ -34,6 +34,7 @@ const CheckoutPage = () => {
               <span className="mr-2 inline w-[100px] text-xl font-bold">Phone no:</span>
               <input
                 id="phone"
+                Z
                 type="number"
                 placeholder="Phone no."
                 disabled={!updateDetails}
@@ -42,9 +43,7 @@ const CheckoutPage = () => {
                 className="flex-1 rounded-md border bg-slate-100 px-5 py-2 text-lg font-semibold"
               />
             </div>
-
             <div className=" h-20 border" />
-
             <div className=" flex w-full items-center gap-2">
               <span className="mr-2 inline w-[100px] text-xl font-bold">Address:</span>
               <input
@@ -57,9 +56,7 @@ const CheckoutPage = () => {
                 onChange={(e) => setUpdateAddress(e.target.value)}
               />
             </div>
-
             <div className="h-20 border" />
-
             <div className=" flex w-[12vw] justify-center">
               <button
                 onClick={() => setUpdateDetails(!updateDetails)}
@@ -68,7 +65,6 @@ const CheckoutPage = () => {
               </button>
             </div>
           </div>
-
           <div className=" flex h-28 w-[25vw] items-center rounded-3xl border px-5">
             {/* Place your order */}
             <div className=" flex w-[12vw] justify-center">
