@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker'
 const AdsCardComponent = ({ onClick }) => {
   return (
     <div>
-      <div className="container relative flex flex-wrap items-center justify-center rounded-lg">
+      <div className=" container relative flex flex-wrap items-center justify-center rounded-lg max-lg:hidden">
         <div className="relative mt-4 flex w-[380px] flex-col items-center justify-center rounded-lg border p-5">
           <div className="relative mx-auto h-60 overflow-hidden rounded-lg bg-white shadow-lg">
             <img
