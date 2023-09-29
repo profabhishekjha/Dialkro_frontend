@@ -67,6 +67,7 @@ import PestControl from './HomeServices/components/pestControl/PestControl'
 import CheckoutPage from './CheckoutPage/CheckoutPage'
 import Onlineshopping from './OnlineShopping/OnlineShopping'
 import AgricultureEquipment from './B2B/components/SubSubCategory/AgricultureEquipment'
+import AgricultureMachinery from './B2B/components/SubSubCategory/AgricultureMachinery'
 
 const router = createBrowserRouter([
   {
@@ -435,6 +436,10 @@ const router = createBrowserRouter([
   {
     path: '/agricultureequipment',
     element: <AgricultureEquipment />
+  },
+  {
+    path: '/agriculturemachinery',
+    element: <AgricultureMachinery />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

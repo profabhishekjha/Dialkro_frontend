@@ -27,7 +27,7 @@ const SearchBar = () => {
     {
       images: '/b2bCarousel/agriculturemachinery.webp',
       title: 'Agriculture Machinery',
-      onClick: () => navigate('/kitchenCategories')
+      onClick: () => navigate('/agriculturemachinery')
     },
     {
       images: '/b2bCarousel/rubber.webp',
