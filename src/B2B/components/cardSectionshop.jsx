@@ -130,7 +130,7 @@ const CardSection = ({ onClick }) => {
           </div>
           <div className="flex h-12 flex-col max-md:flex-row max-md:items-center max-md:justify-center ">
             <Heart
-              className=" h-12 w-24 duration-500 hover:scale-125"
+              className=" h-10  duration-500 hover:scale-125 max-lg:absolute max-lg:right-10"
               color={`${isFavorite ? 'red' : 'black'}`}
               fill={`${isFavorite ? 'red' : 'white'}`}
               onClick={() => {

@@ -21,13 +21,18 @@ const SearchBar = () => {
     },
     {
       images: '/b2bCarousel/agricultureequipment.webp',
-      title: 'Agriculture Equipments',
-      onClick: () => navigate('/agricultureequipment')
+      title: 'Agriculture Tools',
+      onClick: () => navigate('/agriculturetools')
     },
     {
       images: '/b2bCarousel/agriculturemachinery.webp',
       title: 'Agriculture Machinery',
       onClick: () => navigate('/agriculturemachinery')
+    },
+    {
+      images: '/b2bCarousel/electricalcomponents.webp',
+      title: 'Electrical Component',
+      onClick: () => navigate('/electricalcomponents')
     },
     {
       images: '/b2bCarousel/rubber.webp',
@@ -44,11 +49,7 @@ const SearchBar = () => {
       title: 'Cabinet',
       onClick: () => navigate('/chimneyCategories')
     },
-    {
-      images: '/b2bCarousel/electricalcomponents.webp',
-      title: 'Electrical Component',
-      onClick: () => navigate('/waterpurifierCategories')
-    },
+
     {
       images: '/b2bCarousel/handtools.webp',
       title: 'Hand Tools',

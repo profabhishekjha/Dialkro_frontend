@@ -69,6 +69,7 @@ import Onlineshopping from './OnlineShopping/OnlineShopping'
 import AgricultureEquipment from './B2B/components/SubSubCategory/AgricultureEquipment'
 import AgricultureMachinery from './B2B/components/SubSubCategory/AgricultureMachinery'
 import EngineParts from './B2B/components/SubSubCategory/EngineParts'
+import ElectricalComponents from './B2B/components/SubSubCategory/ElectricalComponents'
 
 const router = createBrowserRouter([
   {
@@ -435,7 +436,7 @@ const router = createBrowserRouter([
     element: <Onlineshopping />
   },
   {
-    path: '/agricultureequipment',
+    path: '/agriculturetools',
     element: <AgricultureEquipment />
   },
   {
@@ -445,6 +446,10 @@ const router = createBrowserRouter([
   {
     path: '/engineparts',
     element: <EngineParts />
+  },
+  {
+    path: '/electricalcomponents',
+    element: <ElectricalComponents />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
