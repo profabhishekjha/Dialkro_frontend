@@ -68,6 +68,7 @@ import CheckoutPage from './CheckoutPage/CheckoutPage'
 import Onlineshopping from './OnlineShopping/OnlineShopping'
 import AgricultureEquipment from './B2B/components/SubSubCategory/AgricultureEquipment'
 import AgricultureMachinery from './B2B/components/SubSubCategory/AgricultureMachinery'
+import EngineParts from './B2B/components/SubSubCategory/EngineParts'
 
 const router = createBrowserRouter([
   {
@@ -440,6 +441,10 @@ const router = createBrowserRouter([
   {
     path: '/agriculturemachinery',
     element: <AgricultureMachinery />
+  },
+  {
+    path: '/engineparts',
+    element: <EngineParts />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(

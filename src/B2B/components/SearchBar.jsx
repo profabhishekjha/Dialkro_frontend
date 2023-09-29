@@ -17,7 +17,7 @@ const SearchBar = () => {
     {
       images: '/b2bCarousel/engineparts.webp',
       title: 'Engine Parts',
-      onClick: () => navigate('')
+      onClick: () => navigate('/engineparts')
     },
     {
       images: '/b2bCarousel/agricultureequipment.webp',
