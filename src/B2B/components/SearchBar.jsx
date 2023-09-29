@@ -12,8 +12,23 @@ const SearchBar = () => {
 
   const bigSubCardsData = [
     {
-      images: '/b2bCarousel/axe.webp',
-      title: 'Axe',
+      images: '/b2bCarousel/engineparts.webp',
+      title: 'Engine Parts',
+      onClick: () => navigate('/kitchenCategories')
+    },
+    {
+      images: '/b2bCarousel/agricultureequipment.webp',
+      title: 'Agriculture Equipments',
+      onClick: () => navigate('/kitchenCategories')
+    },
+    {
+      images: '/b2bCarousel/agriculturemachinery.webp',
+      title: 'Agriculture Machinery',
+      onClick: () => navigate('/kitchenCategories')
+    },
+    {
+      images: '/b2bCarousel/rubber.webp',
+      title: 'Rubber',
       onClick: () => navigate('/refrigeratorCategories')
     },
     {
@@ -53,7 +68,7 @@ const SearchBar = () => {
     },
     {
       images: '/b2bCarousel/scaffolding.webp',
-      title: 'Scaf Foldings',
+      title: 'Scaffoldings',
       onClick: () => navigate('/kitchenCategories')
     },
     {
@@ -64,21 +79,6 @@ const SearchBar = () => {
     {
       images: '/b2bCarousel/truckpart.webp',
       title: 'Truck Parts',
-      onClick: () => navigate('/kitchenCategories')
-    },
-    {
-      images: '/b2bCarousel/water-pump.webp',
-      title: 'Water Pumps',
-      onClick: () => navigate('/kitchenCategories')
-    },
-    {
-      images: '/b2bCarousel/water-pump.webp',
-      title: 'Water Pumps',
-      onClick: () => navigate('/kitchenCategories')
-    },
-    {
-      images: '/b2bCarousel/water-pump.webp',
-      title: 'Water Pumps',
       onClick: () => navigate('/kitchenCategories')
     },
     {
