@@ -17,12 +17,12 @@ const SearchBar = () => {
     {
       images: '/b2bCarousel/engineparts.webp',
       title: 'Engine Parts',
-      onClick: () => navigate('/kitchenCategories')
+      onClick: () => navigate('')
     },
     {
       images: '/b2bCarousel/agricultureequipment.webp',
       title: 'Agriculture Equipments',
-      onClick: () => navigate('/kitchenCategories')
+      onClick: () => navigate('/agricultureequipment')
     },
     {
       images: '/b2bCarousel/agriculturemachinery.webp',

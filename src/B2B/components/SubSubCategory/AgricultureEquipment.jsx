@@ -16,7 +16,7 @@ const AgricultureEquipment = () => {
 
   return (
     <div>
-      <Nav services={`Services`} />
+      <Nav services={`B2B`} />
       <BannerCarousel images={images} />
       <div className="mt-10 flex w-full flex-col items-center justify-center gap-5">
         <div className=" grid items-center justify-center gap-16 max-sm:grid-cols-1 sm:grid-cols-3">

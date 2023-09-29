@@ -66,6 +66,7 @@ import WaterPurifier from './HomeServices/components/waterPurifier/WaterPurifier
 import PestControl from './HomeServices/components/pestControl/PestControl'
 import CheckoutPage from './CheckoutPage/CheckoutPage'
 import Onlineshopping from './OnlineShopping/OnlineShopping'
+import AgricultureEquipment from './B2B/components/SubSubCategory/AgricultureEquipment'
 
 const router = createBrowserRouter([
   {
@@ -430,6 +431,10 @@ const router = createBrowserRouter([
   {
     path: '/onlineshopping',
     element: <Onlineshopping />
+  },
+  {
+    path: '/agricultureequipment',
+    element: <AgricultureEquipment />
   }
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
