@@ -5,7 +5,7 @@ import BannerCarousel from '../../../components/Body/Carousel/BannerCarousel'
 import AlignmentSubCards from '../../../components/ui/AlignmentSubCard'
 import { useNavigate } from 'react-router-dom'
 
-const AgricultureEquipment = () => {
+const ElectricalComponents = () => {
   const navigation = useNavigate()
   const category = 'b2b' // Category name
   const images = [
@@ -21,28 +21,33 @@ const AgricultureEquipment = () => {
       <div className="mt-10 flex w-full flex-col items-center justify-center gap-5">
         <div className=" flex items-center justify-center gap-5 max-lg:flex-wrap ">
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/cultivator.webp`}
-            prompt={`cultivator`}
+            images={`/b2bSubSubCategory/capacitor.webp`}
+            prompt={`capacitor`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/hoe.webp`}
-            prompt={`hoe`}
+            images={`/b2bSubSubCategory/diodes.webp`}
+            prompt={`diodes`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/pickaxe.webp`}
-            prompt={`pickaxe`}
+            images={`/b2bSubSubCategory/inductor.webp`}
+            prompt={`inductor`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/sickle.webp`}
-            prompt={`sickle`}
+            images={`/b2bSubSubCategory/led.webp`}
+            prompt={`led`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/trowel.webp`}
-            prompt={`trowel`}
+            images={`/b2bSubSubCategory/transistor.webp`}
+            prompt={`transistor`}
+            onClick={() => navigation('/b2b')}
+          />
+          <AlignmentSubCards
+            images={`/b2bSubSubCategory/resistor.webp`}
+            prompt={`resistor`}
             onClick={() => navigation('/b2b')}
           />
         </div>
@@ -52,4 +57,4 @@ const AgricultureEquipment = () => {
   )
 }
 
-export default AgricultureEquipment
+export default ElectricalComponents
