@@ -2,15 +2,18 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BigSubCards from '../../components/ui/BigSubCards'
-import Cards from '../../components/ui/Cards'
+import Section from '../../components/Section'
+import Card from '../../components/Card'
+import { faker } from '@faker-js/faker'
 
 const SearchBar = () => {
   const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState('')
-  const [visibleBigCardsCount, setVisibleBigCardsCount] = useState(6)
+  const [visibleContentCount, setVisibleContentCount] = useState(5)
   // Your list of available content
+  const section = 'autocare'
 
-  const bigSubCardsData = [
+  const availableContent = [
     {
       images: '/b2bCarousel/axe.webp',
       title: 'Axe',
@@ -72,73 +75,128 @@ const SearchBar = () => {
       onClick: () => navigate('/kitchenCategories')
     }
   ]
+  const filteredContent = availableContent.filter((content) =>
+    content.title.toLowerCase().includes(searchTerm.toLowerCase())
+  )
 
-  const handleViewMoreBigCardsClick = () => {
-    setVisibleBigCardsCount((prevCount) => prevCount + 6) // Increase by 6 on each click
+  const handleEnterKeyPress = (e) => {
+    if (e.keyCode === 13) {
+      // Enter key pressed
+      redirectToFirstSuggestion()
+    }
   }
-  // Render the filtered content
+  // Function to automatically redirect to the first suggestion
+  const redirectToFirstSuggestion = () => {
+    const mergedContent = [...filteredContent, ...filteredContentCurated]
+    if (mergedContent.length > 0) {
+      handleSuggestionClick(mergedContent[0])
+    }
+  }
 
-  return (
-    <div className="flex w-full flex-col gap-16">
-      <div className=" flex w-full items-center justify-center">
-        <div className=" flex w-[80%] flex-col items-center justify-center gap-5">
-          <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
-            <p>Dialkro's B2B Services</p>
-          </div>
-          <div className=" grid items-center justify-center gap-4 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-            {bigSubCardsData.slice(0, visibleBigCardsCount).map((card, index) => (
-              <BigSubCards
-                key={index}
-                images={card.images}
-                title={card.title}
-                onClick={card.onClick}
-              />
-            ))}
-          </div>
-          {visibleBigCardsCount < bigSubCardsData.length && (
-            <div className=" mt-7 flex w-full items-center justify-center">
-              <button
-                onClick={handleViewMoreBigCardsClick}
-                className="h-10 w-44 rounded-md bg-blue-500 text-white hover:bg-blue-400">
-                View More Category
-              </button>
+  // Render the filtered content
+  const renderFilteredContent = () => {
+    if (filteredContent.length === 0) {
+      return (
+        <div className="ml-16 flex items-center justify-center gap-10">
+          <p>No matching content found.</p>
+        </div>
+      )
+    }
+
+    const handleViewMoreClick = () => {
+      // Show 5 more cards when the "View More" button is clicked
+      setVisibleContentCount((prevCount) => prevCount + 5)
+    }
+
+    function CardList() {
+      const cards = []
+      for (let i = 0; i < 10; i++) {
+        cards.push(
+          <Card
+            id={i}
+            heading={faker.commerce.productName()}
+            description={faker.commerce.productDescription()}
+            companyName={faker.company.buzzVerb()}
+            image={faker.image.url()}
+            price={faker.commerce.price()}
+            rating={faker.number.float({ min: 1, max: 5, precision: 0.1 })}
+            reviews={faker.number.int({ max: 10000 })}
+          />
+        )
+      }
+      return cards
+    }
+    const cards = CardList()
+
+    return (
+      <div className="flex w-full flex-col gap-16">
+        <div className="flex w-full items-center justify-center">
+          <div className=" flex w-[70%] flex-col items-center justify-center gap-2">
+            <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
+              <p>Car Services Available in Dialkro</p>
             </div>
-          )}
-        </div>
-      </div>
-      <div className=" flex w-full flex-col items-center justify-center">
-        <div className="flex w-[80%] flex-col items-center justify-center gap-5">
-          <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
-            <p>Dialkro's Most Popular Services</p>
-          </div>
-          <div className="grid items-center justify-center gap-20 max-sm:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <Cards
-              images={`/homeservice/tv.webp`}
-              heading={`Television`}
-              description={'We offer one of the best TV services in India'}
-              onClick={() => {
-                navigate('/tvservices')
-              }}
-            />
-            <Cards
-              images={`/homeservice/refrigerator.webp`}
-              heading={`Refrigerator`}
-              description={'We offer one of the best Refrigerator services in India'}
-              onClick={() => {
-                navigate('/refrigeratorservices')
-              }}
-            />
-            <Cards
-              images={`/homeservice/kitchen.webp`}
-              heading={`Kitchen Deep Cleaning`}
-              description={'We offer one of the best Home Services services in India'}
-              onClick={() => {
-                navigate('/kitchenservices')
-              }}
-            />
+            <div className="grid items-center justify-center max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              {filteredContent.slice(0, visibleContentCount).map((content, index) => (
+                <div key={index}>
+                  <BigSubCards
+                    images={content.images}
+                    title={content.title}
+                    onClick={content.onClick}
+                  />
+                </div>
+              ))}
+            </div>
+            {filteredContent.length > visibleContentCount && (
+              <div className="mt-7 flex items-end justify-end">
+                <button
+                  onClick={handleViewMoreClick}
+                  className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
+                  View More Category
+                </button>
+              </div>
+            )}
           </div>
         </div>
+
+        <div className=" flex w-full flex-col items-center justify-center gap-10">
+          <Section FirstHeading="Engine Parts" cards={cards} isCardCarousel={true} />
+          <Section FirstHeading="Engine Oils" cards={cards} isCardCarousel={true} />
+          <Section FirstHeading="Basic Parts" cards={cards} isCardCarousel={true} />
+        </div>
       </div>
+    )
+  }
+  return (
+    <div className="container flex flex-col gap-10">
+      <div className="flex items-center justify-center">
+        <form className="mt-3 w-96 px-6">
+          <div className="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute bottom-0 left-3 top-0 my-auto h-6 w-6 text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search"
+              className="w-full rounded-md border bg-gray-50 py-2 pl-12 pr-4 text-gray-500 outline-none focus:border-indigo-600 focus:bg-white"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onBlur={redirectToFirstSuggestion}
+              onKeyDown={handleEnterKeyPress}
+            />
+          </div>
+        </form>
+      </div>
+      <div className="flex items-start justify-start">{renderFilteredContent()}</div>
     </div>
   )
 }
