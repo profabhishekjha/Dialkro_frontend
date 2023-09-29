@@ -70,6 +70,7 @@ import AgricultureEquipment from './B2B/components/SubSubCategory/AgricultureEqu
 import AgricultureMachinery from './B2B/components/SubSubCategory/AgricultureMachinery'
 import EngineParts from './B2B/components/SubSubCategory/EngineParts'
 import ElectricalComponents from './B2B/components/SubSubCategory/ElectricalComponents'
+import Error from './Error'
 
 const router = createBrowserRouter([
   {
@@ -78,7 +79,8 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <Layout />
+    element: <Layout />,
+    errorElement: <Error />
   },
   {
     path: '/addbusiness',
