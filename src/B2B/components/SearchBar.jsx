@@ -70,6 +70,21 @@ const SearchBar = () => {
       images: '/b2bCarousel/water-pump.webp',
       title: 'Water Pumps',
       onClick: () => navigate('/kitchenCategories')
+    },
+    {
+      images: '/b2bCarousel/water-pump.webp',
+      title: 'Water Pumps',
+      onClick: () => navigate('/kitchenCategories')
+    },
+    {
+      images: '/b2bCarousel/water-pump.webp',
+      title: 'Water Pumps',
+      onClick: () => navigate('/kitchenCategories')
+    },
+    {
+      images: '/b2bCarousel/water-pump.webp',
+      title: 'Water Pumps',
+      onClick: () => navigate('/kitchenCategories')
     }
   ]
 
