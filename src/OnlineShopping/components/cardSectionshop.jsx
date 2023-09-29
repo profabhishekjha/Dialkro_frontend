@@ -9,7 +9,6 @@ import LoginModal from '../../components/modals/LoginModal' // Adjust the path a
 import RegisterModal from '../../components/modals/RegisterModal' // Adjust the path as needed
 
 const CardSection = ({ onClick }) => {
-  const [isToggleMenuOpen, setIsToggleMenuOpen] = useState(false) // State to control the toggle menu
   const [phoneNumber, setPhoneNumber] = useState('+1234567890')
   const [value] = React.useState(3)
   const [isFavorite, setIsFavorite] = useState(false)

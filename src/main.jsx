@@ -376,6 +376,10 @@ const router = createBrowserRouter([
     element: <ProductDetailPage />
   },
   {
+    path: '/autocare',
+    element: <Autocare />
+  },
+  {
     path: '/b2bcategory',
     element: <SubCategoryb2bPage />
   },

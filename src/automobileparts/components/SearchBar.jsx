@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import AlignmentSubCards from '../../components/ui/AlignmentSubCard'
 import BigSubCards from '../../components/ui/BigSubCards'
 import Section from '../../components/Section'
 import Card from '../../components/Card'
@@ -17,45 +16,56 @@ const SearchBar = () => {
   const availableContent = [
     {
       images: `/${section}/periodicservices.webp`,
-      prompt: 'Periodic Services'
+      prompt: 'Periodic Services',
+      onClick: '/autocare'
     },
     {
       images: `/${section}/acrepair.webp`,
-      prompt: 'Ac Services'
+      prompt: 'Ac Services',
+      onClick: '/autocare'
     },
     {
       images: `/${section}/batteries.webp`,
-      prompt: 'Batteries'
+      prompt: 'Batteries',
+      onClick: '/autocare'
     },
     {
       images: `/${section}/tyre.webp`,
-      prompt: 'Tyres & Wheel Care'
+      prompt: 'Tyres & Wheel Care',
+      onClick: '/autocare'
     },
     {
       images: `/${section}/denting.webp`,
-      prompt: 'Denting and Painting'
+      prompt: 'Denting and Painting',
+      onClick: '/autocare'
     },
     {
       images: `/${section}/detailing.webp`,
-      prompt: 'Detailing Services'
+      prompt: 'Detailing Services',
+      onClick: '/autocare'
     },
     {
       images: `/${section}/carspa.webp`,
-      prompt: 'Car Spa & Cleaning'
+      prompt: 'Car Spa & Cleaning',
+      onClick: '/autocare'
     },
     {
       images: `/${section}/inspection.webp`,
-      prompt: 'Car Inspection'
+      prompt: 'Car Inspection',
+      onClick: '/autocare'
     },
     {
       images: `/${section}/windshields.webp`,
-      prompt: 'Windshields'
+      prompt: 'Windshields',
+      onClick: '/autocare'
     },
     {
       images: `/${section}/suspension.webp`,
-      prompt: 'Suspension & Fitments'
+      prompt: 'Suspension & Fitments',
+      onClick: '/autocare'
     }
   ]
+
   const CustomServices = [
     {
       images: `/${section}/batteries.webp`,
@@ -189,7 +199,7 @@ const SearchBar = () => {
                   <BigSubCards
                     images={content.images}
                     title={content.prompt}
-                    onClick={() => handleSuggestionClick(content)}
+                    onClick={() => navigate(`${content.onClick}`)}
                   />
                 </div>
               ))}
