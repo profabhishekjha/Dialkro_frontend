@@ -21,28 +21,33 @@ const AgricultureMachinery = () => {
       <div className="mt-10 flex w-full flex-col items-center justify-center gap-5">
         <div className=" flex items-center justify-center gap-5 max-lg:flex-wrap ">
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/cultivator.webp`}
-            prompt={`cultivator`}
+            images={`/b2bSubSubCategory/harvester.webp`}
+            prompt={`harvester`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/hoe.webp`}
-            prompt={`hoe`}
+            images={`/b2bSubSubCategory/plough.webp`}
+            prompt={`plough`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/pickaxe.webp`}
-            prompt={`pickaxe`}
+            images={`/b2bSubSubCategory/rotavator.webp`}
+            prompt={`rotavator`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/sickle.webp`}
-            prompt={`sickle`}
+            images={`/b2bSubSubCategory/tractor cultivator.webp`}
+            prompt={`tractor cultivator`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/trowel.webp`}
-            prompt={`trowel`}
+            images={`/b2bSubSubCategory/tractor.webp`}
+            prompt={`tractor`}
+            onClick={() => navigation('/b2b')}
+          />
+          <AlignmentSubCards
+            images={`/b2bSubSubCategory/trailer-wagon.webp`}
+            prompt={`trailer wagon`}
             onClick={() => navigation('/b2b')}
           />
         </div>
