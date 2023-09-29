@@ -19,21 +19,31 @@ const AgricultureEquipment = () => {
       <Nav services={`B2B`} />
       <BannerCarousel images={images} />
       <div className="mt-10 flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-16 max-sm:grid-cols-1 sm:grid-cols-3">
+        <div className=" flex items-center justify-center gap-5 max-lg:flex-wrap ">
           <AlignmentSubCards
-            images={`/homeservice/chimneyrepair.webp`}
-            prompt={`Repair Service`}
-            onClick={() => navigation('/homeservices')}
+            images={`/b2bSubSubCategory/agri1.webp`}
+            prompt={`Shovels`}
+            onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/homeservice/chimneycleaning.webp`}
-            prompt={`Cleaning`}
-            onClick={() => navigation('/homeservices')}
+            images={`/b2bSubSubCategory/agri1.webp`}
+            prompt={`Shovels`}
+            onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/homeservice/chimneyinstall.webp`}
-            prompt={`Installation / Uninstallation`}
-            onClick={() => navigation('/homeservices')}
+            images={`/b2bSubSubCategory/agri1.webp`}
+            prompt={`Shovels`}
+            onClick={() => navigation('/b2b')}
+          />
+          <AlignmentSubCards
+            images={`/b2bSubSubCategory/agri1.webp`}
+            prompt={`Shovels`}
+            onClick={() => navigation('/b2b')}
+          />
+          <AlignmentSubCards
+            images={`/b2bSubSubCategory/agri1.webp`}
+            prompt={`Shovels`}
+            onClick={() => navigation('/b2b')}
           />
         </div>
       </div>
