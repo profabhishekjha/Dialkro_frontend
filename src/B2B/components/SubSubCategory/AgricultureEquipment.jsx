@@ -21,28 +21,28 @@ const AgricultureEquipment = () => {
       <div className="mt-10 flex w-full flex-col items-center justify-center gap-5">
         <div className=" flex items-center justify-center gap-5 max-lg:flex-wrap ">
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/agri1.webp`}
-            prompt={`Shovels`}
+            images={`/b2bSubSubCategory/cultivator.webp`}
+            prompt={`cultivator`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/agri1.webp`}
-            prompt={`Shovels`}
+            images={`/b2bSubSubCategory/hoe.webp`}
+            prompt={`hoe`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/agri1.webp`}
-            prompt={`Shovels`}
+            images={`/b2bSubSubCategory/pickaxe.webp`}
+            prompt={`pickaxe`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/agri1.webp`}
-            prompt={`Shovels`}
+            images={`/b2bSubSubCategory/sickle.webp`}
+            prompt={`sickle`}
             onClick={() => navigation('/b2b')}
           />
           <AlignmentSubCards
-            images={`/b2bSubSubCategory/agri1.webp`}
-            prompt={`Shovels`}
+            images={`/b2bSubSubCategory/trowel.webp`}
+            prompt={`trowel`}
             onClick={() => navigation('/b2b')}
           />
         </div>
