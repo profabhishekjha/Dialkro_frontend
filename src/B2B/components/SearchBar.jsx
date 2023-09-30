@@ -148,7 +148,7 @@ const SearchBar = () => {
         <div className="flex w-full items-center justify-center">
           <div className=" flex w-[70%] flex-col items-center justify-center gap-2">
             <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
-              <p>Car Services Available in Dialkro</p>
+              <p>B2B Services Available in Dialkro</p>
             </div>
             <div className="grid items-center justify-center max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               {filteredContent.slice(0, visibleContentCount).map((content, index) => (
