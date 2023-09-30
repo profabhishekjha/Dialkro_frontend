@@ -460,6 +460,10 @@ const router = createBrowserRouter([
     element: <SubCategoryShoppingPage />
   },
   {
+    path: '/onlinesubaata',
+    element: '<>'
+  },
+  {
     path: '/agriculturetools',
     element: <AgricultureEquipment />
   },

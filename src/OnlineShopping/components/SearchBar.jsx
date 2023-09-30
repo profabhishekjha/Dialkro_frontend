@@ -91,7 +91,7 @@ const SearchBar = () => {
   const filteredContent = availableContent.filter((content) =>
     content.prompt.toLowerCase().includes(searchTerm.toLowerCase())
   )
-
+  
   const handleEnterKeyPress = (e) => {
     if (e.keyCode === 13) {
       // Enter key pressed
