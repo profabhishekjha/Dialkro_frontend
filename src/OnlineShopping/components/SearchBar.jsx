@@ -10,104 +10,66 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/b2bCarousel/axe.webp',
-      prompt: 'Axe'
+      images: '/onlineshoppingCarousel/aata.webp',
+      prompt: 'aata'
     },
     {
-      images: '/b2bCarousel/cabinet.webp',
-      prompt: 'Cabinet'
+      images: '/onlineshoppingCarousel/biscuits.webp',
+      prompt: 'biscuits'
     },
     {
-      images: '/b2bCarousel/commercialfurniture.webp',
-      prompt: 'Commercial Furniture'
+      images: '/onlineshoppingCarousel/butter.webp',
+      prompt: 'Butter'
     },
     {
-      images: '/b2bCarousel/electricalcomponents.webp',
-      prompt: 'Electrical Components'
+      images: '/onlineshoppingCarousel/chocolate.webp',
+      prompt: 'chocolates'
     },
     {
-      images: '/b2bCarousel/handtools.webp',
-      prompt: 'Hand Tools'
+      images: '/onlineshoppingCarousel/coffee.webp',
+      prompt: 'coffee'
     },
     {
-      images: '/b2bCarousel/lightbulb.webp',
-      prompt: ' Light Bulbs'
+      images: '/onlineshoppingCarousel/cornflakes.webp',
+      prompt: 'cornflakes'
+    },
+
+    {
+      images: '/onlineshoppingCarousel/ketchup.webp',
+      prompt: 'ketchup'
+    },
+
+    {
+      images: '/onlineshoppingCarousel/oats.webp',
+      prompt: 'oats'
     },
     {
-      images: '/b2bCarousel/protective-equipment.webp',
-      prompt: 'Protective Gear'
+      images: '/onlineshoppingCarousel/papad.webp',
+      prompt: 'papad'
     },
     {
-      images: '/b2bCarousel/resistor.webp',
-      prompt: 'Resistors'
+      images: '/onlineshoppingCarousel/green tea.webp',
+      prompt: 'green tea'
     },
     {
-      images: '/b2bCarousel/scaffolding.webp',
-      prompt: 'Scaffoldings'
+      images: '/onlineshoppingCarousel/pulses.webp',
+      prompt: 'pulses'
     },
     {
-      images: '/b2bCarousel/treadmill.webp',
-      prompt: 'Treadmill'
+      images: '/onlineshoppingCarousel/rice.webp',
+      prompt: 'rice'
     },
     {
-      images: '/b2bCarousel/truckpart.webp',
-      prompt: 'Truck Parts'
+      images: '/onlineshoppingCarousel/salt.webp',
+      prompt: 'salt'
     },
     {
-      images: '/b2bCarousel/water-pump.webp',
-      prompt: 'Water Pumps'
+      images: '/onlineshoppingCarousel/chips.webp',
+      prompt: 'chips'
     },
     {
-      images: '/b2bCarousel/clamps.webp',
-      prompt: 'Clamps'
-    },
-    {
-      images: '/b2bCarousel/weightmachine.webp',
-      prompt: 'Weight Machine'
-    },
-    {
-      images: '/b2bCarousel/wheelchair.webp',
-      prompt: 'Wheelchairs'
-    },
-    {
-      images: '/b2bCarousel/hoses.webp',
-      prompt: 'Hoses'
-    },
-    {
-      images: '/b2bCarousel/lubricants.webp',
-      prompt: 'Lubricants'
-    },
-    {
-      images: '/b2bCarousel/nut-bolt.webp',
-      prompt: 'Nut & Bolts'
-    },
-    {
-      images: '/b2bCarousel/package-material.webp',
-      prompt: 'Package Materials'
-    },
-    {
-      images: '/b2bCarousel/plastics.webp',
-      prompt: 'Plastics'
-    },
-    {
-      images: '/b2bCarousel/roofing.webp',
-      prompt: 'Roofing'
-    },
-    {
-      images: '/b2bCarousel/rubber.webp',
-      prompt: 'Rubber'
-    },
-    {
-      images: '/b2bCarousel/stationary.webp',
-      prompt: 'Stationary'
-    },
-    {
-      images: '/b2bCarousel/valves.webp',
-      prompt: 'Valves'
-    },
-    {
-      images: '/b2bCarousel/water-pump.webp',
-      prompt: 'Pumps'
+      images: '/onlineshoppingCarousel/tea.webp',
+      prompt: 'tea'
     }
   ]
 

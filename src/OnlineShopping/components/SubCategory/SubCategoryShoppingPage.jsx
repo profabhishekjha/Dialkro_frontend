@@ -19,6 +19,7 @@ const SubCategoryShoppingPage = () => {
       <div className="mt-10 flex items-center justify-center">
         <SearchBar />
       </div>
+      <img src="/onlineshoppingCarousel/img.png" alt="alt" className="mt-20" />
       <Footer />
     </div>
   )
