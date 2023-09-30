@@ -12,7 +12,7 @@ const SearchBar = () => {
     {
       images: '/onlineshoppingCarousel/groceries.webp',
       prompt: 'groceries',
-      onClick: () => navigate('/online/aata')
+      onClick: () => navigate('/online/groceries')
     },
     {
       images: '/onlineshoppingCarousel/clothing.webp',
@@ -32,7 +32,7 @@ const SearchBar = () => {
     {
       images: '/onlineshoppingCarousel/furniture.webp',
       prompt: 'furniture',
-      onClick: () => navigate('/online/aata')
+      onClick: () => navigate('/online/furniture')
     }
   ]
 
