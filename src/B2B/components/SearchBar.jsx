@@ -11,7 +11,6 @@ const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [visibleContentCount, setVisibleContentCount] = useState(5)
   // Your list of available content
-  const section = 'autocare'
 
   const availableContent = [
     {
