@@ -15,6 +15,7 @@ const Onlineshopping = () => {
     `${category}Carousel/${category}3.webp`,
     `${category}Carousel/${category}4.webp`
   ]
+
   return (
     <div>
       <Outlet />
