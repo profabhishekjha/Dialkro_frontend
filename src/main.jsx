@@ -72,6 +72,7 @@ import EngineParts from './B2B/components/SubSubCategory/EngineParts'
 import ElectricalComponents from './B2B/components/SubSubCategory/ElectricalComponents'
 import Error from './Error'
 import SubCategoryShoppingPage from './OnlineShopping/components/SubCategory/SubCategoryShoppingPage'
+import Aata from './OnlineShopping/components/aata/aata'
 
 const router = createBrowserRouter([
   {
@@ -393,6 +394,26 @@ const router = createBrowserRouter([
   {
     path: '/b2b',
     element: <B2B />
+  },
+  {
+    path: '/online/aata',
+    element: <Aata />
+  },
+  {
+    path: '/online/biscuit',
+    element: <Aata />
+  },
+  {
+    path: '/online/butter',
+    element: <Aata />
+  },
+  {
+    path: '/online/chocolate',
+    element: <Aata />
+  },
+  {
+    path: '/online/coffee',
+    element: <Aata />
   },
   {
     path: '/b2b/Product_Detail',

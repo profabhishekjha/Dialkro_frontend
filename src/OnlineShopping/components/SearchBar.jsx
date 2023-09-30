@@ -11,77 +11,87 @@ const SearchBar = () => {
   const availableContent = [
     {
       images: '/onlineshoppingCarousel/aata.webp',
-      prompt: 'aata'
+      prompt: 'aata',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/biscuits.webp',
-      prompt: 'biscuits'
+      prompt: 'biscuits',
+      onClick: () => navigate('/online/biscuit')
     },
     {
       images: '/onlineshoppingCarousel/butter.webp',
-      prompt: 'Butter'
+      prompt: 'Butter',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/chocolate.webp',
-      prompt: 'chocolates'
+      prompt: 'chocolates',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/coffee.webp',
-      prompt: 'coffee'
+      prompt: 'coffee',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/cornflakes.webp',
-      prompt: 'cornflakes'
+      prompt: 'cornflakes',
+      onClick: () => navigate('/online/aata')
     },
 
     {
       images: '/onlineshoppingCarousel/ketchup.webp',
-      prompt: 'ketchup'
+      prompt: 'ketchup',
+      onClick: () => navigate('/online/aata')
     },
 
     {
       images: '/onlineshoppingCarousel/oats.webp',
-      prompt: 'oats'
+      prompt: 'oats',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/papad.webp',
-      prompt: 'papad'
+      prompt: 'papad',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/green tea.webp',
-      prompt: 'green tea'
+      prompt: 'green tea',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/pulses.webp',
-      prompt: 'pulses'
+      prompt: 'pulses',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/rice.webp',
-      prompt: 'rice'
+      prompt: 'rice',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/salt.webp',
-      prompt: 'salt'
+      prompt: 'salt',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/chips.webp',
-      prompt: 'chips'
+      prompt: 'chips',
+      onClick: () => navigate('/online/aata')
     },
     {
       images: '/onlineshoppingCarousel/tea.webp',
-      prompt: 'tea'
+      prompt: 'tea',
+      onClick: () => navigate('/online/aata')
     }
   ]
 
   const filteredContent = availableContent.filter((content) =>
     content.prompt.toLowerCase().includes(searchTerm.toLowerCase())
   )
-
-  const handleSuggestionClick = () => {
-    // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/onlinesubshopping')
-  }
-
+  
   const handleEnterKeyPress = (e) => {
     if (e.keyCode === 13) {
       // Enter key pressed
@@ -118,7 +128,7 @@ const SearchBar = () => {
               <BigSubCards
                 images={content.images}
                 title={content.prompt}
-                onClick={() => handleSuggestionClick(content)}
+                onClick={content.onClick}
               />
             </div>
           ))}
