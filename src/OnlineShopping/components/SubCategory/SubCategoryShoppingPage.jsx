@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer/Footer'
 import SearchBar from '../SearchBar'
 import BannerCarousel from '../../../components/Body/Carousel/BannerCarousel'
 
-const SubCategoryb2bPage = () => {
+const SubCategoryShoppingPage = () => {
   const category = 'b2b' // Category name
   const images = [
     `${category}Carousel/${category}1.webp`,
@@ -13,7 +13,7 @@ const SubCategoryb2bPage = () => {
   ]
   return (
     <div>
-      <Nav services={`B2B`} />
+      <Nav services={`Shopping`} />
       <BannerCarousel images={images} />
 
       <div className="mt-10 flex items-center justify-center">
@@ -24,4 +24,4 @@ const SubCategoryb2bPage = () => {
   )
 }
 
-export default SubCategoryb2bPage
+export default SubCategoryShoppingPage

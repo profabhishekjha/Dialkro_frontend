@@ -61,7 +61,7 @@ const TopBanner = () => {
             className="flex h-full w-full items-center justify-center overflow-hidden rounded-2xl bg-cover bg-center duration-500 ">
             <a
               onClick={() => {
-                navigate('/onlineshopping')
+                navigate('/onlineshoppingcategories')
               }}
               className=" hidden cursor-pointer text-center text-4xl font-extrabold text-white duration-500 hover:scale-[1.5] group-hover:block">
               Order Now!

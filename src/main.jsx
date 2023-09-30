@@ -71,6 +71,7 @@ import AgricultureMachinery from './B2B/components/SubSubCategory/AgricultureMac
 import EngineParts from './B2B/components/SubSubCategory/EngineParts'
 import ElectricalComponents from './B2B/components/SubSubCategory/ElectricalComponents'
 import Error from './Error'
+import SubCategoryShoppingPage from './OnlineShopping/components/SubCategory/SubCategoryShoppingPage'
 
 const router = createBrowserRouter([
   {
@@ -434,8 +435,8 @@ const router = createBrowserRouter([
     element: <CheckoutPage />
   },
   {
-    path: '/onlineshopping',
-    element: <Onlineshopping />
+    path: '/onlineshoppingcategories',
+    element: <SubCategoryShoppingPage />
   },
   {
     path: '/agriculturetools',
