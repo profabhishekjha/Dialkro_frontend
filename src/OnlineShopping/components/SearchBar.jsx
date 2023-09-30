@@ -79,7 +79,7 @@ const SearchBar = () => {
 
   const handleSuggestionClick = () => {
     // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/b2b')
+    navigate('/onlinesubshopping')
   }
 
   const handleEnterKeyPress = (e) => {
