@@ -25,8 +25,8 @@ const SearchBar = () => {
       onClick: '/autocare'
     },
     {
-      images: `/${section}/batteries.webp`,
-      prompt: 'Batteries',
+      images: `/${section}/mechanic.webp`,
+      prompt: 'Mechanic',
       onClick: '/autocare'
     },
     {
