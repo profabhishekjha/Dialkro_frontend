@@ -71,6 +71,7 @@ import EngineParts from './B2B/components/SubSubCategory/EngineParts'
 import ElectricalComponents from './B2B/components/SubSubCategory/ElectricalComponents'
 import Error from './Error'
 import OnlineShoppingpg_1 from './OnlineShopping/components/OnlineShoppingpg_1'
+import Onlineshopping from './OnlineShopping/OnlineShopping'
 
 const router = createBrowserRouter([
   {
@@ -93,6 +94,10 @@ const router = createBrowserRouter([
   {
     path: '/autocare',
     element: <Autocare />
+  },
+  {
+    path: '/onlineshoppingmain',
+    element: <Onlineshopping />
   },
   {
     path: '/onlineshoppingcategories',

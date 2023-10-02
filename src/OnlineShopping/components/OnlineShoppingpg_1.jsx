@@ -7,28 +7,68 @@ const OnlineShoppingpg_1 = () => {
   return (
     <>
       <Nav />
-      <div className="flex items-center justify-center gap-10">
+      <div className=" flex items-center justify-center  gap-10 max-lg:grid max-lg:grid-cols-4 ">
         <DropdownMenu
           prompt={'Staples'}
-          image={'http://via.placeholder.com/640x360'}
-          options={['Da', 'hero2']}
+          image={'/onlineshoppingCarousel/staples 1.png'}
+          options={[
+            'Dals & Pulses',
+            'Ghee & Oils',
+            'Aata Besan & Sooji',
+            'Masalas',
+            'Rice Products',
+            'Dry Fruits and Seeds',
+            'Sugar, Jaggery & Salt'
+          ]}
+        />
+
+        <DropdownMenu
+          prompt={'Packaged Foods'}
+          image={'/onlineshoppingCarousel/packaged 1.png'}
+          options={[
+            'Breakfast Cereals',
+            'Noodles & Pasta',
+            'Ketchups & Spreads',
+            'Chocolates & Sweets',
+            'Jams & Honey',
+            'Pickles & Chutney',
+            'Ready to Cook',
+            'Vinegar',
+            'Baking Powder'
+          ]}
         />
         <DropdownMenu
-          prompt={'heasro'}
-          image={'http://via.placeholder.com/640x360'}
-          options={['hero1', 'hero2']}
+          prompt={'Snacks & Beverage'}
+          image={'/onlineshoppingCarousel/snacks 1.png'}
+          options={[
+            'Biscuits',
+            'Chips, Namkeen & Snacks',
+            'Tea & Coffee',
+            'Juices',
+            'Health Drink Mix',
+            'Soft Drinks',
+            'Instant Drinks Mixes',
+            'Squash & Syrups',
+            'Water'
+          ]}
         />
         <DropdownMenu
-          prompt={'heasro'}
-          image={'http://via.placeholder.com/640x360'}
-          options={['hero1', 'hero2']}
-        />
-        <DropdownMenu
-          prompt={'heasro'}
-          image={'http://via.placeholder.com/640x360'}
-          options={['hero1', 'hero2']}
+          prompt={'Personal & Baby Care'}
+          image={'/onlineshoppingCarousel/babycare 1.png'}
+          options={[
+            'Soaps & Baby Wash',
+            'Hair Care',
+            'Oral Care',
+            'Deos, Perfumes & Talcum Powder',
+            'Creams, Lotions, Skincare',
+            'Kajal'
+          ]}
         />
       </div>
+      <div className="flex items-center justify-center">
+        <img src="/onlineshoppingCarousel/img.svg" alt="alt" />
+      </div>
+
       <Footer />
     </>
   )

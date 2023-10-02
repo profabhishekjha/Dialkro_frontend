@@ -1,21 +1,41 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const DropdownMenu = ({ prompt, image, options }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const dropdownRef = useRef(null)
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false)
+      }
+    }
+
+    // Add a click event listener to the document
+    document.addEventListener('click', handleClickOutside)
+
+    return () => {
+      // Remove the event listener when the component unmounts
+      document.removeEventListener('click', handleClickOutside)
+    }
+  }, [])
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen)
   }
 
+  const navigate = useNavigate()
+
   return (
     <>
       <div className="flex items-center justify-center">
-        <div className=" container my-[12vh] flex flex-wrap items-center justify-center">
+        <div className="container mb-[42vh] mt-20 flex flex-wrap items-center justify-center">
           <div className="inline-block text-left">
-            <div>
+            <div ref={dropdownRef}>
               <div
                 type="text"
-                className=" flex cursor-pointer items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-black "
+                className="flex cursor-pointer items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-black "
                 onClick={toggleDropdown}>
                 <div className="flex items-center">
                   <img
@@ -44,14 +64,16 @@ const DropdownMenu = ({ prompt, image, options }) => {
               </div>
             </div>
             {isDropdownOpen && (
-              <div className="absolute z-10 mt-2 w-44 divide-y divide-gray-100 rounded-lg bg-white py-2 shadow dark:bg-gray-700">
+              <div className=" z-10 mt-2 w-52 divide-gray-100 rounded-lg bg-white py-2 shadow dark:bg-gray-700">
                 <ul
-                  className="text-sm text-gray-700 dark:text-gray-200"
+                  className=" text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownHoverButton">
                   {options.map((option, index) => (
                     <li key={index}>
                       <a
-                        href="#"
+                        onClick={(e) => {
+                          navigate('/onlineshoppingmain')
+                        }}
                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                         {option}
                       </a>
