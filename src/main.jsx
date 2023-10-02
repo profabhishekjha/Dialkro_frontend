@@ -70,6 +70,7 @@ import AgricultureMachinery from './B2B/components/SubSubCategory/AgricultureMac
 import EngineParts from './B2B/components/SubSubCategory/EngineParts'
 import ElectricalComponents from './B2B/components/SubSubCategory/ElectricalComponents'
 import Error from './Error'
+import OnlineShoppingpg_1 from './OnlineShopping/components/OnlineShoppingpg_1'
 
 const router = createBrowserRouter([
   {
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
   {
     path: '/autocare',
     element: <Autocare />
+  },
+  {
+    path: '/onlineshoppingcategories',
+    element: <OnlineShoppingpg_1 />
   },
   {
     path: '/tvservices',
