@@ -6,33 +6,85 @@ import BigSubCards from '../../components/ui/BigSubCards'
 const SearchBar = () => {
   const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState('')
-  const [visibleContentCount, setVisibleContentCount] = useState(7)
+  const [visibleContentCount, setVisibleContentCount] = useState(5)
   // Your list of available content
   const availableContent = [
     {
-      images: '/onlineshoppingCarousel/groceries.webp',
-      prompt: 'groceries',
-      onClick: () => navigate('/online/groceries')
+      images: '/onlineshoppingCarousel/aata.webp',
+      prompt: 'aata',
+      onClick: () => navigate('/online/aata')
     },
     {
-      images: '/onlineshoppingCarousel/clothing.webp',
-      prompt: 'clothing',
-      onClick: () => navigate('/online/clothing')
+      images: '/onlineshoppingCarousel/biscuits.webp',
+      prompt: 'biscuits',
+      onClick: () => navigate('/online/biscuit')
     },
     {
-      images: '/onlineshoppingCarousel/electronics.webp',
-      prompt: 'electronics',
-      onClick: () => navigate('/online/electronics')
+      images: '/onlineshoppingCarousel/butter.webp',
+      prompt: 'Butter',
+      onClick: () => navigate('/online/aata')
     },
     {
-      images: '/onlineshoppingCarousel/movies.webp',
-      prompt: 'Movies',
-      onClick: () => navigate('/online/movies')
+      images: '/onlineshoppingCarousel/chocolate.webp',
+      prompt: 'chocolates',
+      onClick: () => navigate('/online/aata')
     },
     {
-      images: '/onlineshoppingCarousel/furniture.webp',
-      prompt: 'furniture',
-      onClick: () => navigate('/online/furniture')
+      images: '/onlineshoppingCarousel/coffee.webp',
+      prompt: 'coffee',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/cornflakes.webp',
+      prompt: 'cornflakes',
+      onClick: () => navigate('/online/aata')
+    },
+
+    {
+      images: '/onlineshoppingCarousel/ketchup.webp',
+      prompt: 'ketchup',
+      onClick: () => navigate('/online/aata')
+    },
+
+    {
+      images: '/onlineshoppingCarousel/oats.webp',
+      prompt: 'oats',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/papad.webp',
+      prompt: 'papad',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/green tea.webp',
+      prompt: 'green tea',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/pulses.webp',
+      prompt: 'pulses',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/rice.webp',
+      prompt: 'rice',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/salt.webp',
+      prompt: 'salt',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/chips.webp',
+      prompt: 'chips',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/tea.webp',
+      prompt: 'tea',
+      onClick: () => navigate('/online/aata')
     }
   ]
 
@@ -64,13 +116,13 @@ const SearchBar = () => {
     }
 
     const handleViewMoreClick = () => {
-      // Show 7 more cards when the "View More" button is clicked
-      setVisibleContentCount((prevCount) => prevCount + 7)
+      // Show 5 more cards when the "View More" button is clicked
+      setVisibleContentCount((prevCount) => prevCount + 5)
     }
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-md:gap-5 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
+        <div className=" grid items-center justify-center gap-7 max-md:gap-5 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <BigSubCards
