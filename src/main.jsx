@@ -72,7 +72,10 @@ import EngineParts from './B2B/components/SubSubCategory/EngineParts'
 import ElectricalComponents from './B2B/components/SubSubCategory/ElectricalComponents'
 import Error from './Error'
 import SubCategoryShoppingPage from './OnlineShopping/components/SubCategory/SubCategoryShoppingPage'
-import Aata from './OnlineShopping/components/aata/aata'
+import Groceries from './OnlineShopping/components/Groceries/Groceries'
+import Clothing from './OnlineShopping/components/Clothing/Clothing'
+import Electronics from './OnlineShopping/components/Electronics/Electronics'
+import Furniture from './OnlineShopping/components/Furniture/Furniture'
 
 const router = createBrowserRouter([
   {
@@ -396,25 +399,24 @@ const router = createBrowserRouter([
     element: <B2B />
   },
   {
-    path: '/online/aata',
-    element: <Aata />
+    path: '/online/groceries',
+    element: <Groceries />
   },
   {
-    path: '/online/biscuit',
-    element: <Aata />
+    path: '/online/clothing',
+    element: <Clothing />
   },
   {
-    path: '/online/butter',
-    element: <Aata />
+    path: '/online/electronics',
+    element: <Electronics />
   },
   {
-    path: '/online/chocolate',
-    element: <Aata />
+    path: '/online/furniture',
+    element: <Furniture />
   },
-  {
-    path: '/online/coffee',
-    element: <Aata />
-  },
+
+  /* add movies section as well when needed */
+
   {
     path: '/b2b/Product_Detail',
     element: <ProductDetailb2bPageShop />
@@ -458,6 +460,10 @@ const router = createBrowserRouter([
   {
     path: '/onlineshoppingcategories',
     element: <SubCategoryShoppingPage />
+  },
+  {
+    path: '/onlinesubaata',
+    element: '<>'
   },
   {
     path: '/agriculturetools',
