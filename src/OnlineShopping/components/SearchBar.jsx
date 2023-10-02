@@ -10,29 +10,81 @@ const SearchBar = () => {
   // Your list of available content
   const availableContent = [
     {
-      images: '/onlineshoppingCarousel/groceries.webp',
-      prompt: 'groceries',
-      onClick: () => navigate('/online/groceries')
+      images: '/onlineshoppingCarousel/aata.webp',
+      prompt: 'aata',
+      onClick: () => navigate('/online/aata')
     },
     {
-      images: '/onlineshoppingCarousel/clothing.webp',
-      prompt: 'clothing',
-      onClick: () => navigate('/online/clothing')
+      images: '/onlineshoppingCarousel/biscuits.webp',
+      prompt: 'biscuits',
+      onClick: () => navigate('/online/biscuit')
     },
     {
-      images: '/onlineshoppingCarousel/electronics.webp',
-      prompt: 'electronics',
-      onClick: () => navigate('/online/electronics')
+      images: '/onlineshoppingCarousel/butter.webp',
+      prompt: 'Butter',
+      onClick: () => navigate('/online/aata')
     },
     {
-      images: '/onlineshoppingCarousel/movies.webp',
-      prompt: 'Movies',
-      onClick: () => navigate('/online/movies')
+      images: '/onlineshoppingCarousel/chocolate.webp',
+      prompt: 'chocolates',
+      onClick: () => navigate('/online/aata')
     },
     {
-      images: '/onlineshoppingCarousel/furniture.webp',
-      prompt: 'furniture',
-      onClick: () => navigate('/online/furniture')
+      images: '/onlineshoppingCarousel/coffee.webp',
+      prompt: 'coffee',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/cornflakes.webp',
+      prompt: 'cornflakes',
+      onClick: () => navigate('/online/aata')
+    },
+
+    {
+      images: '/onlineshoppingCarousel/ketchup.webp',
+      prompt: 'ketchup',
+      onClick: () => navigate('/online/aata')
+    },
+
+    {
+      images: '/onlineshoppingCarousel/oats.webp',
+      prompt: 'oats',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/papad.webp',
+      prompt: 'papad',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/green tea.webp',
+      prompt: 'green tea',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/pulses.webp',
+      prompt: 'pulses',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/rice.webp',
+      prompt: 'rice',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/salt.webp',
+      prompt: 'salt',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/chips.webp',
+      prompt: 'chips',
+      onClick: () => navigate('/online/aata')
+    },
+    {
+      images: '/onlineshoppingCarousel/tea.webp',
+      prompt: 'tea',
+      onClick: () => navigate('/online/aata')
     }
   ]
 
