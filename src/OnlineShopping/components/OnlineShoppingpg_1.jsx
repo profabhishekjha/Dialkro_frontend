@@ -7,7 +7,7 @@ const OnlineShoppingpg_1 = () => {
   return (
     <>
       <Nav />
-      <div className=" flex cursor-pointer items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
+      <div className=" flex  items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
           prompt={'Staples'}
           image={'/onlineshoppingCarousel/grocery 1.png'}
