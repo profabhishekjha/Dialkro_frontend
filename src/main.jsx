@@ -72,10 +72,6 @@ import EngineParts from './B2B/components/SubSubCategory/EngineParts'
 import ElectricalComponents from './B2B/components/SubSubCategory/ElectricalComponents'
 import Error from './Error'
 import SubCategoryShoppingPage from './OnlineShopping/components/SubCategory/SubCategoryShoppingPage'
-import Groceries from './OnlineShopping/components/Groceries/Groceries'
-import Clothing from './OnlineShopping/components/Clothing/Clothing'
-import Electronics from './OnlineShopping/components/Electronics/Electronics'
-import Furniture from './OnlineShopping/components/Furniture/Furniture'
 
 const router = createBrowserRouter([
   {
@@ -397,22 +393,6 @@ const router = createBrowserRouter([
   {
     path: '/b2b',
     element: <B2B />
-  },
-  {
-    path: '/online/groceries',
-    element: <Groceries />
-  },
-  {
-    path: '/online/clothing',
-    element: <Clothing />
-  },
-  {
-    path: '/online/electronics',
-    element: <Electronics />
-  },
-  {
-    path: '/online/furniture',
-    element: <Furniture />
   },
 
   /* add movies section as well when needed */
