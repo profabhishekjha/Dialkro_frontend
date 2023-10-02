@@ -65,13 +65,11 @@ import Chimney from './HomeServices/components/chimney/Chimney'
 import WaterPurifier from './HomeServices/components/waterPurifier/WaterPurifier'
 import PestControl from './HomeServices/components/pestControl/PestControl'
 import CheckoutPage from './CheckoutPage/CheckoutPage'
-import Onlineshopping from './OnlineShopping/OnlineShopping'
 import AgricultureEquipment from './B2B/components/SubSubCategory/AgricultureEquipment'
 import AgricultureMachinery from './B2B/components/SubSubCategory/AgricultureMachinery'
 import EngineParts from './B2B/components/SubSubCategory/EngineParts'
 import ElectricalComponents from './B2B/components/SubSubCategory/ElectricalComponents'
 import Error from './Error'
-import SubCategoryShoppingPage from './OnlineShopping/components/SubCategory/SubCategoryShoppingPage'
 
 const router = createBrowserRouter([
   {
@@ -437,14 +435,7 @@ const router = createBrowserRouter([
     path: '/checkoutpage',
     element: <CheckoutPage />
   },
-  {
-    path: '/onlineshoppingcategories',
-    element: <SubCategoryShoppingPage />
-  },
-  {
-    path: '/onlinesubaata',
-    element: '<>'
-  },
+
   {
     path: '/agriculturetools',
     element: <AgricultureEquipment />
