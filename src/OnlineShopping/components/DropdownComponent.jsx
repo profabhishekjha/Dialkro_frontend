@@ -10,12 +10,12 @@ const DropdownMenu = ({ prompt, image, options }) => {
   return (
     <>
       <div className="flex items-center justify-center">
-        <div className="redborder container my-[28vh] flex flex-wrap items-center justify-center">
+        <div className=" container my-[12vh] flex flex-wrap items-center justify-center">
           <div className="inline-block text-left">
             <div>
               <div
                 type="text"
-                className="flex items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-black "
+                className=" flex cursor-pointer items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-black "
                 onClick={toggleDropdown}>
                 <div className="flex items-center">
                   <img
