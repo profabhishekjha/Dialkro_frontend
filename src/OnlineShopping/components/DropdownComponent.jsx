@@ -29,8 +29,8 @@ const DropdownMenu = ({ prompt, image, options }) => {
 
   return (
     <>
-      <div className="flex items-center justify-center">
-        <div className="container mb-[42vh] mt-20 flex flex-wrap items-center justify-center">
+      <div className="flex  items-center justify-center">
+        <div className="container mb-[42vh] mt-20 flex cursor-pointer flex-wrap items-center justify-center">
           <div className="inline-block text-left">
             <div ref={dropdownRef}>
               <div
@@ -64,9 +64,9 @@ const DropdownMenu = ({ prompt, image, options }) => {
               </div>
             </div>
             {isDropdownOpen && (
-              <div className=" z-10 mt-2 w-52 divide-gray-100 rounded-lg bg-white py-2 shadow dark:bg-gray-700">
+              <div className="absolute z-10 mt-2 w-52 divide-gray-100 rounded-lg bg-white py-2 shadow dark:bg-gray-700">
                 <ul
-                  className=" text-sm text-gray-700 dark:text-gray-200"
+                  className="text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownHoverButton">
                   {options.map((option, index) => (
                     <li key={index}>
