@@ -6,7 +6,7 @@ import BigSubCards from '../../components/ui/BigSubCards'
 const SearchBar = () => {
   const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState('')
-  const [visibleContentCount, setVisibleContentCount] = useState(5)
+  const [visibleContentCount, setVisibleContentCount] = useState(7)
   // Your list of available content
   const availableContent = [
     {
@@ -116,13 +116,13 @@ const SearchBar = () => {
     }
 
     const handleViewMoreClick = () => {
-      // Show 5 more cards when the "View More" button is clicked
-      setVisibleContentCount((prevCount) => prevCount + 5)
+      // Show 7 more cards when the "View More" button is clicked
+      setVisibleContentCount((prevCount) => prevCount + 7)
     }
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-md:gap-5 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
+        <div className=" grid items-center justify-center gap-7 max-md:gap-5 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <BigSubCards
