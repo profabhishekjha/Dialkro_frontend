@@ -70,8 +70,12 @@ import AgricultureMachinery from './B2B/components/SubSubCategory/AgricultureMac
 import EngineParts from './B2B/components/SubSubCategory/EngineParts'
 import ElectricalComponents from './B2B/components/SubSubCategory/ElectricalComponents'
 import Error from './Error'
-import OnlineShoppingpg_1 from './OnlineShopping/components/OnlineShoppingpg_1'
-import Onlineshopping from './OnlineShopping/OnlineShopping'
+import SubCategoryShoppingPage from './OnlineShoppingMain/components/SubCategory/SubCategoryShoppingPage'
+import OnlineShoppingGroceries from './OnlineShopping/components/OnlineShoppingGroceries'
+import OnlineShoppingClothing from './OnlineShopping/components/OnlineShoppingClothing'
+import OnlineShoppingElectronics from './OnlineShopping/components/OnlineShoppingElectronics'
+import OnlineShoppingFurniture from './OnlineShopping/components/OnlineShoppingFurniture'
+import OnlineShoppingMovies from './OnlineShopping/components/OnlineShoppingMovies'
 
 const router = createBrowserRouter([
   {
@@ -96,12 +100,28 @@ const router = createBrowserRouter([
     element: <Autocare />
   },
   {
-    path: '/onlineshoppingmain',
-    element: <Onlineshopping />
+    path: '/onlineshoppingcategories', // main online shopping elements
+    element: <SubCategoryShoppingPage />
   },
   {
-    path: '/onlineshoppingcategories',
-    element: <OnlineShoppingpg_1 />
+    path: '/online/groceries/',
+    element: <OnlineShoppingGroceries /> // main connected to groceries
+  },
+  {
+    path: '/online/clothing/',
+    element: <OnlineShoppingClothing /> // main connected to clothing
+  },
+  {
+    path: '/online/electronics/',
+    element: <OnlineShoppingElectronics /> // main connected to electronics
+  },
+  {
+    path: '/online/furniture/',
+    element: <OnlineShoppingFurniture /> // main connected to furniture
+  },
+  {
+    path: '/online/movies/',
+    element: <OnlineShoppingMovies /> // main connected to groceries
   },
   {
     path: '/tvservices',

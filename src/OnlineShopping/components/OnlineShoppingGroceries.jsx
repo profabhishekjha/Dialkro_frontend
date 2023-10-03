@@ -3,11 +3,11 @@ import Nav from '../../components/Navbar/Nav'
 import Footer from '../../components/Footer/Footer'
 import DropdownMenu from './DropdownComponent'
 
-const OnlineShoppingpg_1 = () => {
+const OnlineShoppingGroceries = () => {
   return (
     <>
       <Nav />
-      <div className=" flex  items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
+      <div className=" flex flex-wrap  items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
           prompt={'Staples'}
           image={'/onlineshoppingCarousel/grocery 1.png'}
@@ -53,19 +53,12 @@ const OnlineShoppingpg_1 = () => {
           ]}
         />
         <DropdownMenu
-          prompt={'Personal & Baby Care'}
-          image={'/onlineshoppingCarousel/babycare 1.png'}
-          options={[
-            'Soaps & Baby Wash',
-            'Hair Care',
-            'Oral Care',
-            'Deos, Perfumes & Talcum Powder',
-            'Creams, Lotions, Skincare',
-            'Kajal'
-          ]}
+          prompt={'Daily Needs'}
+          image={'/onlineshoppingCarousel/dialy-needs.PNG'}
+          options={['Soaps & Baby Wash', 'Butter', 'Eggs', 'Hair Care', 'Oral Care']}
         />
       </div>
-      <div className="flex items-center justify-center">
+      <div className="my-10 flex items-center justify-center">
         <img src="/onlineshoppingCarousel/img.svg" alt="alt" />
       </div>
 
@@ -74,4 +67,4 @@ const OnlineShoppingpg_1 = () => {
   )
 }
 
-export default OnlineShoppingpg_1
+export default OnlineShoppingGroceries
