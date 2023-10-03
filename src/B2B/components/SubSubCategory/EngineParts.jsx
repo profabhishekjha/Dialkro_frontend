@@ -23,32 +23,32 @@ const EngineParts = () => {
           <AlignmentSubCards
             images={`/b2bSubSubCategory/camshaft.webp`}
             prompt={`camshaft`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/crankshaft.webp`}
             prompt={`crankshaft`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/engine block.webp`}
             prompt={`cylinder`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/piston.webp`}
             prompt={`piston`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/valve.webp`}
             prompt={`valves`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/spares.webp`}
             prompt={`spare parts`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
         </div>
       </div>

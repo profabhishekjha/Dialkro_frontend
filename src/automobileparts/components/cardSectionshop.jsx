@@ -4,23 +4,62 @@ import Rating from '@mui/material/Rating'
 import { faker } from '@faker-js/faker'
 import { Heart } from 'lucide-react'
 import { toast } from 'react-hot-toast'
-const CardSectionshop = ({ onClick }) => {
+import { useNavigate } from 'react-router-dom'
+import LoginModal from '../../components/modals/LoginModal' // Adjust the path as needed
+import RegisterModal from '../../components/modals/RegisterModal' // Adjust the path as needed
+
+const CardSection = ({ onClick }) => {
+  const [isToggleMenuOpen, setIsToggleMenuOpen] = useState(false) // State to control the toggle menu
+  const [phoneNumber, setPhoneNumber] = useState('+1234567890')
   const [value] = React.useState(3)
   const [isFavorite, setIsFavorite] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
+  const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false)
+  const [openToggle, setOpenToggle] = useState(null)
+  const navigate = useNavigate()
+
+  if (isLoggedIn === 'access') {
+    setIsLoggedIn(true)
+  }
+
+  const openRegisterModal = () => {
+    setIsRegisterModalOpen(true)
+  }
+
+  const toggleMenu = (menu) => {
+    if (openToggle === menu) {
+      setOpenToggle(null) // Close the toggle menu if it's already open
+    } else {
+      setOpenToggle(menu) // Open the toggle menu
+    }
+  }
+
+  const handlePhoneIconClick = () => {
+    toggleMenu('phone')
+  }
+
+  const handleWhatsAppIconClick = () => {
+    toggleMenu('whatsapp')
+  }
+
+  const handleOrderNowClick = () => {
+    navigate('/checkoutpage')
+  }
 
   return (
     <div>
-      <div className="container relative flex w-[80vw] rounded-lg border-2">
-        <div className="relative flex gap-5 p-10">
-          <div className="relative mx-auto h-60  overflow-hidden rounded-lg bg-white shadow-lg">
+      <div className="container relative flex w-[90vw] rounded-lg border-2 max-md:flex-col">
+        <div className=" relative flex w-[90vw] gap-5 p-5 max-md:flex-col">
+          <div className=" h-60 overflow-hidden bg-white shadow-lg">
             <img
-              className="h-60 w-full cursor-pointer object-cover"
+              className="h-60 w-full cursor-pointer rounded-lg object-cover"
               onClick={onClick}
               src={faker.image.url()}
               alt="Card Image"
             />
           </div>
-          <div className="grid gap-3">
+          <div className=" grid w-[70vw] gap-5 max-md:w-[80vw] ">
             <div className="">
               <p onClick={onClick} className="cursor-pointer text-xl font-bold capitalize">
                 {' '}
@@ -30,42 +69,84 @@ const CardSectionshop = ({ onClick }) => {
               <p className="cursor-pointer text-lg font-bold uppercase">
                 {faker.company.buzzVerb()}
               </p>
-              <p className=" my-2 w-3/4 ">{faker.commerce.productDescription()}</p>
-              <h1 className="my-5 text-xl font-bold">₹ {faker.commerce.price()}</h1>
+              <p className=" w-3/4 max-md:h-[7vh] max-md:w-[78vw]">
+                {faker.commerce.productDescription().substring(0, 75)}
+              </p>
+              <h1 className=" text-xl font-bold">₹ {faker.commerce.price()}</h1>
             </div>
-            <div className="flex  gap-5">
-              <a href="">
-                <img src="/socials/telephone.svg" alt="DialKro" className="w-10" />
-              </a>
-              <a href="">
-                <img src="/socials/whatsapp.svg" alt="DialKro" className="w-10" />
-              </a>
 
-              <button className="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 p-0.5 text-sm font-medium text-gray-900 hover:text-white focus:outline-none focus:ring-4 focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500 dark:text-white dark:focus:ring-cyan-800">
-                <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
+            {/* ... (other JSX code) */}
+            {isLoggedIn ? (
+              <button
+                onClick={handleOrderNowClick}
+                className="group relative mb-2 mr-2 inline-flex h-10 w-28 items-center justify-center overflow-hidden rounded-lg border border-black bg-gradient-to-b from-blue-500 to-teal-400 font-semibold text-white hover:bg-black">
+                {' '}
+                Order Now!
+              </button>
+            ) : (
+              <p className="w-80">
+                <button className="group relative mb-2 mr-2 inline-flex h-10 w-24 items-center justify-center overflow-hidden rounded-lg border border-black bg-gradient-to-b from-blue-500 to-teal-400 font-semibold text-white hover:bg-black">
                   {' '}
                   Order Now!
-                </span>
-              </button>
-            </div>
+                </button>
+                Please{' '}
+                <span
+                  className="cursor-pointer text-blue-500"
+                  onClick={() => {
+                    setIsLoginModalOpen(true) // Open the LoginModal
+                  }}>
+                  login
+                </span>{' '}
+                or{` `}
+                <span
+                  className="cursor-pointer text-blue-500"
+                  onClick={() => {
+                    setIsRegisterModalOpen(true) // Open the RegisterModal
+                  }}>
+                  signup
+                </span>{' '}
+                to order.
+              </p>
+            )}
+            {isLoginModalOpen && (
+              <LoginModal
+                onClose={() => {
+                  setIsLoginModalOpen(false) // Close the LoginModal
+                }}
+                onRegisterClick={openRegisterModal}
+              />
+            )}
+            {isRegisterModalOpen && (
+              <RegisterModal
+                onClose={() => {
+                  setIsRegisterModalOpen(false) // Close the RegisterModal
+                }}
+                onLoginClick={() => {
+                  setIsLoginModalOpen(true) // Open the LoginModal
+                }}
+              />
+            )}
+            {/* ... (other JSX code) */}
+          </div>
+          <div className="flex h-12 flex-col max-md:flex-row max-md:items-center max-md:justify-center ">
+            <Heart
+              className=" h-10  duration-500 hover:scale-125 max-lg:absolute max-lg:right-10"
+              color={`${isFavorite ? 'red' : 'black'}`}
+              fill={`${isFavorite ? 'red' : 'white'}`}
+              onClick={() => {
+                setIsFavorite(!isFavorite)
+                if (!isFavorite) {
+                  toast.success('Added to Favorites')
+                } else {
+                  toast.error('Removed from Favourites')
+                }
+              }}
+            />
           </div>
         </div>
-        <Heart
-          className="absolute right-10 top-10 cursor-pointer"
-          color={`${isFavorite ? 'red' : 'black'}`}
-          fill={`${isFavorite ? 'red' : 'white'}`}
-          onClick={() => {
-            setIsFavorite(!isFavorite)
-            if (!isFavorite) {
-              toast.success('Added to Favorites')
-            } else {
-              toast.error('Removed from Favourites')
-            }
-          }}
-        />
       </div>
     </div>
   )
 }
 
-export default CardSectionshop
+export default CardSection
