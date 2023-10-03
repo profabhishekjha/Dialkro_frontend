@@ -23,32 +23,32 @@ const AgricultureMachinery = () => {
           <AlignmentSubCards
             images={`/b2bSubSubCategory/harvester.webp`}
             prompt={`harvester`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/plough.webp`}
             prompt={`plough`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/rotavator.webp`}
             prompt={`rotavator`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/tractor cultivator.webp`}
             prompt={`tractor cultivator`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/tractor.webp`}
             prompt={`tractor`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/trailer-wagon.webp`}
             prompt={`trailer wagon`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
         </div>
       </div>

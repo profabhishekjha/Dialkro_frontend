@@ -23,32 +23,32 @@ const ElectricalComponents = () => {
           <AlignmentSubCards
             images={`/b2bSubSubCategory/capacitor.webp`}
             prompt={`capacitor`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/diodes.webp`}
             prompt={`diodes`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/inductor.webp`}
             prompt={`inductor`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/led.webp`}
             prompt={`led`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/transistor.webp`}
             prompt={`transistor`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
           <AlignmentSubCards
             images={`/b2bSubSubCategory/resistor.webp`}
             prompt={`resistor`}
-            onClick={() => navigation('/b2b')}
+            onClick={'/b2b'}
           />
         </div>
       </div>
