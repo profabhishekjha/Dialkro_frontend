@@ -15,7 +15,6 @@ const SubCategoryb2bPage = () => {
     <div>
       <Nav services={`B2B`} />
       <BannerCarousel images={images} />
-
       <div className="mt-10 flex items-center justify-center">
         <SearchBar />
       </div>
