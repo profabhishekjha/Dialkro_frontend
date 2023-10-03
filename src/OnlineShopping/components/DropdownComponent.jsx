@@ -30,7 +30,7 @@ const DropdownMenu = ({ prompt, image, options }) => {
   return (
     <>
       <div className="flex  items-center justify-center">
-        <div className="container mb-[42vh] mt-20 flex cursor-pointer flex-wrap items-center justify-center">
+        <div className="container mt-20 flex cursor-pointer flex-wrap items-center justify-center">
           <div className="inline-block text-left">
             <div ref={dropdownRef}>
               <div
