@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+  const navigate = useNavigate()
   return (
     <>
       <footer className=" mt-20  bg-gray-100 dark:bg-gray-700">
@@ -66,7 +68,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a
+                    onClick={() => {
+                      navigate('/t&c')
+                    }}
+                    className="cursor-pointer hover:underline">
                     Terms &amp; Conditions
                   </a>
                 </li>
