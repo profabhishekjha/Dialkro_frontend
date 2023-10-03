@@ -16,78 +16,78 @@ const SearchBar = () => {
     {
       images: '/b2bCarousel/engineparts.webp',
       title: 'Engine Parts',
-      onClick: () => navigate('/engineparts')
+      onClick: '/engineparts'
     },
     {
       images: '/b2bCarousel/agricultureequipment.webp',
       title: 'Agriculture Tools',
-      onClick: () => navigate('/agriculturetools')
+      onClick: '/agriculturetools'
     },
     {
       images: '/b2bCarousel/agriculturemachinery.webp',
       title: 'Agriculture Machinery',
-      onClick: () => navigate('/agriculturemachinery')
+      onClick: '/agriculturemachinery'
     },
     {
       images: '/b2bCarousel/electricalcomponents.webp',
       title: 'Electrical Component',
-      onClick: () => navigate('/electricalcomponents')
+      onClick: '/electricalcomponents'
     },
     {
       images: '/b2bCarousel/rubber.webp',
       title: 'Rubber',
-      onClick: () => navigate('/refrigeratorCategories')
+      onClick: '/refrigeratorCategories'
     },
     {
       images: '/b2bCarousel/airfilter.webp',
       title: 'Air Filter',
-      onClick: () => navigate('/tvCategories')
+      onClick: '/tvCategories'
     },
     {
       images: '/b2bCarousel/cabinet.webp',
       title: 'Cabinet',
-      onClick: () => navigate('/chimneyCategories')
+      onClick: '/chimneyCategories'
     },
 
     {
       images: '/b2bCarousel/handtools.webp',
       title: 'Hand Tools',
-      onClick: () => navigate('/pestcontrolCategories')
+      onClick: '/pestcontrolCategories'
     },
     {
       images: '/b2bCarousel/lightbulb.webp',
       title: 'Light Bulbs',
-      onClick: () => navigate('/kitchenCategories')
+      onClick: '/kitchenCategories'
     },
     {
       images: '/b2bCarousel/protective-equipment.webp',
       title: 'Protective Equipment',
-      onClick: () => navigate('/kitchenCategories')
+      onClick: '/kitchenCategories'
     },
     {
       images: '/b2bCarousel/resistor.webp',
       title: 'Resistors',
-      onClick: () => navigate('/kitchenCategories')
+      onClick: '/kitchenCategories'
     },
     {
       images: '/b2bCarousel/scaffolding.webp',
       title: 'Scaffoldings',
-      onClick: () => navigate('/kitchenCategories')
+      onClick: '/kitchenCategories'
     },
     {
       images: '/b2bCarousel/treadmill.webp',
       title: 'Tread Mill',
-      onClick: () => navigate('/kitchenCategories')
+      onClick: '/kitchenCategories'
     },
     {
       images: '/b2bCarousel/truckpart.webp',
       title: 'Truck Parts',
-      onClick: () => navigate('/kitchenCategories')
+      onClick: '/kitchenCategories'
     },
     {
       images: '/b2bCarousel/water-pump.webp',
       title: 'Water Pumps',
-      onClick: () => navigate('/kitchenCategories')
+      onClick: '/kitchenCategories'
     }
   ]
   const filteredContent = availableContent.filter((content) =>
@@ -102,7 +102,7 @@ const SearchBar = () => {
   }
   // Function to automatically redirect to the first suggestion
   const redirectToFirstSuggestion = () => {
-    const mergedContent = [...filteredContent, ...filteredContentCurated]
+    const mergedContent = [...filteredContent]
     if (mergedContent.length > 0) {
       handleSuggestionClick(mergedContent[0])
     }
