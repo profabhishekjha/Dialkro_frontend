@@ -12,27 +12,27 @@ const SearchBar = () => {
     {
       images: '/onlineshoppingCarousel/groceries.webp',
       prompt: 'groceries',
-      onClick: () => navigate('/online/groceries')
+      onClick: '/online/groceries'
     },
     {
       images: '/onlineshoppingCarousel/clothing.webp',
       prompt: 'clothing',
-      onClick: () => navigate('/online/clothing')
+      onClick: '/online/clothing'
     },
     {
       images: '/onlineshoppingCarousel/electronics.webp',
       prompt: 'electronics',
-      onClick: () => navigate('/online/electronics')
+      onClick: '/online/electronics'
     },
     {
       images: '/onlineshoppingCarousel/movies.webp',
       prompt: 'movies',
-      onClick: () => navigate('/online/movies')
+      onClick: '/online/movies'
     },
     {
       images: '/onlineshoppingCarousel/furniture.webp',
       prompt: 'furniture',
-      onClick: () => navigate('/online/furniture')
+      onClick: '/online/furniture'
     }
   ]
 
