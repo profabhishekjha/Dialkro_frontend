@@ -6,7 +6,7 @@ import DropdownMenu from './DropdownComponent'
 const OnlineShoppingClothing = () => {
   return (
     <>
-      <Nav />
+      <Nav services={`Fashion`} />
       <div className=" flex flex-wrap items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
           prompt={"Men's Clothing"}

@@ -64,9 +64,9 @@ const DropdownMenu = ({ prompt, image, options }) => {
               </div>
             </div>
             {isDropdownOpen && (
-              <div className="absolute z-10 mt-2 w-52 divide-gray-100 rounded-lg bg-white py-2 shadow dark:bg-gray-700">
+              <div className=" right-100 top-50 absolute z-10 mt-2 max-h-60 w-44  divide-y divide-gray-100  overflow-y-auto rounded-lg  bg-white py-2 shadow dark:bg-gray-700">
                 <ul
-                  className="text-sm text-gray-700 dark:text-gray-200"
+                  className=" text-sm text-gray-700 dark:text-gray-200 "
                   aria-labelledby="dropdownHoverButton">
                   {options.map((option, index) => (
                     <li key={index}>
@@ -74,7 +74,7 @@ const DropdownMenu = ({ prompt, image, options }) => {
                         onClick={(e) => {
                           navigate('/onlineshoppingmain')
                         }}
-                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                        className="block border-b-[1px] border-slate-100 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                         {option}
                       </a>
                     </li>

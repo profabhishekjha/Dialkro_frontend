@@ -16,7 +16,7 @@ const SearchBar = () => {
     },
     {
       images: '/onlineshoppingCarousel/clothing.webp',
-      prompt: 'clothing',
+      prompt: 'Fashion',
       onClick: '/online/clothing'
     },
     {
