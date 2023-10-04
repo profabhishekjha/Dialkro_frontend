@@ -6,32 +6,38 @@ import AlignmentSubCards from '../../../components/ui/AlignmentSubCard'
 const SearchBar = () => {
   const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState('')
-  const [visibleContentCount, setVisibleContentCount] = useState(5)
+  const [visibleContentCount, setVisibleContentCount] = useState(6)
   // Your list of available content
   const availableContent = [
     {
-      images: '/Restaurant/southIndian.webp',
-      prompt: 'South Indian'
+      images: '/Restaurant/indianfood.webp',
+      prompt: 'Indian Food',
+      onClick: '/restaurantcategory/indianfood'
     },
     {
       images: '/Restaurant/globalcuisines.webp',
-      prompt: 'Global Cuisines'
+      prompt: 'Global Cuisines',
+      onClick: '/restaurantcategory/indianfood'
     },
     {
       images: '/Restaurant/nightlife.webp',
-      prompt: 'Night Life'
+      prompt: 'Night Style',
+      onClick: '/restaurantcategory/indianfood'
     },
     {
       images: '/Restaurant/sweettooth.webp',
-      prompt: 'Sweet Tooth'
+      prompt: 'Sweet Tooth',
+      onClick: '/restaurantcategory/indianfood'
     },
     {
       images: '/Restaurant/quickbites.webp',
-      prompt: 'Quick Bites'
+      prompt: 'Quick Bites',
+      onClick: '/restaurantcategory/indianfood'
     },
     {
       images: '/Restaurant/foodie.webp',
-      prompt: 'Foodie'
+      prompt: 'Foodie',
+      onClick: '/restaurantcategory/indianfood'
     }
   ]
 
@@ -68,19 +74,19 @@ const SearchBar = () => {
     }
 
     const handleViewMoreClick = () => {
-      // Show 5 more cards when the "View More" button is clicked
-      setVisibleContentCount((prevCount) => prevCount + 5)
+      // Show 6 more cards when the "View More" button is clicked
+      setVisibleContentCount((prevCount) => prevCount + 6)
     }
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className="grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className="grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <AlignmentSubCards
                 images={content.images}
                 prompt={content.prompt}
-                onClick={'/restaurant'}
+                onClick={content.onClick}
               />
             </div>
           ))}

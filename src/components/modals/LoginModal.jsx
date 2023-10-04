@@ -16,7 +16,7 @@ function LoginModal({ onClose, onRegisterClick }) {
           <div className="relative z-50 rounded-lg bg-white shadow dark:bg-gray-700">
             <button
               type="button"
-              className="absolute right-2.5 top-3 ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gray-600 bg-transparent text-sm text-black hover:bg-gray-400 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-black"
+              className="absolute right-2.5 top-3 ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gray-400 bg-transparent text-sm text-black  dark:hover:bg-gray-600 dark:hover:text-black"
               data-modal-hide="authentication-modal"
               onClick={() => {
                 onClose() // Call the onClose function to close the modal

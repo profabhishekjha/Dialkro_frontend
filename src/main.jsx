@@ -76,6 +76,7 @@ import OnlineShoppingClothing from './OnlineShopping/components/OnlineShoppingCl
 import OnlineShoppingElectronics from './OnlineShopping/components/OnlineShoppingElectronics'
 import OnlineShoppingFurniture from './OnlineShopping/components/OnlineShoppingFurniture'
 import OnlineShoppingMovies from './OnlineShopping/components/OnlineShoppingMovies'
+import IndianFood from './popularCategory/restaurant/components/IndianFood'
 
 const router = createBrowserRouter([
   {
@@ -300,6 +301,10 @@ const router = createBrowserRouter([
   {
     path: '/weddingandeventservices',
     element: <WeddingServices />
+  },
+  {
+    path: '/restaurantcategory/indianfood',
+    element: <IndianFood />
   },
   {
     path: '/weddingservicescategory',
