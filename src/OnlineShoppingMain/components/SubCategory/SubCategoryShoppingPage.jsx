@@ -19,8 +19,12 @@ const SubCategoryShoppingPage = () => {
       <div className="mt-10 flex items-center justify-center">
         <SearchBar />
       </div>
-      <div className="flex items-center justify-center">
-        <img src="/onlineshoppingCarousel/img.svg" alt="alt" className="mt-20" />
+      <div className="flex flex-col items-center justify-center">
+        <img src="/onlineshoppingCarousel/frames/Frame 15.svg" alt="alt" className="mt-10" />
+        <img src="/onlineshoppingCarousel/frames/Frame 8.svg" alt="alt" className="mt-10" />
+        <img src="/onlineshoppingCarousel/frames/Frame 7.svg" alt="alt" className="mt-10" />
+        <img src="/onlineshoppingCarousel/frames/Frame 11.svg" alt="alt" className="mt-10" />
+        <img src="/onlineshoppingCarousel/frames/Frame 13.svg" alt="alt" className="mt-10" />
       </div>
       <Footer />
     </div>
