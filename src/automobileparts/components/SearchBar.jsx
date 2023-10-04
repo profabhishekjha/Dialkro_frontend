@@ -199,7 +199,7 @@ const SearchBar = () => {
                   <BigSubCards
                     images={content.images}
                     title={content.prompt}
-                    onClick={() => navigate(`${content.onClick}`)}
+                    onClick={`${content.onClick}`}
                   />
                 </div>
               ))}
@@ -226,7 +226,7 @@ const SearchBar = () => {
                   <BigSubCards
                     images={content.images}
                     title={content.prompt}
-                    onClick={() => handleSuggestionClick(content)}
+                    onClick={'/autocare'}
                   />
                 </div>
               ))}

@@ -108,7 +108,7 @@ const SearchBar = () => {
               <AlignmentSubCards
                 images={content.images}
                 prompt={content.prompt}
-                onClick={() => handleSuggestionClick(content)}
+                onClick={'/rentals'}
               />
             </div>
           ))}
@@ -127,9 +127,9 @@ const SearchBar = () => {
   }
   return (
     <div className=" container flex flex-col gap-10">
-      <div className="flex items-start justify-start">
+      <div className="flex items-center justify-center">
         <form className="mt-3 w-96 px-6">
-          <div className="relative">
+          <div className=" relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="absolute bottom-0 left-3 top-0 my-auto h-6 w-6 text-gray-400"
@@ -146,7 +146,7 @@ const SearchBar = () => {
             <input
               type="text"
               placeholder="Search"
-              className="w-full rounded-md border bg-gray-50 py-2 pl-12 pr-4 text-gray-500 outline-none focus:border-indigo-600 focus:bg-white"
+              className=" w-full rounded-md border bg-gray-50 py-2 pl-12 pr-4 text-gray-500 outline-none focus:border-indigo-600 focus:bg-white"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               onBlur={redirectToFirstSuggestion}

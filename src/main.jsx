@@ -298,7 +298,7 @@ const router = createBrowserRouter([
     element: <SubCategoryWashingMachinePage />
   },
   {
-    path: '/weddingservices',
+    path: '/weddingandeventservices',
     element: <WeddingServices />
   },
   {
