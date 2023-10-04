@@ -6,32 +6,38 @@ import AlignmentSubCards from '../../../components/ui/AlignmentSubCard'
 const SearchBar = () => {
   const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState('')
-  const [visibleContentCount, setVisibleContentCount] = useState(5)
+  const [visibleContentCount, setVisibleContentCount] = useState(6)
   // Your list of available content
   const availableContent = [
     {
-      images: '/Restaurant/southIndian.webp',
-      prompt: 'South Indian'
+      images: '/Restaurant/indianfood.webp',
+      prompt: 'Indian Food',
+      onClick: '/restaurantcategory/indianfood'
     },
     {
       images: '/Restaurant/globalcuisines.webp',
-      prompt: 'Global Cuisines'
+      prompt: 'Global Cuisines',
+      onClick: '/restaurantcategory/globalcuisines'
     },
     {
       images: '/Restaurant/nightlife.webp',
-      prompt: 'Night Life'
+      prompt: 'Night Style',
+      onClick: '/restaurantcategory/nightstyle'
     },
     {
       images: '/Restaurant/sweettooth.webp',
-      prompt: 'Sweet Tooth'
+      prompt: 'Dessert',
+      onClick: '/restaurantcategory/dessert'
     },
     {
       images: '/Restaurant/quickbites.webp',
-      prompt: 'Quick Bites'
+      prompt: 'Quick Bites',
+      onClick: '/restaurantcategory/quickbites'
     },
     {
       images: '/Restaurant/foodie.webp',
-      prompt: 'Foodie'
+      prompt: 'Foodie',
+      onClick: '/restaurantcategory/foodie'
     }
   ]
 
@@ -39,24 +45,12 @@ const SearchBar = () => {
     content.prompt.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
-  const handleSuggestionClick = () => {
-    // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/restaurant')
-  }
-
   const handleEnterKeyPress = (e) => {
     if (e.keyCode === 13) {
       // Enter key pressed
       redirectToFirstSuggestion()
     }
   }
-  // Function to automatically redirect to the first suggestion
-  const redirectToFirstSuggestion = () => {
-    if (filteredContent.length > 0) {
-      handleSuggestionClick(filteredContent[0])
-    }
-  }
-
   // Render the filtered content
   const renderFilteredContent = () => {
     if (filteredContent.length === 0) {
@@ -68,19 +62,19 @@ const SearchBar = () => {
     }
 
     const handleViewMoreClick = () => {
-      // Show 5 more cards when the "View More" button is clicked
-      setVisibleContentCount((prevCount) => prevCount + 5)
+      // Show 6 more cards when the "View More" button is clicked
+      setVisibleContentCount((prevCount) => prevCount + 6)
     }
 
     return (
       <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className="grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className="grid items-center justify-center gap-7 max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
           {filteredContent.slice(0, visibleContentCount).map((content, index) => (
             <div key={index}>
               <AlignmentSubCards
                 images={content.images}
                 prompt={content.prompt}
-                onClick={'/restaurant'}
+                onClick={content.onClick}
               />
             </div>
           ))}
@@ -121,7 +115,6 @@ const SearchBar = () => {
               className="w-full rounded-md border bg-gray-50 py-2 pl-12 pr-4 text-gray-500 outline-none focus:border-indigo-600 focus:bg-white"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              onBlur={redirectToFirstSuggestion}
               onKeyDown={handleEnterKeyPress}
             />
           </div>

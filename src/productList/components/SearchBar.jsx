@@ -155,15 +155,13 @@ const SearchBar = () => {
           <button
             id="dropdown-button"
             data-dropdown-toggle="dropdown"
-            className="z-10 inline-flex flex-shrink-0 items-center rounded-l-lg border border-gray-300 px-4 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:ring-blue-500 dark:border-black dark:bg-white dark:text-black "
+            className=" z-10 inline-flex flex-shrink-0 items-center rounded-l-lg border border-gray-300 px-4 py-2.5 text-center text-sm font-medium text-gray-900 hover:bg-gray-200 focus:ring-blue-500 dark:border-black dark:bg-white dark:text-black "
             type="button"
             onClick={handleDropdownButtonClick}
             ref={allCategoriesButtonRef}>
             All categories
             <svg
-              className={`ml-2.5 h-2.5 w-2.5 ${
-                isAllCategoriesOpen ? 'rotate-180 transform' : '' // Rotate the arrow based on dropdown state
-              }`}
+              className={`ml-2.5 h-2.5 w-2.5 ${isAllCategoriesOpen ? 'rotate-180 transform' : ''}`}
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
