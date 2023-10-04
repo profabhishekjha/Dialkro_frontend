@@ -17,27 +17,27 @@ const SearchBar = () => {
     {
       images: '/Restaurant/globalcuisines.webp',
       prompt: 'Global Cuisines',
-      onClick: '/restaurantcategory/indianfood'
+      onClick: '/restaurantcategory/globalcuisines'
     },
     {
       images: '/Restaurant/nightlife.webp',
       prompt: 'Night Style',
-      onClick: '/restaurantcategory/indianfood'
+      onClick: '/restaurantcategory/nightstyle'
     },
     {
       images: '/Restaurant/sweettooth.webp',
-      prompt: 'Sweet Tooth',
-      onClick: '/restaurantcategory/indianfood'
+      prompt: 'Dessert',
+      onClick: '/restaurantcategory/dessert'
     },
     {
       images: '/Restaurant/quickbites.webp',
       prompt: 'Quick Bites',
-      onClick: '/restaurantcategory/indianfood'
+      onClick: '/restaurantcategory/quickbites'
     },
     {
       images: '/Restaurant/foodie.webp',
       prompt: 'Foodie',
-      onClick: '/restaurantcategory/indianfood'
+      onClick: '/restaurantcategory/foodie'
     }
   ]
 
@@ -45,24 +45,12 @@ const SearchBar = () => {
     content.prompt.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
-  const handleSuggestionClick = () => {
-    // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/restaurant')
-  }
-
   const handleEnterKeyPress = (e) => {
     if (e.keyCode === 13) {
       // Enter key pressed
       redirectToFirstSuggestion()
     }
   }
-  // Function to automatically redirect to the first suggestion
-  const redirectToFirstSuggestion = () => {
-    if (filteredContent.length > 0) {
-      handleSuggestionClick(filteredContent[0])
-    }
-  }
-
   // Render the filtered content
   const renderFilteredContent = () => {
     if (filteredContent.length === 0) {
@@ -127,7 +115,6 @@ const SearchBar = () => {
               className="w-full rounded-md border bg-gray-50 py-2 pl-12 pr-4 text-gray-500 outline-none focus:border-indigo-600 focus:bg-white"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              onBlur={redirectToFirstSuggestion}
               onKeyDown={handleEnterKeyPress}
             />
           </div>

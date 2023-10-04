@@ -77,6 +77,11 @@ import OnlineShoppingElectronics from './OnlineShopping/components/OnlineShoppin
 import OnlineShoppingFurniture from './OnlineShopping/components/OnlineShoppingFurniture'
 import OnlineShoppingMovies from './OnlineShopping/components/OnlineShoppingMovies'
 import IndianFood from './popularCategory/restaurant/components/IndianFood'
+import GlobalCuisines from './popularCategory/restaurant/components/GlobalCuisines'
+import NightStyle from './popularCategory/restaurant/components/NightStyle'
+import QuickBites from './popularCategory/restaurant/components/QuickBites'
+import Foodie from './popularCategory/restaurant/components/Foodie'
+import Dessert from './popularCategory/restaurant/components/Dessert'
 
 const router = createBrowserRouter([
   {
@@ -305,6 +310,26 @@ const router = createBrowserRouter([
   {
     path: '/restaurantcategory/indianfood',
     element: <IndianFood />
+  },
+  {
+    path: '/restaurantcategory/globalcuisines',
+    element: <GlobalCuisines />
+  },
+  {
+    path: '/restaurantcategory/nightstyle',
+    element: <NightStyle />
+  },
+  {
+    path: '/restaurantcategory/quickbites',
+    element: <QuickBites />
+  },
+  {
+    path: '/restaurantcategory/foodie',
+    element: <Foodie />
+  },
+  {
+    path: '/restaurantcategory/dessert',
+    element: <Dessert />
   },
   {
     path: '/weddingservicescategory',

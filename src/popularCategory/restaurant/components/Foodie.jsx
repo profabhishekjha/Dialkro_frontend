@@ -3,7 +3,7 @@ import Nav from '../../../components/Navbar/Nav'
 import Footer from '../../../components/Footer/Footer'
 import DropdownMenu from '../../../OnlineShopping/components/DropdownComponent'
 
-const GlobalCuisines = () => {
+const Foodie = () => {
   return (
     <>
       <Nav />
@@ -66,4 +66,4 @@ const GlobalCuisines = () => {
   )
 }
 
-export default GlobalCuisines
+export default Foodie
