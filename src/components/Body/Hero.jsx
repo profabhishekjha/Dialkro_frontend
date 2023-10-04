@@ -5,6 +5,7 @@ import AlignmentCardsOther from '../ui/AlignmentCardsOther'
 
 const Hero = () => {
   const navigate = useNavigate()
+
   return (
     <div className="flex items-center justify-center">
       <section className="flex items-center text-black">
@@ -16,57 +17,39 @@ const Hero = () => {
               <AlignmentCards
                 images={'Popular/transport.webp'}
                 prompt={'Transport'}
-                onClick={() => {
-                  navigate('/transport')
-                }}
+                onClick="/transport"
               />
 
               <AlignmentCards
                 images={'Popular/restaurant.webp'}
                 prompt={'Restaurant'}
-                onClick={() => {
-                  navigate('/restaurantcategory')
-                }}
+                onClick="/restaurantcategory"
               />
 
               <AlignmentCards
                 images={'Popular/astrology.webp'}
                 prompt={'Astrologers'}
-                onClick={() => {
-                  navigate('/astrologer')
-                }}
+                onClick="/astrologer"
               />
 
               <AlignmentCards
                 images={'Popular/hospital.webp'}
                 prompt={'Hospitals'}
-                onClick={() => {
-                  navigate('/hospitalscategory')
-                }}
+                onClick="/hospitalscategory"
               />
 
-              <AlignmentCards
-                images={'Popular/hotel.webp'}
-                prompt={'Hotels'}
-                onClick={() => {
-                  navigate('/hotels')
-                }}
-              />
+              <AlignmentCards images={'Popular/hotel.webp'} prompt={'Hotels'} onClick="/hotels" />
 
               <AlignmentCards
                 images={'Popular/movers.webp'}
                 prompt={'Packers And Movers'}
-                onClick={() => {
-                  navigate('/movers')
-                }}
+                onClick="/movers"
               />
 
               <AlignmentCards
                 images={'Trending/house.webp'}
                 prompt={'Real-Estate'}
-                onClick={() => {
-                  navigate('/realestatecategory')
-                }}
+                onClick="/realestatecategory"
               />
             </div>
 
@@ -76,57 +59,39 @@ const Hero = () => {
               <AlignmentCards
                 images={'Trending/dentist.webp'}
                 prompt={'Dentist'}
-                onClick={() => {
-                  navigate('/dentist')
-                }}
+                onClick="/dentist"
               />
 
-              <AlignmentCards
-                images={'Trending/gyms.webp'}
-                prompt={'gyms'}
-                onClick={() => {
-                  navigate('/gym')
-                }}
-              />
+              <AlignmentCards images={'Trending/gyms.webp'} prompt={'gyms'} onClick="/gym" />
 
               <AlignmentCards
                 images={'Trending/hostels.webp'}
                 prompt={'hostels'}
-                onClick={() => {
-                  navigate('/hostels')
-                }}
+                onClick="/hostels"
               />
 
               <AlignmentCards
                 images={'Popular/travels.webp'}
                 prompt={'travels'}
-                onClick={() => {
-                  navigate('/travels')
-                }}
+                onClick="/travels"
               />
 
               <AlignmentCards
                 images={'Trending/pest-control.webp'}
                 prompt={'pest control'}
-                onClick={() => {
-                  navigate('/pestControl')
-                }}
+                onClick="/pestControl"
               />
 
               <AlignmentCards
                 images={'Popular/rentals.webp'}
                 prompt={'Rent on Hire'}
-                onClick={() => {
-                  navigate('/rentalcategory')
-                }}
+                onClick="/rentalcategory"
               />
 
               <AlignmentCards
                 images={'Trending/petshop.webp'}
                 prompt={'pet shop'}
-                onClick={() => {
-                  navigate('/petshop')
-                }}
+                onClick="/petshop"
               />
             </div>
             <h1 className="my-20 text-left text-4xl font-bold">Repair Services</h1>
@@ -135,71 +100,51 @@ const Hero = () => {
               <AlignmentCards
                 images={'Repairs/ac repairs.webp'}
                 prompt={'AC repair'}
-                onClick={() => {
-                  navigate('/acRepaircategory')
-                }}
+                onClick="/acRepaircategory"
               />
               <AlignmentCards
                 images={'Repairs/car care.webp'}
                 prompt={'Car care'}
-                onClick={() => {
-                  navigate('/carCarecategory')
-                }}
+                onClick="/carCarecategory"
               />
               <AlignmentCards
                 images={'Repairs/tv repairs.webp'}
                 prompt={'electronics services'}
-                onClick={() => {
-                  navigate('/electronicServicesCategory')
-                }}
+                onClick="/electronicServicesCategory"
               />
               <AlignmentCards
                 images={'Repairs/washing machine repairs.webp'}
                 prompt={'washing machine'}
-                onClick={() => {
-                  navigate('/washingMachineCategory')
-                }}
+                onClick="/washingMachineCategory"
               />
             </div>
             <h1 className=" my-10 text-left text-4xl font-bold">Other Services</h1>
             <hr className="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
-
             <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-              {/* give props to the cards and make them dynamic by giving them anchor , desc , name*/}
               <AlignmentCardsOther
                 images={'Wedding&Beauty/bridal-makeup.webp'}
                 prompt={'Wedding & Event Organiser'}
-                onClick={() => {
-                  navigate('/weddingservicescategory')
-                }}
+                onClick="/weddingservicescategory"
               />
               <AlignmentCardsOther
                 images={'education/education.webp'}
                 prompt={'Education'}
-                onClick={() => {
-                  navigate('/educationcategory')
-                }}
+                onClick="/educationcategory"
               />
               <AlignmentCardsOther
                 images={'consultant/consultant.webp'}
                 prompt={'Consultant'}
-                onClick={() => {
-                  navigate('/consultantcategory')
-                }}
+                onClick="/consultantcategory"
               />
               <AlignmentCardsOther
                 images={'contractor/contractor.webp'}
                 prompt={'Contractor'}
-                onClick={() => {
-                  navigate('/contractorcategory')
-                }}
+                onClick="/contractorcategory"
               />
               <AlignmentCardsOther
                 images={'Popular/couriers.webp'}
                 prompt={'Courier'}
-                onClick={() => {
-                  navigate('/courierscategory')
-                }}
+                onClick="/courierscategory"
               />
             </div>
           </div>
