@@ -1,10 +1,39 @@
-import React from 'react'
+
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react'
 
 function RegisterModal({ onClose, onLoginClick }) {
   const handleLoginClick = () => {
     onClose() // Close the LoginModal
     onLoginClick() // Open the RegisterModal
   }
+
+  const [email, setemail] = useState();
+  const [userName, setuserName] = useState();
+  const [password, setpassword] = useState();
+  const [reEnterPassword, setreEnterPassword] = useState();
+
+  const obj = {userName, email, password, reEnterPassword}
+  
+  const handleSubmit = async (e)=>{
+    e.preventDefault();
+   let postuserInfo = await fetch('http://localhost:4000/register/user',{
+    method:'post',
+    body:JSON.stringify(obj),
+    headers:{
+      'Content-Type': 'application/json'
+    }
+   });
+   postuserInfo = await postuserInfo.json();
+   localStorage.setItem('user', JSON.stringify(postuserInfo.newUser))
+   localStorage.setItem('token', JSON.stringify(postuserInfo.Token))
+   if(postuserInfo.Token){
+    alert('register successfully !')
+   }else{
+    alert(postuserInfo.msg);
+   }
+  }
+  
   return (
     <div
       id="authentication-modal"
@@ -26,7 +55,7 @@ function RegisterModal({ onClose, onLoginClick }) {
             <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
               Sign up to Dialkro
             </h3>
-            <form className="space-y-6" action="#">
+            <form onSubmit={handleSubmit} className="space-y-6" action="#">
               {/* Form inputs and submit button */}
               <div>
                 <label
@@ -35,6 +64,7 @@ function RegisterModal({ onClose, onLoginClick }) {
                   Your email
                 </label>
                 <input
+                onChange={(e)=>setemail(e.target.value)}
                   type="email"
                   name="email"
                   id="email"
@@ -50,6 +80,7 @@ function RegisterModal({ onClose, onLoginClick }) {
                   Name
                 </label>
                 <input
+                onChange={(e)=>setuserName(e.target.value)}
                   type="text"
                   name="name"
                   id="name"
@@ -65,6 +96,7 @@ function RegisterModal({ onClose, onLoginClick }) {
                   Your password
                 </label>
                 <input
+                onChange={(e)=>setpassword(e.target.value)}
                   type="password"
                   name="password"
                   id="password"
@@ -80,6 +112,7 @@ function RegisterModal({ onClose, onLoginClick }) {
                   Re-enter your password
                 </label>
                 <input
+                onChange={(e)=>setreEnterPassword(e.target.value)}
                   type="password"
                   name="password"
                   id="password"
