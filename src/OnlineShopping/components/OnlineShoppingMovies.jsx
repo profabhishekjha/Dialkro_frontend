@@ -68,7 +68,7 @@ const OnlineShoppingMovies = () => {
         />
       </div>
       <div className="my-10 flex items-center justify-center">
-        <img src="/onlineshoppingCarousel/img.svg" alt="alt" />
+        <img src="/onlineshoppingCarousel/frames/Frame 14.svg" alt="alt" className="mt-20" />
       </div>
 
       <Footer />
