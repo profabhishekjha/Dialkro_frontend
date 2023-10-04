@@ -75,7 +75,7 @@ const SearchBar = () => {
               <AlignmentSubCards
                 images={content.images}
                 prompt={content.prompt}
-                onClick={() => handleSuggestionClick(content)}
+                onClick={'/education'}
               />
             </div>
           ))}

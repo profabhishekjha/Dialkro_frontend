@@ -61,7 +61,7 @@ const SearchBar = () => {
 
   const handleSuggestionClick = () => {
     // Handle the card click here, e.g., navigate to the corresponding route
-    navigate('/weddingservices')
+    navigate('/weddingandeventservices')
   }
 
   const handleEnterKeyPress = (e) => {
@@ -100,7 +100,7 @@ const SearchBar = () => {
               <AlignmentSubCards
                 images={content.images}
                 prompt={content.prompt}
-                onClick={() => handleSuggestionClick(content)}
+                onClick={'/weddingandeventservices'}
               />
             </div>
           ))}
