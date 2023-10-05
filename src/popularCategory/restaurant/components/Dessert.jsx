@@ -6,11 +6,11 @@ import DropdownMenu from '../../../OnlineShopping/components/DropdownComponent'
 const Dessert = () => {
   return (
     <>
-      <Nav />
+      <Nav services={'Dessert'} />
       <div className=" flex flex-wrap items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
           prompt={'Cakes'}
-          image={'/onlineshoppingCarousel/cakes.png'}
+          image={'/Restaurant/desserts/cakes.PNG'}
           options={[
             'Chocolate Cake',
             'Vanilla Cake',
@@ -25,7 +25,7 @@ const Dessert = () => {
         />
         <DropdownMenu
           prompt={'Ice Cream'}
-          image={'/onlineshoppingCarousel/ice-cream.png'}
+          image={'/Restaurant/desserts/ice-cream.PNG'}
           options={[
             'Vanilla',
             'Chocolate',
@@ -40,7 +40,7 @@ const Dessert = () => {
         />
         <DropdownMenu
           prompt={'Pies & Pastries'}
-          image={'/onlineshoppingCarousel/pies-pastries.png'}
+          image={'/Restaurant/desserts/pies-pastries.PNG'}
           options={[
             'Apple Pie',
             'Cherry Pie',
@@ -56,7 +56,7 @@ const Dessert = () => {
 
         <DropdownMenu
           prompt={'Cookies'}
-          image={'/onlineshoppingCarousel/cookies.png'}
+          image={'/Restaurant/desserts/cookies.PNG'}
           options={[
             'Chocolate Chip Cookies',
             'Oatmeal Cookies',
@@ -71,7 +71,7 @@ const Dessert = () => {
         />
         <DropdownMenu
           prompt={'Chocolates'}
-          image={'/onlineshoppingCarousel/chocolates.png'}
+          image={'/Restaurant/desserts/chocolates.PNG'}
           options={[
             'Dark Chocolate',
             'Milk Chocolate',
@@ -85,7 +85,7 @@ const Dessert = () => {
         />
         <DropdownMenu
           prompt={'Puddings'}
-          image={'/onlineshoppingCarousel/puddings.png'}
+          image={'/Restaurant/desserts/puddings.PNG'}
           options={[
             'Chocolate Pudding',
             'Vanilla Pudding',
@@ -99,7 +99,7 @@ const Dessert = () => {
         />
         <DropdownMenu
           prompt={'Fruit Desserts'}
-          image={'/onlineshoppingCarousel/fruit-desserts.png'}
+          image={'/Restaurant/desserts/fruit-desserts.PNG'}
           options={[
             'Fruit Salad',
             'Fruit Tarts',
@@ -114,7 +114,7 @@ const Dessert = () => {
 
         <DropdownMenu
           prompt={'Custards'}
-          image={'/onlineshoppingCarousel/custards.png'}
+          image={'/Restaurant/desserts/custards.PNG'}
           options={[
             'Crème Brûlée',
             'Flan',
@@ -128,7 +128,7 @@ const Dessert = () => {
         />
         <DropdownMenu
           prompt={'Gelato'}
-          image={'/onlineshoppingCarousel/gelato.png'}
+          image={'/Restaurant/desserts/gelato.PNG'}
           options={[
             'Chocolate Gelato',
             'Vanilla Gelato',
@@ -142,7 +142,7 @@ const Dessert = () => {
         />
         <DropdownMenu
           prompt={'Sorbet'}
-          image={'/onlineshoppingCarousel/sorbet.png'}
+          image={'/Restaurant/desserts/sorbet.PNG'}
           options={[
             'Fruit Sorbet',
             'Lemon Sorbet',
@@ -155,8 +155,8 @@ const Dessert = () => {
           ]}
         />
       </div>
-      <div className="my-10 flex items-center justify-center">
-        <img src="/onlineshoppingCarousel/frames/Frame 12.svg" alt="alt" className="mt-20" />
+      <div className="my-32 flex items-center justify-center">
+        <img src="/Restaurant/desserts/frames/Frame 12.svg" alt="alt" className="mt-2" />
       </div>
 
       <Footer />
