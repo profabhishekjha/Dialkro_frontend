@@ -2,6 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BigSubCards from '../../components/ui/BigSubCards'
+import Card from '../../components/Card'
+import { faker } from '@faker-js/faker'
+import Section from '../../components/Section'
 
 const SearchBar = () => {
   const navigate = useNavigate()
@@ -68,28 +71,59 @@ const SearchBar = () => {
       setVisibleContentCount((prevCount) => prevCount + 5)
     }
 
+    function CardList() {
+      const cards = []
+      for (let i = 0; i < 10; i++) {
+        cards.push(
+          <Card
+            id={i}
+            heading={faker.commerce.productName()}
+            description={faker.commerce.productDescription()}
+            companyName={faker.company.buzzVerb()}
+            image={faker.image.url()}
+            price={faker.commerce.price()}
+            rating={faker.number.float({ min: 1, max: 5, precision: 0.1 })}
+            reviews={faker.number.int({ max: 10000 })}
+          />
+        )
+      }
+      return cards
+    }
+    const cards = CardList()
+
     return (
-      <div className="flex w-full flex-col items-center justify-center gap-5">
-        <div className=" grid items-center justify-center gap-7 max-md:gap-5 max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
-          {filteredContent.slice(0, visibleContentCount).map((content, index) => (
-            <div key={index}>
-              <BigSubCards
-                images={content.images}
-                title={content.prompt}
-                onClick={content.onClick}
-              />
+      <div className="flex w-full flex-col gap-16">
+        <div className="flex w-full items-center justify-center">
+          <div className=" flex w-[70%] flex-col items-center justify-center gap-2">
+            <div className="ml-6 w-full gap-3 border-b border-gray-400 text-4xl font-bold tracking-wide">
+              <p>B2B Services Available in Dialkro</p>
             </div>
-          ))}
-        </div>
-        {filteredContent.length > visibleContentCount && (
-          <div className="mt-7 flex items-end justify-end">
-            <button
-              onClick={handleViewMoreClick}
-              className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
-              View More Category
-            </button>
+            <div className="grid items-center justify-center max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              {filteredContent.slice(0, visibleContentCount).map((content, index) => (
+                <div key={index}>
+                  <BigSubCards
+                    images={content.images}
+                    title={content.prompt}
+                    onClick={content.onClick}
+                  />
+                </div>
+              ))}
+            </div>
+            {filteredContent.length > visibleContentCount && (
+              <div className="mt-7 flex items-end justify-end">
+                <button
+                  onClick={handleViewMoreClick}
+                  className="h-10 w-40 rounded-md bg-blue-500 text-white hover:bg-blue-400">
+                  View More Category
+                </button>
+              </div>
+            )}
           </div>
-        )}
+        </div>
+
+        <div className=" flex w-full flex-col items-center justify-center gap-10">
+          <Section FirstHeading="Top Deals" cards={cards} isCardCarousel={true} />
+        </div>
       </div>
     )
   }
