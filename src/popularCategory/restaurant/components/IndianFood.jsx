@@ -6,11 +6,11 @@ import DropdownMenu from '../../../OnlineShopping/components/DropdownComponent'
 const IndianFood = () => {
   return (
     <>
-      <Nav />
+      <Nav services={'Indian'} />
       <div className=" flex flex-wrap items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
           prompt={'North Indian'}
-          image={'/onlineshoppingCarousel/north-indian-cuisine.PNG'}
+          image={'/Restaurant/indian foods/north-indian.PNG'}
           options={[
             'Paneer Dishes',
             'Biryani',
@@ -29,7 +29,7 @@ const IndianFood = () => {
 
         <DropdownMenu
           prompt={'South Indian Cuisine'}
-          image={'/onlineshoppingCarousel/south-indian-cuisine.png'}
+          image={'/Restaurant/indian foods/south-indian-cuisine.PNG'}
           options={[
             'Dosa',
             'Idli',
@@ -48,7 +48,7 @@ const IndianFood = () => {
 
         <DropdownMenu
           prompt={'Punjabi Cuisine'}
-          image={'/onlineshoppingCarousel/punjabi-cuisine.png'}
+          image={'/Restaurant/indian foods/punjabi-cuisine.PNG'}
           options={[
             'Paneer Tikka',
             'Chole Bhature',
@@ -67,7 +67,7 @@ const IndianFood = () => {
 
         <DropdownMenu
           prompt={'Rajasthani Cuisine'}
-          image={'/onlineshoppingCarousel/rajasthani-cuisine.png'}
+          image={'/Restaurant/indian foods/rajasthani-cuisine.PNG'}
           options={[
             'Dal Baati Churma',
             'Gatte Ki Sabzi',
@@ -86,7 +86,7 @@ const IndianFood = () => {
 
         <DropdownMenu
           prompt={'Goan Cuisine'}
-          image={'/onlineshoppingCarousel/goan-cuisine.png'}
+          image={'/Restaurant/indian foods/goan-cuisine.PNG'}
           options={[
             'Vindaloo',
             'Fish Curry Rice',
@@ -104,7 +104,7 @@ const IndianFood = () => {
         />
         <DropdownMenu
           prompt={'Bengali Cuisine'}
-          image={'/onlineshoppingCarousel/bengali-cuisine.png'}
+          image={'/Restaurant/indian foods/bengali-cuisine.PNG'}
           options={[
             'Rasgulla',
             'Machher Jhol',
@@ -123,7 +123,7 @@ const IndianFood = () => {
 
         <DropdownMenu
           prompt={'Maharashtrian Cuisine'}
-          image={'/onlineshoppingCarousel/maharashtrian-cuisine.png'}
+          image={'/Restaurant/indian foods/maharashtrian-cuisine.PNG'}
           options={[
             'Vada Pav',
             'Pav Bhaji',
@@ -142,7 +142,7 @@ const IndianFood = () => {
 
         <DropdownMenu
           prompt={'Kashmiri Cuisine'}
-          image={'/onlineshoppingCarousel/kashmiri-cuisine.png'}
+          image={'/Restaurant/indian foods/kashmiri-cuisine.PNG'}
           options={[
             'Rogan Josh',
             'Yakhni',
@@ -160,7 +160,7 @@ const IndianFood = () => {
 
         <DropdownMenu
           prompt={'Assamese Cuisine'}
-          image={'/onlineshoppingCarousel/assamese-cuisine.png'}
+          image={'/Restaurant/indian foods/assamese-cuisine.PNG'}
           options={[
             'Assam Laksa',
             'Bengena Pitika',
@@ -175,7 +175,7 @@ const IndianFood = () => {
 
         <DropdownMenu
           prompt={'Gujarati Cuisine'}
-          image={'/onlineshoppingCarousel/gujarati-cuisine.png'}
+          image={'/Restaurant/indian foods/gujarati-cuisine.PNG'}
           options={[
             'Dhokla',
             'Thepla',
@@ -191,8 +191,8 @@ const IndianFood = () => {
           ]}
         />
       </div>
-      <div className="my-10 flex items-center justify-center">
-        <img src="/onlineshoppingCarousel/frames/Frame 12.svg" alt="alt" className="mt-20" />
+      <div className="my-28 flex items-center justify-center">
+        <img src="/Restaurant/indian foods/frames/Frame 12.svg" alt="alt" className="mt-20" />
       </div>
 
       <Footer />
