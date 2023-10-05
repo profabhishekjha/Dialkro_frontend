@@ -6,11 +6,11 @@ import DropdownMenu from '../../../OnlineShopping/components/DropdownComponent'
 const Foodie = () => {
   return (
     <>
-      <Nav />
+      <Nav services={'Foodie'} />
       <div className=" flex flex-wrap items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
           prompt={'Dhabas'}
-          image={'/onlineshoppingCarousel/dhabas.png'}
+          image={'/Restaurant/foodie/dhabas.PNG'}
           options={[
             'Local Dhabas',
             'Highway Dhabas',
@@ -23,7 +23,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={'Fine Dining'}
-          image={'/onlineshoppingCarousel/fine-dining.png'}
+          image={'/Restaurant/foodie/fine-dining.PNG'}
           options={[
             'Michelin Star Restaurants',
             'Gourmet Dining',
@@ -36,7 +36,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={'Food Trucks'}
-          image={'/onlineshoppingCarousel/food-trucks.png'}
+          image={'/Restaurant/foodie/food-trucks.PNG'}
           options={[
             'Street Food Trucks',
             'Food Truck Festivals',
@@ -48,7 +48,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={'Farm-to-Table'}
-          image={'/onlineshoppingCarousel/farm-to-table.png'}
+          image={'/Restaurant/foodie/farm-to-table.PNG'}
           options={[
             'Organic Ingredients',
             'Locally Sourced',
@@ -61,7 +61,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={'Food Festivals'}
-          image={'/onlineshoppingCarousel/food-festivals.png'}
+          image={'/Restaurant/foodie/food-festivals.PNG'}
           options={[
             'Cultural Food Festivals',
             'Street Food Festivals',
@@ -74,7 +74,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={'Pop-Up Restaurants'}
-          image={'/onlineshoppingCarousel/pop-up-restaurants.png'}
+          image={'/Restaurant/foodie/pop-up-restaurants.PNG'}
           options={[
             'Unique Dining Experiences',
             'Limited-Time Menus',
@@ -87,7 +87,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={'Gourmet Cuisine'}
-          image={'/onlineshoppingCarousel/gourmet-cuisine.png'}
+          image={'/Restaurant/foodie/gourmet-cuisine.PNG'}
           options={[
             'Exquisite Flavors',
             'Artfully Plated Dishes',
@@ -100,7 +100,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={"Chef's Specials"}
-          image={'/onlineshoppingCarousel/chefs-specials.png'}
+          image={'/Restaurant/foodie/chefs-specials.PNG'}
           options={[
             'Signature Dishes',
             `Chef's Recommendations`,
@@ -112,7 +112,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={'Unique Eateries'}
-          image={'/onlineshoppingCarousel/unique-eateries.png'}
+          image={'/Restaurant/foodie/unique-eateries.PNG'}
           options={[
             'Unconventional Dining',
             'Quirky Themes',
@@ -124,7 +124,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={'Tasting Menus'}
-          image={'/onlineshoppingCarousel/tasting-menus.png'}
+          image={'/Restaurant/foodie/tasting-menus.PNG'}
           options={[
             `Chef's Tasting Menus`,
             'Wine and Food Pairing',
@@ -136,7 +136,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={'Culinary Experiences'}
-          image={'/onlineshoppingCarousel/culinary-experiences.png'}
+          image={'/Restaurant/foodie/culinary-experiences.PNG'}
           options={[
             'Cooking Classes',
             'Food and Wine Tours',
@@ -149,7 +149,7 @@ const Foodie = () => {
 
         <DropdownMenu
           prompt={'Foodie Tours'}
-          image={'/onlineshoppingCarousel/foodie-tours.png'}
+          image={'/Restaurant/foodie/foodie-tours.PNG'}
           options={[
             'Culinary Adventures',
             'Local Food Tours',
@@ -160,8 +160,8 @@ const Foodie = () => {
           ]}
         />
       </div>
-      <div className="my-10 flex items-center justify-center">
-        <img src="/onlineshoppingCarousel/frames/Frame 12.svg" alt="alt" className="mt-20" />
+      <div className="my-28 flex items-center justify-center">
+        <img src="/Restaurant/foodie/frames/Frame 12.svg" alt="alt" className="mt-20" />
       </div>
 
       <Footer />

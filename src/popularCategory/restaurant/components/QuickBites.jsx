@@ -6,11 +6,11 @@ import DropdownMenu from '../../../OnlineShopping/components/DropdownComponent'
 const QuickBites = () => {
   return (
     <>
-      <Nav />
+      <Nav services={'Bites'} />
       <div className=" flex flex-wrap items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
           prompt={'Street Food'}
-          image={'/onlineshoppingCarousel/street-food.png'}
+          image={'/Restaurant/quick bites/street-food.PNG'}
           options={[
             'Food Carts',
             'Food Stalls',
@@ -25,7 +25,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Burgers'}
-          image={'/onlineshoppingCarousel/burgers.png'}
+          image={'/Restaurant/quick bites/burgers.PNG'}
           options={[
             'Classic Burgers',
             'Gourmet Burgers',
@@ -40,7 +40,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Pizza'}
-          image={'/onlineshoppingCarousel/pizza.png'}
+          image={'/Restaurant/quick bites/pizza.PNG'}
           options={[
             'Margherita Pizza',
             'Pepperoni Pizza',
@@ -55,7 +55,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Tacos'}
-          image={'/onlineshoppingCarousel/tacos.png'}
+          image={'/Restaurant/quick bites/taco.PNG'}
           options={[
             'Street Tacos',
             'Taco Trucks',
@@ -70,7 +70,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Hot Dogs'}
-          image={'/onlineshoppingCarousel/hot-dogs.png'}
+          image={'/Restaurant/quick bites/hot-dogs.PNG'}
           options={[
             'Classic Hot Dogs',
             'Gourmet Hot Dogs',
@@ -85,7 +85,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Sandwiches'}
-          image={'/onlineshoppingCarousel/sandwiches.png'}
+          image={'/Restaurant/quick bites/sandwiches.PNG'}
           options={[
             'Sub Sandwiches',
             'Paninis',
@@ -100,7 +100,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Wraps'}
-          image={'/onlineshoppingCarousel/wraps.png'}
+          image={'/Restaurant/quick bites/wraps.PNG'}
           options={[
             'Chicken Wraps',
             'Veggie Wraps',
@@ -114,7 +114,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Pasta'}
-          image={'/onlineshoppingCarousel/pasta.png'}
+          image={'/Restaurant/quick bites/pasta.PNG'}
           options={[
             'Spaghetti',
             'Fettuccine Alfredo',
@@ -128,7 +128,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Sushi'}
-          image={'/onlineshoppingCarousel/sushi.png'}
+          image={'/Restaurant/quick bites/sushi.PNG'}
           options={[
             'Sashimi',
             'Maki Rolls',
@@ -143,7 +143,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Fries'}
-          image={'/onlineshoppingCarousel/fries.png'}
+          image={'/Restaurant/quick bites/fries.PNG'}
           options={[
             'French Fries',
             'Sweet Potato Fries',
@@ -158,7 +158,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Chicken Wings'}
-          image={'/onlineshoppingCarousel/chicken-wings.png'}
+          image={'/Restaurant/quick bites/chicken-wings.PNG'}
           options={[
             'BBQ Wings',
             'Honey Mustard Wings',
@@ -172,7 +172,7 @@ const QuickBites = () => {
 
         <DropdownMenu
           prompt={'Tandoori'}
-          image={'/onlineshoppingCarousel/tandoori.png'}
+          image={'/Restaurant/quick bites/tandoori.PNG'}
           options={[
             'Tandoori Chicken',
             'Tandoori Naan',
@@ -185,8 +185,8 @@ const QuickBites = () => {
           ]}
         />
       </div>
-      <div className="my-10 flex items-center justify-center">
-        <img src="/onlineshoppingCarousel/frames/Frame 12.svg" alt="alt" className="mt-20" />
+      <div className="my-28 flex items-center justify-center">
+        <img src="/Restaurant/quick bites/frames/Frame 12.svg" alt="alt" className="mt-20" />
       </div>
 
       <Footer />
