@@ -103,7 +103,7 @@ const SearchBar = () => {
                 <div key={index}>
                   <BigSubCards
                     images={content.images}
-                    title={content.title}
+                    title={content.prompt}
                     onClick={content.onClick}
                   />
                 </div>
