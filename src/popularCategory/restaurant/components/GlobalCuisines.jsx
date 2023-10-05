@@ -6,11 +6,11 @@ import DropdownMenu from '../../../OnlineShopping/components/DropdownComponent'
 const GlobalCuisines = () => {
   return (
     <>
-      <Nav />
+      <Nav services={'Global'} />
       <div className=" flex flex-wrap items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
           prompt={'Chinese'}
-          image={'/onlineshoppingCarousel/chinese-cuisine.png'}
+          image={'/Restaurant/global cusines/chinese-cuisine.PNG'}
           options={[
             'Szechuan',
             'Cantonese',
@@ -26,7 +26,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'Japanese'}
-          image={'/onlineshoppingCarousel/japanese-cuisine.png'}
+          image={'/Restaurant/global cusines/japanese-cuisine.PNG'}
           options={[
             'Sushi',
             'Sashimi',
@@ -42,7 +42,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'Italian'}
-          image={'/onlineshoppingCarousel/italian-cuisine.png'}
+          image={'/Restaurant/global cusines/italian-cuisine.PNG'}
           options={[
             'Pasta',
             'Pizza',
@@ -58,7 +58,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'Mexican'}
-          image={'/onlineshoppingCarousel/mexican-cuisine.png'}
+          image={'/Restaurant/global cusines/mexican-cuisine.PNG'}
           options={[
             'Tacos',
             'Burritos',
@@ -74,7 +74,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'Thai'}
-          image={'/onlineshoppingCarousel/thai-cuisine.png'}
+          image={'/Restaurant/global cusines/thai-cuisine.PNG'}
           options={[
             'Pad Thai',
             'Tom Yum',
@@ -89,7 +89,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'Mediterranean'}
-          image={'/onlineshoppingCarousel/mediterranean-cuisine.png'}
+          image={'/Restaurant/global cusines/mediterranean-cuisine.PNG'}
           options={[
             'Hummus',
             'Falafel',
@@ -104,7 +104,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'French'}
-          image={'/onlineshoppingCarousel/french-cuisine.png'}
+          image={'/Restaurant/global cusines/french-cuisine.PNG'}
           options={[
             'Croissants',
             'Escargot',
@@ -119,7 +119,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'Greek'}
-          image={'/onlineshoppingCarousel/greek-cuisine.png'}
+          image={'/Restaurant/global cusines/greek-cuisine.PNG'}
           options={[
             'Gyros',
             'Moussaka',
@@ -134,7 +134,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'Spanish'}
-          image={'/onlineshoppingCarousel/spanish-cuisine.png'}
+          image={'/Restaurant/global cusines/spanish-cuisine.PNG'}
           options={[
             'Paella',
             'Tapas',
@@ -149,7 +149,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'Indian'}
-          image={'/onlineshoppingCarousel/indian-cuisine.png'}
+          image={'/Restaurant/global cusines/indian-cuisine.PNG'}
           options={[
             'Curry',
             'Biryani',
@@ -164,7 +164,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'Middle Eastern'}
-          image={'/onlineshoppingCarousel/middle-eastern-cuisine.png'}
+          image={'/Restaurant/global cusines/middle-eastern-cuisine.PNG'}
           options={[
             'Hummus',
             'Falafel',
@@ -179,7 +179,7 @@ const GlobalCuisines = () => {
 
         <DropdownMenu
           prompt={'Korean'}
-          image={'/onlineshoppingCarousel/korean-cuisine.png'}
+          image={'/Restaurant/global cusines/korean-cuisine.PNG'}
           options={[
             'Kimchi',
             'Bulgogi',
@@ -192,8 +192,8 @@ const GlobalCuisines = () => {
           ]}
         />
       </div>
-      <div className="my-10 flex items-center justify-center">
-        <img src="/onlineshoppingCarousel/frames/Frame 12.svg" alt="alt" className="mt-20" />
+      <div className="my-28  flex items-center justify-center">
+        <img src="/Restaurant/global cusines/frames/Frame 12.svg" alt="alt" className="mt-20" />
       </div>
 
       <Footer />

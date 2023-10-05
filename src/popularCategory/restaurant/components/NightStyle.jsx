@@ -6,11 +6,11 @@ import DropdownMenu from '../../../OnlineShopping/components/DropdownComponent'
 const NightStyle = () => {
   return (
     <>
-      <Nav />
+      <Nav services={`Night`} />
       <div className=" flex flex-wrap items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
           prompt={'Pubs Near Me'}
-          image={'/onlineshoppingCarousel/pubs-near-me.png'}
+          image={'/Restaurant/night life/pubs-near-me.PNG'}
           options={[
             'Pubs in City Center',
             'Pubs in Downtown',
@@ -30,7 +30,7 @@ const NightStyle = () => {
 
         <DropdownMenu
           prompt={'Clubs Near Me'}
-          image={'/onlineshoppingCarousel/clubs-near-me.png'}
+          image={'/Restaurant/night life/clubs-near-me.PNG'}
           options={[
             'Clubs in City Center',
             'Clubs in Downtown',
@@ -47,7 +47,7 @@ const NightStyle = () => {
 
         <DropdownMenu
           prompt={'Bars with Outdoor Seating'}
-          image={'/onlineshoppingCarousel/bars-outdoor-seating.png'}
+          image={'/Restaurant/night life/bars-outdoor-seating.PNG'}
           options={[
             'Bars with Patio',
             'Bars with Garden',
@@ -60,7 +60,7 @@ const NightStyle = () => {
 
         <DropdownMenu
           prompt={'Bars Near Me'}
-          image={'/onlineshoppingCarousel/bars-near-me.png'}
+          image={'/Restaurant/night life/bars-near-me.PNG'}
           options={[
             'Bars in City Center',
             'Bars in Downtown',
@@ -79,7 +79,7 @@ const NightStyle = () => {
 
         <DropdownMenu
           prompt={'Restaurants'}
-          image={'/onlineshoppingCarousel/restaurants.png'}
+          image={'/Restaurant/night life/restaurants.PNG'}
           options={[
             'Fine Dining',
             'Casual Dining',
@@ -97,7 +97,7 @@ const NightStyle = () => {
 
         <DropdownMenu
           prompt={'Comedy Shows'}
-          image={'/onlineshoppingCarousel/comedy-shows.png'}
+          image={'/Restaurant/night life/comedy-shows.PNG'}
           options={[
             'Stand-up Comedy',
             'Improv Comedy',
@@ -110,7 +110,7 @@ const NightStyle = () => {
 
         <DropdownMenu
           prompt={'Live Music'}
-          image={'/onlineshoppingCarousel/live-music.png'}
+          image={'/Restaurant/night life/live-music.PNG'}
           options={[
             'Live Music Bars',
             'Concert Venues',
@@ -124,8 +124,8 @@ const NightStyle = () => {
           ]}
         />
       </div>
-      <div className="my-10 flex items-center justify-center">
-        <img src="/onlineshoppingCarousel/frames/Frame 12.svg" alt="alt" className="mt-20" />
+      <div className="my-52 flex items-center justify-center">
+        <img src="/Restaurant/night life/frames/Frame 12.svg" alt="alt" className="mt-20" />
       </div>
 
       <Footer />
