@@ -9,52 +9,150 @@ const Dessert = () => {
       <Nav />
       <div className=" flex flex-wrap items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
-          prompt={'North Indian'}
-          image={'/onlineshoppingCarousel/chairs.PNG'}
-          options={['Chairs', 'Sofas', 'Benches', 'Stools']}
-        />
-
-        <DropdownMenu
-          prompt={'Punjabi'}
-          image={'/onlineshoppingCarousel/desk.PNG'}
+          prompt={'Cakes'}
+          image={'/onlineshoppingCarousel/cakes.png'}
           options={[
-            'Dining Tables',
-            'Coffee Tables',
-            'End Tables',
-            'Console Tables',
-            'Desks',
-            'Nightstands'
+            'Chocolate Cake',
+            'Vanilla Cake',
+            'Red Velvet Cake',
+            'Cheesecake',
+            'Carrot Cake',
+            'Fruit Cake',
+            'Cupcakes',
+            'Custom Cakes',
+            'Cake Decorating'
+          ]}
+        />
+        <DropdownMenu
+          prompt={'Ice Cream'}
+          image={'/onlineshoppingCarousel/ice-cream.png'}
+          options={[
+            'Vanilla',
+            'Chocolate',
+            'Strawberry',
+            'Mint Chocolate Chip',
+            'Cookies and Cream',
+            'Gelato',
+            'Sorbet',
+            'Ice Cream Sundaes',
+            'Ice Cream Toppings'
+          ]}
+        />
+        <DropdownMenu
+          prompt={'Pies & Pastries'}
+          image={'/onlineshoppingCarousel/pies-pastries.png'}
+          options={[
+            'Apple Pie',
+            'Cherry Pie',
+            'Pecan Pie',
+            'Key Lime Pie',
+            'Danish Pastries',
+            'Custard Tarts',
+            'Baklava',
+            'Puff Pastry',
+            'Pie Crusts'
           ]}
         />
 
         <DropdownMenu
-          prompt={'South Indian'}
-          image={'/onlineshoppingCarousel/storage.PNG'}
-          options={['Cabinets', 'Dressers', 'Wardrobes', 'Bookshelves', 'Buffets and Sideboards']}
-        />
-
-        <DropdownMenu
-          prompt={'Rajasthani'}
-          image={'/onlineshoppingCarousel/beds.PNG'}
+          prompt={'Cookies'}
+          image={'/onlineshoppingCarousel/cookies.png'}
           options={[
-            'Bed Frames',
-            'Mattresses',
-            'Headboards and Footboards',
-            'Bunk Beds',
-            'Canopy Beds'
+            'Chocolate Chip Cookies',
+            'Oatmeal Cookies',
+            'Sugar Cookies',
+            'Peanut Butter Cookies',
+            'Snickerdoodles',
+            'Shortbread Cookies',
+            'Biscotti',
+            'Cookie Decorating',
+            'Cookie Cutters'
+          ]}
+        />
+        <DropdownMenu
+          prompt={'Chocolates'}
+          image={'/onlineshoppingCarousel/chocolates.png'}
+          options={[
+            'Dark Chocolate',
+            'Milk Chocolate',
+            'White Chocolate',
+            'Truffles',
+            'Chocolate Bars',
+            'Chocolate Fondue',
+            'Chocolate Gifts',
+            'Chocolate Making'
+          ]}
+        />
+        <DropdownMenu
+          prompt={'Puddings'}
+          image={'/onlineshoppingCarousel/puddings.png'}
+          options={[
+            'Chocolate Pudding',
+            'Vanilla Pudding',
+            'Rice Pudding',
+            'Bread Pudding',
+            'Tapioca Pudding',
+            'Butterscotch Pudding',
+            'Pudding Cups',
+            'Homemade Pudding'
+          ]}
+        />
+        <DropdownMenu
+          prompt={'Fruit Desserts'}
+          image={'/onlineshoppingCarousel/fruit-desserts.png'}
+          options={[
+            'Fruit Salad',
+            'Fruit Tarts',
+            'Fruit Compote',
+            'Fruit Crumble',
+            'Fruit Parfaits',
+            'Fruit Sorbet',
+            'Fruit Pizza',
+            'Fruit Smoothies'
           ]}
         />
 
         <DropdownMenu
-          prompt={'Gujrati Dish'}
-          image={'/onlineshoppingCarousel/bench.PNG'}
-          options={['Patio Sets', 'Outdoor Sofas', 'Sun Loungers', 'Adirondack Chairs', 'Hammocks']}
+          prompt={'Custards'}
+          image={'/onlineshoppingCarousel/custards.png'}
+          options={[
+            'Crème Brûlée',
+            'Flan',
+            'Tapioca Pudding',
+            'Custard Tarts',
+            'Custard Pie',
+            'Custard Cups',
+            'Custard Sauces',
+            'Homemade Custard'
+          ]}
         />
-
         <DropdownMenu
-          prompt={'North East Food'}
-          image={'/onlineshoppingCarousel/craddle.PNG'}
-          options={['Cribs', 'Changing Tables', "Kids' Beds", 'Playroom Furniture']}
+          prompt={'Gelato'}
+          image={'/onlineshoppingCarousel/gelato.png'}
+          options={[
+            'Chocolate Gelato',
+            'Vanilla Gelato',
+            'Stracciatella',
+            'Pistachio Gelato',
+            'Fruit Gelato',
+            'Gelato Sundaes',
+            'Gelato Cones',
+            'Gelato Machines'
+          ]}
+        />
+        <DropdownMenu
+          prompt={'Sorbet'}
+          image={'/onlineshoppingCarousel/sorbet.png'}
+          options={[
+            'Fruit Sorbet',
+            'Lemon Sorbet',
+            'Raspberry Sorbet',
+            'Mango Sorbet',
+            'Sorbetto',
+            'Sorbet Cocktails',
+            'Sorbet Maker',
+            'Homemade Sorbet'
+          ]}
         />
       </div>
       <div className="my-10 flex items-center justify-center">

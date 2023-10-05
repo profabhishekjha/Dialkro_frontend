@@ -9,52 +9,187 @@ const GlobalCuisines = () => {
       <Nav />
       <div className=" flex flex-wrap items-center justify-center gap-10 overflow-hidden max-lg:grid max-lg:grid-cols-2 ">
         <DropdownMenu
-          prompt={'North Indian'}
-          image={'/onlineshoppingCarousel/chairs.PNG'}
-          options={['Chairs', 'Sofas', 'Benches', 'Stools']}
-        />
-
-        <DropdownMenu
-          prompt={'Punjabi'}
-          image={'/onlineshoppingCarousel/desk.PNG'}
+          prompt={'Chinese'}
+          image={'/onlineshoppingCarousel/chinese-cuisine.png'}
           options={[
-            'Dining Tables',
-            'Coffee Tables',
-            'End Tables',
-            'Console Tables',
-            'Desks',
-            'Nightstands'
+            'Szechuan',
+            'Cantonese',
+            'Hunan',
+            'Dim Sum',
+            'Peking Duck',
+            'Hot Pot',
+            'Noodles',
+            'Vegetarian Options',
+            'Chinese Desserts'
           ]}
         />
 
         <DropdownMenu
-          prompt={'South Indian'}
-          image={'/onlineshoppingCarousel/storage.PNG'}
-          options={['Cabinets', 'Dressers', 'Wardrobes', 'Bookshelves', 'Buffets and Sideboards']}
-        />
-
-        <DropdownMenu
-          prompt={'Rajasthani'}
-          image={'/onlineshoppingCarousel/beds.PNG'}
+          prompt={'Japanese'}
+          image={'/onlineshoppingCarousel/japanese-cuisine.png'}
           options={[
-            'Bed Frames',
-            'Mattresses',
-            'Headboards and Footboards',
-            'Bunk Beds',
-            'Canopy Beds'
+            'Sushi',
+            'Sashimi',
+            'Tempura',
+            'Ramen',
+            'Izakaya',
+            'Teppanyaki',
+            'Japanese Curry',
+            'Matcha Desserts',
+            'Mochi'
           ]}
         />
 
         <DropdownMenu
-          prompt={'Gujrati Dish'}
-          image={'/onlineshoppingCarousel/bench.PNG'}
-          options={['Patio Sets', 'Outdoor Sofas', 'Sun Loungers', 'Adirondack Chairs', 'Hammocks']}
+          prompt={'Italian'}
+          image={'/onlineshoppingCarousel/italian-cuisine.png'}
+          options={[
+            'Pasta',
+            'Pizza',
+            'Lasagna',
+            'Risotto',
+            'Gelato',
+            'Tiramisu',
+            'Italian Coffee',
+            'Antipasti',
+            'Italian Desserts'
+          ]}
         />
 
         <DropdownMenu
-          prompt={'North East Food'}
-          image={'/onlineshoppingCarousel/craddle.PNG'}
-          options={['Cribs', 'Changing Tables', "Kids' Beds", 'Playroom Furniture']}
+          prompt={'Mexican'}
+          image={'/onlineshoppingCarousel/mexican-cuisine.png'}
+          options={[
+            'Tacos',
+            'Burritos',
+            'Enchiladas',
+            'Guacamole',
+            'Salsas',
+            'Chiles Rellenos',
+            'Mexican Street Food',
+            'Churros',
+            'Mexican Desserts'
+          ]}
+        />
+
+        <DropdownMenu
+          prompt={'Thai'}
+          image={'/onlineshoppingCarousel/thai-cuisine.png'}
+          options={[
+            'Pad Thai',
+            'Tom Yum',
+            'Green Curry',
+            'Som Tum',
+            'Thai Noodles',
+            'Thai Soups',
+            'Mango Sticky Rice',
+            'Thai Desserts'
+          ]}
+        />
+
+        <DropdownMenu
+          prompt={'Mediterranean'}
+          image={'/onlineshoppingCarousel/mediterranean-cuisine.png'}
+          options={[
+            'Hummus',
+            'Falafel',
+            'Kebabs',
+            'Greek Salad',
+            'Tabbouleh',
+            'Baba Ganoush',
+            'Mediterranean Desserts',
+            'Greek Yogurt'
+          ]}
+        />
+
+        <DropdownMenu
+          prompt={'French'}
+          image={'/onlineshoppingCarousel/french-cuisine.png'}
+          options={[
+            'Croissants',
+            'Escargot',
+            'Coq au Vin',
+            'Quiche',
+            'Ratatouille',
+            'Macarons',
+            'French Cheese',
+            'French Desserts'
+          ]}
+        />
+
+        <DropdownMenu
+          prompt={'Greek'}
+          image={'/onlineshoppingCarousel/greek-cuisine.png'}
+          options={[
+            'Gyros',
+            'Moussaka',
+            'Greek Salad',
+            'Tzatziki',
+            'Spanakopita',
+            'Baklava',
+            'Greek Yogurt',
+            'Greek Desserts'
+          ]}
+        />
+
+        <DropdownMenu
+          prompt={'Spanish'}
+          image={'/onlineshoppingCarousel/spanish-cuisine.png'}
+          options={[
+            'Paella',
+            'Tapas',
+            'Churros',
+            'Gazpacho',
+            'Sangria',
+            'Spanish Omelette',
+            'Spanish Desserts',
+            'Flan'
+          ]}
+        />
+
+        <DropdownMenu
+          prompt={'Indian'}
+          image={'/onlineshoppingCarousel/indian-cuisine.png'}
+          options={[
+            'Curry',
+            'Biryani',
+            'Tandoori',
+            'Masala Dosa',
+            'Samosas',
+            'Chaat',
+            'Indian Sweets',
+            'Indian Desserts'
+          ]}
+        />
+
+        <DropdownMenu
+          prompt={'Middle Eastern'}
+          image={'/onlineshoppingCarousel/middle-eastern-cuisine.png'}
+          options={[
+            'Hummus',
+            'Falafel',
+            'Shawarma',
+            'Kebabs',
+            'Baklava',
+            'Middle Eastern Sweets',
+            'Tahini',
+            'Middle Eastern Desserts'
+          ]}
+        />
+
+        <DropdownMenu
+          prompt={'Korean'}
+          image={'/onlineshoppingCarousel/korean-cuisine.png'}
+          options={[
+            'Kimchi',
+            'Bulgogi',
+            'Bibimbap',
+            'Tteokbokki',
+            'Korean BBQ',
+            'Korean Noodles',
+            'Korean Pancakes',
+            'Korean Desserts'
+          ]}
         />
       </div>
       <div className="my-10 flex items-center justify-center">
