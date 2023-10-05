@@ -19,12 +19,13 @@ const SubCategoryShoppingPage = () => {
       <div className="mt-10 flex items-center justify-center">
         <SearchBar />
       </div>
-      <div className="flex flex-col items-center justify-center">
-        <img src="/onlineshoppingCarousel/frames/Frame 15.svg" alt="alt" className="mt-10" />
-        <img src="/onlineshoppingCarousel/frames/Frame 8.svg" alt="alt" className="mt-10" />
-        <img src="/onlineshoppingCarousel/frames/Frame 7.svg" alt="alt" className="mt-10" />
-        <img src="/onlineshoppingCarousel/frames/Frame 11.svg" alt="alt" className="mt-10" />
-        <img src="/onlineshoppingCarousel/frames/Frame 13.svg" alt="alt" className="mt-10" />
+      <div className="grid w-full grid-cols-3 items-center justify-center max-lg:grid-cols-1">
+        <img src="/onlineshoppingCarousel/frames/Frame 15.jpg" alt="alt" className="mt-10" />
+        <img src="/onlineshoppingCarousel/frames/Frame 8.jpg" alt="alt" className="mt-10" />
+        <img src="/onlineshoppingCarousel/frames/Frame 7.jpg" alt="alt" className="mt-10" />
+        <img src="/onlineshoppingCarousel/frames/Frame 11.jpg" alt="alt" className="mt-10" />
+        <img src="/onlineshoppingCarousel/frames/Frame 13.jpg" alt="alt" className="mt-10" />
+        <img src="/onlineshoppingCarousel/frames/Frame 14.jpg" alt="alt" className="mt-10" />
       </div>
       <Footer />
     </div>
