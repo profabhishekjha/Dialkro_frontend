@@ -50,10 +50,22 @@ function ContactForm() {
     setFormData(updatedData)
   }
 
+  const removeContactPerson = (index) => {
+    const updatedData = { ...formData }
+    updatedData.contactPersons.splice(index, 1)
+    setFormData(updatedData)
+  }
+
+  // Handle removing mobile number
+  const removeMobileNumber = (index) => {
+    const updatedData = { ...formData }
+    updatedData.mobileNumbers.splice(index, 1)
+    setFormData(updatedData)
+  }
+
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formData)
     // Perform form validation if needed
     if (!formData.contactPersons || !formData.mobileNumbers) {
       alert('Please fill in all required fields.')
@@ -72,8 +84,7 @@ function ContactForm() {
           <h2 className="mb-4 p-3 text-center text-3xl font-semibold">Contact Information</h2>
           <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
 
-          {/* Contact Persons */}
-          <div className="mb-6">
+          <div className="mb-2">
             <label
               htmlFor="contactPersons"
               className="mb-2 block text-sm font-medium text-gray-900">
@@ -81,15 +92,23 @@ function ContactForm() {
             </label>
             <div id="contactPersonContainer">
               {formData.contactPersons.map((value, index) => (
-                <div key={index} className="mb-2">
+                <div key={index} className="mb-2 flex">
                   <input
                     type="text"
                     name={`contactPersons[${index}]`}
-                    className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
+                    className="flex-1 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
                     placeholder="Amit Grewal"
                     value={value}
                     onChange={(e) => handleInputChange(e, index, 'contactPersons')}
                   />
+                  {index > 0 && (
+                    <button
+                      type="button"
+                      onClick={() => removeContactPerson(index)}
+                      className="ml-2 rounded-lg bg-red-500 px-3 py-2 font-medium text-white hover:bg-red-600">
+                      Remove
+                    </button>
+                  )}
                 </div>
               ))}
             </div>
@@ -108,16 +127,24 @@ function ContactForm() {
             </label>
             <div id="mobileNumbersContainer">
               {formData.mobileNumbers.map((value, index) => (
-                <div key={index} className="mb-2">
+                <div key={index} className="mb-2 flex">
                   <input
                     type="text"
                     name={`mobileNumbers[${index}]`}
-                    className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
+                    className="flex-1 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
                     placeholder="00-000-00-000"
                     value={value}
                     onChange={(e) => handleInputChange(e, index, 'mobileNumbers')}
                     required
                   />
+                  {index > 0 && (
+                    <button
+                      type="button"
+                      onClick={() => removeMobileNumber(index)}
+                      className="ml-2 rounded-lg bg-red-500 px-3 py-2 font-medium text-white hover:bg-red-600">
+                      Remove
+                    </button>
+                  )}
                 </div>
               ))}
             </div>
