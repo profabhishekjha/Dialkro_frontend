@@ -10,7 +10,7 @@ const notify = () => {
 
 const BusinessListingForm = () => {
   const navigate = useNavigate()
-  const [formData, setFormData] = useState({
+  const [form2Data, setForm2Data] = useState({
     companyName: '',
     title: '',
     fullName: '',
@@ -23,8 +23,8 @@ const BusinessListingForm = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target
     const newValue = type === 'checkbox' ? checked : value
-    setFormData({
-      ...formData,
+    setForm2Data({
+      ...form2Data,
       [name]: newValue
     })
   }
@@ -32,7 +32,7 @@ const BusinessListingForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     notify() /* toaster on submit */
-    console.log(formData)
+    console.log(form2Data)
   }
 
   return (
@@ -55,7 +55,7 @@ const BusinessListingForm = () => {
               type="text"
               id="companyName"
               name="companyName"
-              value={formData.companyName}
+              value={form2Data.companyName}
               onChange={handleChange}
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
               placeholder="DialKro"
@@ -71,7 +71,7 @@ const BusinessListingForm = () => {
               <select
                 id="title"
                 name="title"
-                value={formData.title}
+                value={form2Data.title}
                 onChange={handleChange}
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400">
                 <option value="">-Select-</option>
@@ -89,7 +89,7 @@ const BusinessListingForm = () => {
                 type="text"
                 id="fullName"
                 name="fullName"
-                value={formData.fullName}
+                value={form2Data.fullName}
                 onChange={handleChange}
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
                 placeholder="John Doe"
@@ -108,7 +108,7 @@ const BusinessListingForm = () => {
                 type="text"
                 id="mobileNumber"
                 name="mobileNumber"
-                value={formData.mobileNumber}
+                value={form2Data.mobileNumber}
                 onChange={handleChange}
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
                 placeholder="(+91) 000-000-0000"
@@ -127,7 +127,7 @@ const BusinessListingForm = () => {
                 type="email"
                 id="companyEmail"
                 name="companyEmail"
-                value={formData.companyEmail}
+                value={form2Data.companyEmail}
                 onChange={handleChange}
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
                 placeholder="Dialkro@gmail.com"
@@ -142,7 +142,7 @@ const BusinessListingForm = () => {
                 type="www"
                 id="companyURL"
                 name="companyURL"
-                value={formData.companyURL}
+                value={form2Data.companyURL}
                 onChange={handleChange}
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
                 placeholder="DialKro.com"
@@ -155,7 +155,7 @@ const BusinessListingForm = () => {
                 id="remember"
                 name="rememberMe"
                 type="checkbox"
-                checked={formData.rememberMe}
+                checked={form2Data.rememberMe}
                 onChange={handleChange}
                 className="h-4 w-4 rounded border border-gray-300 bg-gray-50"
               />

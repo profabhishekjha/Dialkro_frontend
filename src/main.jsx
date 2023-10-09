@@ -85,13 +85,13 @@ import Dessert from './popularCategory/restaurant/components/Dessert'
 
 const router = createBrowserRouter([
   {
-    path: '/signin',
-    element: <LoginModal />
-  },
-  {
     path: '/',
     element: <Layout />,
     errorElement: <Error />
+  },
+  {
+    path: '/signin',
+    element: <LoginModal />
   },
   {
     path: '/addbusiness',
