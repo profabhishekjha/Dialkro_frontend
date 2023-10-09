@@ -28,6 +28,9 @@ const OnlineShoppingClothing = () => {
           prompt={"Women's Clothing"}
           image={'/onlineshoppingCarousel/womenswear.PNG'}
           options={[
+            'Ladies Suit',
+            'Saree',
+            'Salwars',
             'Dresses',
             'Tops',
             'Bottoms',
