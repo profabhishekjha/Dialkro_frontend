@@ -1,16 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ShopTimingsForm from './ShopTimingsForm'
 import { useNavigate } from 'react-router-dom'
 import Nav from '../Nav'
 import Footer from '../../Footer/Footer'
 const PaymentForm = () => {
   const navigate = useNavigate()
+
+  const [formData, setFormData] = useState({
+    googlepay: false,
+    phonepe: false,
+    bhim: false,
+
+    // ...other form fields
+    cashOnDelivery: false
+  })
+
+  // Handle checkbox change
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target
+    setFormData((formData) => ({
+      ...formData,
+      [name]: checked
+    }))
+  }
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Log the form data
+    console.log(formData)
+    // Navigate to the next form or perform other actions
+    navigate('/keywordsform')
+  }
+
   return (
     <>
       <Nav />
 
       <div className="flex items-center justify-center">
-        <form className="container mt-10 rounded-lg border p-10">
+        <form className="container mt-10 rounded-lg border p-10" onSubmit={handleSubmit}>
           <h2 className="mb-4 p-3 text-center text-3xl font-semibold">Other Information</h2>
           <hr className="my-12 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
           <ShopTimingsForm />
@@ -27,6 +55,8 @@ const PaymentForm = () => {
                   type="checkbox"
                   className="form-checkbox h-5 w-5 rounded-md border text-blue-500"
                   name="googlepay"
+                  checked={formData.googlepay}
+                  onChange={handleCheckboxChange}
                 />
                 <span className="text-lg ">Google Pay</span>
               </label>
@@ -36,6 +66,8 @@ const PaymentForm = () => {
                   type="checkbox"
                   className="form-checkbox h-5 w-5 rounded-md border text-blue-500"
                   name="phonepe"
+                  checked={formData.phonepe}
+                  onChange={handleCheckboxChange}
                 />
                 <span className="text-lg">PhonePe</span>
               </label>
@@ -45,6 +77,8 @@ const PaymentForm = () => {
                   type="checkbox"
                   className="form-checkbox h-5 w-5 rounded-md border text-blue-500"
                   name="bhim"
+                  checked={formData.bhim}
+                  onChange={handleCheckboxChange}
                 />
                 <span className="text-lg ">BHIM App</span>
               </label>
@@ -155,7 +189,9 @@ const PaymentForm = () => {
                 <input
                   type="checkbox"
                   className="form-checkbox h-5 w-5 rounded-md border text-blue-500"
-                  name="cred"
+                  name="cashOnDelivery"
+                  checked={formData.cashOnDelivery}
+                  onChange={handleCheckboxChange}
                 />
                 <span className="text-lg ">Cash on Delivery</span>
               </label>
