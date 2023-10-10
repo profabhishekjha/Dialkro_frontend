@@ -9,6 +9,7 @@ const MobileUserMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false)
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(true)
   const dropdownRef = useRef(null)
   const navigate = useNavigate()
 
@@ -43,6 +44,18 @@ const MobileUserMenu = () => {
     setIsOpen(false) // Close the menu when opening the login modal
   }
 
+  const handleLogin = () => {
+    // Logic to handle user login
+    setIsLoggedIn(true)
+    setIsOpen(false)
+  }
+
+  const handleLogout = () => {
+    // Logic to handle user logout
+    setIsLoggedIn(false)
+    setIsOpen(false)
+  }
+
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
@@ -55,20 +68,30 @@ const MobileUserMenu = () => {
       {isOpen && (
         <div className="absolute right-0 top-8 w-[20vw] overflow-hidden rounded-xl bg-white text-sm shadow-md max-md:w-[30vw] max-sm:w-[40vw]">
           <div className="flex cursor-pointer flex-col">
-            <MenuItem
-              label="Login"
-              onClick={() => {
-                setIsLoginModalOpen(true) // Open the LoginModal
-              }}
-            />
-            <MenuItem label="Register" onClick={openRegisterModal} />
-            <MenuItem label="Services" onClick={() => {}} />
-            <MenuItem
-              label="Add Business"
-              onClick={() => {
-                navigate('/addbusiness')
-              }}
-            />
+            {isLoggedIn ? (
+              <>
+                <MenuItem label="Services" onClick={() => {}} />
+                <MenuItem
+                  label="Add Business"
+                  onClick={() => {
+                    navigate('/addbusiness')
+                  }}
+                />
+                <MenuItem label="Logout" onClick={handleLogout} />
+              </>
+            ) : (
+              <>
+                <MenuItem label="Login" onClick={openLoginModal} />
+                <MenuItem label="Register" onClick={openRegisterModal} />
+                <MenuItem label="Services" onClick={() => {}} />
+                <MenuItem
+                  label="Add Business"
+                  onClick={() => {
+                    navigate('/addbusiness')
+                  }}
+                />
+              </>
+            )}
             {/* <MenuItem label="Advertise" onClick={() => {}} /> */}
           </div>
         </div>
@@ -84,7 +107,7 @@ const MobileUserMenu = () => {
       {isRegisterModalOpen && (
         <RegisterModal
           onClose={() => {
-            setIsRegisterModalOpen(false) // Close the LoginModal
+            setIsRegisterModalOpen(false) // Close the RegisterModal
           }}
           onLoginClick={openLoginModal}
         />
