@@ -84,6 +84,7 @@ import Foodie from './popularCategory/restaurant/components/Foodie'
 import Dessert from './popularCategory/restaurant/components/Dessert'
 
 const router = createBrowserRouter([
+  
   {
     path: '/',
     element: <Layout />,

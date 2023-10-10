@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Nav from '../Nav'
 import Footer from '../../Footer/Footer'
@@ -19,22 +19,44 @@ function ContactForm() {
     instagram: ''
   }
 
+  const [contactName, setcontactName]  = useState();
+  const [Mob, setMob]  = useState();
+  const [Tollfree,setTollfree] = useState();
+  const [Landline,setLandline] = useState();
+  const [Website,setWebsite] = useState();
+  const [Email,setEmail] = useState();
+  const [Facebook,setFacebook] = useState();
+  const [Twitter,setTwitter] = useState();
+  const [Insta, setInsta] = useState();
+
+  useEffect(()=>{
+    setcontactName(localStorage.getItem('fullName'));
+    setMob(localStorage.getItem('mobileNumber'))
+  }, [])
+  
+
+
+ const obj = {contactName, Mob, Tollfree, Landline, Website, Email, Facebook, Twitter, Insta}
+
+ 
   // Use state to manage form data
   const [formData, setFormData] = useState(initialFormData)
 
   // Handle input field changes
-  const handleInputChange = (e, index, type) => {
-    const { name, value } = e.target
-    const updatedData = { ...formData }
+  // const handleInputChange = (e, index, type) => {
+  //   const { name, value } = e.target
+  //   const updatedData = { ...formData }
 
-    if (type === 'contactPersons' || type === 'mobileNumbers') {
-      updatedData[type][index] = value
-    } else {
-      updatedData[name] = value
-    }
+  //   if (type === 'contactPersons' || type === 'mobileNumbers') {
+  //     updatedData[type][index] = value
+  //   } else {
+  //     updatedData[name] = value
+  //   }
 
-    setFormData(updatedData)
-  }
+  //   setFormData(updatedData)
+  // }
+
+  
 
   // Handle adding contact person
   const addContactPerson = () => {
@@ -74,6 +96,16 @@ function ContactForm() {
       navigate('/otherinfo')
     }
     // Navigate to the next page
+    console.log(obj)
+    localStorage.setItem('contactName', obj.contactName);
+    localStorage.setItem('mobile', obj.Mob);
+    localStorage.setItem('tollfree', obj.Tollfree);
+    localStorage.setItem('landline', obj.Landline);
+    localStorage.setItem('website', obj.Website);
+    localStorage.setItem('email', obj.Email);
+    localStorage.setItem('facebookUrl', obj.Facebook);
+    localStorage.setItem('twitterUrl', obj.Twitter);
+    localStorage.setItem('instaUrl', obj.Insta);
   }
 
   return (
@@ -98,8 +130,10 @@ function ContactForm() {
                     name={`contactPersons[${index}]`}
                     className="flex-1 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
                     placeholder="Amit Grewal"
-                    value={value}
-                    onChange={(e) => handleInputChange(e, index, 'contactPersons')}
+                    // value={value}
+                    value={contactName}
+                    // onChange={(e) => handleInputChange(e, index, 'contactPersons')}
+                    onChange={e=>setcontactName(e.target.value)}
                   />
                   {index > 0 && (
                     <button
@@ -133,8 +167,10 @@ function ContactForm() {
                     name={`mobileNumbers[${index}]`}
                     className="flex-1 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
                     placeholder="00-000-00-000"
-                    value={value}
-                    onChange={(e) => handleInputChange(e, index, 'mobileNumbers')}
+                    // value={value}
+                    // onChange={(e) => handleInputChange(e, index, 'mobileNumbers')}
+                    value={Mob}
+                    onChange={e=>setMob(localStorage.getItem('mobileNumber'))}
                     required
                   />
                   {index > 0 && (
@@ -169,8 +205,9 @@ function ContactForm() {
                 name="tollFreeNumber"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
                 placeholder="(800) 623-4541"
-                value={formData.tollFreeNumber}
-                onChange={handleInputChange}
+                // value={formData.tollFreeNumber}
+                // onChange={handleInputChange}
+                onChange={e=>setTollfree(e.target.value)}
               />
             </div>
           </div>
@@ -187,8 +224,9 @@ function ContactForm() {
               name="landlineNumber"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
               placeholder="00-000-00"
-              value={formData.landlineNumber}
-              onChange={handleInputChange}
+              // value={formData.landlineNumber}
+              // onChange={handleInputChange}
+              onChange={e=>setLandline(e.target.value)}
             />
           </div>
 
@@ -202,8 +240,9 @@ function ContactForm() {
               name="website"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
               placeholder="www.johndoe.com"
-              value={formData.website}
-              onChange={handleInputChange}
+              // value={formData.website}
+              // onChange={handleInputChange}
+              onChange={e=>setWebsite(e.target.value)}
             />
           </div>
 
@@ -217,8 +256,9 @@ function ContactForm() {
               name="email"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
               placeholder="johndoe@gmail.com"
-              value={formData.email}
-              onChange={handleInputChange}
+              // value={formData.email}
+              // onChange={handleInputChange}
+              onChange={e=>setEmail(e.target.value)}
             />
           </div>
 
@@ -232,8 +272,9 @@ function ContactForm() {
               name="facebook"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
               placeholder="socials"
-              value={formData.facebook}
-              onChange={handleInputChange}
+              // value={formData.facebook}
+              // onChange={handleInputChange}
+              onChange={e=>setFacebook(e.target.value)}
             />
           </div>
 
@@ -247,8 +288,9 @@ function ContactForm() {
               name="twitter"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
               placeholder="socials"
-              value={formData.twitter}
-              onChange={handleInputChange}
+              // value={formData.twitter}
+              // onChange={handleInputChange}
+              onChange={e=>setTwitter(e.target.value)}
             />
           </div>
 
@@ -262,8 +304,9 @@ function ContactForm() {
               name="instagram"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
               placeholder="socials"
-              value={formData.instagram}
-              onChange={handleInputChange}
+              // value={formData.instagram}
+              // onChange={handleInputChange}
+              onChange={e=>setInsta(e.target.value)}
             />
           </div>
 
