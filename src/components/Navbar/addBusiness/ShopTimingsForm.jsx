@@ -23,6 +23,7 @@ const ShopTimingsForm = () => {
       ...timings,
       [field]: value
     })
+    
   }
 
   const handleDayClosedChange = (day) => {
@@ -30,6 +31,16 @@ const ShopTimingsForm = () => {
       ...closedDays,
       [day]: !closedDays[day]
     })
+  }
+
+  const handlesubmit = (e)=>{
+    e.preventDefault();
+    // console.log(closedDays)
+    console.log(closedDays)
+    localStorage.setItem('openingTime', timings.openingTime);
+    localStorage.setItem('closeTime', timings.closingTime);
+    localStorage.setItem('closeDay', JSON.stringify(closedDays))
+    
   }
 
   return (
@@ -112,8 +123,12 @@ const ShopTimingsForm = () => {
               Closed
             </label>
           </div>
+
+          
         </div>
+        
       ))}
+      <button className='border mt-3 px-4 py-1 rounded' type='submit' onClick={handlesubmit}>Submit</button>
     </div>
   )
 }

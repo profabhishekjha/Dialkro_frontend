@@ -47,7 +47,7 @@ const BusinessForm = () => {
   const handleCompanyNameChange = (e) => {
     setForm1Data({
       ...form1data,
-      companyName: e.target.value
+      companyName: localStorage.getItem('companyname')
     })
   }
 

@@ -27,12 +27,19 @@ const BusinessListingForm = () => {
       ...form2Data,
       [name]: newValue
     })
+
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     notify() /* toaster on submit */
     console.log(form2Data)
+    localStorage.setItem('companyname', form2Data.companyName);
+    localStorage.setItem('title', form2Data.title);
+    localStorage.setItem('fullName', form2Data.fullName);
+    localStorage.setItem('mobileNumber', form2Data.mobileNumber);
+    localStorage.setItem('companyEmail', form2Data.companyEmail);
+    localStorage.setItem('companyURL', form2Data.companyURL)
   }
 
   return (
