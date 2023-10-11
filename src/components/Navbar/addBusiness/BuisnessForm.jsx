@@ -158,12 +158,12 @@ const BusinessForm = () => {
                   value={input}
                   onChange={(e) => handleSelectChange(e, index)}
                   required
-                  className="mr-2 flex-1 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400">
+                  className="mr-2  flex-1 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400">
                   <option className="w-full text-xl" value="">
                     Select Option
                   </option>
                   {initialOptions.map((option) => (
-                    <option key={option} className=" h-10 rounded-lg text-lg" value={option}>
+                    <option key={option} className=" rounded-lg text-lg " value={option}>
                       {option}
                     </option>
                   ))}
