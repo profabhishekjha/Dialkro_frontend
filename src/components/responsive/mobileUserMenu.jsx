@@ -12,7 +12,7 @@ const MobileUserMenu = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true)
   const dropdownRef = useRef(null)
   const navigate = useNavigate()
-
+ 
   const toggleOpen = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen)
   }

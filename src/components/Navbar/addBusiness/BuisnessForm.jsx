@@ -128,7 +128,9 @@ const BusinessForm = () => {
     <>
       <Nav />
       <div className="flex items-center justify-center">
-        <form className="container mt-10 rounded-lg border p-10" onSubmit={handleSubmit}>
+        <form
+          className="container mt-28 w-[55vw] rounded-lg border p-10 max-md:mt-16 max-md:w-full"
+          onSubmit={handleSubmit}>
           <h1 className="mb-10 text-4xl">Enlist your Business</h1>
           <div className="mb-6">
             <label htmlFor="companyName" className="mb-2 block text-sm font-medium text-gray-900">
@@ -138,7 +140,7 @@ const BusinessForm = () => {
               type="text"
               id="companyName"
               name="companyName"
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
+              className=" block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400"
               value={form1data.companyName}
               onChange={handleCompanyNameChange}
               placeholder="DialKro"
@@ -150,18 +152,18 @@ const BusinessForm = () => {
               Select Your Business Categories <span className="text-red-700">*</span>
             </label>
             {form1data.selectedInputs.map((input, index) => (
-              <div key={index} className=" mb-2 flex w-[50%]">
+              <div key={index} className="mb-2 flex w-[75%]">
                 <select
                   name="selectedInput"
                   value={input}
                   onChange={(e) => handleSelectChange(e, index)}
                   required
-                  className="mr-2 flex-1 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400">
-                  <option className="w-10" value="">
+                  className="mr-2  flex-1 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 dark:placeholder-gray-400">
+                  <option className="w-full text-xl" value="">
                     Select Option
                   </option>
                   {initialOptions.map((option) => (
-                    <option key={option} value={option}>
+                    <option key={option} className=" rounded-lg text-lg " value={option}>
                       {option}
                     </option>
                   ))}

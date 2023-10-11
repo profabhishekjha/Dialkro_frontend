@@ -27,18 +27,17 @@ const BusinessListingForm = () => {
       ...form2Data,
       [name]: newValue
     })
-
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     notify() /* toaster on submit */
     console.log(form2Data)
-    localStorage.setItem('companyname', form2Data.companyName);
-    localStorage.setItem('title', form2Data.title);
-    localStorage.setItem('fullName', form2Data.fullName);
-    localStorage.setItem('mobileNumber', form2Data.mobileNumber);
-    localStorage.setItem('companyEmail', form2Data.companyEmail);
+    localStorage.setItem('companyname', form2Data.companyName)
+    localStorage.setItem('title', form2Data.title)
+    localStorage.setItem('fullName', form2Data.fullName)
+    localStorage.setItem('mobileNumber', form2Data.mobileNumber)
+    localStorage.setItem('companyEmail', form2Data.companyEmail)
     localStorage.setItem('companyURL', form2Data.companyURL)
   }
 
@@ -46,7 +45,9 @@ const BusinessListingForm = () => {
     <>
       <Nav />
       <div className="flex items-center justify-center" onSubmit={() => navigate('/businessform')}>
-        <form className=" container mt-48 w-5/12 rounded-lg border p-10" onSubmit={handleSubmit}>
+        <form
+          className=" container mt-32 w-[55vw] rounded-lg border p-10 max-md:w-full"
+          onSubmit={handleSubmit}>
           <div className="mb-5 text-center">
             <h1 className="text-xl font-light">
               Get your business listed for{' '}
@@ -70,7 +71,7 @@ const BusinessListingForm = () => {
             />
           </div>
           {/* ... Existing JSX code ... */}
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-cols-3 gap-10 max-md:grid-cols-1">
             <div className="col-span-1 mb-6">
               <label htmlFor="title" className="mb-2 block text-sm font-medium text-gray-900">
                 Title
@@ -123,7 +124,7 @@ const BusinessListingForm = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid grid-cols-2 gap-10 max-md:grid-cols-1">
             <div className="mb-6">
               <label
                 htmlFor="companyEmail"
