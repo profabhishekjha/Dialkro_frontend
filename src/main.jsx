@@ -82,9 +82,10 @@ import NightStyle from './popularCategory/restaurant/components/NightStyle'
 import QuickBites from './popularCategory/restaurant/components/QuickBites'
 import Foodie from './popularCategory/restaurant/components/Foodie'
 import Dessert from './popularCategory/restaurant/components/Dessert'
+import SubCategoryDoctorsPage from './Doctor/components/SubCategory/SubCategoryDoctorsPage'
+import DoctorsPage from './Doctor/DoctorsPage'
 
 const router = createBrowserRouter([
-  
   {
     path: '/',
     element: <Layout />,
@@ -105,6 +106,14 @@ const router = createBrowserRouter([
   {
     path: '/autocare',
     element: <Autocare />
+  },
+  {
+    path: '/doctors',
+    element: <DoctorsPage />
+  },
+  {
+    path: '/subcategorydoctors',
+    element: <SubCategoryDoctorsPage />
   },
   {
     path: '/onlineshoppingcategories', // main online shopping elements

@@ -129,11 +129,9 @@ const TopBanner = () => {
             }}
             className="relative h-full w-full overflow-hidden rounded-2xl bg-cover bg-center duration-500 hover:scale-[1.5]">
             <a
-              href=""
+              href="/subcategorydoctors"
               className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-center text-lg font-extrabold text-white opacity-0 transition-opacity hover:opacity-100">
-              <p className="grid">
-                Explore <span>More</span>
-              </p>
+              <p className="grid">Doctors</p>
             </a>
           </div>
         </div>
